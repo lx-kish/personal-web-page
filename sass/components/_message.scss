@@ -1,0 +1,133 @@
+.message {
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: var(--color-shadow-50);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
+
+  &__form {
+    @include absCenter;
+
+    max-height: 90vh;
+    width: 70vw;
+    border-radius: 0.8rem;
+    padding: 1.5rem 3.5rem;
+    background-color: var(--color-bg);
+    overflow-y: auto;
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(.5);
+    transition: all .4s .2s;
+  }
+
+  &__header {
+    padding: 0 1rem 3.5rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: $font-size-main;
+    font-weight: 700;
+    color: var(--color-primary-dark);
+  }
+  
+  &:target {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  &:target &__form {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+
+  &__close {
+    &:link,
+    &:active {
+      display: inline-block;
+      position: absolute;
+      top: 2rem;
+      right: 2rem;
+      font-size: 3rem;
+      text-decoration: none;
+      line-height: .5;
+      color: var(--color-grey-dark);
+      transition: all .2s;
+    }
+
+    &:hover {
+      color: var(--color-primary-dark);
+    }
+  }
+}
+
+.form {
+  // &__group:not(:last-child) {
+  //   margin-bottom: -1rem;
+  // }
+  &__group--btns {
+    margin: auto;
+    width: 25.5%;
+    position: relative;
+    top: -3rem;
+  }
+
+  &__input {
+    width: 100%;
+    font-size: $font-size-main;
+    font-family: inherit;
+    color: inherit;
+    padding: 0.7rem 1rem;
+    border-radius: 2px;
+    background-color: var(--color-input-bg);
+    border: none;
+    // border-bottom: 2px solid transparent;
+    // border-right: 2px solid transparent;
+    transition: all 0.3s;
+
+    &--message {
+      overflow: hidden;
+      resize: none;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem var(--color-shadow-20);
+      //   border-radius: .8rem;
+      border-bottom: 2px solid var(--color-primary-dark);
+      // border-right: 2px solid var(--color-primary-dark);
+
+      &:invalid {
+        border-bottom: 2px solid var(--color__accent);
+        // border-right: 2px solid var(--color__accent);
+      }
+    }
+  }
+
+  &__label {
+    position: relative;
+
+    display: block;
+    font-size: $font-size-main;
+    color: var(--color-grey-dark);
+    margin-top: 1rem;
+    margin-left: 1rem;
+    transition: all 0.3s;
+
+    &--not-last {
+      top: -7.9rem;
+    }
+
+    &--last {
+      top: -24.1rem;
+    }
+  }
+
+  &__input:placeholder-shown + &__label {
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(4.5rem);
+  }
+}

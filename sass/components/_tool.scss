@@ -1,0 +1,45 @@
+.tool {
+
+  &__list {
+    list-style-type: none;
+  }
+
+  &__name {
+    display: inline-block;
+    width: 70%;
+  }
+
+  &__score {
+    float: right;
+  }
+
+  &__icon {
+    position: relative;
+    top: .3rem;
+    height: 1.6rem;
+    stroke-width: 0.5;
+    margin: 0;
+    transition: all 0.3s;
+    animation-timing-function: ease-in;
+    backface-visibility: hidden;
+  
+    &--bright {
+      stroke: var(--color-primary-dark);
+      fill: var(--color-primary-dark);
+    }
+  
+    &--light {
+      stroke: var(--color-score-light);
+      fill: var(--color-score-light);
+    }
+  }
+
+  &:hover {
+    background: var(--color-input-bg);
+    // background: var(--color-yellow-bg);
+
+    .tool__icon {
+      margin-left: 1.5px;
+    }
+  }
+}

@@ -1,0 +1,181 @@
+// COLORS
+
+//PRIMARY COLOR
+//green
+// $color-primary-dark: #25a31d;
+// $color-primary-light: #38c52e;
+
+// $color-primary-dark: #15680f;
+// $color-primary-light: #2f8329;
+
+//dark blue
+// $color-primary-dark: #392478;
+// $color-primary-light: #4a3197;
+
+//light blue
+// $color-primary-dark: #22A39F;
+// $color-primary-light: #29beb9;
+
+// $color-primary-test: #30c9e8;
+
+//yellow sand
+// $color-primary-dark: #fddb5b;
+// $color-primary-light: #ffe27b;
+
+//dark red
+// $color-primary-dark: #7c2323;
+// $color-primary-light: #a74444;
+
+//grey-blue
+$color-primary-dark: #23868b;
+$color-primary-dark-70: rgba($color-primary-dark, 0.7);
+$color-primary-dark-75: rgba($color-primary-dark, 0.75);
+$color-primary-dark-90: rgba($color-primary-dark, 0.9);
+
+$color-primary-light: #66b7bb;
+// $color-primary-light: rgb(146, 185, 163);
+$color-primary-light-70: rgba($color-primary-light, 0.7);
+$color-primary-light-75: rgba($color-primary-light, 0.75);
+$color-primary-light-90: rgba($color-primary-light, 0.9);
+
+//SECONDARY COLOR(S)
+
+//Problem solving <!-- orange / green -->
+//(Orange)
+$color-PS-dark: #fe5619;
+$color-PS-dark-70: rgba($color-PS-dark, 0.7);
+$color-PS-dark-90: rgba($color-PS-dark, 0.9);
+
+$color-PS-light: #fa9c31;
+$color-PS-light-70: rgba($color-PS-light, 0.7);
+$color-PS-light-90: rgba($color-PS-light, 0.9);
+
+//Teamwork <!-- dark-red / dark-blue -->
+//(Dark-Red)
+$color-TW-dark: #dc4e48; //3-#960519; //1-#e63d39 2-#960519
+$color-TW-dark-70: rgba($color-TW-dark, 0.7);
+$color-TW-dark-90: rgba($color-TW-dark, 0.9);
+
+$color-TW-light: #e07470; //3-#BC152C; //1-#FF8E8B
+$color-TW-light-70: rgba($color-TW-light, 0.7);
+$color-TW-light-90: rgba($color-TW-light, 0.9);
+
+//Perseverance <!-- light-brown -->
+//(Light-brown)
+$color-PV-dark: #c67d17; //1-#FDA960;
+$color-PV-dark-70: rgba($color-PV-dark, 0.7);
+$color-PV-dark-90: rgba($color-PV-dark, 0.9);
+
+$color-PV-light: #fdbc60; //1-#e7b68c;
+$color-PV-light-70: rgba($color-PV-light, 0.7);
+$color-PV-light-90: rgba($color-PV-light, 0.9);
+
+//Empathy <!-- gold / green-grey -->
+//(Green-grey)
+$color-EM-dark: #879746; //2-#408C05; //1-#55d45d;
+$color-EM-dark-70: rgba($color-EM-dark, 0.7);
+$color-EM-dark-90: rgba($color-EM-dark, 0.9);
+
+$color-EM-light: #abbb6d; //2-#58B014; //1-#77DA7D;
+$color-EM-light-70: rgba($color-EM-light, 0.7);
+$color-EM-light-90: rgba($color-EM-light, 0.9);
+
+//Accountability <!-- #615187 - dark violet -->
+//(Dark-violet)
+$color-ACC-dark: #23868b; //2-#4C0869; //1-#8F44A7;
+// $color-ACC-dark: #80a8ae;//2-#4C0869; //1-#8F44A7;
+$color-ACC-dark-70: rgba($color-ACC-dark, 0.7);
+$color-ACC-dark-90: rgba($color-ACC-dark, 0.9);
+
+$color-ACC-light: #66b7bb; //2-#621484; //1-#B06EC5;
+// $color-ACC-light: #a2bec2;//2-#621484; //1-#B06EC5;
+$color-ACC-light-70: rgba($color-ACC-light, 0.7);
+$color-ACC-light-90: rgba($color-ACC-light, 0.9);
+
+//Curiosity <!-- yellow -->
+//(Yellow)
+$color-CU-dark: #f5b01e; //2-#969C05;//1-#C6C217;
+$color-CU-dark-70: rgba($color-CU-dark, 0.7);
+$color-CU-dark-90: rgba($color-CU-dark, 0.9);
+
+$color-CU-light: #f3bf4f; //2-#C6C217; //1-#FDF960;
+$color-CU-light-70: rgba($color-CU-light, 0.7);
+$color-CU-light-90: rgba($color-CU-light, 0.9);
+
+// NEW COLOR ARCHITECTURE - NIGHT
+
+// //BACKGROUND
+$color-bg-night: #171c20;
+// $color-bg-night: #22272B; //2
+// $color-bg-night: #1a1e21; //3
+
+// //FONT
+$color-font-night: #bfbfbf;
+
+// //HEADER-FOOTER-MENU-TEXT-ICONS
+$color-sign-night: $color-font-night;
+
+// //MENU
+// $color-menu-base-night: ;
+
+// //SECTION TOOLSET
+$color-score-light-night: #bfbfbf;
+$color-input-bg-night: #4e5255;
+
+// //SHADOWS
+// $color-shadow-night-20: ;
+// $color-shadow-night-50: ;
+
+//COLOR BLACK
+$color-black: #000;
+
+$color-black-15: rgba($color-black, 0.15);
+$color-black-20: rgba($color-black, 0.2);
+$color-black-50: rgba($color-black, 0.5);
+
+//COLOR WHITE
+$color-white: #fff;
+
+$color-white-50: rgba($color-white, 0.5);
+
+$color-accent: #e9690e; //orangered;
+
+//OTHER COLORS
+
+//Grey
+$color-grey-bg-1: #dde6c0;
+$color-grey-bg-2: #e9eabe;
+$color-yellow-bg: #fff458; //3-#f1e0c3; //2-#f3f091; 1-#e2e17a;
+
+$color-grey-font-1: #574044;
+$color-grey-font-2: #333333;
+
+$color-grey-bg: $color-grey-bg-2;
+$color-grey-mild: #9e9d9d;
+$color-grey-font: $color-grey-font-2;
+
+// -- OLD
+// $color-grey-dark: #343233;
+// $color-grey-mild: #574c4f; //near #574044
+// $color-grey-mild-1:#666666;
+// $color-grey-light: #f2f2f2;
+// $color-grey-dirty: #dedede;
+
+$color-white-light: #f4f4f4;
+$color-white-mild: #efdab9;
+
+//FONT
+$font-size-main: 1.6rem;
+
+//GRID
+$grid-width: 114rem;
+$gutter-vertical: 4rem;
+$gutter-horizontal: 6rem;
+
+//CONTAINER DIMENTIONS
+$container-max-width: 128rem;
+$container-padding-top-bottom: 2rem;
+$container-padding-left-right: 22rem;
+
+//NAVIGATION
+$navigation-item-height: 8rem;

@@ -1,0 +1,15 @@
+.activity {
+  // margin: 1rem;
+  padding: 1rem;
+  border-radius: 3px;
+  background: var(--color-white);
+  // background: $color-white-light;
+  transition: transform .2s linear;
+  backface-visibility: hidden;
+
+  &:hover {
+    transform: translateY(-0.3rem) scale(1.01, 1.01);
+    box-shadow: 0 0 1rem .4rem var(--color-shadow-20);
+    backface-visibility: hidden;
+  }
+}

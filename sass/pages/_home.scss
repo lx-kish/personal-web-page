@@ -1,0 +1,10 @@
+.section {
+    // padding-top: 7rem;
+    max-width: $container-max-width;
+    padding: $container-padding-top-bottom $container-padding-left-right;
+    background-color: var(--color-bg);
+}
+
+// .section-profile, .section-contacts {
+//     background-color: var(--color-grey-bg);
+// }

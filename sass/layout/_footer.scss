@@ -1,0 +1,85 @@
+.footer {
+  padding: 3rem;
+  background-image: linear-gradient(to right bottom, var(--color-primary-dark-90), var(--color-primary-light-90));
+  color: var(--color-sign);
+  font-size: 1.3rem;
+  text-align: center;
+  position: relative;
+
+  &__button {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    right: 5%;
+    height: 5rem;
+    width: 12rem;
+    background-color: var(--color-menu-base);
+    // background-color: var(--color-primary-dark); //grey--font);
+    text-align: center;
+    border-radius: 0 0 .8rem .8rem;
+
+    @include animationAppears;
+    // animation-name: appears;
+    // animation-duration: 5.5s;
+    // animation-timing-function: ease-in;
+    // backface-visibility: hidden;
+  }
+
+  &__icon-up {
+    height: 3.2rem;
+    width: 3.2rem;
+    fill: var(--color-sign);
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__logo-box {
+    padding-bottom: 2rem;
+  }
+
+  &__logo {
+    height: 4.5rem;
+    stroke: var(--color-sign);
+    fill: var(--color-sign);
+    stroke-width: 0.5;
+  }
+
+  &__hr {
+    box-sizing: content-box;
+    height: 0;
+    overflow: visible;
+    margin:.1rem auto;
+    width: 40rem;
+    border: .5px solid var(--color-sign);
+  }
+
+//   &__slogan {
+//     // font-size: 1.3rem;
+//     text-transform: lowercase;
+//     // font-size: .9rem;
+//     letter-spacing: 0.56rem;
+//     -webkit-box-decoration-break: clone;
+//     box-decoration-break: clone;
+//   }
+
+//   &__name {
+//     font-size: 3rem;
+//     font-weight: 300;
+//     text-transform: uppercase;
+//   }
+
+  // &__copyright {
+  //   font-size: 1rem;
+  // }
+
+  // &__attributions {
+  //   font-size: 1rem;
+  // }
+
+  &__link:link,
+  &__link:visited {
+    text-decoration: none;
+    color: inherit;
+  }
+}

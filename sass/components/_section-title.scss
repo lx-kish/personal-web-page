@@ -1,0 +1,29 @@
+.section-title {
+
+    padding: 5rem;
+
+    &__logo-box {
+        display: inline-block;
+        margin-right: 1.5rem;
+    }
+
+    &__logo {
+        height: 4.8rem;
+        vertical-align: -.7rem;
+        stroke: var(--color-primary-dark);
+        fill: var(--color-primary-dark);
+        stroke-width: .5;
+    }
+
+    &__text {
+        display: inline-block;
+        background-image: linear-gradient(to right, var(--color-primary-dark), var(--color-primary-light));
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        font-size: 5.5rem;
+        font-weight: 300;
+        letter-spacing: .3rem;
+        // text-transform: uppercase;
+    }
+}

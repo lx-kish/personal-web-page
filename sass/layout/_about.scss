@@ -1,0 +1,49 @@
+.about {
+  margin: 0 auto;
+
+  &__shape {
+    width: 20rem;
+    height: 20rem;
+    float: left;
+    shape-outside: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);
+    transform: translate(-2rem);
+  }
+
+  &__img {
+    height: 100%;
+    border-radius: 50%;
+    border: 0.5rem solid var(--color-sign);
+    filter: brightness(90%) sepia(20%);
+  }
+
+  &__text {
+    font-size: $font-size-main;
+  }
+
+  &__social-media-box {
+    margin-top: 2rem;
+    text-align: center;
+  }
+
+  &__link:link,
+  &__link:visited,
+  &__link:hover,
+  &__link:active {
+    text-decoration: none;
+  }
+
+  &__link:not(:last-child) {
+    margin-right: 2rem;
+  }
+
+  &__icon {
+    height: 3.2rem;
+    width: 3.2rem;
+    fill: var(--color-primary-dark);
+
+    &:hover {
+      fill: var(--color-primary-light);
+    }
+  }
+}

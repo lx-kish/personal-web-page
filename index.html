@@ -1,0 +1,1763 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:100,300,400,600,700,900" rel="stylesheet">
+    <!-- <link href="http://fonts.googleapis.com/css?family=Roboto:100,300,400,700,900" rel="stylesheet"> -->
+    <!-- <link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet"> -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <title>lx-kish web-dev</title>
+
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+</head>
+
+<!-- <body> -->
+
+<body class="color-primary--blue">
+    <!-- SVG logo - will use further across the page -->
+    <svg version="1.1" viewBox="0 0 60 60" style="display: none;">
+        <symbol id="lx-logo">
+            <polygon points="1 8 8 1 8 52 59 52 52 59 1 59" class="shape" />
+            <polygon points="15.75 13.5 22.5 6.75 52.25 36.5 45.5 43.25" class="shape" />
+            <polygon points="15.75 36.5 45.5 6.75 52.25 13.5 22.5 43.25" class="shape" />
+        </symbol>
+    </svg>
+
+    <div class="color-schema">
+        <div class="color-schema__panel">
+            <form action="#" class="color-schema__form">
+                <div class="color-schema__palette">
+                    <div class="color-schema__row">
+                        <div class="color-schema__color-component u-bg-blue">
+                            <label for="blue" class="color-schema__color-label">
+                                <input id="blue" class="color-schema__input" type="radio" name="color-schema__color"
+                                    value="color-primary--blue" checked>
+                                <svg class="color-schema__color-icon">
+                                    <use xlink:href="img/sprite.svg#icon-check"></use>
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="color-schema__color-component u-bg-orange">
+                            <label for="orange" class="color-schema__color-label">
+                                <input id="orange" class="color-schema__input" type="radio" name="color-schema__color"
+                                    value="color-primary--orange">
+                                <svg class="color-schema__color-icon">
+                                    <use xlink:href="img/sprite.svg#icon-check"></use>
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="color-schema__color-component u-bg-red">
+                            <label for="red" class="color-schema__color-label">
+                                <input id="red" class="color-schema__input" type="radio" name="color-schema__color"
+                                    value="color-primary--red">
+                                <svg class="color-schema__color-icon">
+                                    <use xlink:href="img/sprite.svg#icon-check"></use>
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="color-schema__row">
+                        <div class="color-schema__color-component u-bg-brown">
+                            <label for="brown" class="color-schema__color-label">
+                                <input id="brown" class="color-schema__input" type="radio" name="color-schema__color"
+                                    value="color-primary--brown">
+                                <svg class="color-schema__color-icon">
+                                    <use xlink:href="img/sprite.svg#icon-check"></use>
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="color-schema__color-component u-bg-green">
+                            <label for="green" class="color-schema__color-label">
+                                <input id="green" class="color-schema__input" type="radio" name="color-schema__color"
+                                    value="color-primary--green">
+                                <svg class="color-schema__color-icon">
+                                    <use xlink:href="img/sprite.svg#icon-check"></use>
+                                </svg>
+                            </label>
+                        </div>
+                        <div class="color-schema__color-component u-bg-yellow">
+                            <label for="yellow" class="color-schema__color-label">
+                                <input id="yellow" class="color-schema__input" type="radio" name="color-schema__color"
+                                    value="color-primary--yellow">
+                                <svg class="color-schema__color-icon">
+                                    <use xlink:href="img/sprite.svg#icon-check"></use>
+                                </svg>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="color-schema__toggle">
+                    <label for="day-night" class="color-schema__toggle-label">
+                        <span class="color-schema__toggle-text">Night mode</span>
+                        <input id="day-night" class="color-schema__toggle-input" type="checkbox">
+                    </label>
+                </div>
+            </form>
+        </div>
+        <div class="color-schema__btn">
+            <svg class="color-schema__icon">
+                <use xlink:href="img/sprite.svg#icon-fill"></use>
+            </svg>
+        </div>
+    </div>
+
+    <header class="header">
+        <div class="header__logo-box">
+            <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60"
+                    class="header__logo"> -->
+            <svg class="header__logo" viewBox="0 0 60 60">
+                <use xlink:href="#lx-logo" />
+            </svg>
+        </div>
+
+        <div class="header__text-box">
+            <!-- <h1 class="header__main">Alexander Kish</h1> -->
+            <h1 class="header__main">Alexander Kis<span class="header__last-letter">h</span></h1>
+            <hr class="header__hr">
+            <!-- <h2 class="header__sub">Web developer | Software engineer</h2> -->
+            <h2 class="header__sub">Web developer | Software enginee<span class="header__last-letter">r</span></h2>
+
+        </div>
+        <span class="header__button">
+            <a href="#about" class="header__scroll-down">
+                <svg class="header__icon-down">
+                    <use xlink:href="../img/sprite.svg#icon-chevron-down" />
+                </svg>
+            </a>
+        </span>
+    </header>
+    <main class="main">
+
+        <nav class="navigation navigation--top">
+            <ul class="navigation__list">
+                <li class="navigation__item navigation__item--active"><a href="#about"
+                        class="navigation__link">About</a></li>
+                <!-- <li class="navigation__item"><a href="#about" class="navigation__link">About</a></li> -->
+                <li class="navigation__item"><a href="#skills" class="navigation__link">Skills</a></li>
+                <li class="navigation__item"><a href="#toolset" class="navigation__link">Toolset</a></li>
+                <li class="navigation__item"><a href="#experience" class="navigation__link">Experience</a></li>
+                <li class="navigation__item"><a href="#qualification" class="navigation__link">Qualification</a>
+                </li>
+                <li class="navigation__item"><a href="#contacts" class="navigation__link">Contacts</a></li>
+            </ul>
+        </nav>
+
+        <section class="section section-profile" id="about">
+            <header class="section-title u-center-text">
+                <div class="section-title__logo-box">
+                    <svg viewBox="0 0 60 60" class="section-title__logo">
+                        <use xlink:href="#lx-logo" />
+                    </svg>
+                </div>
+                <h2 class="section-title__text">About</h2>
+            </header>
+
+            <div class="row">
+                <div class="about">
+                    <figure class="about__shape">
+                        <img src="img/lx-photo-in.png" alt="Alex photo" class="about__img">
+                    </figure>
+                    <p class="about__text">Microsoft 70-480 and ITILv3 Foundation certified software engineer with
+                        14+ years of commercial experience in IT industry, focused on development of web applications, I
+                        would like to utilize my knowledge, skills, and passion in the fast-paced challenging
+                        environment, providing first-rate outcomes and developing better user experience . With a wide
+                        experience across all the software development lifecycle, combination of engineering approach
+                        and best practices, and perseverance in mastering of advanced technologies, I am the person who
+                        makes the difference to enhance the value of IT solutions.
+                    </p>
+                    <div class="about__social-media-box">
+                        <a href="mailto:alexander.kish@gmail.com" class="about__link">
+                            <svg class="about__icon">
+                                <use xlink:href="../img/sprite.svg#icon-email" />
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/alexander-kish" target="_blank" class="about__link">
+                            <svg class="about__icon">
+                                <use xlink:href="../img/sprite.svg#icon-linkedin" />
+                            </svg>
+                        </a>
+                        <a href="https://github.com/lx-kish" target="_blank" class="about__link">
+                            <svg class="about__icon">
+                                <use xlink:href="../img/sprite.svg#icon-github" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section class="section" id="skills">
+            <header class="section-title u-center-text">
+                <div class="section-title__logo-box">
+                    <svg viewBox="0 0 60 60" class="section-title__logo">
+                        <use xlink:href="#lx-logo" />
+                    </svg>
+                </div>
+                <h2 class="section-title__text">Skills</h2>
+            </header>
+            <div class="row">
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--PS">
+                                &nbsp;
+                            </div>
+                            <h3 class="card__heading card__heading--middle">
+                                <span class="card__heading-span card__heading-span--PS">
+                                    Problem solving
+                                    <!-- orange / green -->
+                                </span>
+                            </h3>
+                        </div>
+                        <div class="card__side card__side--back">
+                            <p class="card__description">
+                                I’m coming from the engineering school which proved me that logic beats rote. There
+                                I established habits to trace causal links, recognize patterns, use logic and common
+                                sense, which composes the backbones of my engineering approach and forms the core of
+                                my problem solving skills, giving me the opportunity to get maximum effect using
+                                minimum resources.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--TW">
+                                &nbsp;
+                            </div>
+                            <h3 class="card__heading card__heading--bottom">
+                                <span class="card__heading-span card__heading-span--TW">
+                                    Teamwork
+                                    <!-- dark-red / dark-blue -->
+                                </span>
+                            </h3>
+                        </div>
+                        <div class="card__side card__side--back">
+                            <p class="card__description">
+                                The rule: ‘A chain is as strong as it weakest link’ describes teamwork best. As a
+                                team member, my goal is not only to be a strong link, but help to reinforce other
+                                links.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--PV">
+                                &nbsp;
+                            </div>
+                            <h3 class="card__heading card__heading--top">
+                                <span class="card__heading-span card__heading-span--PV">
+                                    Perseverance
+                                    <!-- light-brown -->
+                                </span>
+                            </h3>
+                        </div>
+                        <div class="card__side card__side--back">
+                            <p class="card__description">
+                                I’m a strong believer that if any human can do something, so can I. The only way to
+                                fail is to abandon further attempts. If what I do doesn't work, I should try doing
+                                something
+                                different.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--EM">
+                                &nbsp;
+                            </div>
+                            <h3 class="card__heading card__heading--middle">
+                                <span class="card__heading-span card__heading-span--EM">
+                                    Empathy
+                                    <!-- gold / green-gray -->
+                                </span>
+                            </h3>
+                        </div>
+                        <div class="card__side card__side--back">
+                            <p class="card__description">
+                                It’s known that a wise man's question contains half the answer. As an engineer
+                                solving a problem, I must be ensured that the problem has been defined
+                                comprehensively, and I’m addressing this very problem.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--ACC">
+                                &nbsp;
+                            </div>
+                            <h3 class="card__heading card__heading--bottom">
+                                <span class="card__heading-span card__heading-span--ACC">
+                                    Accountability
+                                    <!-- #615187 - dark violet -->
+                                </span>
+                            </h3>
+                        </div>
+                        <div class="card__side card__side--back">
+                            <p class="card__description">
+                                The only thing I can change at any situation is my own behaviour. The more I blame
+                                something else, the less I am able to change.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-1-of-3">
+                    <div class="card">
+                        <div class="card__side card__side--front">
+                            <div class="card__picture card__picture--CU">
+                                &nbsp;
+                            </div>
+                            <h3 class="card__heading card__heading--top">
+                                <span class="card__heading-span card__heading-span--CU">
+                                    Curiosity
+                                    <!-- yellow -->
+                                </span>
+                            </h3>
+                        </div>
+                        <div class="card__side card__side--back">
+                            <p class="card__description">
+                                Curiosity is best described by the Buddhist concept of Karma. Causal links are
+                                everywhere. Each thing has future consequences and at the same time is a consequence
+                                of past causes. Curiosity is the desire to see causal links, the desire to
+                                understand how things work.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="toolset">
+            <header class="section-title u-center-text">
+                <div class="section-title__logo-box">
+                    <svg viewBox="0 0 60 60" class="section-title__logo">
+                        <use xlink:href="#lx-logo" />
+                    </svg>
+                </div>
+                <h2 class="section-title__text">Toolset</h2>
+            </header>
+            <div class="row">
+                <div class="col-1-of-2">
+                    <ul class="tool__list">
+                        <h3 class="heading-tertiary u-center-text">Frontend</h3>
+                        <li class="tool">
+                            <span class="tool__name">HTML</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">CSS</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">SASS/SCSS</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">AJAX</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                    </ul>
+                    <ul class="tool__list">
+                        <h3 class="heading-tertiary u-center-text">Backend</h3>
+                        <li class="tool">
+                            <span class="tool__name">Node.js</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">RESTful APIs</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                    </ul>
+                    <ul class="tool__list">
+                        <h3 class="heading-tertiary u-center-text">Databases</h3>
+                        <li class="tool">
+                            <span class="tool__name">SQL (MS SQL, MySQL, Oracle SQL)</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">noSQL (MongoDB/Mongoose)</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                    </ul>
+                    <ul class="tool__list">
+                        <h3 class="heading-tertiary u-center-text">Programming languages</h3>
+                        <li class="tool">
+                            <span class="tool__name">JavaScript</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">TypeScript</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">C#</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">Java</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">PHP</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                    </ul>
+                    <ul class="tool__list">
+                        <h3 class="heading-tertiary u-center-text">Frameworks and libraries</h3>
+                        <li class="tool">
+                            <span class="tool__name">Express</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">Restify</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">React.js</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">Redux</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">jQuery</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">ASP.NET</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                    </ul>
+                    <ul class="tool__list">
+                        <h3 class="heading-tertiary u-center-text">Unit testing</h3>
+                        <li class="tool">
+                            <span class="tool__name">Mocha</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">Chai</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">QUnit</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-1-of-2">
+                    <ul class="tool__list">
+                        <h3 class="heading-tertiary u-center-text">Web services</h3>
+                        <li class="tool">
+                            <span class="tool__name">AWS</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">Azure</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">IBM Watson</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                    </ul>
+                    <ul class="tool__list">
+                        <h3 class="heading-tertiary u-center-text">Scripting, bundling, compiling tools</h3>
+                        <li class="tool">
+                            <span class="tool__name">npm</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">Webpack</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">Babel</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                    </ul>
+                    <ul class="tool__list">
+                        <h3 class="heading-tertiary u-center-text">Version control and integration</h3>
+                        <li class="tool">
+                            <span class="tool__name">Git (GitHub/GitLab/BitBucket)</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">Trello</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">Jira</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">MS Teams</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                    </ul>
+                    <ul class="tool__list">
+                        <h3 class="heading-tertiary u-center-text">Methodologies</h3>
+                        <li class="tool">
+                            <span class="tool__name">Agile (Scrum)</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">Waterfall</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">TDD/BDD</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">SOLID</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">DRY, KISS, YAGNI</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">Mobile/Desctop-First</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">BEM</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                    </ul>
+                    <ul class="tool__list">
+                        <h3 class="heading-tertiary u-center-text">Other useful techniques</h3>
+                        <li class="tool">
+                            <span class="tool__name">Design thinking</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">Mind mapping</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">UML</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">SWOT analysis</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">BPMN</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                        <li class="tool">
+                            <span class="tool__name">RACI matrix</span>
+                            <span class="tool__score">
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--bright">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                                <svg viewBox="0 0 60 60" class="tool__icon tool__icon--light">
+                                    <use xlink:href="#lx-logo" />
+                                </svg>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="section" id="experience">
+            <header class="section-title u-center-text">
+                <div class="section-title__logo-box">
+                    <svg viewBox="0 0 60 60" class="section-title__logo">
+                        <use xlink:href="#lx-logo" />
+                    </svg>
+                </div>
+                <h2 class="section-title__text">Experience</h2>
+            </header>
+            <div class="row activity">
+                <div class="col-1-of-3">
+                    <h3 class="heading-tertiary activity__name">Cultiv8.ai <br> (via MissionReady HQ)</h3>
+                    <div class="activity__duration">Oct 2019 – Dec 2019</div>
+                </div>
+                <div class="col-2-of-3">
+                    <h3 class="heading-tertiary activity__title">Web Developer (full stack)</h3>
+                    <p class="activity__description">
+                        Developed chat-bot platform using Node.js and Restify on server-side, facebook messenger as a
+                        front-end, and dialogflow as a conversational AI web-service.
+                        Developed RESTful API for chat-bots analytic platform using node.js, Restify, Mongo DB,
+                        Mongoose, Power BI web-service.
+                        Design Power BI Dashboard for defined metrics. Building appropriate data sets from existing
+                        data base structure.
+                    </p>
+                    <div class="activity__location">Auckland, NZ</div>
+                </div>
+            </div>
+            <div class="row activity">
+                <div class="col-1-of-3">
+                    <h3 class="heading-tertiary activity__name">LUKOIL Mid East Limited<br>West Qurna – 2</h3>
+                    <div class="activity__duration">Jul 2014 – Nov 2015</div>
+                </div>
+                <div class="col-2-of-3">
+                    <h3 class="heading-tertiary activity__title">Business applications support engineer</h3>
+                    <p class="activity__description">
+                        Designed technical solutions for corporate business problems, provided ideas, options and
+                        consulting of using information technologies for corporate needs.
+                        Designed architecture of corporate web-applications.
+                        Developed and tested new functionality in collaboration with project teams (HTML, CSS,
+                        JavaScript, jQuery, ASP.NET, MS SQL, MS SharePoint).
+                        Provided second and third line onsite technical support of business applications, information
+                        systems and web-applications in collaboration with remote project teams located in different
+                        time zones (HP OpenView Service Desk, JIRA).
+                        Managed prioritization of change requests for business applications, analyzed work content,
+                        planned resources, managed incidents and problems (HP OpenView Service Desk, JIRA).
+                        Monitored usage of software licenses (MS SCCM, MS Active Directory).
+                    </p>
+                    <div class="activity__location">West Qurna - 2 oilfield, Basrah, Iraq</div>
+                </div>
+            </div>
+            <div class="row activity">
+                <div class="col-1-of-3">
+                    <h3 class="heading-tertiary activity__name">LUKOIL Overseas Service B.V.<br>(Dubai branch)</h3>
+                    <div class="activity__duration">Oct 2013 – Jun 2014</div>
+                </div>
+                <div class="col-2-of-3">
+                    <h3 class="heading-tertiary activity__title">IT Services Department, Engineer</h3>
+                    <p class="activity__description">
+                        Organized second line support for corporate business systems and applications in collaboration
+                        with Service Desk team (HP OpenView Service Desk, JIRA).
+                        Utilized ITIL processes to manage incidents, problems and changes (HP OpenView Service Desk,
+                        JIRA).
+                    </p>
+                    <div class="activity__location">Tekom, Dubai, UAE</div>
+                </div>
+            </div>
+            <div class="row activity">
+                <div class="col-1-of-3">
+                    <h3 class="heading-tertiary activity__name">LUKOIL Overseas Service B.V.<br>(Moscow branch)</h3>
+                    <div class="activity__duration">Feb 2011 – Oct 2013</div>
+                </div>
+                <div class="col-2-of-3">
+                    <h3 class="heading-tertiary activity__title">IT Services Department, Lead Expert</h3>
+                    <p class="activity__description">
+                        Supported operation of SAP ERP and OpenText based corporate systems in collaboration with
+                        project teams.
+                        Utilized ITIL processes to manage incidents, problems and changes (HP OpenView Service Desk,
+                        JIRA).
+                        Conducted review of IT solutions for matching corporate business and security models.
+                    </p>
+                    <div class="activity__location">Moscow, Russia</div>
+                </div>
+            </div>
+            <div class="row activity">
+                <div class="col-1-of-3">
+                    <h3 class="heading-tertiary activity__name">LUKOIL Overseas Service B.V.<br>(Moscow branch)</h3>
+                    <div class="activity__duration">Sep 2007 – Feb 2011</div>
+                </div>
+                <div class="col-2-of-3">
+                    <h3 class="heading-tertiary activity__title">IMS Project (SAP ERP), FI Department, Head Expert</h3>
+                    <p class="activity__description">
+                        Configured SAP FI module on design stage of the project.
+                        Designed scripts and structured data sets for information flowing from number of sources to SAP
+                        FI module (LSMW).
+                        Designed use cases for system testing.
+                        Designed Project Solutions, Specifications and other project documentation.
+                        Prepared and conducted trainings of using implemented SAP ERP system.
+                        Organized support process of SAP FI Master Data Management on transition and operation stages.
+                    </p>
+                    <div class="activity__location">Moscow, Russia</div>
+                </div>
+            </div>
+            <div class="row activity">
+                <div class="col-1-of-3">
+                    <h3 class="heading-tertiary activity__name">1C – Automatization</h3>
+                    <div class="activity__duration">Dec 2002 – Sep 2007</div>
+                </div>
+                <div class="col-2-of-3">
+                    <h3 class="heading-tertiary activity__title">Software Engineer</h3>
+                    <p class="activity__description">
+                        Identified business problems and designed technical solutions, provided ideas, options and
+                        consulting of using information technologies for several business customers.
+                        Designed architecture of business-applications.
+                        Developed and tested database structure, views, queries, stored procedures, user interfaces,
+                        integration solutions (PHP, JavaScript, Visual Basic, WSH, batch files, ftp, XML, OLE, ADO, MS
+                        SQL, MySQL).
+                    </p>
+                    <div class="activity__location">Moscow, Russia</div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section" id="qualification">
+            <header class="section-title u-center-text">
+                <div class="section-title__logo-box">
+                    <svg viewBox="0 0 60 60" class="section-title__logo">
+                        <use xlink:href="#lx-logo" />
+                    </svg>
+                </div>
+                <h2 class="section-title__text">Qualification</h2>
+            </header>
+            <div class="row activity">
+                <div class="col-1-of-3">
+                    <h3 class="heading-tertiary activity__name">Udemy</h3>
+                    <div class="activity__duration">Jan 2020</div>
+                </div>
+                <div class="col-2-of-3">
+                    <h3 class="heading-tertiary activity__title">Course - Software Architecture: Meta and SOLID
+                        Principles in C#</h3>
+                    <p class="activity__description">
+                        Course description - get from udemy.com
+                    </p>
+                    <div class="activity__location">online</div>
+                </div>
+            </div>
+            <div class="row activity">
+                <div class="col-1-of-3">
+                    <h3 class="heading-tertiary activity__name">Microsoft</h3>
+                    <div class="activity__duration">Jan 2020</div>
+                </div>
+                <div class="col-2-of-3">
+                    <h3 class="heading-tertiary activity__title">Sertification exam 70-480 - Programming in HTML5 with
+                        JavaScript and CSS3</h3>
+                    <p class="activity__description">
+                        Exam description - get from microsoft.com
+                    </p>
+                    <div class="activity__location">certified center</div>
+                </div>
+            </div>
+            <div class="row activity">
+                <div class="col-1-of-3">
+                    <h3 class="heading-tertiary activity__name">Mission Ready HQ</h3>
+                    <div class="activity__duration">Dec 2019</div>
+                </div>
+                <div class="col-2-of-3">
+                    <h3 class="heading-tertiary activity__title">Course - AI Developer</h3>
+                    <p class="activity__description">
+                        Course programme from mrhq.com
+                    </p>
+                    <div class="activity__location">Auckland, NZ</div>
+                </div>
+            </div>
+            <div class="row activity">
+                <div class="col-1-of-3">
+                    <h3 class="heading-tertiary activity__name">Udemy</h3>
+                    <div class="activity__duration">Aug 2019</div>
+                </div>
+                <div class="col-2-of-3">
+                    <h3 class="heading-tertiary activity__title">Course - Advanced CSS and SASS: Flexbox, Grid,
+                        Animations and More!</h3>
+                    <p class="activity__description">
+                        Course programme from udemy.com
+                    </p>
+                    <div class="activity__location">online</div>
+                </div>
+            </div>
+            <div class="row activity">
+                <div class="col-1-of-3">
+                    <h3 class="heading-tertiary activity__name">Udemy</h3>
+                    <div class="activity__duration">Feb 2019</div>
+                </div>
+                <div class="col-2-of-3">
+                    <h3 class="heading-tertiary activity__title">Course - The complete React Full stack course</h3>
+                    <p class="activity__description">
+                        Course programme from udemy.com
+                    </p>
+                    <div class="activity__location">online</div>
+                </div>
+            </div>
+            <div class="row activity">
+                <div class="col-1-of-3">
+                    <h3 class="heading-tertiary activity__name">Javarush</h3>
+                    <div class="activity__duration">Jun 2016</div>
+                </div>
+                <div class="col-2-of-3">
+                    <h3 class="heading-tertiary activity__title">Course - Javarush</h3>
+                    <p class="activity__description">
+                        Course programme from Javarush.com
+                    </p>
+                    <div class="activity__location">online</div>
+                </div>
+            </div>
+            <div class="row activity">
+                <div class="col-1-of-3">
+                    <h3 class="heading-tertiary activity__name">EXIN</h3>
+                    <div class="activity__duration">Sep 2013</div>
+                </div>
+                <div class="col-2-of-3">
+                    <h3 class="heading-tertiary activity__title">Exam - ITIL&reg;v3 Foundation, Cert. No 00260407</h3>
+                    <p class="activity__description">
+                        Certification programme
+                    </p>
+                    <div class="activity__location">online</div>
+                </div>
+            </div>
+            <div class="row activity">
+                <div class="col-1-of-3">
+                    <h3 class="heading-tertiary activity__name">SAP CIS</h3>
+                    <div class="activity__duration">Sep 2010</div>
+                </div>
+                <div class="col-2-of-3">
+                    <h3 class="heading-tertiary activity__title">SCM500 - Processes in Procurement in SAP R/3</h3>
+                    <p class="activity__description">
+                        Course programme (download somewhere)
+                    </p>
+                    <div class="activity__location">Moscow, Russia</div>
+                </div>
+            </div>
+            <div class="row activity">
+                <div class="col-1-of-3">
+                    <h3 class="heading-tertiary activity__name">SAP CIS</h3>
+                    <div class="activity__duration">Oct 2007</div>
+                </div>
+                <div class="col-2-of-3">
+                    <h3 class="heading-tertiary activity__title">AC200 - Basics of Customizing for Financial Accounting:
+                        General Ledger, Accounts Receivable, Accounts Payable in SAP R/3</h3>
+                    <p class="activity__description">
+                        Course programme (download somewhere)
+                    </p>
+                    <div class="activity__location">Moscow, Russia</div>
+                </div>
+            </div>
+            <div class="row activity">
+                <div class="col-1-of-3">
+                    <h3 class="heading-tertiary activity__name">’Specialist’ Computer Training Center of Bauman
+                        Technical University</h3>
+                    <div class="activity__duration">Apr 2002</div>
+                </div>
+                <div class="col-2-of-3">
+                    <h3 class="heading-tertiary activity__title">Programming and Databases fundamentals</h3>
+                    <p class="activity__description">
+                        Course programme (download somewhere)
+                    </p>
+                    <div class="activity__location">Moscow, Russia</div>
+                </div>
+            </div>
+            <div class="row activity">
+                <div class="col-1-of-3">
+                    <h3 class="heading-tertiary activity__name">G.I. Nevelskoy Maritime State University</h3>
+                    <div class="activity__duration">Jul 1997</div>
+                </div>
+                <div class="col-2-of-3">
+                    <h3 class="heading-tertiary activity__title">Bachelor of Engineering - Ship Power Units Operation
+                    </h3>
+                    <p class="activity__description">
+                        Course programme (download somewhere)
+                    </p>
+                    <div class="activity__location">Vladivostok, Russia</div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="section section-contacts" id="contacts">
+            <header class="section-title u-center-text">
+                <div class="section-title__logo-box">
+                    <svg viewBox="0 0 60 60" class="section-title__logo">
+                        <use xlink:href="#lx-logo" />
+                    </svg>
+                </div>
+                <h2 class="section-title__text">Contacts</h2>
+            </header>
+            <div class="contacts">
+                <!-- <h3 class="heading-tertiary u-center-text contacts__heading">
+                    You can contact me via
+                </h3> -->
+                <div class="row">
+                    <div class="col-1-of-2">
+                        <div class="contacts__contact-box">
+                            <a href="https://linkedin.com/in/alexander-kish" target="_blank" class="contacts__contact">
+                                <span class="contacts__icon-box">
+                                    <svg class="contacts__icon">
+                                        <use xlink:href="../img/sprite.svg#icon-linkedin" />
+                                    </svg>
+                                </span>
+                                <span class="contacts__text">
+                                    https://linkedin.com/in/alexander-kish
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-1-of-2">
+                        <div class="contacts__contact-box">
+                            <a href="mailto:alexander.kish@gmail.com" class="contacts__contact">
+                                <span class="contacts__icon-box">
+                                    <svg class="contacts__icon">
+                                        <use xlink:href="../img/sprite.svg#icon-email" />
+                                    </svg>
+                                </span>
+                                <span class="contacts__text">
+                                    alexander.kish@gmail.com
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="contacts__btn-box">
+                        <a href="#message" class="btn btn-contacts">Send a message</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="message" id="message">
+                <div class="message__form" id="contact-form">
+                    <h3 class="message__header">Send a message</h3>
+                    <a href="#contacts" class="message__close">&times;</a>
+                    <form id="contactForm" class="form" action="#">
+                        <div class="row">
+                            <div class="col-1-of-2">
+                                <div class="form__group">
+                                    <input id="name" type="text" class="form__input" name="name" placeholder="Name"
+                                        required>
+                                    <label for="name" class="form__label form__label--not-last">Name</label>
+                                </div>
+                            </div>
+                            <div class="col-1-of-2">
+                                <div class="form__group">
+                                    <input id="email" type="email" class="form__input" name="email" placeholder="Email"
+                                        required>
+                                    <label for="email" class="form__label form__label--not-last">Email</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form__group">
+                                <input id="subject" type="text" class="form__input" name="subject" placeholder="Subject"
+                                    required>
+                                <label for="subject" class="form__label form__label--not-last">Subject</label>
+                            </div>
+                            <div class="form__group form__group--message">
+                                <textarea id="message" class="form__input form__input--message" cols="30" rows="8"
+                                    placeholder="Message" required></textarea>
+                                <label for="message" class="form__label form__label--last">Message</label>
+                            </div>
+                            <div class="form__group form__group--btns">
+                                <button type="submit" value="Send" class="btn btn-form">Send</button>
+                                <button type="reset" value="Reset" class="btn btn-form">Reset</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <span class="footer__button">
+            <a href="#about" class="footer__scroll-up">
+                <svg class="footer__icon-up">
+                    <use xlink:href="../img/sprite.svg#icon-chevron-up" />
+                </svg>
+            </a>
+        </span>
+        <div class="row">
+            <div class="footer__logo-box">
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60"
+                    class="footer__logo">
+                    <use xlink:href="#lx-logo" />
+                </svg>
+            </div>
+            <!-- <p class="footer__slogan">Designed and developed<br>by</p> -->
+            <!-- <h3 class="footer__name">Alexander Kish</h3> -->
+            <p class="footer__copyright">&copy; designed and developed by Alexander Kish</p>
+            <hr class="footer__hr">
+            <p class="footer__attributions">Images on this page are credited to <a href="https://unsplash.com/"
+                    class="footer__link">unsplash.com</a>.</p>
+        </div>
+    </footer>
+
+    <!--
+    <section class="grid-test">
+        <div class="row">
+            <div class="col-1-of-2">
+                Col-1-of-2
+            </div>
+            <div class="col-1-of-2">
+                Col-1-of-2
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-3">
+                Col-1-of-3
+            </div>
+            <div class="col-1-of-3">
+                Col-1-of-3
+            </div>
+            <div class="col-1-of-3">
+                Col-1-of-3
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-3">
+                Col-1-of-3
+            </div>
+            <div class="col-2-of-3">
+                Col-2-of-3
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-4">
+                Col-1-of-4
+            </div>
+            <div class="col-1-of-4">
+                Col-1-of-4
+            </div>
+            <div class="col-1-of-4">
+                Col-1-of-4
+            </div>
+            <div class="col-1-of-4">
+                Col-1-of-4
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-4">
+                Col-1-of-4
+            </div>
+            <div class="col-1-of-4">
+                Col-1-of-4
+            </div>
+            <div class="col-2-of-4">
+                Col-2-of-4
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-4">
+                Col-1-of-4
+            </div>
+            <div class="col-3-of-4">
+                Col-3-of-4
+            </div>
+        </div>
+    </section>
+    -->
+</body>
+
+</html>

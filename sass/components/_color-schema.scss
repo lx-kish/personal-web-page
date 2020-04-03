@@ -1,0 +1,297 @@
+.color-schema {
+  &:hover .color-schema__panel {
+    opacity: 1;
+    visibility: visible;
+
+    transform: translateY(-0.3rem);
+    box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
+  }
+
+  &__panel {
+    position: fixed;
+    left: 2%;
+    bottom: 5.5rem;
+    z-index: 1;
+    width: 16rem;
+    height: 16rem;
+    border-radius: 0.8rem;
+    border: 0.2rem solid var(--color-primary-dark);
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 1rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+
+    &:hover {
+      opacity: 1;
+      visibility: visible;
+
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
+    }
+  }
+
+  &__form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__palette {
+    padding: 1rem;
+
+    flex: 0 0 70%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__color-component {
+    width: 3.2rem;
+    height: 3.2rem;
+    border-radius: 0.2rem;
+  }
+
+  &__color-label {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    // display: inline-block;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__color-icon {
+    // flex: 0 0 50%;
+    // justify-content: center;
+
+    width: 50%;
+    height: 50%;
+    fill: var(--color-sign);
+    opacity: 0;
+    visibility: hidden;
+  }
+
+  &__input {
+    display: none;
+
+    &:checked + .color-schema__color-icon {
+      opacity: 1;
+      visibility: visible;
+      z-index: 5;
+    }
+  }
+
+  &__btn {
+    position: fixed;
+    left: 5%;
+    bottom: 1.8rem;
+    z-index: 1;
+    display: inline-block;
+    border-radius: 0.8rem;
+    padding: 0.2rem;
+    height: 3.2rem;
+    width: 3.2rem;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
+    }
+
+    &:active {
+      transform: translateY(-0.1rem);
+      box-shadow: 0 0.5rem 1rem var(--color-shadow-20);
+    }
+  }
+
+  &__icon {
+    height: 100%;
+    width: 100%;
+  }
+
+  /////////////////////////////////////////////////////////
+  //TOGGLE BUTTON
+  &__toggle {
+    // width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+
+    &-label {
+      // height: 20px;
+      // line-height: 20px;
+      width: 100%;
+      padding: 1rem;
+      position: relative;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &-text {
+      font-size: 1.2rem;
+    }
+
+    &-input {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 4.4rem;
+      height: 2.4rem;
+      border-radius: 1.5rem;
+      // border: 0.2rem solid var(--color-primary-dark);
+      background: transparent;
+      transition: all 0.4s;
+
+      &::before {
+        width: 1.6rem;
+        height: 1.6rem;
+        border-radius: 50%;
+        // background-color: var(--color-primary-dark);
+        content: "";
+        position: absolute;
+        top: 1.4rem;
+        left: 64%;
+        transition: all 0.4s;
+      }
+
+      // &:checked {
+      //   // background-color: var(--color-primary-dark);
+      // }
+
+      &:checked::before {
+        // background-color: var(--color-bg);
+        left: 78%;
+      }
+
+      &:focus {
+        outline: none;
+      }
+    }
+
+    //NEW TOGGLE COLORS
+    &--color {
+      &-top-bottom {
+        & .color-schema__toggle {
+          &-text {
+            color: var(--color-sign);
+          }
+
+          &-input {
+            border: 0.2rem solid var(--color-sign);
+
+            &::before {
+              background-color: var(--color-sign);
+            }
+
+            &:checked {
+              background-color: var(--color-sign);
+              // background-color: var(--color-primary-dark);
+            }
+
+            &:checked::before {
+              background-color: var(--color-primary-dark);
+              // background-color: var(--color-sign);
+            }
+          }
+        }
+      }
+
+      &-main {
+        & .color-schema__toggle {
+          &-text {
+            color: var(--color-primary-dark);
+          }
+
+          &-input {
+            border: 0.2rem solid var(--color-primary-dark);
+
+            &::before {
+              background-color: var(--color-primary-dark);
+            }
+
+            &:checked {
+              background-color: var(--color-primary-dark);
+            }
+
+            &:checked::before {
+              background-color: var(--color-bg);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //color toggle depending on backgrounds
+  &--color {
+    &-top-bottom {
+      fill: var(--color-sign);
+      border: 0.2rem solid var(--color-sign);
+
+      // //NEW TOGGLE COLORS
+      // & .color-schema__toggle {
+      //   &-text {
+      //     color: var(--color-sign);
+      //   }
+
+      //   &-input {
+      //     border: 0.2rem solid var(--color-sign);
+
+      //     &::before {
+      //       background-color: var(--color-sign);
+      //     }
+
+      //     &:checked {
+      //       background-color: var(--color-primary-dark);
+      //     }
+
+      //     &:checked::before {
+      //       background-color: var(--color-sign);
+      //     }
+      //   }
+      // }
+    }
+
+    &-main {
+      fill: var(--color-primary-dark);
+      border: 0.2rem solid var(--color-primary-dark);
+
+      // //NEW TOGGLE COLORS
+      // & .color-schema__toggle {
+      //   &-text {
+      //     color: var(--color-primary-dark);
+      //   }
+
+      //   &-input {
+      //     border: 0.2rem solid var(--color-primary-dark);
+
+      //     &::before {
+      //       background-color: var(--color-primary-dark);
+      //     }
+
+      //     &:checked {
+      //       background-color: var(--color-primary-dark);
+      //     }
+
+      //     &:checked::before {
+      //       background-color: var(--color-bg);
+      //     }
+      //   }
+      // }
+    }
+  }
+}
