@@ -1,9 +1,13 @@
-.u-center-text { text-align: center; }
+.u-center-text {
+    text-align: center;
+}
 
-.u-margin-bottom-main { margin-bottom: 8rem; }
+.u-margin-bottom-main {
+    margin-bottom: 8rem;
+}
 
-.u-margin-left-right-main { 
-    margin-left: 15rem; 
+.u-margin-left-right-main {
+    margin-left: 15rem;
     margin-right: 15rem;
 }
 
@@ -29,4 +33,16 @@
 
 .u-bg-yellow {
     background-color: var(--color-CU-dark);
+}
+
+body.color-theme-in-transition,
+body.color-theme-in-transition *,
+body.color-theme-in-transition *:before,
+body.color-theme-in-transition *:after {
+    -webkit-transition: all 0.5s ease !important;
+    -moz-transition: all 0.5s ease !important;
+    -o-transition: all 0.5s ease !important;
+    transition: all 0.5s !important;
+    transition-delay: 0 !important;
+    backface-visibility: hidden !important;
 }

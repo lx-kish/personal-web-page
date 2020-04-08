@@ -15,13 +15,19 @@
 
     max-height: 90vh;
     width: 70vw;
-    border-radius: 0.8rem;
+    border-radius: $border-radius;
     padding: 1.5rem 3.5rem;
     background-color: var(--color-bg);
     overflow-y: auto;
     opacity: 0;
     transform: translate(-50%, -50%) scale(.5);
     transition: all .4s .2s;
+
+    @include respond(_0-360) {
+      height: 80vh;
+      width: 90vw;
+      padding: 5rem 3.5rem;
+    }
   }
 
   &__header {
@@ -31,6 +37,11 @@
     font-size: $font-size-main;
     font-weight: 700;
     color: var(--color-primary-dark);
+
+    @include respond(_0-360) {
+      font-size: $font-size-mobile-small;
+    }
+
   }
   
   &:target {
@@ -53,8 +64,15 @@
       font-size: 3rem;
       text-decoration: none;
       line-height: .5;
-      color: var(--color-grey-dark);
+      // z-index: 101;
+      color: var(--color-menu-base);
       transition: all .2s;
+
+      @include respond(_0-360) {
+        font-size: 10rem;
+        line-height: .5;
+        color: var(--color-primary-dark);
+      }
     }
 
     &:hover {
@@ -64,14 +82,17 @@
 }
 
 .form {
-  // &__group:not(:last-child) {
-  //   margin-bottom: -1rem;
-  // }
+
   &__group--btns {
-    margin: auto;
-    width: 25.5%;
+    // margin: 0 auto;
+    // width: 25.5%;
+    text-align: center;
     position: relative;
     top: -3rem;
+
+    @include respond(_0-360) {
+
+    }
   }
 
   &__input {
@@ -80,7 +101,7 @@
     font-family: inherit;
     color: inherit;
     padding: 0.7rem 1rem;
-    border-radius: 2px;
+    border-radius: .2rem;
     background-color: var(--color-input-bg);
     border: none;
     // border-bottom: 2px solid transparent;
@@ -100,7 +121,7 @@
       // border-right: 2px solid var(--color-primary-dark);
 
       &:invalid {
-        border-bottom: 2px solid var(--color__accent);
+        border-bottom: 2px solid var(--color-accent);
         // border-right: 2px solid var(--color__accent);
       }
     }
@@ -111,7 +132,7 @@
 
     display: block;
     font-size: $font-size-main;
-    color: var(--color-grey-dark);
+    color: var(--color-font);
     margin-top: 1rem;
     margin-left: 1rem;
     transition: all 0.3s;

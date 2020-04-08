@@ -7,10 +7,20 @@
   &__name {
     display: inline-block;
     width: 70%;
+
+    @include respond(_0-360) {
+      top: 5%;
+      max-width: 65%;
+      font-size: $font-size-mobile-small;
+    }
   }
 
   &__score {
     float: right;
+
+    @include respond(_0-360) {
+      max-width: 30%;
+    }
   }
 
   &__icon {
@@ -22,6 +32,11 @@
     transition: all 0.3s;
     animation-timing-function: ease-in;
     backface-visibility: hidden;
+
+    @include respond(_0-360) {
+      top: 1.9rem;
+      height: 3.5rem;
+    }
   
     &--bright {
       stroke: var(--color-primary-dark);
@@ -38,8 +53,16 @@
     background: var(--color-input-bg);
     // background: var(--color-yellow-bg);
 
+    @include respond(_0-360) {
+      background: none;
+    }
+
     .tool__icon {
       margin-left: 1.5px;
+
+      @include respond(_0-360) {
+        margin-left: 0;
+      }
     }
   }
 }

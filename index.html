@@ -19,7 +19,7 @@
 
 <!-- <body> -->
 
-<body class="color-primary--blue">
+<body data-theme="light" primary-color="blue">
     <!-- SVG logo - will use further across the page -->
     <svg version="1.1" viewBox="0 0 60 60" style="display: none;">
         <symbol id="lx-logo">
@@ -37,7 +37,7 @@
                         <div class="color-schema__color-component u-bg-blue">
                             <label for="blue" class="color-schema__color-label">
                                 <input id="blue" class="color-schema__input" type="radio" name="color-schema__color"
-                                    value="color-primary--blue" checked>
+                                    value="blue" checked>
                                 <svg class="color-schema__color-icon">
                                     <use xlink:href="img/sprite.svg#icon-check"></use>
                                 </svg>
@@ -46,7 +46,7 @@
                         <div class="color-schema__color-component u-bg-orange">
                             <label for="orange" class="color-schema__color-label">
                                 <input id="orange" class="color-schema__input" type="radio" name="color-schema__color"
-                                    value="color-primary--orange">
+                                    value="orange">
                                 <svg class="color-schema__color-icon">
                                     <use xlink:href="img/sprite.svg#icon-check"></use>
                                 </svg>
@@ -55,7 +55,7 @@
                         <div class="color-schema__color-component u-bg-red">
                             <label for="red" class="color-schema__color-label">
                                 <input id="red" class="color-schema__input" type="radio" name="color-schema__color"
-                                    value="color-primary--red">
+                                    value="red">
                                 <svg class="color-schema__color-icon">
                                     <use xlink:href="img/sprite.svg#icon-check"></use>
                                 </svg>
@@ -66,7 +66,7 @@
                         <div class="color-schema__color-component u-bg-brown">
                             <label for="brown" class="color-schema__color-label">
                                 <input id="brown" class="color-schema__input" type="radio" name="color-schema__color"
-                                    value="color-primary--brown">
+                                    value="brown">
                                 <svg class="color-schema__color-icon">
                                     <use xlink:href="img/sprite.svg#icon-check"></use>
                                 </svg>
@@ -75,7 +75,7 @@
                         <div class="color-schema__color-component u-bg-green">
                             <label for="green" class="color-schema__color-label">
                                 <input id="green" class="color-schema__input" type="radio" name="color-schema__color"
-                                    value="color-primary--green">
+                                    value="green">
                                 <svg class="color-schema__color-icon">
                                     <use xlink:href="img/sprite.svg#icon-check"></use>
                                 </svg>
@@ -84,7 +84,7 @@
                         <div class="color-schema__color-component u-bg-yellow">
                             <label for="yellow" class="color-schema__color-label">
                                 <input id="yellow" class="color-schema__input" type="radio" name="color-schema__color"
-                                    value="color-primary--yellow">
+                                    value="yellow">
                                 <svg class="color-schema__color-icon">
                                     <use xlink:href="img/sprite.svg#icon-check"></use>
                                 </svg>
@@ -93,17 +93,19 @@
                     </div>
                 </div>
                 <div class="color-schema__toggle">
-                    <label for="day-night" class="color-schema__toggle-label">
-                        <span class="color-schema__toggle-text">Night mode</span>
-                        <input id="day-night" class="color-schema__toggle-input" type="checkbox">
+                    <label for="dark-mode" class="color-schema__toggle-label">
+                        <span class="color-schema__toggle-text">Dark mode</span>
+                        <input id="dark-mode" class="color-schema__toggle-input" type="checkbox">
                     </label>
                 </div>
             </form>
         </div>
-        <div class="color-schema__btn">
-            <svg class="color-schema__icon">
-                <use xlink:href="img/sprite.svg#icon-fill"></use>
-            </svg>
+        <div class="color-schema__btn--bg">
+            <div class="color-schema__btn">
+                <svg class="color-schema__icon">
+                    <use xlink:href="img/sprite.svg#icon-fill"></use>
+                </svg>
+            </div>
         </div>
     </div>
 
@@ -119,9 +121,11 @@
         <div class="header__text-box">
             <!-- <h1 class="header__main">Alexander Kish</h1> -->
             <h1 class="header__main">Alexander Kis<span class="header__last-letter">h</span></h1>
+            <!-- <h1 class="header__main">Alexander <span class="header__main--surname">Kis<span class="header__last-letter">h</span></span></h1> -->
             <hr class="header__hr">
             <!-- <h2 class="header__sub">Web developer | Software engineer</h2> -->
-            <h2 class="header__sub">Web developer | Software enginee<span class="header__last-letter">r</span></h2>
+            <h2 class="header__sub">Web developer <span class="header__sub-delimeter">|</span> Software enginee<span
+                    class="header__last-letter">r</span></h2>
 
         </div>
         <span class="header__button">
@@ -1594,12 +1598,12 @@
                 <div class="row">
                     <div class="col-1-of-2">
                         <div class="contacts__contact-box">
-                            <a href="https://linkedin.com/in/alexander-kish" target="_blank" class="contacts__contact">
-                                <span class="contacts__icon-box">
-                                    <svg class="contacts__icon">
-                                        <use xlink:href="../img/sprite.svg#icon-linkedin" />
-                                    </svg>
-                                </span>
+                            <a href="https://linkedin.com/in/alexander-kish" target="_blank" class="contacts__link">
+                                <!-- <span class="contacts__icon-box"> -->
+                                <svg class="contacts__icon">
+                                    <use xlink:href="../img/sprite.svg#icon-linkedin" />
+                                </svg>
+                                <!-- </span> -->
                                 <span class="contacts__text">
                                     https://linkedin.com/in/alexander-kish
                                 </span>
@@ -1608,12 +1612,12 @@
                     </div>
                     <div class="col-1-of-2">
                         <div class="contacts__contact-box">
-                            <a href="mailto:alexander.kish@gmail.com" class="contacts__contact">
-                                <span class="contacts__icon-box">
-                                    <svg class="contacts__icon">
-                                        <use xlink:href="../img/sprite.svg#icon-email" />
-                                    </svg>
-                                </span>
+                            <a href="mailto:alexander.kish@gmail.com" class="contacts__link">
+                                <!-- <span class="contacts__icon-box"> -->
+                                <svg class="contacts__icon">
+                                    <use xlink:href="../img/sprite.svg#icon-email" />
+                                </svg>
+                                <!-- </span> -->
                                 <span class="contacts__text">
                                     alexander.kish@gmail.com
                                 </span>
@@ -1657,7 +1661,7 @@
                             </div>
                             <div class="form__group form__group--message">
                                 <textarea id="message" class="form__input form__input--message" cols="30" rows="8"
-                                    placeholder="Message" required></textarea>
+                                    name="message" placeholder="Message" required></textarea>
                                 <label for="message" class="form__label form__label--last">Message</label>
                             </div>
                             <div class="form__group form__group--btns">
@@ -1687,7 +1691,7 @@
             </div>
             <!-- <p class="footer__slogan">Designed and developed<br>by</p> -->
             <!-- <h3 class="footer__name">Alexander Kish</h3> -->
-            <p class="footer__copyright">&copy; designed and developed by Alexander Kish</p>
+            <p class="footer__copyright">designed and developed with passion by Alexander Kish</p>
             <hr class="footer__hr">
             <p class="footer__attributions">Images on this page are credited to <a href="https://unsplash.com/"
                     class="footer__link">unsplash.com</a>.</p>

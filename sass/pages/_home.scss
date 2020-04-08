@@ -1,10 +1,24 @@
 .section {
     // padding-top: 7rem;
-    max-width: $container-max-width;
+    // max-width: $container-max-width;
     padding: $container-padding-top-bottom $container-padding-left-right;
     background-color: var(--color-bg);
+
+    @include respond(_360-600) {
+        padding: 5rem 5rem;
+    }
+
+    @include respond(_0-360) {
+        padding: 15rem 3.5rem 0;
+    }
 }
 
-// .section-profile, .section-contacts {
-//     background-color: var(--color-grey-bg);
-// }
+.section-profile {
+    @include respond(_360-600) {
+        padding-top: 10rem;
+    }
+
+    @include respond(_0-360) {
+        padding-top: 15rem;
+    }
+}

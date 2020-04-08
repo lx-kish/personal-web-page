@@ -6,6 +6,11 @@
   text-align: center;
   position: relative;
 
+  @include respond(_0-360) {
+    padding: 5rem 15rem;
+    font-size: 2.5rem;
+  }
+
   &__button {
     display: inline-block;
     position: absolute;
@@ -16,13 +21,22 @@
     background-color: var(--color-menu-base);
     // background-color: var(--color-primary-dark); //grey--font);
     text-align: center;
-    border-radius: 0 0 .8rem .8rem;
+    border-radius: 0 0 $border-radius $border-radius;
 
     @include animationAppears;
     // animation-name: appears;
     // animation-duration: 5.5s;
     // animation-timing-function: ease-in;
     // backface-visibility: hidden;
+
+    @include respond(_600-900) {
+      right: 1.5%;
+    }
+
+
+    @include respond(_360-600) {
+      height: 10rem;
+    }
   }
 
   &__icon-up {
@@ -32,10 +46,19 @@
     position: relative;
     top: 50%;
     transform: translateY(-50%);
+
+    @include respond(_360-600) {
+      height: 5rem;
+      width: 5rem;
+    }
   }
 
   &__logo-box {
     padding-bottom: 2rem;
+
+    @include respond(_0-360) {
+      padding-bottom: 5rem;
+    }
   }
 
   &__logo {
@@ -43,6 +66,10 @@
     stroke: var(--color-sign);
     fill: var(--color-sign);
     stroke-width: 0.5;
+
+    @include respond(_0-360) {
+      height: 9rem;
+    }
   }
 
   &__hr {
@@ -53,29 +80,6 @@
     width: 40rem;
     border: .5px solid var(--color-sign);
   }
-
-//   &__slogan {
-//     // font-size: 1.3rem;
-//     text-transform: lowercase;
-//     // font-size: .9rem;
-//     letter-spacing: 0.56rem;
-//     -webkit-box-decoration-break: clone;
-//     box-decoration-break: clone;
-//   }
-
-//   &__name {
-//     font-size: 3rem;
-//     font-weight: 300;
-//     text-transform: uppercase;
-//   }
-
-  // &__copyright {
-  //   font-size: 1rem;
-  // }
-
-  // &__attributions {
-  //   font-size: 1rem;
-  // }
 
   &__link:link,
   &__link:visited {

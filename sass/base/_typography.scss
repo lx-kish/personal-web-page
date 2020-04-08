@@ -12,6 +12,10 @@ body {
 .heading-tertiary {
     font-size: $font-size-main;
     font-weight: 700;
+
+    @include respond(_0-360) {
+        font-size: $font-size-mobile-small;
+    }
 }
 
 // .paragraph-title {

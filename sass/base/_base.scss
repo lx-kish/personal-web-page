@@ -7,7 +7,32 @@
 }
 
 html {
-  font-size: 62.5%;
+  //defines how many px is 1rem
+  font-size: 62.5%; //1rem = 10px (10px/16px = 62.5%)
+
+  // @include respond(_360-600) {
+  //   font-size: 50%;
+  // }
+
+  @include respond(_900-1200) {
+    font-size: 56.25%; //1rem = 9px (9px/16px = 56.25%)
+  }
+
+  @include respond(_600-900) {
+    font-size: 50%; //1rem = 8px (8px/16px = 50%)
+  }
+
+  @include respond(_360-600) {
+    font-size: 31.25%; //1rem = 5px (5px/16px = 31.25%)
+  }
+
+  @include respond(_0-360) {
+    font-size: 25%; //1rem = 4px (4px/16px = 25%)
+  }
+
+  @include respond(big-desktop) {
+    font-size: 75%; //1rem = 12px (12px/16px = 75%)
+  }
 }
 
 :root {
@@ -153,92 +178,112 @@ html {
 
 body {
   box-sizing: border-box;
+
+  &[data-theme="light"] {
+    //BACKGROUND
+    --color-bg: var(--color-grey-bg);
+
+    //FONT
+    --color-font: var(--color-black);
+
+    //HEADER-FOOTER-MENU-TEXT-ICONS
+    --color-sign: var(--color-white);
+
+    //MENU
+    --color-menu-base: var(--color-grey-dark);
+
+    //SECTION TOOLSET
+    --color-score-light: var(--color-grey-mild);
+    --color-input-bg: var(--color-white-50);
+
+    //SHADOWS
+    --color-shadow-20: var(--color-black-20);
+    --color-shadow-50: var(--color-black-50);
+  }
+
+  &[data-theme="dark"] {
+    //BACKGROUND
+    --color-bg: #{$color-bg-night};
+
+    //FONT
+    --color-font: #{$color-font-night};
+
+    //HEADER-FOOTER-MENU-TEXT-ICONS
+    // --color-sign: #{$color-sign-night};
+
+    //MENU
+    // --color-menu-base: #{$color-menu-base-night};
+
+    //SECTION TOOLSET
+    --color-score-light: #{$color-score-light-night};
+    --color-input-bg: #{$color-input-bg-night};
+
+    //SHADOWS
+    // --color-shadow-20: #{$color-shadow-night-20};
+    // --color-shadow-50: #{$color-shadow-night-50};
+  }
+
+  &[primary-color="blue"] {
+    --color-primary-dark: #{$color-ACC-dark};
+    --color-primary-dark-70: #{$color-ACC-dark-70};
+    --color-primary-dark-90: #{$color-ACC-dark-90};
+
+    --color-primary-light: #{$color-ACC-light};
+    --color-primary-light-70: #{$color-ACC-light-70};
+    --color-primary-light-90: #{$color-ACC-light-90};
+  }
+
+  &[primary-color="orange"] {
+    --color-primary-dark: #{$color-PS-dark};
+    --color-primary-dark-70: #{$color-PS-dark-70};
+    --color-primary-dark-90: #{$color-PS-dark-90};
+
+    --color-primary-light: #{$color-PS-light};
+    --color-primary-light-70: #{$color-PS-light-70};
+    --color-primary-light-90: #{$color-PS-light-90};
+  }
+
+  &[primary-color="red"] {
+    --color-primary-dark: #{$color-TW-dark};
+    --color-primary-dark-70: #{$color-TW-dark-70};
+    --color-primary-dark-90: #{$color-TW-dark-90};
+
+    --color-primary-light: #{$color-TW-light};
+    --color-primary-light-70: #{$color-TW-light-70};
+    --color-primary-light-90: #{$color-TW-light-90};
+  }
+
+  &[primary-color="brown"] {
+    --color-primary-dark: #{$color-PV-dark};
+    --color-primary-dark-70: #{$color-PV-dark-70};
+    --color-primary-dark-90: #{$color-PV-dark-90};
+
+    --color-primary-light: #{$color-PV-light};
+    --color-primary-light-70: #{$color-PV-light-70};
+    --color-primary-light-90: #{$color-PV-light-90};
+  }
+
+  &[primary-color="green"] {
+    --color-primary-dark: #{$color-EM-dark};
+    --color-primary-dark-70: #{$color-EM-dark-70};
+    --color-primary-dark-90: #{$color-EM-dark-90};
+
+    --color-primary-light: #{$color-EM-light};
+    --color-primary-light-70: #{$color-EM-light-70};
+    --color-primary-light-90: #{$color-EM-light-90};
+  }
+
+  &[primary-color="yellow"] {
+    --color-primary-dark: #{$color-CU-dark};
+    --color-primary-dark-70: #{$color-CU-dark-70};
+    --color-primary-dark-90: #{$color-CU-dark-90};
+
+    --color-primary-light: #{$color-CU-light};
+    --color-primary-light-70: #{$color-CU-light-70};
+    --color-primary-light-90: #{$color-CU-light-90};
+  }
 }
 
 .main {
   position: relative;
-}
-
-////////////////////////////////////////////////
-// NEW COLOR ARCHITECTURE - DYNAMICALLY SWITCHING COLOR SHCEMAS
-.color-primary--blue {
-  --color-primary-dark: #{$color-ACC-dark};
-  --color-primary-dark-70: #{$color-ACC-dark-70};
-  --color-primary-dark-90: #{$color-ACC-dark-90};
-
-  --color-primary-light: #{$color-ACC-light};
-  --color-primary-light-70: #{$color-ACC-light-70};
-  --color-primary-light-90: #{$color-ACC-light-90};
-}
-
-.color-primary--orange {
-  --color-primary-dark: #{$color-PS-dark};
-  --color-primary-dark-70: #{$color-PS-dark-70};
-  --color-primary-dark-90: #{$color-PS-dark-90};
-
-  --color-primary-light: #{$color-PS-light};
-  --color-primary-light-70: #{$color-PS-light-70};
-  --color-primary-light-90: #{$color-PS-light-90};
-}
-
-.color-primary--red {
-  --color-primary-dark: #{$color-TW-dark};
-  --color-primary-dark-70: #{$color-TW-dark-70};
-  --color-primary-dark-90: #{$color-TW-dark-90};
-
-  --color-primary-light: #{$color-TW-light};
-  --color-primary-light-70: #{$color-TW-light-70};
-  --color-primary-light-90: #{$color-TW-light-90};
-}
-
-.color-primary--brown {
-  --color-primary-dark: #{$color-PV-dark};
-  --color-primary-dark-70: #{$color-PV-dark-70};
-  --color-primary-dark-90: #{$color-PV-dark-90};
-
-  --color-primary-light: #{$color-PV-light};
-  --color-primary-light-70: #{$color-PV-light-70};
-  --color-primary-light-90: #{$color-PV-light-90};
-}
-
-.color-primary--green {
-  --color-primary-dark: #{$color-EM-dark};
-  --color-primary-dark-70: #{$color-EM-dark-70};
-  --color-primary-dark-90: #{$color-EM-dark-90};
-
-  --color-primary-light: #{$color-EM-light};
-  --color-primary-light-70: #{$color-EM-light-70};
-  --color-primary-light-90: #{$color-EM-light-90};
-}
-
-.color-primary--yellow {
-  --color-primary-dark: #{$color-CU-dark};
-  --color-primary-dark-70: #{$color-CU-dark-70};
-  --color-primary-dark-90: #{$color-CU-dark-90};
-
-  --color-primary-light: #{$color-CU-light};
-  --color-primary-light-70: #{$color-CU-light-70};
-  --color-primary-light-90: #{$color-CU-light-90};
-}
-
-.color-schema--night {
-  //BACKGROUND
-  --color-bg: #{$color-bg-night};
-
-  //FONT
-  --color-font: #{$color-font-night};
-
-  //HEADER-FOOTER-MENU-TEXT-ICONS
-  // --color-sign: #{$color-sign-night};
-
-  //MENU
-  // --color-menu-base: #{$color-menu-base-night};
-
-  //SECTION TOOLSET
-  --color-score-light: #{$color-score-light-night};
-  --color-input-bg: #{$color-input-bg-night};
-
-  //SHADOWS
-  // --color-shadow-20: #{$color-shadow-night-20};
-  // --color-shadow-50: #{$color-shadow-night-50};
 }

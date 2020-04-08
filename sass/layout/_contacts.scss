@@ -1,5 +1,6 @@
 .contacts {
-  margin: 3rem auto;
+  padding: 3rem 0;
+  // margin: 3rem auto;
 
   &__heading {
     padding: 0 2rem 2rem;
@@ -7,13 +8,29 @@
 
   &__contact-box {
     text-align: center;
+    margin: 2rem auto;
+    // vertical-align: middle;
+
+    @include respond(_0-360) {
+      // text-align: initial;
+      margin: 7rem auto;
+    }
   }
 
-  &__contact {
+  &__link {
     text-decoration: none;
-    display: inline-block;
-    margin: 2rem auto;
+
+    // display: table;
+    // display: inline-block;
+    display: block;
+    // height: 100%;
+    // vertical-align: middle;
+
     // position: relative;
+
+    // @include respond(_0-360) {
+    //   height: 7rem;
+    // }
 
     &:hover {
       .contacts__icon {
@@ -26,37 +43,76 @@
     }
   }
 
-  &__icon-box {
-    display: inline-block;
-    height: 100%;
-  }
+  // &__icon-box {
+  //   display: inline-block;
+  //   // height: 100%;
+  // }
 
   &__icon {
     height: 3.2rem;
     width: 3.2rem;
     fill: var(--color-primary-dark);
+    
+    vertical-align: middle;
+
+    // display: table-cell;
+
+    @include respond(_0-360) {
+      height: 7rem;
+      width: 7rem;
+      vertical-align: middle;
+    }
   }
 
   &__text {
-    display: inline-block;
+    // display: inline-block;
     text-decoration: none;
-    margin-left: 1rem;
-    height: 100%;
-    // line-height: 100%;
-    // vertical-align: middle;
-    position: relative;
-    top: -1rem;
+    // margin-left: 1rem;
+    padding-left: 1rem;
+    // height: 100%;
+    line-height: 100%;
+    vertical-align: middle;
+    // position: relative;
+    // top: -1rem;
     // position: absolute;
     // top: 50%;
     // transform: translateY(-50%);
 
+    // //previous rules
+    // // display: inline-block;
+    // text-decoration: none;
+    // // margin-left: 1rem;
+    // padding-left: 1rem;
+    // // height: 100%;
+    // line-height: 100%;
+    // // vertical-align: middle;
+    // position: relative;
+    // top: -1rem;
+    // // position: absolute;
+    // // top: 50%;
+    // // transform: translateY(-50%);
+
     font-weight: 400;
     color: var(--color-primary-dark);
+
+    @include respond(_0-360) {
+      // padding-left: 3rem;
+      // padding: 1.25rem 0 1.25rem 3rem;
+      // display: table-cell;
+      font-size: 3.3rem;
+      line-height: 100%;
+      // display: inline-block;
+      vertical-align: middle;
+    }
   }
 
   &__btn-box {
     width: 100%;
     margin: 3rem 0;
     text-align: center;
+
+    @include respond(_0-360) {
+      margin: 7rem 0 20rem;
+    }
   }
 }

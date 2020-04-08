@@ -11,34 +11,85 @@
 
   @include animationAppears;
 
+  @include respond(_600-900) {
+    right: 1.5%;
+  }
+
+  @include respond(_360-600) {
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-radius: 0;
+    z-index: 5;
+  }
+
   &--top {
     top: 0;
+
+    @include respond(_360-600) {
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-radius: 0;
+    }
   }
 
   &--bottom {
     bottom: 0rem;
+
+    @include respond(_360-600) {
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-radius: 0;
+    }
   }
 
   &--fixed {
     position: fixed;
     top: 5rem;
+
+    @include respond(_360-600) {
+      top: 0;
+      left: 0;
+    }
   }
 
   &__list {
     list-style: none;
+
+    @include respond(_360-600) {
+      display: table;
+      width: 100%;
+      table-layout: fixed;
+    }
+
+    // @include respond(_0-360) {
+    //   display: table;
+    //   width: 100%;
+    //   table-layout: fixed;
+    // }
   }
 
   &__item {
     height: $navigation-item-height;
     background-color: var(--color-menu-base);
     color: var(--color-sign);
+    
+    @include respond(_360-600) {
+      display: table-cell;
+    }
 
     &--active {
       background-color: var(--color-primary-dark);
     }
 
     &:hover:not(.navigation__item--active) {
-      color: var(--color-bg);
+      color: var(--color-input-bg);
+
+      @include respond(_360-600) {
+        color: var(--color-sign);
+      }
     }
   }
 
@@ -52,6 +103,18 @@
     font-size: inherit;
     font-weight: 600;
     color: inherit;
+
+    @include respond(_360-600) {
+      line-height: 10rem;
+      font-size: 2rem;
+      font-weight: 400;
+    }
+
+    @include respond(_0-360) {
+      line-height: 10rem;
+      font-size: 2rem;
+      font-weight: 300;
+    }
   }
 }
 

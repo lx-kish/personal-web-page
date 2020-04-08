@@ -19,3 +19,39 @@
   animation-timing-function: ease-in;
   backface-visibility: hidden;
 }
+
+////////////////////////////////////////////////
+// MEDIA QUERY MANAGER
+
+/*
+possible $breakpoint arguments:
+-phone-small: 0 - 360px     ==> Phone small ???
+-phone:       360 - 600px   ==> Phone
+-tab-port:    600 - 900px   ==> Tablet portrait
+-tab-land:    900 - 1200px  ==> Tablet landscape
+[1200 - 1800] normal style
+-big-desktop: 1800+         ==> Big destop screens
+
+1em = 16px
+*/
+@mixin respond($breakpoint) {
+  @if $breakpoint == _0-360 { //phone-small {
+    @media (max-width: 22.5em) { @content }; //18.75em) { @content };
+  }
+
+  @if $breakpoint == _360-600 { //phone {
+    @media (max-width: 37.5em) { @content };
+  }
+
+  @if $breakpoint == _600-900 { //tab-port {
+    @media (max-width: 56.25em) { @content };
+  }
+
+  @if $breakpoint == _900-1200 { //tab-land {
+    @media (max-width: 75em) { @content };
+  }
+
+  @if $breakpoint == big-desktop {
+    @media (min-width: 112.5em) { @content };
+  }
+}

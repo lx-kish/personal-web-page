@@ -30,12 +30,12 @@ function calculateAllSectionsOffsetTop() {
 }
 
 function getNavbarTopPoint() {
-    return $('.header').height() - 50;
+    return $('.header').height() - 20; //50;
     // return $('.header__button').offset().top + 50;
 }
 
 function getNavbarBottomPoint() {
-    return $('.footer').offset().top - $('.navigation').height() - 50;
+    return $('.footer').offset().top - $('.navigation').height() - 20; //50;
     // return $('.footer__button').offset().top - $('.navigation').height() - 50;
 }
 
@@ -184,28 +184,48 @@ function colorManagement() {
     //primary color changing
     $('.color-schema__input').on('change', function () {
 
-        var classList = $('body').attr('class').split(/\s+/);
-
-        $.each(classList, function (index, item) {
-
-            if (item.indexOf('color-primary') >= 0) {
-
-                $('body').removeClass(item);
-            }
-        });
-
-        $('body').addClass($(this).val());
-
-        // console.log($('.color-schema__input:checked').val());
+        // $('body').addClass('color-theme-in-transition')
+        $('body').attr('primary-color', $(this).val());
+        // window.setTimeout(function () {
+        //     $('body').removeClass('color-theme-in-transition')
+        // }, 1000)
     });
 
-    //day-night toggling
+    //light/dark mode
     $('.color-schema__toggle-input').on('change', function () {
 
-        $(this).is(':checked') ?
-            $('body').addClass('color-schema--night') :
-            $('body').removeClass('color-schema--night');
+        $('body').addClass('color-theme-in-transition');
+        $('body').attr('data-theme', $(this).is(':checked') ? "dark" : "light");
+        window.setTimeout(function () {
+            $('body').removeClass('color-theme-in-transition')
+        }, 1000)
     });
+
+    // //primary color changing
+    // $('.color-schema__input').on('change', function () {
+
+    //     var classList = $('body').attr('class').split(/\s+/);
+
+    //     $.each(classList, function (index, item) {
+
+    //         if (item.indexOf('color-primary') >= 0) {
+
+    //             $('body').removeClass(item);
+    //         }
+    //     });
+
+    //     $('body').addClass($(this).val());
+
+    //     // console.log($('.color-schema__input:checked').val());
+    // });
+
+    // //day-night toggling
+    // $('.color-schema__toggle-input').on('change', function () {
+
+    //     $(this).is(':checked') ?
+    //         $('body').addClass('color-schema--night') :
+    //         $('body').removeClass('color-schema--night');
+    // });
 
 
 }

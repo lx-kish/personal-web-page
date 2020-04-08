@@ -105,7 +105,8 @@ $color-CU-light-90: rgba($color-CU-light, 0.9);
 // NEW COLOR ARCHITECTURE - NIGHT
 
 // //BACKGROUND
-$color-bg-night: #171c20;
+// $color-bg-night: #22272B;
+$color-bg-night: #171c20; //good ex 1
 // $color-bg-night: #22272B; //2
 // $color-bg-night: #1a1e21; //3
 
@@ -121,6 +122,7 @@ $color-sign-night: $color-font-night;
 // //SECTION TOOLSET
 $color-score-light-night: #bfbfbf;
 $color-input-bg-night: #4e5255;
+// $color-input-bg-night: #4e5255;
 
 // //SHADOWS
 // $color-shadow-night-20: ;
@@ -166,10 +168,13 @@ $color-white-mild: #efdab9;
 
 //FONT
 $font-size-main: 1.6rem;
+$font-size-mobile: 2.2rem;
+$font-size-mobile-small: 4.3rem;
 
 //GRID
 $grid-width: 114rem;
 $gutter-vertical: 4rem;
+$gutter-vertical-phone: 3rem;
 $gutter-horizontal: 6rem;
 
 //CONTAINER DIMENTIONS
@@ -179,3 +184,6 @@ $container-padding-left-right: 22rem;
 
 //NAVIGATION
 $navigation-item-height: 8rem;
+
+//BUTTONS-MESSAGES
+$border-radius: .5rem;

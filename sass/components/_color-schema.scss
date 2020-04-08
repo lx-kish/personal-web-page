@@ -3,8 +3,33 @@
     opacity: 1;
     visibility: visible;
 
+    z-index: 10;
+
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
+
+    @include respond(_0-360) {
+      transform: translateY(0);
+      box-shadow: none;
+      left: 0;
+      border-style: none;
+    }
+  }
+
+  &:hover .color-schema__btn--bg {
+
+    @include respond(_0-360) {
+      background-color: var(--color-menu-base);
+      left: 36rem;
+    }
+  }
+
+  &:hover .color-schema__btn {
+
+    @include respond(_0-360) {
+      fill: var(--color-sign);
+      border: 0.2rem solid var(--color-sign);
+    }
   }
 
   &__panel {
@@ -14,7 +39,7 @@
     z-index: 1;
     width: 16rem;
     height: 16rem;
-    border-radius: 0.8rem;
+    border-radius: $border-radius;
     border: 0.2rem solid var(--color-primary-dark);
 
     display: flex;
@@ -23,14 +48,38 @@
     padding: 1rem;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.5s;
+    transition: all 0.4s ease;
+
+    @include respond(_0-360) {
+      left: -36rem;
+      bottom: 0;
+      opacity: 0.5;
+      visibility: visible;
+
+      width: 36rem;
+      height: 36rem;
+      padding: 3.5rem;
+      border-radius: 0 $border-radius 0 0;
+      border-style: none;
+
+      background-color: var(--color-menu-base);
+    }
 
     &:hover {
       opacity: 1;
       visibility: visible;
 
+      z-index: 10;
+
       transform: translateY(-0.3rem);
       box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
+
+      // @include respond(_0-360) {
+      //   opacity: 0;
+      //   visibility: hidden;
+
+      //   z-index: 0;
+      // }
     }
   }
 
@@ -49,6 +98,11 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include respond(_0-360) {
+      flex: 0 0 65%;
+      padding: 0;
+    }
   }
 
   &__row {
@@ -61,6 +115,12 @@
     width: 3.2rem;
     height: 3.2rem;
     border-radius: 0.2rem;
+
+    @include respond(_0-360) {
+      width: 7rem;
+      height: 7rem;
+      border-radius: 0.2rem;
+    }
   }
 
   &__color-label {
@@ -89,7 +149,7 @@
     &:checked + .color-schema__color-icon {
       opacity: 1;
       visibility: visible;
-      z-index: 5;
+      // z-index: 5;
     }
   }
 
@@ -97,29 +157,103 @@
     position: fixed;
     left: 5%;
     bottom: 1.8rem;
-    z-index: 1;
+    z-index: 10;
     display: inline-block;
-    border-radius: 0.8rem;
+    border-radius: $border-radius;
     padding: 0.2rem;
     height: 3.2rem;
     width: 3.2rem;
     cursor: pointer;
     transition: all 0.2s;
+    // transition: all 0.4s ease;
+
+    @include respond(_0-360) {
+      position: relative;
+      top: 3rem;
+      left: 3rem;
+
+      height: 6rem;
+      width: 6rem;
+      padding: 1rem;
+    }
 
     &:hover {
       transform: translateY(-0.3rem);
       box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
+
+      @include respond(_0-360) {
+        transform: translateY(0);
+        box-shadow: none;
+
+        fill: var(--color-sign);
+        border: 0.2rem solid var(--color-sign);
+        transition: all 0.4s ease;
+      }
     }
 
     &:active {
       transform: translateY(-0.1rem);
       box-shadow: 0 0.5rem 1rem var(--color-shadow-20);
+
+      @include respond(_0-360) {
+        transform: translateY(0);
+        box-shadow: none;
+
+        fill: var(--color-sign);
+        border: 0.2rem solid var(--color-sign);
+        transition: all 0.4s ease;
+      }
+    }
+
+    &--bg {
+      transition: all 0.4s ease;
+
+      @include respond(_0-360) {
+        display: inline-block;
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        z-index: 8;
+
+        height: 12rem;
+        width: 12rem;
+
+        border-radius: 0 $border-radius 0 0;
+
+        background-color: var(--color-shadow-50);
+      }
+
+      &:hover {
+        @include respond(_0-360) {
+          background-color: var(--color-menu-base);
+          left: 36rem;
+        }
+
+        & .color-schema__panel {
+          @include respond(_0-360) {
+            opacity: 1;
+            visibility: visible;
+
+            z-index: 10;
+
+            background-color: var(--color-menu-base);
+            left: 0;
+          }
+        }
+      }
     }
   }
 
   &__icon {
     height: 100%;
     width: 100%;
+
+    @include respond(_0-360) {
+      height: 85%;
+      width: 85%;
+
+      @include absCenter;
+    }
   }
 
   /////////////////////////////////////////////////////////
@@ -140,10 +274,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
+
+      @include respond(_0-360) {
+        padding: 0;
+      }
     }
 
     &-text {
       font-size: 1.2rem;
+
+      @include respond(_0-360) {
+        font-size: 3.5rem;
+      }
     }
 
     &-input {
@@ -154,7 +296,14 @@
       border-radius: 1.5rem;
       // border: 0.2rem solid var(--color-primary-dark);
       background: transparent;
-      transition: all 0.4s;
+
+      transition: all 0.4s ease;
+
+      @include respond(_0-360) {
+        width: 8rem;
+        height: 4.5rem;
+        border-radius: 2.5rem;
+      }
 
       &::before {
         width: 1.6rem;
@@ -165,16 +314,26 @@
         position: absolute;
         top: 1.4rem;
         left: 64%;
-        transition: all 0.4s;
-      }
 
-      // &:checked {
-      //   // background-color: var(--color-primary-dark);
-      // }
+        transition: all 0.4s ease;
+
+        @include respond(_0-360) {
+          width: 3.5rem;
+          height: 3.5rem;
+          top: 1.15rem;
+          left: 75%;
+        }
+      }
 
       &:checked::before {
         // background-color: var(--color-bg);
         left: 78%;
+
+        @include respond(_0-360) {
+          width: 3.7rem;
+          height: 3.7rem;
+          left: 85%;
+        }
       }
 
       &:focus {
@@ -188,23 +347,42 @@
         & .color-schema__toggle {
           &-text {
             color: var(--color-sign);
+
+            @include respond(_360-600) {
+              color: var(--color-primary-dark);
+            }
           }
 
           &-input {
             border: 0.2rem solid var(--color-sign);
 
+            @include respond(_360-600) {
+              border: 0.2rem solid var(--color-primary-dark);
+            }
+
             &::before {
               background-color: var(--color-sign);
+
+              @include respond(_360-600) {
+                background-color: var(--color-primary-dark);
+              }
             }
 
             &:checked {
               background-color: var(--color-sign);
               // background-color: var(--color-primary-dark);
+
+              @include respond(_360-600) {
+                background-color: var(--color-primary-dark);
+              }
             }
 
             &:checked::before {
               background-color: var(--color-primary-dark);
               // background-color: var(--color-sign);
+              @include respond(_0-360) {
+                background-color: var(--color-menu-base);
+              }
             }
           }
         }
@@ -229,6 +407,10 @@
 
             &:checked::before {
               background-color: var(--color-bg);
+
+              @include respond(_0-360) {
+                background-color: var(--color-menu-base);
+              }
             }
           }
         }
@@ -242,56 +424,23 @@
       fill: var(--color-sign);
       border: 0.2rem solid var(--color-sign);
 
-      // //NEW TOGGLE COLORS
-      // & .color-schema__toggle {
-      //   &-text {
-      //     color: var(--color-sign);
-      //   }
-
-      //   &-input {
-      //     border: 0.2rem solid var(--color-sign);
-
-      //     &::before {
-      //       background-color: var(--color-sign);
-      //     }
-
-      //     &:checked {
-      //       background-color: var(--color-primary-dark);
-      //     }
-
-      //     &:checked::before {
-      //       background-color: var(--color-sign);
-      //     }
-      //   }
-      // }
+      //doesn't apply on small screens
+      @include respond(_0-360) {
+        fill: var(--color-white-50);
+        border: 0.2rem solid var(--color-white-50);
+        // fill: var(--color-sign);
+        // border: 0.2rem solid var(--color-sign);
+      }
     }
 
     &-main {
       fill: var(--color-primary-dark);
       border: 0.2rem solid var(--color-primary-dark);
 
-      // //NEW TOGGLE COLORS
-      // & .color-schema__toggle {
-      //   &-text {
-      //     color: var(--color-primary-dark);
-      //   }
-
-      //   &-input {
-      //     border: 0.2rem solid var(--color-primary-dark);
-
-      //     &::before {
-      //       background-color: var(--color-primary-dark);
-      //     }
-
-      //     &:checked {
-      //       background-color: var(--color-primary-dark);
-      //     }
-
-      //     &:checked::before {
-      //       background-color: var(--color-bg);
-      //     }
-      //   }
-      // }
+      @include respond(_0-360) {
+        fill: var(--color-white-50);
+        border: 0.2rem solid var(--color-white-50);
+      }
     }
   }
 }
