@@ -223,6 +223,11 @@ body {
     // --color-shadow-50: #{$color-shadow-night-50};
   }
 
+  ::selection {
+    background-color: var(--color-primary-dark);
+    color: $color-white;
+  }
+
   &[primary-color="blue"] {
     --color-primary-dark: #{$color-ACC-dark};
     --color-primary-dark-70: #{$color-ACC-dark-70};

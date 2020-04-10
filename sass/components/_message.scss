@@ -91,7 +91,7 @@
     top: -3rem;
 
     @include respond(_0-360) {
-
+      top: -1rem;
     }
   }
 
@@ -107,6 +107,10 @@
     // border-bottom: 2px solid transparent;
     // border-right: 2px solid transparent;
     transition: all 0.3s;
+
+    @include respond(_0-360) {
+      font-size: 3.5rem;
+    }
 
     &--message {
       overflow: hidden;
@@ -137,12 +141,24 @@
     margin-left: 1rem;
     transition: all 0.3s;
 
+    @include respond(_0-360) {
+      font-size: 3.5rem;
+    }
+
     &--not-last {
       top: -7.9rem;
+
+      @include respond(_0-360) {
+        top: -13.6rem;
+      }
     }
 
     &--last {
       top: -24.1rem;
+
+      @include respond(_0-360) {
+        top: -47.5rem;
+      }
     }
   }
 

@@ -48,7 +48,14 @@
     color: var(--color-primary-dark);
 
     @include respond(_0-360) {
-      width: 9.8rem;
+      width: 23rem;
+      padding: 3rem 4rem;
+    }
+
+    &:not(:last-child) {
+      @include respond(_0-360) {
+        margin-right: 6rem;
+      }
     }
   }
 }

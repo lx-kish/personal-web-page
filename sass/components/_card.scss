@@ -63,7 +63,9 @@
   &__picture {
     background-size: cover;
     height: 100%;
-    background-blend-mode: screen;
+    // background-blend-mode: screen;
+    // background-blend-mode: multiply;
+    background-blend-mode: overlay;
 
     &--PS {
       background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70)),

@@ -35,12 +35,14 @@
 
   &__logo {
     height: 5rem;
-    stroke: var(--color-sign);
+    width: 5rem;
+    // stroke: var(--color-sign);
     fill: var(--color-sign);
-    stroke-width: 0.5;
+    // stroke-width: 0.5;
 
     @include respond(_360-600) {
-      height: 9rem;
+      height: 12rem;
+      width: 12rem;
     }
   }
 

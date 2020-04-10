@@ -36,22 +36,22 @@ possible $breakpoint arguments:
 */
 @mixin respond($breakpoint) {
   @if $breakpoint == _0-360 { //phone-small {
-    @media (max-width: 22.5em) { @content }; //18.75em) { @content };
+    @media only screen and (max-width: 22.5em) { @content }; //18.75em) { @content };
   }
 
   @if $breakpoint == _360-600 { //phone {
-    @media (max-width: 37.5em) { @content };
+    @media only screen and (max-width: 37.5em) { @content };
   }
 
   @if $breakpoint == _600-900 { //tab-port {
-    @media (max-width: 56.25em) { @content };
+    @media only screen and (max-width: 56.25em) { @content };
   }
 
   @if $breakpoint == _900-1200 { //tab-land {
-    @media (max-width: 75em) { @content };
+    @media only screen and (max-width: 75em) { @content };
   }
 
   @if $breakpoint == big-desktop {
-    @media (min-width: 112.5em) { @content };
+    @media only screen and (min-width: 112.5em) { @content };
   }
 }
