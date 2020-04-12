@@ -23,8 +23,8 @@
 
     animation-name: appears;
     // animation-delay: 1.5s;
-    animation-duration: 5s;
-    animation-timing-function: ease-in;
+    animation-duration: 5.5s;
+    // animation-timing-function: ease-in;
 
     @include respond(_360-600) {
       top: 15%;
@@ -73,18 +73,6 @@
       font-size: 11rem;
       letter-spacing: 0.75rem;
     }
-
-    // &--surname {
-    //   @include respond(_360-600) {
-    //     display: inline-block;
-    //     font-size: 16rem;
-    //     letter-spacing: 5rem;
-    //   }
-
-    //   @include respond(_0-360) {
-    //     letter-spacing: 0.75rem;
-    //   }
-    // }
   }
 
   &__hr {
@@ -97,8 +85,8 @@
 
     animation-name: appears;
     animation-duration: 4s;
-    animation-timing-function: ease-in;
-    backface-visibility: hidden;
+    // animation-timing-function: ease-in;
+    // backface-visibility: hidden;
 
     @include respond(_600-900) {
       width: 59rem;
@@ -124,8 +112,8 @@
 
     animation-name: appears;
     animation-duration: 4s;
-    animation-timing-function: ease-in;
-    backface-visibility: hidden;
+    // animation-timing-function: ease-in;
+    // backface-visibility: hidden;
 
     @include respond(_600-900) {
       letter-spacing: 0.76rem;

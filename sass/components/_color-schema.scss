@@ -48,7 +48,8 @@
     padding: 1rem;
     opacity: 0;
     visibility: hidden;
-    transition: all 0.4s ease;
+
+    @include transition4of10;
 
     @include respond(_0-360) {
       left: -36rem;
@@ -167,8 +168,12 @@
     width: 3.2rem;
     cursor: pointer;
     transition: all 0.2s;
-    // transition: all 0.4s ease;
+    // @include transition4of10;
 
+    animation-name: appears;
+    animation-duration: 5s;
+
+    
     @include respond(_0-360) {
       position: relative;
       top: 3rem;
@@ -189,8 +194,7 @@
 
         fill: var(--color-sign);
         border: 0.2rem solid var(--color-sign);
-        transition: all 0.4s ease;
-      }
+        @include transition4of10;      }
     }
 
     &:active {
@@ -203,13 +207,11 @@
 
         fill: var(--color-sign);
         border: 0.2rem solid var(--color-sign);
-        transition: all 0.4s ease;
-      }
+        @include transition4of10;      }
     }
 
     &--bg {
-      transition: all 0.4s ease;
-
+      @include transition4of10;
       @include respond(_0-360) {
         display: inline-block;
         position: fixed;
@@ -301,8 +303,7 @@
       background: transparent;
       cursor: pointer;
 
-      transition: all 0.4s ease;
-
+      @include transition4of10;
       @include respond(_0-360) {
         width: 8rem;
         height: 4.5rem;
@@ -319,8 +320,7 @@
         top: 1.4rem;
         left: 64%;
 
-        transition: all 0.4s ease;
-
+        @include transition4of10;
         @include respond(_0-360) {
           width: 3.5rem;
           height: 3.5rem;

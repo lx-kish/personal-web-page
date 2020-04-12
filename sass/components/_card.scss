@@ -127,6 +127,7 @@
     }
   }
 
+  //HEADING
   &__heading {
     font-size: 2.2rem;
     font-weight: 300;
@@ -151,35 +152,75 @@
       top: 3%;
       font-size: 7rem;
     }
-  }
 
-  &__heading-span {
-    padding: 1rem 1.5rem;
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
+    &-span {
+      padding: 1rem 1.5rem;
+      -webkit-box-decoration-break: clone;
+      box-decoration-break: clone;
 
-    &--PS {
-      background-image: linear-gradient(to right, var(--color-PS-dark-90), var(--color-PS-light-90));
+      &--PS {
+        background-image: linear-gradient(to right, var(--color-PS-dark-90), var(--color-PS-light-90));
+      }
+
+      &--TW {
+        background-image: linear-gradient(to right, var(--color-TW-dark-90), var(--color-TW-light-90));
+      }
+
+      &--PV {
+        background-image: linear-gradient(to right, var(--color-PV-dark-90), var(--color-PV-light-90));
+      }
+
+      &--EM {
+        background-image: linear-gradient(to right, var(--color-EM-dark-90), var(--color-EM-light-90));
+      }
+
+      &--ACC {
+        background-image: linear-gradient(to right, var(--color-ACC-dark-90), var(--color-ACC-light-90));
+      }
+
+      &--CU {
+        background-image: linear-gradient(to right, var(--color-CU-dark-90), var(--color-CU-light-90));
+      }
     }
 
-    &--TW {
-      background-image: linear-gradient(to right, var(--color-TW-dark-90), var(--color-TW-light-90));
-    }
+    &-toggle {
+      display: none;
 
-    &--PV {
-      background-image: linear-gradient(to right, var(--color-PV-dark-90), var(--color-PV-light-90));
-    }
+      @include respond(_0-360) {
+        display: inline-block;
+        height: 11.75rem;
+        width: 11.75rem;
+        // line-height: 100%;
+      }
 
-    &--EM {
-      background-image: linear-gradient(to right, var(--color-EM-dark-90), var(--color-EM-light-90));
-    }
+      &-label {
+        display: none;
 
-    &--ACC {
-      background-image: linear-gradient(to right, var(--color-ACC-dark-90), var(--color-ACC-light-90));
-    }
+        @include respond(_0-360) {
+          display: inline-block;
+          height: 11.75rem;
+          width: 11.75rem;
+          cursor: pointer;
+        }
+      }
 
-    &--CU {
-      background-image: linear-gradient(to right, var(--color-CU-dark-90), var(--color-CU-light-90));
+      &-input {
+        display: none;
+      }
+
+      &-icon {
+        display: none;
+
+        @include respond(_0-360) {
+          display: inline-block;
+          width: 50%;
+          height: 50%;
+          fill: var(--color-sign);
+
+          // line-height: 100%;
+          vertical-align: middle;
+        }
+      }
     }
   }
 
