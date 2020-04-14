@@ -64,17 +64,17 @@
     background-size: cover;
     height: 100%;
     // background-blend-mode: screen;
-    // background-blend-mode: multiply;
-    background-blend-mode: overlay;
+    background-blend-mode: multiply;
+    // background-blend-mode: overlay;
 
     &--PS {
       background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70)),
         url(../img/card-1.jpg);
       filter: brightness(0.85);
 
-      @include respond(_0-360) {
-        background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70));
-      }
+      // @include respond(_0-360) {
+      //   background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70));
+      // }
     }
 
     &--TW {
@@ -82,9 +82,9 @@
         url(../img/card-2.jpg);
       filter: brightness(1.1);
 
-      @include respond(_0-360) {
-        background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70));
-      }
+      // @include respond(_0-360) {
+      //   background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70));
+      // }
     }
 
     &--PV {
@@ -92,18 +92,18 @@
         url(../img/card-3.jpg);
       filter: brightness(0.8);
 
-      @include respond(_0-360) {
-        background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70));
-      }
+      // @include respond(_0-360) {
+      //   background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70));
+      // }
     }
 
     &--EM {
       background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70)),
         url(../img/card-4.jpg);
 
-      @include respond(_0-360) {
-        background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70));
-      }
+      // @include respond(_0-360) {
+      //   background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70));
+      // }
     }
 
     &--ACC {
@@ -111,9 +111,9 @@
         url(../img/card-5.jpg);
       filter: brightness(0.8);
 
-      @include respond(_0-360) {
-        background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70));
-      }
+      // @include respond(_0-360) {
+      //   background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70));
+      // }
     }
 
     &--CU {
@@ -121,9 +121,9 @@
         url(../img/card-6.jpg);
       filter: brightness(0.85);
 
-      @include respond(_0-360) {
-        background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70));
-      }
+      // @include respond(_0-360) {
+      //   background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70));
+      // }
     }
   }
 
@@ -242,6 +242,42 @@
       font-weight: 300;
       line-height: 1.5;
       color: var(--color-white);
+    }
+
+    &--PS {
+      @include respond(_0-360) {
+        background-color: var(--color-PS-light-70);
+      }
+    }
+
+    &--TW {
+      @include respond(_0-360) {
+        background-color: var(--color-TW-light-70);
+      }
+    }
+
+    &--PV {
+      @include respond(_0-360) {
+        background-color: var(--color-PV-light-70);
+      }
+    }
+
+    &--EM {
+      @include respond(_0-360) {
+        background-color: var(--color-EM-light-70);
+      }
+    }
+
+    &--ACC {
+      @include respond(_0-360) {
+        background-color: var(--color-ACC-light-70);
+      }
+    }
+
+    &--CU {
+      @include respond(_0-360) {
+        background-color: var(--color-CU-light-70);
+      }
     }
   }
 }

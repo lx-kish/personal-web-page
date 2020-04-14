@@ -11,39 +11,35 @@ $(document).ready(function () {
     scrollAnimation();
     resizeEvent();
     colorManagement();
-    // changePrimaryColor();
 });
 
+function getElementHeight(e) {
+    return $(e).height();
+}
+
+function getElementOffsetTop(e) {
+    return $(e).offset().top;
+}
+
 //refactor with less lines of code later
-function calculateAllSectionsOffsetTop() {
+function getAllSectionsOffsetTop() {
 
     var sections = {};
     var sectionsList = $('section');
 
     Array.prototype.forEach.call(sectionsList, function (e) {
-        sections[e.id] = $(e).offset().top;// - $(window).scrollTop();
-        // sections[e.id] = $(e).offset().top - $(window).scrollTop();
-        // sections[e.id] = e.offsetTop;
+
+        sections[e.id] = getElementOffsetTop(e);
     });
 
     return sections;
 }
 
-function getNavbarTopPoint() {
-    return $('.header').height() - 20; //50;
-    // return $('.header__button').offset().top + 50;
-}
-
-function getNavbarBottomPoint() {
-    return $('.footer').offset().top - $('.navigation').height() - 20; //50;
-    // return $('.footer__button').offset().top - $('.navigation').height() - 50;
-}
-
 function ititiateInterfaceValues() {
 
-    allSectionsOffsetTop = calculateAllSectionsOffsetTop();
-    navbarTopPoint = getNavbarTopPoint();
-    navbarBottomPoint = getNavbarBottomPoint();
+    allSectionsOffsetTop = getAllSectionsOffsetTop();
+    navbarTopPoint = getElementHeight('.header') - 20; //50;
+    navbarBottomPoint = getElementOffsetTop('.footer') - getElementHeight('.navigation') - 20; //50;
 
     scrollSpy();
     stickNavbar();
@@ -91,14 +87,12 @@ function stickNavbar() {
 
 function switchColorSchemaBtn() {
 
-    // var btnTopPoint = $('.color-schema__btn').offset().top;
-    // var btnBottomPoint = $('.color-schema__btn').offset().top + $('.color-schema__btn').height();
-    var panelPoint = $('.color-schema__panel').offset().top + $('.color-schema__panel').height() / 2;
-    var togglePoint = $('.color-schema__toggle').offset().top + $('.color-schema__toggle').height() / 2;
-    var btnPoint = $('.color-schema__btn').offset().top + $('.color-schema__btn').height() / 2;
+    var panelPoint = getElementOffsetTop('.color-schema__panel') + getElementHeight('.color-schema__panel') / 2;
+    var togglePoint = getElementOffsetTop('.color-schema__toggle') + getElementHeight('.color-schema__toggle') / 2;
+    var btnPoint = getElementOffsetTop('.color-schema__btn') + getElementHeight('.color-schema__btn') / 2;
 
     //changing panel color
-    if (panelPoint > $('.header').height() && panelPoint < $('.footer').offset().top) {
+    if (panelPoint > getElementHeight('.header') && panelPoint < getElementOffsetTop('.footer')) {
         $('.color-schema__panel')
             .removeClass('color-schema--color-top-bottom')
             .addClass('color-schema--color-main');
@@ -110,7 +104,7 @@ function switchColorSchemaBtn() {
     }
 
     //changing toggle color
-    if (togglePoint > $('.header').height() && togglePoint < $('.footer').offset().top) {
+    if (togglePoint > getElementHeight('.header') && togglePoint < getElementOffsetTop('.footer')) {
         $('.color-schema__toggle')
             .removeClass('color-schema__toggle--color-top-bottom')
             .addClass('color-schema__toggle--color-main');
@@ -122,7 +116,7 @@ function switchColorSchemaBtn() {
     }
 
     //changing button color
-    if (btnPoint > $('.header').height() && btnPoint < $('.footer').offset().top) {
+    if (btnPoint > getElementHeight('.header') && btnPoint < getElementOffsetTop('.footer')) {
         $('.color-schema__btn')
             .removeClass('color-schema--color-top-bottom')
             .addClass('color-schema--color-main');
@@ -132,7 +126,6 @@ function switchColorSchemaBtn() {
             .removeClass('color-schema--color-main')
             .addClass('color-schema--color-top-bottom');
     }
-
 }
 
 function scrollEvents() {
@@ -141,15 +134,6 @@ function scrollEvents() {
         scrollSpy();
         stickNavbar();
         switchColorSchemaBtn();
-
-        // console.log(allSectionsOffsetTop);
-        // console.log(`scroll position = ${$(window).scrollTop()}`);
-        // console.log(`color-schema-btn top position = ${$('.color-schema__btn').offset().top}`);
-        // console.log(`color-schema-btn bottom position = ${$('.color-schema__btn').offset().top + $('.color-schema__btn').height()}`);
-        // console.log(`header height = ${$('.header').height()}`);
-        // console.log(`header offset top = ${$('.header').offset().top}`);
-        // console.log(`footer offset top = ${$('.footer').offset().top}`);
-        // console.log(`scroll position = ${scrollPosition}, section = ${allSectionsOffsetTop[i]}`);
 
     });
 }
@@ -162,7 +146,7 @@ function scrollAnimation() {
 
         $('html, body').animate(
             {
-                scrollTop: $($.attr(this, 'href')).offset().top
+                scrollTop: getElementOffsetTop($.attr(this, 'href'))
             }, 400);
 
         return false;
@@ -175,20 +159,13 @@ function resizeEvent() {
     });
 }
 
-function toggleClass(cl, mask) {
-
-}
-
 function colorManagement() {
 
     //primary color changing
     $('.color-schema__input').on('change', function () {
 
-        // $('body').addClass('color-theme-in-transition')
+
         $('body').attr('primary-color', $(this).val());
-        // window.setTimeout(function () {
-        //     $('body').removeClass('color-theme-in-transition')
-        // }, 1000)
     });
 
     //light/dark mode
@@ -200,32 +177,4 @@ function colorManagement() {
             $('body').removeClass('color-theme-in-transition')
         }, 1000)
     });
-
-    // //primary color changing
-    // $('.color-schema__input').on('change', function () {
-
-    //     var classList = $('body').attr('class').split(/\s+/);
-
-    //     $.each(classList, function (index, item) {
-
-    //         if (item.indexOf('color-primary') >= 0) {
-
-    //             $('body').removeClass(item);
-    //         }
-    //     });
-
-    //     $('body').addClass($(this).val());
-
-    //     // console.log($('.color-schema__input:checked').val());
-    // });
-
-    // //day-night toggling
-    // $('.color-schema__toggle-input').on('change', function () {
-
-    //     $(this).is(':checked') ?
-    //         $('body').addClass('color-schema--night') :
-    //         $('body').removeClass('color-schema--night');
-    // });
-
-
 }
