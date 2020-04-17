@@ -146,7 +146,7 @@ html {
   --color-menu-base: var(--color-grey-dark);
 
   //SECTION TOOLSET
-  --color-score-light: var(--color-grey-mild);
+  --color-score: var(--color-grey-mild);
   --color-input-bg: var(--color-white-50);
 
   //SHADOWS
@@ -168,7 +168,7 @@ html {
   // --color-menu-base: #{$color-menu-base-night};
 
   // //SECTION TOOLSET
-  // --color-score-light: #{$color-score-light-night};
+  // --color-score: #{$color-score-light-night};
   // --color-input-bg: #{$color-input-bg-night};
 
   // //SHADOWS
@@ -178,6 +178,20 @@ html {
 
 body {
   box-sizing: border-box;
+
+  //////////////////////////////////////
+  //in order to fix iPhone issues...
+  -webkit-text-size-adjust: none;
+  -moz-text-size-adjust: none;
+  -ms-text-size-adjust: none;
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  //////////////////////////////////////
+
+  // @include respond(_0-360) {
+  //   width: 100vw;
+  // }
 
   &[data-theme="light"] {
     //BACKGROUND
@@ -193,7 +207,7 @@ body {
     --color-menu-base: var(--color-grey-dark);
 
     //SECTION TOOLSET
-    --color-score-light: var(--color-grey-mild);
+    --color-score: var(--color-grey-mild);
     --color-input-bg: var(--color-white-50);
 
     //SHADOWS
@@ -215,17 +229,12 @@ body {
     // --color-menu-base: #{$color-menu-base-night};
 
     //SECTION TOOLSET
-    --color-score-light: #{$color-score-light-night};
+    --color-score: #{$color-score-light-night};
     --color-input-bg: #{$color-input-bg-night};
 
     //SHADOWS
     // --color-shadow-20: #{$color-shadow-night-20};
     // --color-shadow-50: #{$color-shadow-night-50};
-  }
-
-  ::selection {
-    background-color: var(--color-primary-dark);
-    color: $color-white;
   }
 
   &[primary-color="blue"] {
@@ -287,6 +296,20 @@ body {
     --color-primary-light-70: #{$color-CU-light-70};
     --color-primary-light-90: #{$color-CU-light-90};
   }
+}
+
+//STYLING SELECTION
+::selection {
+  background-color: var(--color-primary-dark);
+  color: $color-white;
+}
+
+//COMPATIBILITY WITH NON-HTML5 BROWSERS
+footer,
+header,
+nav,
+section {
+  display: block;
 }
 
 .main {

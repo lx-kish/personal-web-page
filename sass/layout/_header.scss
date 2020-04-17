@@ -1,7 +1,7 @@
 .header {
   height: 100vh;
   background-image: linear-gradient(to right bottom, var(--color-primary-dark-70), var(--color-primary-light-70)),
-    url(../img/3.jpg);
+    url(../img/header.jpg);
   background-size: cover;
   background-position: top;
   background-attachment: fixed;
@@ -11,6 +11,15 @@
   // background-blend-mode: overlay;
   // background-blend-mode: screen;
   background-blend-mode: multiply;
+
+  @media (min-resolution: 192dpi) and (min-width: 56.25em), (min-width: 75em) {
+    background-image: linear-gradient(to right bottom, var(--color-primary-dark-70), var(--color-primary-light-70)),
+      url(../img/header-large.jpg);
+  }
+
+  @include respond(touch-screen) {
+    background-attachment: initial;
+  }
 
   &__logo-box {
     position: absolute;

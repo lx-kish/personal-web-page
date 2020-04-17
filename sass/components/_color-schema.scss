@@ -230,7 +230,8 @@
         animation-duration: 5s;
       }
 
-      &:hover {
+      &:hover,
+      &:active {
         @include respond(_0-360) {
           background-color: var(--color-menu-base);
           left: 36rem;

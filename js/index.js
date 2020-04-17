@@ -17,8 +17,20 @@ function getElementHeight(e) {
     return $(e).height();
 }
 
+function getElementWidth(e) {
+    return $(e).width();
+}
+
 function getElementOffsetTop(e) {
     return $(e).offset().top;
+}
+
+function setElementWidth(e, value) {
+    $(e).css({ 'width': value });
+}
+
+function setElementHeight(e, value) {
+    $(e).css({ 'height': value });
 }
 
 //refactor with less lines of code later
@@ -37,10 +49,12 @@ function getAllSectionsOffsetTop() {
 
 function ititiateInterfaceValues() {
 
-    allSectionsOffsetTop = getAllSectionsOffsetTop();
-    navbarTopPoint = getElementHeight('.header') - 20; //50;
-    navbarBottomPoint = getElementOffsetTop('.footer') - getElementHeight('.navigation') - 20; //50;
+    allSectionsOffsetTop    = getAllSectionsOffsetTop();
+    navbarTopPoint          = getElementHeight('.header') - 20; //50;
+    navbarBottomPoint       = getElementOffsetTop('.footer') - getElementHeight('.navigation') - 20; //50;
 
+    setElementWidth('body', getElementWidth(window));
+    setElementHeight('header.header', getElementHeight(window));
     scrollSpy();
     stickNavbar();
     switchColorSchemaBtn();
@@ -155,6 +169,9 @@ function scrollAnimation() {
 
 function resizeEvent() {
     $(window).on('resize', function () {
+
+        // $('header.header').css({ 'height': $(window).height() });
+        // $('body').css({ 'width': $(window).width() });
         ititiateInterfaceValues();
     });
 }
