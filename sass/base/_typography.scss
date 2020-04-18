@@ -7,6 +7,12 @@ body {
     line-height: 1.7;
     color: var(--color-font);
     // color: $color-grey-dark;
+
+    @include respond(_0-360) {
+        font-size: $font-size-mobile-small;
+        font-weight: 300;
+        line-height: 1.5;
+    }
 }
 
 .heading-tertiary {

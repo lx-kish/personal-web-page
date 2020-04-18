@@ -10,7 +10,7 @@
 
     @include respond(_0-360) {
       top: 5%;
-      max-width: 65%;
+      max-width: 63%;
       font-size: $font-size-mobile-small;
     }
   }
@@ -19,7 +19,7 @@
     float: right;
 
     @include respond(_0-360) {
-      max-width: 30%;
+      max-width: 37%;
     }
   }
 
@@ -27,6 +27,7 @@
     position: relative;
     top: .3rem;
     height: 1.6rem;
+    width: 1.6rem;
     stroke-width: 0.5;
     margin: 0;
     transition: all 0.3s;
@@ -34,8 +35,11 @@
     backface-visibility: hidden;
 
     @include respond(_0-360) {
-      top: 1.9rem;
-      height: 3.5rem;
+      top: .4rem;
+      height: 2rem;
+      width: 2rem;
+      // height: 3.5rem;
+      // width: 3.5rem;
     }
   
     &--bright {
