@@ -36,12 +36,6 @@
       left: 50%;
       transform: translate(-50%, -50%);
     }
-
-    @include respond(_0-360) {
-      top: 12%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
   }
 
   &__logo {
@@ -52,13 +46,8 @@
     // stroke-width: 0.5;
 
     @include respond(_360-600) {
-      height: 6rem;
-      width: 6rem;
-    }
-
-    @include respond(_0-360) {
-      height: 4.3rem;
-      width: 4.3rem;
+      height: 12rem;
+      width: 12rem;
     }
   }
 
@@ -96,8 +85,7 @@
     height: 0;
     overflow: visible;
     margin: 0.1rem auto;
-    // width: 65.6rem;
-    max-width: 90vw;
+    width: 65.6rem;
     border: 1px solid var(--color-sign);
 
     animation-name: appears;
@@ -106,16 +94,16 @@
     // backface-visibility: hidden;
 
     @include respond(_600-900) {
-      // width: 59rem;
+      width: 59rem;
     }
 
     @include respond(_360-600) {
-      // width: 52.5rem;
+      width: 52.5rem;
       margin: 0 auto 1rem;
     }
 
     @include respond(_0-360) {
-      // width: 65rem;
+      width: 65rem;
       margin: 0 auto 2rem;
     }
   }
@@ -174,12 +162,9 @@
     }
 
     @include respond(_360-600) {
-      height: 6rem;
+      right: 1.5%;
+      height: 10rem;
       // border-radius: 0 0 $border-radius $border-radius;
-    }
-
-    @include respond(_0-360) {
-      width: 6rem;
     }
   }
 

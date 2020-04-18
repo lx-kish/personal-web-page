@@ -10,9 +10,8 @@ html {
   //defines how many px is 1rem
   font-size: 62.5%; //1rem = 10px (10px/16px = 62.5%)
 
-  // @include respond(_360-600) {
-  //   font-size: 50%;
-  // }
+  //for correct calculations rem units in Safari
+  -webkit-text-size-adjust: none;
 
   @include respond(_900-1200) {
     font-size: 56.25%; //1rem = 9px (9px/16px = 56.25%)

@@ -7,10 +7,8 @@
   position: relative;
 
   @include respond(_0-360) {
-    padding: 5rem 15vw;
-    font-size: $font-size-mobile-small;
-    font-weight: 300;
-    line-height: 1.5;
+    padding: 5rem 15rem;
+    font-size: 2.5rem;
   }
 
   &__button {
@@ -35,12 +33,9 @@
       right: 1.5%;
     }
 
+
     @include respond(_360-600) {
-      height: 6rem;
-    }
-    
-    @include respond(_0-360) {
-      width: 6rem;
+      height: 10rem;
     }
   }
 
@@ -74,8 +69,8 @@
     stroke-width: 0.5;
 
     @include respond(_0-360) {
-      height: 4.3rem;
-      width: 4.3rem;
+      height: 9rem;
+      width: 9rem;
     }
   }
 
@@ -84,8 +79,7 @@
     height: 0;
     overflow: visible;
     margin:.1rem auto;
-    // width: 40rem;
-    max-width: 90vw;
+    width: 40rem;
     border: .5px solid var(--color-sign);
   }
 
