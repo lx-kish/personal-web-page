@@ -32,7 +32,7 @@
     </svg> -->
 
     <div class="color-schema">
-        <div class="color-schema__panel">
+        <div id="color-panel" class="color-schema__panel">
             <form action="#" class="color-schema__form">
                 <div class="color-schema__palette">
                     <div class="color-schema__row">
@@ -102,13 +102,24 @@
                 </div>
             </form>
         </div>
-        <div class="color-schema__btn--bg">
-            <div class="color-schema__btn">
-                <svg class="color-schema__icon">
-                    <use xlink:href="img/sprite.svg#icon-fill"></use>
-                </svg>
-            </div>
+        <!-- <div class="color-schema__btn--bg"> -->
+        <!-- <div class="color-schema__btn"> -->
+        <div class="color-schema__btn color-schema__btn-desktop">
+            <svg class="color-schema__icon">
+                <use xlink:href="img/sprite.svg#icon-fill"></use>
+            </svg>
         </div>
+        <a id="color-btn-mobile" href="#color-panel" class="color-schema__btn color-schema__btn-mobile">
+            <svg class="color-schema__icon">
+                <use xlink:href="img/sprite.svg#icon-fill"></use>
+            </svg>
+        </a>
+        <a href="#about" class="color-schema__btn color-schema__btn-mobile">
+            <svg class="color-schema__icon">
+                <use xlink:href="img/sprite.svg#icon-fill"></use>
+            </svg>
+        </a>
+        <!-- </div> -->
     </div>
 
     <header class="header">
