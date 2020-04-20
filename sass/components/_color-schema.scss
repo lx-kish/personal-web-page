@@ -8,27 +8,19 @@
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
 
+    //TODO - for all touchscreen devices
     @include respond(_0-360) {
       transform: translateY(0);
       box-shadow: none;
-      left: 0;
-      border-style: none;
+      background: var(--color-bg);
     }
   }
 
-  &:hover .color-schema__btn--bg {
+  &:hover .color-schema__btn-mobile {
 
+    //TODO - for all touchscreen devices
     @include respond(_0-360) {
-      background-color: var(--color-menu-base);
-      left: 36rem;
-    }
-  }
-
-  &:hover .color-schema__btn {
-
-    @include respond(_0-360) {
-      fill: var(--color-sign);
-      border: 0.2rem solid var(--color-sign);
+      background: var(--color-bg);
     }
   }
 
@@ -39,7 +31,7 @@
     z-index: 1;
     width: 16rem;
     height: 16rem;
-    border-radius: $border-radius;
+    border-radius: 0.8rem;
     border: 0.2rem solid var(--color-primary-dark);
 
     display: flex;
@@ -48,22 +40,19 @@
     padding: 1rem;
     opacity: 0;
     visibility: hidden;
-
-    @include transition4of10;
+    transition: all 0.5s;
 
     @include respond(_0-360) {
-      left: -36rem;
-      bottom: 0;
-      opacity: 0.5;
-      visibility: visible;
+      height: 27rem;
+      width: 27rem;
+      bottom: 9.5rem;
+    }
 
-      width: 36rem;
-      height: 36rem;
-      padding: 3.5rem;
-      border-radius: 0 $border-radius 0 0;
-      border-style: none;
-
-      background-color: var(--color-menu-base);
+    @include respond(touch-screen) {
+      &:not(:target) ~ .color-schema__btn-mobile:first-of-type,
+      &:target ~ .color-schema__btn-mobile:last-of-type {
+        display: inline-block;
+      }
     }
 
     &:hover {
@@ -75,12 +64,11 @@
       transform: translateY(-0.3rem);
       box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
 
-      // @include respond(_0-360) {
-      //   opacity: 0;
-      //   visibility: hidden;
-
-      //   z-index: 0;
-      // }
+      //TODO - for all touchscreen devices
+      @include respond(_0-360) {
+        transform: translateY(0);
+        box-shadow: none;
+      }
     }
   }
 
@@ -99,11 +87,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-
-    @include respond(_0-360) {
-      flex: 0 0 65%;
-      padding: 0;
-    }
   }
 
   &__row {
@@ -118,9 +101,8 @@
     border-radius: 0.2rem;
 
     @include respond(_0-360) {
-      width: 7rem;
-      height: 7rem;
-      border-radius: 0.2rem;
+      height: calc(3.2rem * #{$scale-mobile});
+      width: calc(3.2rem * #{$scale-mobile});
     }
   }
 
@@ -128,17 +110,11 @@
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    // display: inline-block;
     width: 100%;
     height: 100%;
-
-    cursor: pointer;
   }
 
   &__color-icon {
-    // flex: 0 0 50%;
-    // justify-content: center;
-
     width: 50%;
     height: 50%;
     fill: var(--color-sign);
@@ -156,98 +132,57 @@
     }
   }
 
+  //appearance
   &__btn {
     position: fixed;
     left: 5%;
     bottom: 1.8rem;
     z-index: 10;
-    display: inline-block;
-    border-radius: $border-radius;
+    border-radius: 0.8rem;
     padding: 0.2rem;
     height: 3.2rem;
     width: 3.2rem;
-    cursor: pointer;
-    transition: all 0.2s;
-    // @include transition4of10;
 
-    animation-name: appears;
-    animation-duration: 5s;
-
-    
     @include respond(_0-360) {
-      position: relative;
-      top: 3rem;
-      left: 3rem;
+      height: 7rem;
+      width: 7rem;
+      padding: 0.4rem;
+    }
 
-      height: 6rem;
-      width: 6rem;
-      padding: 1rem;
+    //behaviour
+    &-desktop {
+      display: inline-block;
+      cursor: pointer;
+      transition: all 0.2s;
+
+      @include respond(touch-screen) {
+        display: none;
+      }
+    }
+
+    &-mobile {
+      display: none;
+
+      @include respond(touch-screen) {
+        display: inline-block;
+      }
     }
 
     &:hover {
       transform: translateY(-0.3rem);
       box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
 
-      @include respond(_0-360) {
-        transform: translateY(0);
-        box-shadow: none;
-
-        fill: var(--color-sign);
-        border: 0.2rem solid var(--color-sign);
-        @include transition4of10;      }
+      @include respond(touch-screen) {
+        display: none;
+      }
     }
 
     &:active {
       transform: translateY(-0.1rem);
       box-shadow: 0 0.5rem 1rem var(--color-shadow-20);
 
-      @include respond(_0-360) {
-        transform: translateY(0);
-        box-shadow: none;
-
-        fill: var(--color-sign);
-        border: 0.2rem solid var(--color-sign);
-        @include transition4of10;      }
-    }
-
-    &--bg {
-      @include transition4of10;
-      @include respond(_0-360) {
-        display: inline-block;
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        z-index: 8;
-
-        height: 12rem;
-        width: 12rem;
-
-        border-radius: 0 $border-radius 0 0;
-
-        background-color: var(--color-shadow-50);
-
-        animation-name: appears;
-        animation-duration: 5s;
-      }
-
-      &:hover,
-      &:active {
-        @include respond(_0-360) {
-          background-color: var(--color-menu-base);
-          left: 36rem;
-        }
-
-        & .color-schema__panel {
-          @include respond(_0-360) {
-            opacity: 1;
-            visibility: visible;
-
-            z-index: 10;
-
-            background-color: var(--color-menu-base);
-            left: 0;
-          }
-        }
+      @include respond(touch-screen) {
+        display: none;
       }
     }
   }
@@ -255,13 +190,6 @@
   &__icon {
     height: 100%;
     width: 100%;
-
-    @include respond(_0-360) {
-      height: 85%;
-      width: 85%;
-
-      @include absCenter;
-    }
   }
 
   /////////////////////////////////////////////////////////
@@ -274,26 +202,19 @@
     position: relative;
 
     &-label {
-      // height: 20px;
-      // line-height: 20px;
       width: 100%;
       padding: 1rem;
       position: relative;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      cursor: pointer;
-
-      @include respond(_0-360) {
-        padding: 0;
-      }
     }
 
     &-text {
       font-size: 1.2rem;
 
       @include respond(_0-360) {
-        font-size: 3.5rem;
+        font-size: calc(1.2rem * #{$scale-mobile});
       }
     }
 
@@ -303,44 +224,37 @@
       width: 4.4rem;
       height: 2.4rem;
       border-radius: 1.5rem;
-      // border: 0.2rem solid var(--color-primary-dark);
       background: transparent;
-      cursor: pointer;
+      transition: all 0.4s;
 
-      @include transition4of10;
       @include respond(_0-360) {
-        width: 8rem;
-        height: 4.5rem;
-        border-radius: 2.5rem;
+        width: 7rem;
+        height: 4rem;
+        border-radius: 3rem;
       }
 
       &::before {
         width: 1.6rem;
         height: 1.6rem;
         border-radius: 50%;
-        // background-color: var(--color-primary-dark);
         content: "";
         position: absolute;
         top: 1.4rem;
         left: 64%;
+        transition: all 0.4s;
 
-        @include transition4of10;
         @include respond(_0-360) {
-          width: 3.5rem;
-          height: 3.5rem;
-          top: 1.15rem;
-          left: 75%;
+          width: 3rem;
+          height: 3rem;
+          left: 70%;
         }
       }
 
       &:checked::before {
-        // background-color: var(--color-bg);
         left: 78%;
 
         @include respond(_0-360) {
-          width: 3.7rem;
-          height: 3.7rem;
-          left: 85%;
+          left: 82%;
         }
       }
 
@@ -355,42 +269,21 @@
         & .color-schema__toggle {
           &-text {
             color: var(--color-sign);
-
-            @include respond(_0-360) {
-              color: var(--color-primary-dark);
-            }
           }
 
           &-input {
             border: 0.2rem solid var(--color-sign);
 
-            @include respond(_0-360) {
-              border: 0.2rem solid var(--color-primary-dark);
-            }
-
             &::before {
               background-color: var(--color-sign);
-
-              @include respond(_0-360) {
-                background-color: var(--color-primary-dark);
-              }
             }
 
             &:checked {
               background-color: var(--color-sign);
-              // background-color: var(--color-primary-dark);
-
-              @include respond(_0-360) {
-                background-color: var(--color-primary-dark);
-              }
             }
 
             &:checked::before {
               background-color: var(--color-primary-dark);
-              // background-color: var(--color-sign);
-              @include respond(_0-360) {
-                background-color: var(--color-menu-base);
-              }
             }
           }
         }
@@ -414,11 +307,8 @@
             }
 
             &:checked::before {
+              // background-color: transparent;
               background-color: var(--color-bg);
-
-              @include respond(_0-360) {
-                background-color: var(--color-menu-base);
-              }
             }
           }
         }
@@ -431,24 +321,11 @@
     &-top-bottom {
       fill: var(--color-sign);
       border: 0.2rem solid var(--color-sign);
-
-      //doesn't apply on small screens
-      @include respond(_0-360) {
-        fill: var(--color-white-50);
-        border: 0.2rem solid var(--color-white-50);
-        // fill: var(--color-sign);
-        // border: 0.2rem solid var(--color-sign);
-      }
     }
 
     &-main {
       fill: var(--color-primary-dark);
       border: 0.2rem solid var(--color-primary-dark);
-
-      @include respond(_0-360) {
-        fill: var(--color-white-50);
-        border: 0.2rem solid var(--color-white-50);
-      }
     }
   }
 }
