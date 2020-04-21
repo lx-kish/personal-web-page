@@ -39,12 +39,10 @@ html {
   //Color primary (light-blue)
   --color-primary-dark: #{$color-primary-dark};
   --color-primary-dark-70: #{$color-primary-dark-70};
-  // --color-primary-dark-75: #{$color-primary-dark-75};
   --color-primary-dark-90: #{$color-primary-dark-90};
 
   --color-primary-light: #{$color-primary-light};
   --color-primary-light-70: #{$color-primary-light-70};
-  // --color-primary-light-75: #{$color-primary-light-75};
   --color-primary-light-90: #{$color-primary-light-90};
 
   //cards
@@ -95,9 +93,6 @@ html {
   --color-CU-light: #{$color-CU-light};
   --color-CU-light-70: #{$color-CU-light-70};
   --color-CU-light-90: #{$color-CU-light-90};
-
-  // --color__secondary--dark: #{$color-secondary-dark};
-  // --color__secondary--light: #{$color-secondary-light};
 
   //black
   --color-black: #{$color-black};
@@ -151,46 +146,10 @@ html {
   //SHADOWS
   --color-shadow-20: var(--color-black-20);
   --color-shadow-50: var(--color-black-50);
-
-  // // NEW COLOR ARCHITECTURE - NIGHT
-
-  // //BACKGROUND
-  // --color-bg: #{$color-bg-night};
-
-  // //FONT
-  // --color-font: #{$color-font-night};
-
-  // //HEADER-FOOTER-MENU-TEXT-ICONS
-  // --color-sign: #{$color-sign-night};
-
-  // //MENU
-  // --color-menu-base: #{$color-menu-base-night};
-
-  // //SECTION TOOLSET
-  // --color-score: #{$color-score-light-night};
-  // --color-input-bg: #{$color-input-bg-night};
-
-  // //SHADOWS
-  // --color-shadow-20: #{$color-shadow-night-20};
-  // --color-shadow-50: #{$color-shadow-night-50};
 }
 
 body {
   box-sizing: border-box;
-
-  //////////////////////////////////////
-  //in order to fix iPhone issues...
-  // -webkit-text-size-adjust: none;
-  // -moz-text-size-adjust: none;
-  // -ms-text-size-adjust: none;
-  // -webkit-text-size-adjust: 100%;
-  // -moz-text-size-adjust: 100%;
-  // -ms-text-size-adjust: 100%;
-  //////////////////////////////////////
-
-  // @include respond(_0-360) {
-  //   width: 100vw;
-  // }
 
   &[data-theme="light"] {
     //BACKGROUND

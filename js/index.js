@@ -4,6 +4,9 @@ var allSectionsOffsetTop;
 var navbarTopPoint;
 var navbarBottomPoint;
 
+/**
+* Initialize page interface, load all variables and events handlers
+*/
 $(document).ready(function () {
 
     ititiateInterfaceValues();
@@ -11,29 +14,44 @@ $(document).ready(function () {
     scrollAnimation();
     resizeEvent();
     colorManagement();
+    mobileColorPanelShowHide();
 });
 
+/**
+ * Get height of an element in pixels
+ * @param  {Node} e The element which height is getting
+ * @return {Number} The height of the element in pixels
+ */
 function getElementHeight(e) {
     return $(e).height();
 }
 
+/**
+ * Get width of an element in pixels
+ * @param  {Node} e The element which width is getting
+ * @return {Number} The width of the element in pixels
+ */
 function getElementWidth(e) {
     return $(e).width();
 }
 
+/**
+ * Get offset top (distance between top point of an element 
+ * and top of the page) of an element in pixels
+ * @param  {Node} e The element which offset top is getting
+ * @return {Number} The offset top of the element in pixels
+ */
 function getElementOffsetTop(e) {
     return $(e).offset().top;
 }
 
-// function setElementWidth(e, value) {
-//     $(e).css({ 'width': value });
-// }
-
-// function setElementHeight(e, value) {
-//     $(e).css({ 'height': value });
-// }
-
-//refactor with less lines of code later
+/**
+ * Get offsets top (distances between top point of an element 
+ * and top of the page) of all <section> elements in pixels
+ * @return {Object} The list of all <section> elements 
+ * offsets top in pixels
+ */
+//TODO - refactor with less lines of code later
 function getAllSectionsOffsetTop() {
 
     var sections = {};
@@ -47,11 +65,14 @@ function getAllSectionsOffsetTop() {
     return sections;
 }
 
+/**
+* Initialize values for fixed elements positioning
+*/
 function ititiateInterfaceValues() {
 
-    allSectionsOffsetTop    = getAllSectionsOffsetTop();
-    navbarTopPoint          = getElementHeight('.header') - 20; //50;
-    navbarBottomPoint       = getElementOffsetTop('.footer') - getElementHeight('.navigation') - 20; //50;
+    allSectionsOffsetTop = getAllSectionsOffsetTop();
+    navbarTopPoint = getElementHeight('.header') - 20; //50;
+    navbarBottomPoint = getElementOffsetTop('.footer') - getElementHeight('.navigation') - 20; //50;
 
     // setElementWidth('body', getElementWidth(window));
     // setElementHeight('header.header', getElementHeight(window));
@@ -60,6 +81,33 @@ function ititiateInterfaceValues() {
     switchColorSchemaBtn();
 }
 
+/**
+* Hides/shows color panel on touch-screens
+* Showing by clicking the button, hiding by clicking outside the color pannel
+*/
+function mobileColorPanelShowHide() {
+
+    $('.color-schema__btn--mobile').on('click', function () {
+        $('.color-schema__panel')
+        .removeClass('color-schema__panel--hide')
+        .addClass('color-schema__panel--show');
+    });
+
+    $('body').on('click touch', function () {
+        $('.color-schema__panel')
+        .removeClass('color-schema__panel--show')
+        .addClass('color-schema__panel--hide');
+    });
+
+    // Prevent events from getting pass .color-schema__panel{
+    $('.color-schema').on('click touch', function (e) {
+        e.stopPropagation();
+    });
+}
+
+/**
+* Makes appropriate menu item active while scrolling through page sections
+*/
 function scrollSpy() {
 
     var scrollPosition = $(window).scrollTop();
@@ -74,6 +122,9 @@ function scrollSpy() {
     }
 }
 
+/**
+* Sticks the navigation bar at the top and bottom points of <main> section
+*/
 function stickNavbar() {
 
     if ($(window).scrollTop() > navbarTopPoint &&
@@ -99,6 +150,11 @@ function stickNavbar() {
     }
 }
 
+/**
+* Switches the color of the <color-schema-button>, <color palete>
+* and <dark-mode toggler> elements at the top and bottom points 
+* of <main> section
+*/
 function switchColorSchemaBtn() {
 
     var panelPoint = getElementOffsetTop('.color-schema__panel') + getElementHeight('.color-schema__panel') / 2;
@@ -142,6 +198,9 @@ function switchColorSchemaBtn() {
     }
 }
 
+/**
+* Initialize all <on scroll> events
+*/
 function scrollEvents() {
 
     $(window).on('scroll', function () {
@@ -152,9 +211,12 @@ function scrollEvents() {
     });
 }
 
+/**
+* Animates scroll effect on click of header and footer buttons
+*/
 function scrollAnimation() {
 
-    $('.navigation__link, .header__scroll-down, .footer__scroll-up').click(function (e) {
+    $('.navigation__link, .header__scroll-down, .footer__scroll-up').on('click', function (e) {
 
         e.preventDefault();
 
@@ -167,6 +229,10 @@ function scrollAnimation() {
     });
 }
 
+/**
+* Recalculates all initial elements values after resizing 
+* (in case of changing portrait/landscape modes or equal)
+*/
 function resizeEvent() {
     $(window).on('resize', function () {
 
@@ -176,6 +242,9 @@ function resizeEvent() {
     });
 }
 
+/**
+* Changes primary color by user choice
+*/
 function colorManagement() {
 
     //primary color changing

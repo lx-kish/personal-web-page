@@ -468,22 +468,12 @@ body.color-theme-in-transition *:after {
   z-index: 10;
   transform: translateY(-0.3rem);
   box-shadow: 0 1rem 1.5rem var(--color-shadow-50); }
-  @media only screen and (max-width: 22.5em) {
+  @media only screen and (max-width: 22.5em) and (hover: none) {
     .color-schema:hover .color-schema__panel {
       transform: translateY(0);
       box-shadow: none;
       left: 0;
       border-style: none; } }
-
-@media only screen and (max-width: 22.5em) {
-  .color-schema:hover .color-schema__btn--bg {
-    background-color: var(--color-menu-base);
-    left: 36rem; } }
-
-@media only screen and (max-width: 22.5em) {
-  .color-schema:hover .color-schema__btn {
-    fill: var(--color-sign);
-    border: 0.2rem solid var(--color-sign); } }
 
 .color-schema__panel {
   position: fixed;
@@ -500,12 +490,13 @@ body.color-theme-in-transition *:after {
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s ease; }
-  @media only screen and (max-width: 22.5em) {
+  @media only screen and (max-width: 22.5em) and (hover: none) {
     .color-schema__panel {
       left: -36rem;
       bottom: 0;
-      opacity: 0.5;
+      opacity: 1;
       visibility: visible;
+      z-index: 10;
       width: 36rem;
       height: 36rem;
       padding: 3.5rem;
@@ -513,11 +504,26 @@ body.color-theme-in-transition *:after {
       border-style: none;
       background-color: var(--color-menu-base); } }
   .color-schema__panel:hover {
-    opacity: 1;
-    visibility: visible;
     z-index: 10;
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 1.5rem var(--color-shadow-50); }
+    @media only screen and (max-width: 22.5em) and (hover: none) {
+      .color-schema__panel:hover {
+        opacity: 0;
+        visibility: hidden;
+        z-index: 0; } }
+  @media only screen and (max-width: 22.5em) and (hover: none) {
+    .color-schema__panel--hide {
+      transform: translateY(0);
+      box-shadow: none;
+      border-style: none;
+      left: -36rem; } }
+  @media only screen and (max-width: 22.5em) and (hover: none) {
+    .color-schema__panel--show {
+      transform: translateY(0);
+      box-shadow: none;
+      left: 0;
+      border-style: none; } }
 
 .color-schema__form {
   height: 100%;
@@ -600,24 +606,18 @@ body.color-theme-in-transition *:after {
     @media only screen and (max-width: 22.5em) {
       .color-schema__btn:hover {
         transform: translateY(0);
-        box-shadow: none;
-        fill: var(--color-sign);
-        border: 0.2rem solid var(--color-sign);
-        transition: all 0.4s ease; } }
+        box-shadow: none; } }
   .color-schema__btn:active {
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem var(--color-shadow-20); }
     @media only screen and (max-width: 22.5em) {
       .color-schema__btn:active {
         transform: translateY(0);
-        box-shadow: none;
-        fill: var(--color-sign);
-        border: 0.2rem solid var(--color-sign);
-        transition: all 0.4s ease; } }
-  .color-schema__btn--bg {
+        box-shadow: none; } }
+  .color-schema__btn--mobile {
     transition: all 0.4s ease; }
-    @media only screen and (max-width: 22.5em) {
-      .color-schema__btn--bg {
+    @media only screen and (max-width: 22.5em) and (hover: none) {
+      .color-schema__btn--mobile {
         display: inline-block;
         position: fixed;
         left: 0;
@@ -629,17 +629,6 @@ body.color-theme-in-transition *:after {
         background-color: var(--color-shadow-50);
         animation-name: appears;
         animation-duration: 5s; } }
-    @media only screen and (max-width: 22.5em) {
-      .color-schema__btn--bg:hover, .color-schema__btn--bg:active {
-        background-color: var(--color-menu-base);
-        left: 36rem; } }
-    @media only screen and (max-width: 22.5em) {
-      .color-schema__btn--bg:hover .color-schema__panel, .color-schema__btn--bg:active .color-schema__panel {
-        opacity: 1;
-        visibility: visible;
-        z-index: 10;
-        background-color: var(--color-menu-base);
-        left: 0; } }
 
 .color-schema__icon {
   height: 100%;
@@ -699,17 +688,17 @@ body.color-theme-in-transition *:after {
       transition: all 0.4s ease; }
       @media only screen and (max-width: 22.5em) {
         .color-schema__toggle-input::before {
-          width: 3.5rem;
-          height: 3.5rem;
+          width: 3.2rem;
+          height: 3.2rem;
           top: 1.15rem;
           left: 75%; } }
     .color-schema__toggle-input:checked::before {
       left: 78%; }
       @media only screen and (max-width: 22.5em) {
         .color-schema__toggle-input:checked::before {
-          width: 3.7rem;
-          height: 3.7rem;
-          left: 85%; } }
+          width: 3.4rem;
+          height: 3.4rem;
+          left: 86%; } }
     .color-schema__toggle-input:focus {
       outline: none; }
   .color-schema__toggle--color-top-bottom .color-schema__toggle-text {
@@ -754,18 +743,14 @@ body.color-theme-in-transition *:after {
 .color-schema--color-top-bottom {
   fill: var(--color-sign);
   border: 0.2rem solid var(--color-sign); }
-  @media only screen and (max-width: 22.5em) {
-    .color-schema--color-top-bottom {
-      fill: var(--color-white-50);
-      border: 0.2rem solid var(--color-white-50); } }
 
 .color-schema--color-main {
   fill: var(--color-primary-dark);
   border: 0.2rem solid var(--color-primary-dark); }
   @media only screen and (max-width: 22.5em) {
     .color-schema--color-main {
-      fill: var(--color-white-50);
-      border: 0.2rem solid var(--color-white-50); } }
+      fill: var(--color-sign);
+      border: 0.2rem solid var(--color-sign); } }
 
 .message {
   height: 100vh;
