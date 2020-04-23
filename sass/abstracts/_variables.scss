@@ -111,7 +111,9 @@ $color-bg-night: #171c20; //good ex 1
 // $color-bg-night: #1a1e21; //3
 
 // //FONT
+//day - black
 $color-font-night: #bfbfbf;
+
 
 // //HEADER-FOOTER-MENU-TEXT-ICONS
 $color-sign-night: $color-font-night;
@@ -120,9 +122,11 @@ $color-sign-night: $color-font-night;
 // $color-menu-base-night: ;
 
 // //SECTION TOOLSET
+$color-score-light: #e0e0e0; //score-light
+$color-score-hover: #f2f2f2; //input, score:hover
 $color-score-light-night: #bfbfbf;
 $color-input-bg-night: #4e5255;
-// $color-input-bg-night: #4e5255;
+// $color-input-bg-night: #555555;
 
 // //SHADOWS
 // $color-shadow-night-20: ;
@@ -152,7 +156,8 @@ $color-yellow-bg: #fff458; //3-#f1e0c3; //2-#f3f091; 1-#e2e17a;
 $color-grey-font-1: #574044;
 $color-grey-font-2: #333333;
 
-$color-grey-mild: #9d9d9d;
+// $color-grey-mild: #9d9d9d;
+$color-grey-mild: #dfe0e0;
 // $color-grey-mild: #9d9d9d;
 $color-grey-font: $color-grey-font-2;
 
@@ -178,7 +183,7 @@ $font-size-mobile-small: 4.3rem;
 
 //GRID
 $grid-width: 114rem;
-$gutter-vertical: 4rem;
+$gutter-vertical: 6rem;
 $gutter-vertical-phone: 3rem;
 $gutter-horizontal: 6rem;
 
@@ -192,3 +197,4 @@ $navigation-item-height: 8rem;
 
 //BUTTONS-MESSAGES
 $border-radius: .5rem;
+$border-radius-mobileS: 1.5rem;

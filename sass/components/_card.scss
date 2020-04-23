@@ -11,13 +11,13 @@
 
   &__side {
     // background-color: $color-white-mild;
-    height: 40rem;
+    // height: 40rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 90%;
+    height: 100%;
     backface-visibility: hidden;
     border-radius: 0.2rem;
     overflow: hidden;
@@ -32,13 +32,64 @@
     }
 
     &--back {
-      background-color: var(--color-input-bg);
+      // background-image: linear-gradient(to right bottom, var(--color-primary-dark-70), var(--color-primary-light-70));
+      // background-color: var(--color-input-bg);
       // background-color: var(--color-bg);
       transform: rotateY(180deg);
+      background-size: cover;
+      background-position: top;
 
-      @include respond(_0-360) {
-        background-color: transparent;
+      @include respond(touch_0-360) {
+        // background-color: transparent;
         transform: rotateY(0);
+      }
+
+      &--PS {
+        background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70));
+
+        @include respond(touch_0-360) {
+          background-image: none;
+        }
+      }
+
+      &--TW {
+        background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70));
+
+        @include respond(touch_0-360) {
+          background-image: none;
+        }
+      }
+
+      &--PV {
+        background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70));
+        
+        @include respond(touch_0-360) {
+          background-image: none;
+        }
+      }
+
+      &--EM {
+        background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70));
+        
+        @include respond(touch_0-360) {
+          background-image: none;
+        }
+      }
+
+      &--ACC {
+        background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70));
+        
+        @include respond(touch_0-360) {
+          background-image: none;
+        }
+      }
+
+      &--CU {
+        background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70));
+        
+        @include respond(touch_0-360) {
+          background-image: none;
+        }
       }
     }
   }
@@ -182,46 +233,6 @@
         background-image: linear-gradient(to right, var(--color-CU-dark-90), var(--color-CU-light-90));
       }
     }
-
-    &-toggle {
-      display: none;
-
-      @include respond(_0-360) {
-        display: inline-block;
-        height: 11.75rem;
-        width: 11.75rem;
-        // line-height: 100%;
-      }
-
-      &-label {
-        display: none;
-
-        @include respond(_0-360) {
-          display: inline-block;
-          height: 11.75rem;
-          width: 11.75rem;
-          cursor: pointer;
-        }
-      }
-
-      &-input {
-        display: none;
-      }
-
-      &-icon {
-        display: none;
-
-        @include respond(_0-360) {
-          display: inline-block;
-          width: 50%;
-          height: 50%;
-          fill: var(--color-sign);
-
-          // line-height: 100%;
-          vertical-align: middle;
-        }
-      }
-    }
   }
 
   &__description {
@@ -237,7 +248,7 @@
       width: 90%;
       // height: 80%;
       position: absolute;
-      bottom: 0;
+      // bottom: 0;
       font-size: $font-size-mobile-small;
       font-weight: 300;
       line-height: 1.5;
@@ -246,37 +257,43 @@
 
     &--PS {
       @include respond(_0-360) {
-        background-color: var(--color-PS-light-70);
+        background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70));
+        // background-color: var(--color-PS-light-70);
       }
     }
 
     &--TW {
       @include respond(_0-360) {
-        background-color: var(--color-TW-light-70);
+        background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70));
+        // background-color: var(--color-TW-light-70);
       }
     }
 
     &--PV {
       @include respond(_0-360) {
-        background-color: var(--color-PV-light-70);
+        background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70));
+        // background-color: var(--color-PV-light-70);
       }
     }
 
     &--EM {
       @include respond(_0-360) {
-        background-color: var(--color-EM-light-70);
+        background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70));
+        // background-color: var(--color-EM-light-70);
       }
     }
 
     &--ACC {
       @include respond(_0-360) {
-        background-color: var(--color-ACC-light-70);
+        background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70));
+        // background-color: var(--color-ACC-light-70);
       }
     }
 
     &--CU {
       @include respond(_0-360) {
-        background-color: var(--color-CU-light-70);
+        background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70));
+        // background-color: var(--color-CU-light-70);
       }
     }
   }

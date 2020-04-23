@@ -1,42 +1,5 @@
 .color-schema {
 
-  //DESKTOP ENTIRE MODULE VISIBILITY
-  &:hover .color-schema__panel {
-    opacity: 1;
-    visibility: visible;
-
-    z-index: 10;
-
-    transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
-
-    @include respond(touch_0-360) {
-      transform: translateY(0);
-      box-shadow: none;
-      left: 0;
-      border-style: none;
-
-      // opacity: 0;
-      // visibility: hidden;
-    }
-  }
-
-  //TODO - decide, if this block is needed
-  &:hover .color-schema__btn--mobile {
-    @include respond(touch_0-360) {
-      // background-color: var(--color-menu-base);
-      // left: 36rem;
-    }
-  }
-
-  //TODO - decide, if this block is needed
-  &:hover .color-schema__btn {
-    @include respond(_0-360) {
-      // fill: var(--color-sign);
-      // border: 0.2rem solid var(--color-sign);
-    }
-  }
-
   /////////////////////////////////////////////////////////
   //GENERAL SETTINGS FOR COLOR-PANEL
   &__panel {
@@ -58,28 +21,27 @@
 
     @include transition4of10;
 
-    //TODO - refactor this block for mobile devices
     @include respond(touch_0-360) {
-      // @include respond(_0-360) {
-      left: -36rem;
+      left: -45rem;
       bottom: 0;
       opacity: 1;
       visibility: visible;
 
       z-index: 10;
 
-      width: 36rem;
-      height: 36rem;
+      width: 45rem;
+      height: 45rem;
       padding: 3.5rem;
       border-radius: 0 $border-radius 0 0;
-      border-style: none;
 
+      border-style: none !important;
       background-color: var(--color-menu-base);
+      transition-delay: .4s;
     }
 
     &:hover {
-      // opacity: 1;
-      // visibility: visible;
+      opacity: 1;
+      visibility: visible;
 
       z-index: 10;
 
@@ -87,10 +49,8 @@
       box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
 
       @include respond(touch_0-360) {
-        opacity: 0;
-        visibility: hidden;
-
-        z-index: 0;
+        transform: translateY(0);
+        box-shadow: none;
       }
     }
 
@@ -104,7 +64,8 @@
         transform: translateY(0);
         box-shadow: none;
         border-style: none;
-        left: -36rem;
+        left: -45rem;
+        // left: -36rem;
       }
     }
 
@@ -114,8 +75,8 @@
       @include respond(touch_0-360) {
         transform: translateY(0);
         box-shadow: none;
-        left: 0;
         border-style: none;
+        left: 0;
       }
     }
   }
@@ -140,7 +101,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @include respond(_0-360) {
+    @include respond(touch_0-360) {
       flex: 0 0 65%;
       padding: 0;
     }
@@ -161,10 +122,10 @@
     height: 3.2rem;
     border-radius: 0.2rem;
 
-    @include respond(_0-360) {
-      width: 7rem;
-      height: 7rem;
-      border-radius: 0.2rem;
+    @include respond(touch_0-360) {
+      width: 10rem;
+      height: 10rem;
+      border-radius: 0.5rem;
     }
   }
 
@@ -182,8 +143,6 @@
   }
 
   &__color-icon {
-    // flex: 0 0 50%;
-    // justify-content: center;
 
     width: 50%;
     height: 50%;
@@ -198,7 +157,6 @@
     &:checked + .color-schema__color-icon {
       opacity: 1;
       visibility: visible;
-      // z-index: 5;
     }
   }
 
@@ -214,18 +172,17 @@
     width: 3.2rem;
     cursor: pointer;
     transition: all 0.2s;
-    // @include transition4of10;
 
     animation-name: appears;
     animation-duration: 5s;
 
-    @include respond(_0-360) {
+    @include respond(touch_0-360) {
       position: relative;
       top: 3rem;
       left: 3rem;
 
-      height: 6rem;
-      width: 6rem;
+      height: 9rem;
+      width: 9rem;
       padding: 1rem;
     }
 
@@ -233,13 +190,9 @@
       transform: translateY(-0.3rem);
       box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
 
-      @include respond(_0-360) {
+      @include respond(touch_0-360) {
         transform: translateY(0);
         box-shadow: none;
-
-        // fill: var(--color-sign);
-        // border: 0.2rem solid var(--color-sign);
-        // @include transition4of10;
       }
     }
 
@@ -247,13 +200,9 @@
       transform: translateY(-0.1rem);
       box-shadow: 0 0.5rem 1rem var(--color-shadow-20);
 
-      @include respond(_0-360) {
+      @include respond(touch_0-360) {
         transform: translateY(0);
         box-shadow: none;
-
-        // fill: var(--color-sign);
-        // border: 0.2rem solid var(--color-sign);
-        // @include transition4of10;
       }
     }
 
@@ -267,8 +216,8 @@
         bottom: 0;
         z-index: 8;
 
-        height: 12rem;
-        width: 12rem;
+        height: 15rem;
+        width: 15rem;
 
         border-radius: 0 $border-radius 0 0;
 
@@ -278,26 +227,22 @@
         animation-duration: 5s;
       }
 
-      // &:hover,
-      // &:active {
-      //   @include respond(_0-360) {
-      //     // background-color: var(--color-menu-base);
-      //     // left: 36rem;
-      //     z-index: 7;
-      //   }
-
-      //   & .color-schema__panel {
-      //     @include respond(_0-360) {
-      //       opacity: 1;
-      //       visibility: visible;
-
-      //       z-index: 10;
-
-      //       background-color: var(--color-menu-base);
-      //       left: 0;
-      //     }
-      //   }
-      // }
+      &:hover ~ .color-schema__panel {
+        opacity: 1;
+        visibility: visible;
+    
+        z-index: 10;
+    
+        transform: translateY(-0.3rem);
+        box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
+    
+        @include respond(touch_0-360) {
+          transform: translateY(0);
+          box-shadow: none;
+          left: 0;
+          border-style: none;
+        }
+      }
     }
   }
 
@@ -325,8 +270,6 @@
     /////////////////////////////////////////////////////////
     //GENERAL SETTINGS FOR A DARK-MODE TOGGLER LABEL
     &-label {
-      // height: 20px;
-      // line-height: 20px;
       width: 100%;
       padding: 1rem;
       position: relative;
@@ -346,7 +289,8 @@
       font-size: 1.2rem;
 
       @include respond(_0-360) {
-        font-size: 3.5rem;
+        font-size: 4.5rem;
+        font-weight: 400;
       }
     }
 
@@ -358,7 +302,6 @@
       width: 4.4rem;
       height: 2.4rem;
       border-radius: 1.5rem;
-      // border: 0.2rem solid var(--color-primary-dark);
       background: transparent;
       cursor: pointer;
 
@@ -373,7 +316,6 @@
         width: 1.6rem;
         height: 1.6rem;
         border-radius: 50%;
-        // background-color: var(--color-primary-dark);
         content: "";
         position: absolute;
         top: 1.4rem;
@@ -383,19 +325,18 @@
         @include respond(_0-360) {
           width: 3.2rem;
           height: 3.2rem;
-          top: 1.15rem;
-          left: 75%;
+          top: 1.85rem;
+          left: 81%;
         }
       }
 
       &:checked::before {
-        // background-color: var(--color-bg);
         left: 78%;
 
         @include respond(_0-360) {
           width: 3.4rem;
           height: 3.4rem;
-          left: 86%;
+          left: 89%;
         }
       }
 
@@ -435,7 +376,6 @@
 
             &:checked {
               background-color: var(--color-sign);
-              // background-color: var(--color-primary-dark);
 
               @include respond(_0-360) {
                 background-color: var(--color-primary-dark);
@@ -444,7 +384,7 @@
 
             &:checked::before {
               background-color: var(--color-primary-dark);
-              // background-color: var(--color-sign);
+
               @include respond(_0-360) {
                 background-color: var(--color-menu-base);
               }
@@ -488,23 +428,13 @@
     &-top-bottom {
       fill: var(--color-sign);
       border: 0.2rem solid var(--color-sign);
-
-      //doesn't apply on small screens
-      @include respond(_0-360) {
-        // fill: var(--color-white-50);
-        // border: 0.2rem solid var(--color-white-50);
-        // fill: var(--color-sign);
-        // border: 0.2rem solid var(--color-sign);
-      }
     }
 
     &-main {
       fill: var(--color-primary-dark);
       border: 0.2rem solid var(--color-primary-dark);
 
-      @include respond(_0-360) {
-        // fill: var(--color-white-50);
-        // border: 0.2rem solid var(--color-white-50);
+      @include respond(touch_0-360) {
         fill: var(--color-sign);
         border: 0.2rem solid var(--color-sign);
       }

@@ -37,6 +37,12 @@
     @include respond(_360-600) {
       height: 10rem;
     }
+
+    @include respond(touch_0-360) {
+      height: 15rem;
+      width: 15rem;
+      border-radius: 0 0 $border-radius-mobileS $border-radius-mobileS;
+    }
   }
 
   &__icon-up {
@@ -50,6 +56,11 @@
     @include respond(_360-600) {
       height: 5rem;
       width: 5rem;
+    }
+    
+    @include respond(touch_0-360) {
+      height: 9rem;
+      width: 9rem;
     }
   }
 

@@ -87,20 +87,21 @@ function ititiateInterfaceValues() {
 */
 function mobileColorPanelShowHide() {
 
-    $('.color-schema__btn--mobile').on('click', function () {
+    $('.color-schema__btn--mobile').on('touchstart', function (e) {
         $('.color-schema__panel')
         .removeClass('color-schema__panel--hide')
         .addClass('color-schema__panel--show');
+        e.stopPropagation();
     });
 
-    $('body').on('click touch', function () {
+    $('body').on('touchstart', function () {
         $('.color-schema__panel')
         .removeClass('color-schema__panel--show')
         .addClass('color-schema__panel--hide');
     });
 
     // Prevent events from getting pass .color-schema__panel{
-    $('.color-schema').on('click touch', function (e) {
+    $('.color-schema').on('touchstart', function (e) {
         e.stopPropagation();
     });
 }

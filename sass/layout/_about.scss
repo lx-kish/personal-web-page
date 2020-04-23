@@ -43,7 +43,7 @@
   }
 
   &__social-media-box {
-    margin-top: 2rem;
+    margin-top: calc(#{$gutter-vertical} / 2);
     text-align: center;
 
     @include respond(_360-600) {
@@ -63,7 +63,7 @@
   }
 
   &__link:not(:last-child) {
-    margin-right: 2rem;
+    margin-right: $gutter-horizontal;
 
     @include respond(_360-600) {
       margin-right: 8rem;

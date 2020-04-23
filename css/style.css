@@ -101,41 +101,106 @@ html {
   --color-CU-light-70: rgba(243, 191, 79, 0.7);
   --color-CU-light-90: rgba(243, 191, 79, 0.9);
   --color-black: #000;
-  --color-black-15: rgba(0, 0, 0, 0.15);
   --color-black-20: rgba(0, 0, 0, 0.2);
   --color-black-50: rgba(0, 0, 0, 0.5);
   --color-white: #fff;
   --color-white-50: rgba(255, 255, 255, 0.5);
   --color-grey-bg: #dddddd;
-  --color-grey-mild: #9d9d9d;
+  --color-grey-mild: #dfe0e0;
   --color-grey-dark: #333333;
+  --color-score-light: #e0e0e0;
+  --color-score-hover: #f2f2f2;
   --color-yellow-bg: #fff458;
   --color-accent: #e9690e;
-  --color-bg: var(--color-grey-bg);
-  --color-font: var(--color-black);
-  --color-sign: var(--color-white);
-  --color-menu-base: var(--color-grey-dark);
-  --color-score: var(--color-grey-mild);
-  --color-input-bg: var(--color-white-50);
-  --color-shadow-20: var(--color-black-20);
-  --color-shadow-50: var(--color-black-50); }
+  /*
+  DAY/NIGHT
+  
+  HEADER, FOOTER:
+  background gradient - color-primary/color-primary
+  fonts - white/white
+  logo - white/white
+  button background - dark-grey/dark-grey
+  icon-button - white/white
+  COLOR-PANEL & COLOR BUTTON background - transparent
+  COLOR-PANEL & COLOR BUTTON icon/border - white
+  COLOR-PANEL toggler - color-primary
+
+  NAVIGATION:
+  button background - dark-grey
+  active background - color-primary
+  sign - white
+  hover - ...
+
+  SECTIONS:
+  background - white/dark-grey-bg (special for bg)
+  header - color-primary
+  intro - black/grey-light
+  COLOR-PANEL & COLOR BUTTON background - transparent
+  COLOR-PANEL & COLOR BUTTON icon/border - color-primary
+
+  ABOUT:
+  font - black/grey-light
+  photo-border - white
+  icons-media - color-primary
+
+  SKILLS:
+  cards-front gradient - color-primary
+  cards-front font - white
+  cards-back gradient - color-primary
+  cards-front font - black/white
+
+  TOOLS:
+  heading - black/grey-light
+  font - black/grey-light
+  icon-score dark - color-primary
+  icon-score light - ... (border EXPERIENCE, QUALIFICATION - #DFE0E0 ?)
+  score-background - ... (background EXPERIENCE, QUALIFICATION - #F2F2F2 ?)
+
+  EXPERIENCE, QUALIFICATION:
+  background - white/dark-grey-bg
+  font - black/grey-light
+  background-component - white/...
+  border-component - grey-light/... (perhaps, d3...)
+  link - color-primary
+  icon-link - color-primary
+
+  CONTACTS:
+  background - white/dark-grey-bg (special for bg)
+  link - color-primary
+  icon-link - color-primary
+  button - color-primary
+  button background - transparent
+
+  MESSAGE:
+  background - white/dark-grey-bg (special for bg)
+  header - color-primary
+  fields - .../...
+  placeholders - .../...
+  fields font - .../...
+  buttons - color-primary
+  buttons background - transparent
+  icon-close - color-primary
+
+  */ }
 
 body {
   box-sizing: border-box; }
   body[data-theme="light"] {
-    --color-bg: var(--color-grey-bg);
+    --color-bg: var(--color-white);
     --color-font: var(--color-black);
     --color-sign: var(--color-white);
     --color-menu-base: var(--color-grey-dark);
-    --color-score: var(--color-grey-mild);
-    --color-input-bg: var(--color-white-50);
+    --color-score: var(--color-score-light);
+    --color-input-bg: var(--color-score-hover);
+    --color-activity: var(--color-score-light);
     --color-shadow-20: var(--color-black-20);
     --color-shadow-50: var(--color-black-50); }
   body[data-theme="dark"] {
     --color-bg: #171c20;
     --color-font: #bfbfbf;
     --color-score: #bfbfbf;
-    --color-input-bg: #4e5255; }
+    --color-input-bg: #4e5255;
+    --color-activity: var(--color-grey-dark); }
   body[primary-color="blue"] {
     --color-primary-dark: #23868b;
     --color-primary-dark-70: rgba(35, 134, 139, 0.7);
@@ -214,8 +279,8 @@ body {
 .u-center-text {
   text-align: center; }
 
-.u-margin-bottom-main {
-  margin-bottom: 8rem; }
+.u-margin-bottom {
+  margin-bottom: 6rem !important; }
 
 .u-margin-left-right-main {
   margin-left: 15rem;
@@ -252,14 +317,26 @@ body.color-theme-in-transition *:after {
 
 .activity {
   padding: 1rem;
-  border-radius: .3rem;
-  background: var(--color-input-bg);
-  transition: transform .2s linear;
-  backface-visibility: hidden; }
-  .activity:hover {
-    transform: translateY(-0.3rem) scale(1.01, 1.01);
-    box-shadow: 0 0 1rem 0.4rem var(--color-shadow-20);
-    backface-visibility: hidden; }
+  background: var(--color-score-hover);
+  border: 0.1rem solid var(--color-score);
+  border-radius: 0.3rem;
+  color: var(--color-font); }
+  @media only screen and (max-width: 22.5em) and (hover: none) {
+    .activity {
+      border: 0.1rem solid var(--color-grey-mild);
+      border-radius: 0.3rem; } }
+  .activity:not(:last-child) {
+    margin-bottom: 1rem; }
+    @media only screen and (max-width: 22.5em) and (hover: none) {
+      .activity:not(:last-child) {
+        margin-bottom: 1rem; } }
+  .activity__duration {
+    font-family: librebaskerville-italic, serif;
+    font-size: 1.8rem;
+    font-style: italic; }
+    @media only screen and (max-width: 22.5em) and (hover: none) {
+      .activity__duration {
+        font-size: 4rem; } }
 
 .btn {
   text-transform: uppercase;
@@ -312,13 +389,12 @@ body.color-theme-in-transition *:after {
     .card {
       height: 80vh; } }
   .card__side {
-    height: 40rem;
     transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 90%;
+    height: 100%;
     backface-visibility: hidden;
     border-radius: 0.2rem;
     overflow: hidden;
@@ -329,12 +405,42 @@ body.color-theme-in-transition *:after {
         .card__side--front {
           background-color: var(--color-shadow-50); } }
     .card__side--back {
-      background-color: var(--color-input-bg);
-      transform: rotateY(180deg); }
-      @media only screen and (max-width: 22.5em) {
+      transform: rotateY(180deg);
+      background-size: cover;
+      background-position: top; }
+      @media only screen and (max-width: 22.5em) and (hover: none) {
         .card__side--back {
-          background-color: transparent;
           transform: rotateY(0); } }
+      .card__side--back--PS {
+        background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70)); }
+        @media only screen and (max-width: 22.5em) and (hover: none) {
+          .card__side--back--PS {
+            background-image: none; } }
+      .card__side--back--TW {
+        background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70)); }
+        @media only screen and (max-width: 22.5em) and (hover: none) {
+          .card__side--back--TW {
+            background-image: none; } }
+      .card__side--back--PV {
+        background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70)); }
+        @media only screen and (max-width: 22.5em) and (hover: none) {
+          .card__side--back--PV {
+            background-image: none; } }
+      .card__side--back--EM {
+        background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70)); }
+        @media only screen and (max-width: 22.5em) and (hover: none) {
+          .card__side--back--EM {
+            background-image: none; } }
+      .card__side--back--ACC {
+        background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70)); }
+        @media only screen and (max-width: 22.5em) and (hover: none) {
+          .card__side--back--ACC {
+            background-image: none; } }
+      .card__side--back--CU {
+        background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70)); }
+        @media only screen and (max-width: 22.5em) and (hover: none) {
+          .card__side--back--CU {
+            background-image: none; } }
   .card:hover .card__side--front {
     transform: rotateY(-180deg); }
     @media only screen and (max-width: 22.5em) {
@@ -399,32 +505,6 @@ body.color-theme-in-transition *:after {
         background-image: linear-gradient(to right, var(--color-ACC-dark-90), var(--color-ACC-light-90)); }
       .card__heading-span--CU {
         background-image: linear-gradient(to right, var(--color-CU-dark-90), var(--color-CU-light-90)); }
-    .card__heading-toggle {
-      display: none; }
-      @media only screen and (max-width: 22.5em) {
-        .card__heading-toggle {
-          display: inline-block;
-          height: 11.75rem;
-          width: 11.75rem; } }
-      .card__heading-toggle-label {
-        display: none; }
-        @media only screen and (max-width: 22.5em) {
-          .card__heading-toggle-label {
-            display: inline-block;
-            height: 11.75rem;
-            width: 11.75rem;
-            cursor: pointer; } }
-      .card__heading-toggle-input {
-        display: none; }
-      .card__heading-toggle-icon {
-        display: none; }
-        @media only screen and (max-width: 22.5em) {
-          .card__heading-toggle-icon {
-            display: inline-block;
-            width: 50%;
-            height: 50%;
-            fill: var(--color-sign);
-            vertical-align: middle; } }
   .card__description {
     position: absolute;
     top: 50%;
@@ -438,42 +518,28 @@ body.color-theme-in-transition *:after {
       .card__description {
         width: 90%;
         position: absolute;
-        bottom: 0;
         font-size: 4.3rem;
         font-weight: 300;
         line-height: 1.5;
         color: var(--color-white); } }
     @media only screen and (max-width: 22.5em) {
       .card__description--PS {
-        background-color: var(--color-PS-light-70); } }
+        background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70)); } }
     @media only screen and (max-width: 22.5em) {
       .card__description--TW {
-        background-color: var(--color-TW-light-70); } }
+        background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70)); } }
     @media only screen and (max-width: 22.5em) {
       .card__description--PV {
-        background-color: var(--color-PV-light-70); } }
+        background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70)); } }
     @media only screen and (max-width: 22.5em) {
       .card__description--EM {
-        background-color: var(--color-EM-light-70); } }
+        background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70)); } }
     @media only screen and (max-width: 22.5em) {
       .card__description--ACC {
-        background-color: var(--color-ACC-light-70); } }
+        background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70)); } }
     @media only screen and (max-width: 22.5em) {
       .card__description--CU {
-        background-color: var(--color-CU-light-70); } }
-
-.color-schema:hover .color-schema__panel {
-  opacity: 1;
-  visibility: visible;
-  z-index: 10;
-  transform: translateY(-0.3rem);
-  box-shadow: 0 1rem 1.5rem var(--color-shadow-50); }
-  @media only screen and (max-width: 22.5em) and (hover: none) {
-    .color-schema:hover .color-schema__panel {
-      transform: translateY(0);
-      box-shadow: none;
-      left: 0;
-      border-style: none; } }
+        background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70)); } }
 
 .color-schema__panel {
   position: fixed;
@@ -492,38 +558,40 @@ body.color-theme-in-transition *:after {
   transition: all 0.4s ease; }
   @media only screen and (max-width: 22.5em) and (hover: none) {
     .color-schema__panel {
-      left: -36rem;
+      left: -45rem;
       bottom: 0;
       opacity: 1;
       visibility: visible;
       z-index: 10;
-      width: 36rem;
-      height: 36rem;
+      width: 45rem;
+      height: 45rem;
       padding: 3.5rem;
       border-radius: 0 0.5rem 0 0;
-      border-style: none;
-      background-color: var(--color-menu-base); } }
+      border-style: none !important;
+      background-color: var(--color-menu-base);
+      transition-delay: .4s; } }
   .color-schema__panel:hover {
+    opacity: 1;
+    visibility: visible;
     z-index: 10;
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 1.5rem var(--color-shadow-50); }
     @media only screen and (max-width: 22.5em) and (hover: none) {
       .color-schema__panel:hover {
-        opacity: 0;
-        visibility: hidden;
-        z-index: 0; } }
+        transform: translateY(0);
+        box-shadow: none; } }
   @media only screen and (max-width: 22.5em) and (hover: none) {
     .color-schema__panel--hide {
       transform: translateY(0);
       box-shadow: none;
       border-style: none;
-      left: -36rem; } }
+      left: -45rem; } }
   @media only screen and (max-width: 22.5em) and (hover: none) {
     .color-schema__panel--show {
       transform: translateY(0);
       box-shadow: none;
-      left: 0;
-      border-style: none; } }
+      border-style: none;
+      left: 0; } }
 
 .color-schema__form {
   height: 100%;
@@ -537,7 +605,7 @@ body.color-theme-in-transition *:after {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  @media only screen and (max-width: 22.5em) {
+  @media only screen and (max-width: 22.5em) and (hover: none) {
     .color-schema__palette {
       flex: 0 0 65%;
       padding: 0; } }
@@ -551,11 +619,11 @@ body.color-theme-in-transition *:after {
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 0.2rem; }
-  @media only screen and (max-width: 22.5em) {
+  @media only screen and (max-width: 22.5em) and (hover: none) {
     .color-schema__color-component {
-      width: 7rem;
-      height: 7rem;
-      border-radius: 0.2rem; } }
+      width: 10rem;
+      height: 10rem;
+      border-radius: 0.5rem; } }
 
 .color-schema__color-label {
   display: inline-flex;
@@ -592,25 +660,25 @@ body.color-theme-in-transition *:after {
   transition: all 0.2s;
   animation-name: appears;
   animation-duration: 5s; }
-  @media only screen and (max-width: 22.5em) {
+  @media only screen and (max-width: 22.5em) and (hover: none) {
     .color-schema__btn {
       position: relative;
       top: 3rem;
       left: 3rem;
-      height: 6rem;
-      width: 6rem;
+      height: 9rem;
+      width: 9rem;
       padding: 1rem; } }
   .color-schema__btn:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 1.5rem var(--color-shadow-50); }
-    @media only screen and (max-width: 22.5em) {
+    @media only screen and (max-width: 22.5em) and (hover: none) {
       .color-schema__btn:hover {
         transform: translateY(0);
         box-shadow: none; } }
   .color-schema__btn:active {
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem var(--color-shadow-20); }
-    @media only screen and (max-width: 22.5em) {
+    @media only screen and (max-width: 22.5em) and (hover: none) {
       .color-schema__btn:active {
         transform: translateY(0);
         box-shadow: none; } }
@@ -623,12 +691,24 @@ body.color-theme-in-transition *:after {
         left: 0;
         bottom: 0;
         z-index: 8;
-        height: 12rem;
-        width: 12rem;
+        height: 15rem;
+        width: 15rem;
         border-radius: 0 0.5rem 0 0;
         background-color: var(--color-shadow-50);
         animation-name: appears;
         animation-duration: 5s; } }
+    .color-schema__btn--mobile:hover ~ .color-schema__panel {
+      opacity: 1;
+      visibility: visible;
+      z-index: 10;
+      transform: translateY(-0.3rem);
+      box-shadow: 0 1rem 1.5rem var(--color-shadow-50); }
+      @media only screen and (max-width: 22.5em) and (hover: none) {
+        .color-schema__btn--mobile:hover ~ .color-schema__panel {
+          transform: translateY(0);
+          box-shadow: none;
+          left: 0;
+          border-style: none; } }
 
 .color-schema__icon {
   height: 100%;
@@ -662,7 +742,8 @@ body.color-theme-in-transition *:after {
     font-size: 1.2rem; }
     @media only screen and (max-width: 22.5em) {
       .color-schema__toggle-text {
-        font-size: 3.5rem; } }
+        font-size: 4.5rem;
+        font-weight: 400; } }
   .color-schema__toggle-input {
     -webkit-appearance: none;
     appearance: none;
@@ -690,15 +771,15 @@ body.color-theme-in-transition *:after {
         .color-schema__toggle-input::before {
           width: 3.2rem;
           height: 3.2rem;
-          top: 1.15rem;
-          left: 75%; } }
+          top: 1.85rem;
+          left: 81%; } }
     .color-schema__toggle-input:checked::before {
       left: 78%; }
       @media only screen and (max-width: 22.5em) {
         .color-schema__toggle-input:checked::before {
           width: 3.4rem;
           height: 3.4rem;
-          left: 86%; } }
+          left: 89%; } }
     .color-schema__toggle-input:focus {
       outline: none; }
   .color-schema__toggle--color-top-bottom .color-schema__toggle-text {
@@ -747,7 +828,7 @@ body.color-theme-in-transition *:after {
 .color-schema--color-main {
   fill: var(--color-primary-dark);
   border: 0.2rem solid var(--color-primary-dark); }
-  @media only screen and (max-width: 22.5em) {
+  @media only screen and (max-width: 22.5em) and (hover: none) {
     .color-schema--color-main {
       fill: var(--color-sign);
       border: 0.2rem solid var(--color-sign); } }
@@ -933,7 +1014,8 @@ body.color-theme-in-transition *:after {
     color: var(--color-sign); }
     @media only screen and (max-width: 37.5em) {
       .navigation__item {
-        display: table-cell; } }
+        display: table-cell;
+        height: 15rem; } }
     .navigation__item--active {
       background-color: var(--color-primary-dark); }
     .navigation__item:hover:not(.navigation__item--active) {
@@ -953,14 +1035,17 @@ body.color-theme-in-transition *:after {
     color: inherit; }
     @media only screen and (max-width: 37.5em) {
       .navigation__link {
-        line-height: 10rem;
-        font-size: 2rem;
-        font-weight: 400; } }
-    @media only screen and (max-width: 22.5em) {
-      .navigation__link {
-        line-height: 10rem;
-        font-size: 2rem;
-        font-weight: 300; } }
+        line-height: 15rem;
+        font-size: 2rem; } }
+
+.section-intro {
+  padding: 3rem 6rem 6rem;
+  font-family: librebaskerville-italic, serif;
+  font-size: 2.5rem;
+  font-style: italic; }
+  @media only screen and (max-width: 22.5em) and (hover: none) {
+    .section-intro {
+      font-size: 4rem; } }
 
 .section-title {
   padding: 5rem; }
@@ -1094,7 +1179,7 @@ body.color-theme-in-transition *:after {
       .about__text {
         font-size: 4.3rem; } }
   .about__social-media-box {
-    margin-top: 2rem;
+    margin-top: calc(6rem / 2);
     text-align: center; }
     @media only screen and (max-width: 37.5em) {
       .about__social-media-box {
@@ -1105,7 +1190,7 @@ body.color-theme-in-transition *:after {
   .about__link:link, .about__link:visited, .about__link:hover, .about__link:active {
     text-decoration: none; }
   .about__link:not(:last-child) {
-    margin-right: 2rem; }
+    margin-right: 6rem; }
     @media only screen and (max-width: 37.5em) {
       .about__link:not(:last-child) {
         margin-right: 8rem; } }
@@ -1205,6 +1290,11 @@ body.color-theme-in-transition *:after {
     @media only screen and (max-width: 37.5em) {
       .footer__button {
         height: 10rem; } }
+    @media only screen and (max-width: 22.5em) and (hover: none) {
+      .footer__button {
+        height: 15rem;
+        width: 15rem;
+        border-radius: 0 0 1.5rem 1.5rem; } }
   .footer__icon-up {
     height: 3.2rem;
     width: 3.2rem;
@@ -1216,6 +1306,10 @@ body.color-theme-in-transition *:after {
       .footer__icon-up {
         height: 5rem;
         width: 5rem; } }
+    @media only screen and (max-width: 22.5em) and (hover: none) {
+      .footer__icon-up {
+        height: 9rem;
+        width: 9rem; } }
   .footer__logo-box {
     padding-bottom: 2rem; }
     @media only screen and (max-width: 22.5em) {
@@ -1386,8 +1480,12 @@ body.color-theme-in-transition *:after {
         right: 1.5%; } }
     @media only screen and (max-width: 37.5em) {
       .header__button {
-        right: 1.5%;
         height: 10rem; } }
+    @media only screen and (max-width: 22.5em) and (hover: none) {
+      .header__button {
+        height: 15rem;
+        width: 15rem;
+        border-radius: 1.5rem 1.5rem 0 0; } }
   .header__icon-down {
     height: 3.2rem;
     width: 3.2rem;
@@ -1399,6 +1497,10 @@ body.color-theme-in-transition *:after {
       .header__icon-down {
         height: 5rem;
         width: 5rem; } }
+    @media only screen and (max-width: 22.5em) and (hover: none) {
+      .header__icon-down {
+        height: 9rem;
+        width: 9rem; } }
 
 .section {
   padding: 2rem 22rem;

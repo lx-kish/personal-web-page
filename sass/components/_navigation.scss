@@ -75,9 +75,10 @@
     height: $navigation-item-height;
     background-color: var(--color-menu-base);
     color: var(--color-sign);
-    
+
     @include respond(_360-600) {
       display: table-cell;
+      height: 15rem;
     }
 
     &--active {
@@ -105,15 +106,15 @@
     color: inherit;
 
     @include respond(_360-600) {
-      line-height: 10rem;
+      line-height: 15rem;
       font-size: 2rem;
-      font-weight: 400;
+      // font-weight: 600;
     }
 
     @include respond(_0-360) {
-      line-height: 10rem;
-      font-size: 2rem;
-      font-weight: 300;
+      // line-height: 10rem;
+      // font-size: 2rem;
+      // font-weight: 600;
     }
   }
 }

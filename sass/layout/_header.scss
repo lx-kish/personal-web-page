@@ -162,9 +162,16 @@
     }
 
     @include respond(_360-600) {
-      right: 1.5%;
+      // right: 1.5%;
       height: 10rem;
       // border-radius: 0 0 $border-radius $border-radius;
+    }
+
+    @include respond(touch_0-360) {
+      // right: 1.5%;
+      height: 15rem;
+      width: 15rem;
+      border-radius: $border-radius-mobileS $border-radius-mobileS 0 0;
     }
   }
 
@@ -179,6 +186,11 @@
     @include respond(_360-600) {
       height: 5rem;
       width: 5rem;
+    }
+
+    @include respond(touch_0-360) {
+      height: 9rem;
+      width: 9rem;
     }
   }
 }

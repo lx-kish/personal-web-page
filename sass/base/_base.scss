@@ -97,7 +97,6 @@ html {
   //black
   --color-black: #{$color-black};
 
-  --color-black-15: #{$color-black-15};
   --color-black-20: #{$color-black-20};
   --color-black-50: #{$color-black-50};
 
@@ -106,11 +105,14 @@ html {
 
   --color-white-50: #{$color-white-50};
 
-  //other colors
+  //grey
   --color-grey-bg: #{$color-grey-bg};
   --color-grey-mild: #{$color-grey-mild};
   --color-grey-dark: #{$color-grey-font};
+  --color-score-light: #{$color-score-light};
+  --color-score-hover: #{$color-score-hover};
 
+  //other colors
   --color-yellow-bg: #{$color-yellow-bg};
 
   --color-accent: #{$color-accent};
@@ -125,27 +127,105 @@ html {
   // --color-accent: orangered;
 
   ////////////////////////////////////////////////
-  // NEW COLOR ARCHITECTURE - DAY
+  // NEW COLOR ARCHITECTURE
+  /*
+  DAY/NIGHT
+  
+  HEADER, FOOTER:
+  background gradient - color-primary/color-primary
+  fonts - white/white
+  logo - white/white
+  button background - dark-grey/dark-grey
+  icon-button - white/white
+  COLOR-PANEL & COLOR BUTTON background - transparent
+  COLOR-PANEL & COLOR BUTTON icon/border - white
+  COLOR-PANEL toggler - color-primary
 
-  //BACKGROUND
-  --color-bg: var(--color-grey-bg);
+  NAVIGATION:
+  button background - dark-grey
+  active background - color-primary
+  sign - white
+  hover - ...
 
-  //FONT
-  --color-font: var(--color-black);
+  SECTIONS:
+  background - white/dark-grey-bg (special for bg)
+  header - color-primary
+  intro - black/grey-light
+  COLOR-PANEL & COLOR BUTTON background - transparent
+  COLOR-PANEL & COLOR BUTTON icon/border - color-primary
 
-  //HEADER-FOOTER-MENU-TEXT-ICONS
-  --color-sign: var(--color-white);
+  ABOUT:
+  font - black/grey-light
+  photo-border - white
+  icons-media - color-primary
 
-  //MENU
-  --color-menu-base: var(--color-grey-dark);
+  SKILLS:
+  cards-front gradient - color-primary
+  cards-front font - white
+  cards-back gradient - color-primary
+  cards-front font - black/white
 
-  //SECTION TOOLSET
-  --color-score: var(--color-grey-mild);
-  --color-input-bg: var(--color-white-50);
+  TOOLS:
+  heading - black/grey-light
+  font - black/grey-light
+  icon-score dark - color-primary
+  icon-score light - ... (border EXPERIENCE, QUALIFICATION - #DFE0E0 ?)
+  score-background - ... (background EXPERIENCE, QUALIFICATION - #F2F2F2 ?)
 
-  //SHADOWS
-  --color-shadow-20: var(--color-black-20);
-  --color-shadow-50: var(--color-black-50);
+  EXPERIENCE, QUALIFICATION:
+  background - white/dark-grey-bg
+  font - black/grey-light
+  background-component - white/...
+  border-component - grey-light/... (perhaps, d3...)
+  link - color-primary
+  icon-link - color-primary
+
+  CONTACTS:
+  background - white/dark-grey-bg (special for bg)
+  link - color-primary
+  icon-link - color-primary
+  button - color-primary
+  button background - transparent
+
+  MESSAGE:
+  background - white/dark-grey-bg (special for bg)
+  header - color-primary
+  fields - .../...
+  placeholders - .../...
+  fields font - .../...
+  buttons - color-primary
+  buttons background - transparent
+  icon-close - color-primary
+
+  */
+
+  // ////////////////////////////////////////////////
+  // // NEW COLOR ARCHITECTURE - LIGHT
+  // //BACKGROUND
+  // --color-bg: var(--color-grey-bg);
+
+  // //FONT
+  // --color-font: var(--color-black);
+
+  // //HEADER-FOOTER-MENU-TEXT-ICONS
+  // --color-sign: var(--color-white);
+
+  // //MENU
+  // --color-menu-base: var(--color-grey-dark);
+
+  // //SECTION TOOLSET
+  // --color-score-light: var(--color-score-light);
+  // // --color-score: var(--color-grey-mild);
+  // --color-score-hover: var(--color-score-hover);
+  // --color-input-bg: var(--color-score-hover);
+  // // --color-input-bg: var(--color-white-50);
+
+  // //SECTION QUALIFICATION
+  // --color-activity: var(--color-score-light);
+
+  // //SHADOWS
+  // --color-shadow-20: var(--color-black-20);
+  // --color-shadow-50: var(--color-black-50);
 }
 
 body {
@@ -153,7 +233,8 @@ body {
 
   &[data-theme="light"] {
     //BACKGROUND
-    --color-bg: var(--color-grey-bg);
+    --color-bg: var(--color-white);
+    // --color-bg: var(--color-grey-bg);
 
     //FONT
     --color-font: var(--color-black);
@@ -165,8 +246,13 @@ body {
     --color-menu-base: var(--color-grey-dark);
 
     //SECTION TOOLSET
-    --color-score: var(--color-grey-mild);
-    --color-input-bg: var(--color-white-50);
+    // --color-score: var(--color-white); //score-light
+    --color-score: var(--color-score-light);
+    --color-input-bg: var(--color-score-hover);
+    // --color-input-bg: var(--color-white-50);
+
+    //SECTION QUALIFICATION
+    --color-activity: var(--color-score-light);
 
     //SHADOWS
     --color-shadow-20: var(--color-black-20);
@@ -189,6 +275,9 @@ body {
     //SECTION TOOLSET
     --color-score: #{$color-score-light-night};
     --color-input-bg: #{$color-input-bg-night};
+
+    //SECTION QUALIFICATION
+    --color-activity: var(--color-grey-dark);
 
     //SHADOWS
     // --color-shadow-20: #{$color-shadow-night-20};

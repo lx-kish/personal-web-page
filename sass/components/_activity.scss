@@ -1,15 +1,43 @@
 .activity {
   // margin: 1rem;
   padding: 1rem;
-  border-radius: .3rem;
-  background: var(--color-input-bg);
-  // background: $color-white-light;
-  transition: transform .2s linear;
-  backface-visibility: hidden;
 
-  &:hover {
-    transform: translateY(-0.3rem) scale(1.01, 1.01);
-    box-shadow: 0 0 1rem .4rem var(--color-shadow-20);
-    backface-visibility: hidden;
+  background: var(--color-score-hover);
+  border: 0.1rem solid var(--color-score);
+  // border: 0.1rem solid var(--color-grey-mild);
+  border-radius: 0.3rem;
+  // background: var(--color-input-bg);
+  // background: $color-white-light;
+  color: var(--color-font);
+
+  // transition: transform .2s linear;
+  // backface-visibility: hidden;
+
+  @include respond(touch_0-360) {
+    border: 0.1rem solid var(--color-grey-mild);
+    border-radius: 0.3rem;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+    @include respond(touch_0-360) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  // &:hover {
+  //   transform: translateY(-0.3rem) scale(1.01, 1.01);
+  //   box-shadow: 0 0 1rem .4rem var(--color-shadow-20);
+  //   backface-visibility: hidden;
+  // }
+
+  &__duration {
+    font-family: librebaskerville-italic, serif;
+    font-size: 1.8rem;
+    font-style: italic;
+
+    @include respond(touch_0-360) {
+      font-size: 4rem;
+    }
   }
 }
