@@ -4,7 +4,7 @@
   //GENERAL SETTINGS FOR COLOR-PANEL
   &__panel {
     position: fixed;
-    left: 2%;
+    left: 1.5%;
     bottom: 5.5rem;
     z-index: 1;
     width: 16rem;
@@ -35,7 +35,7 @@
       border-radius: 0 $border-radius 0 0;
 
       border-style: none !important;
-      background-color: var(--color-menu-base);
+      background-color: var(--color-menu-bg);
       transition-delay: .4s;
     }
 
@@ -162,7 +162,7 @@
 
   &__btn {
     position: fixed;
-    left: 5%;
+    left: 4%;
     bottom: 1.8rem;
     z-index: 10;
     display: inline-block;
@@ -386,7 +386,7 @@
               background-color: var(--color-primary-dark);
 
               @include respond(_0-360) {
-                background-color: var(--color-menu-base);
+                background-color: var(--color-menu-bg);
               }
             }
           }
@@ -414,7 +414,7 @@
               background-color: var(--color-bg);
 
               @include respond(_0-360) {
-                background-color: var(--color-menu-base);
+                background-color: var(--color-menu-bg);
               }
             }
           }

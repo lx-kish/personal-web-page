@@ -1,27 +1,33 @@
 .activity {
   // margin: 1rem;
-  padding: 1rem;
+  // padding: 2rem;
 
-  background: var(--color-score-hover);
-  border: 0.1rem solid var(--color-score);
-  // border: 0.1rem solid var(--color-grey-mild);
-  border-radius: 0.3rem;
+  // background: var(--color-activity-bg);
+  // border: 0.1rem solid var(--color-activity-border);
+  // border-radius: 0.3rem;
+
+  // border: 0.1rem solid var(--color-grey-mild-2);
   // background: var(--color-input-bg);
-  // background: $color-white-light;
+  // background: $color-grey-light-4;
   color: var(--color-font);
 
   // transition: transform .2s linear;
   // backface-visibility: hidden;
 
-  @include respond(touch_0-360) {
-    border: 0.1rem solid var(--color-grey-mild);
+  @include respond(_0-360) {
+
+    background: var(--color-activity-bg);
+    border: 0.1rem solid var(--color-activity-border);
     border-radius: 0.3rem;
+    padding: 2rem;
+    // border: 0.1rem solid var(--color-grey-mild-2);
+    // border-radius: 0.3rem;
   }
 
   &:not(:last-child) {
-    margin-bottom: 1rem;
-    @include respond(touch_0-360) {
-      margin-bottom: 1rem;
+    margin-bottom: 2rem;
+    @include respond(_0-360) {
+      margin-bottom: 2rem;
     }
   }
 
@@ -31,13 +37,52 @@
   //   backface-visibility: hidden;
   // }
 
+  &__name {
+    text-align: right;
+
+    @include respond(_0-360) {
+      text-align: initial;
+    }
+  }
+
   &__duration {
     font-family: librebaskerville-italic, serif;
     font-size: 1.8rem;
     font-style: italic;
 
-    @include respond(touch_0-360) {
+    text-align: right;
+
+    @include respond(_0-360) {
       font-size: 4rem;
+      text-align: initial;
+    }
+  }
+
+  &__prop {
+    display: inline-block;
+    text-decoration: none;
+    // font-size: 1.2rem;
+
+    &-icon {
+      width: 2rem;
+      height: 2rem;
+      fill: var(--color-primary-dark);
+
+      vertical-align: middle;
+
+      @include respond(_0-360) {
+        width: 4rem;
+        height: 4rem;
+      }
+    }
+
+    &-text {
+      text-decoration: none;
+      padding-left: 1rem;
+      line-height: 100%;
+      vertical-align: middle;
+
+      color: var(--color-primary-dark);
     }
   }
 }

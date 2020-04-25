@@ -64,7 +64,7 @@ possible $breakpoint arguments:
   }
 
   @if $breakpoint == touch_0-360 { //touch-screen small size
-    @media only screen and (max-width: 22.5em)
-    and (hover: none) { @content };
+    @media only screen and (max-width: 22.5em),
+    only screen and (hover: none) { @content };
   }
 }

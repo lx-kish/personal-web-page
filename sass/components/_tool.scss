@@ -52,7 +52,7 @@
   }
 
   &:hover {
-    background: var(--color-input-bg);
+    background: var(--color-score-hover);
     // background: var(--color-yellow-bg);
 
     @include respond(_0-360) {

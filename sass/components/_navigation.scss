@@ -1,6 +1,6 @@
 .navigation {
   position: absolute;
-  right: 5%;
+  right: 4%;
   width: 12rem;
   border-radius: 0.2rem;
 
@@ -73,8 +73,8 @@
 
   &__item {
     height: $navigation-item-height;
-    background-color: var(--color-menu-base);
-    color: var(--color-sign);
+    background-color: var(--color-menu-bg);
+    color: var(--color-menu-font);
 
     @include respond(_360-600) {
       display: table-cell;
@@ -86,7 +86,7 @@
     }
 
     &:hover:not(.navigation__item--active) {
-      color: var(--color-input-bg);
+      color: var(--color-primary-dark);
 
       @include respond(_360-600) {
         color: var(--color-sign);

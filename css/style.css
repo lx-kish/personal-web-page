@@ -9,6 +9,22 @@ possible $breakpoint arguments:
 
 1em = 16px
 */
+/*
+MENU-BACKGROUND
+MENU-FONT-HOVER
+FONT DARK SCHEMA
+ABOUT PHOTO BORDER
+
+SCORE-ICON-LIGHT/ACTIVITY-BACKGROUND-LIGHT
+SCORE-HOVER-LIGHT/ACTIVITY-BORDER-LIGHT
+SCORE-ICON-DARK/ACTIVITY-BACKGROUND-DARK
+SCORE-HOVER-DARK/ACTIVITY-BORDER-DARK
+
+MESSAGE-INPUT-LIGHT
+MESSAGE-PLACEHOLDER/LABLE-LIGHT
+MESSAGE-INPUT-DARK
+MESSAGE-PLACEHOLDER/LABEL-DARK
+*/
 @keyframes moveInDown {
   0% {
     opacity: 0;
@@ -58,62 +74,8 @@ html {
       font-size: 75%; } }
 
 :root {
-  --color-primary-dark: #23868b;
-  --color-primary-dark-70: rgba(35, 134, 139, 0.7);
-  --color-primary-dark-90: rgba(35, 134, 139, 0.9);
-  --color-primary-light: #66b7bb;
-  --color-primary-light-70: rgba(102, 183, 187, 0.7);
-  --color-primary-light-90: rgba(102, 183, 187, 0.9);
-  --color-PS-dark: #fe5619;
-  --color-PS-dark-70: rgba(254, 86, 25, 0.7);
-  --color-PS-dark-90: rgba(254, 86, 25, 0.9);
-  --color-PS-light: #fa9c31;
-  --color-PS-light-70: rgba(250, 156, 49, 0.7);
-  --color-PS-light-90: rgba(250, 156, 49, 0.9);
-  --color-TW-dark: #dc4e48;
-  --color-TW-dark-70: rgba(220, 78, 72, 0.7);
-  --color-TW-dark-90: rgba(220, 78, 72, 0.9);
-  --color-TW-light: #e07470;
-  --color-TW-light-70: rgba(224, 116, 112, 0.7);
-  --color-TW-light-90: rgba(224, 116, 112, 0.9);
-  --color-PV-dark: #c67d17;
-  --color-PV-dark-70: rgba(198, 125, 23, 0.7);
-  --color-PV-dark-90: rgba(198, 125, 23, 0.9);
-  --color-PV-light: #fdbc60;
-  --color-PV-light-70: rgba(253, 188, 96, 0.7);
-  --color-PV-light-90: rgba(253, 188, 96, 0.9);
-  --color-EM-dark: #879746;
-  --color-EM-dark-70: rgba(135, 151, 70, 0.7);
-  --color-EM-dark-90: rgba(135, 151, 70, 0.9);
-  --color-EM-light: #abbb6d;
-  --color-EM-light-70: rgba(171, 187, 109, 0.7);
-  --color-EM-light-90: rgba(171, 187, 109, 0.9);
-  --color-ACC-dark: #23868b;
-  --color-ACC-dark-70: rgba(35, 134, 139, 0.7);
-  --color-ACC-dark-90: rgba(35, 134, 139, 0.9);
-  --color-ACC-light: #66b7bb;
-  --color-ACC-light-70: rgba(102, 183, 187, 0.7);
-  --color-ACC-light-90: rgba(102, 183, 187, 0.9);
-  --color-CU-dark: #f5b01e;
-  --color-CU-dark-70: rgba(245, 176, 30, 0.7);
-  --color-CU-dark-90: rgba(245, 176, 30, 0.9);
-  --color-CU-light: #f3bf4f;
-  --color-CU-light-70: rgba(243, 191, 79, 0.7);
-  --color-CU-light-90: rgba(243, 191, 79, 0.9);
-  --color-black: #000;
-  --color-black-20: rgba(0, 0, 0, 0.2);
-  --color-black-50: rgba(0, 0, 0, 0.5);
-  --color-white: #fff;
-  --color-white-50: rgba(255, 255, 255, 0.5);
-  --color-grey-bg: #dddddd;
-  --color-grey-mild: #dfe0e0;
-  --color-grey-dark: #333333;
-  --color-score-light: #e0e0e0;
-  --color-score-hover: #f2f2f2;
-  --color-yellow-bg: #fff458;
-  --color-accent: #e9690e;
   /*
-  DAY/NIGHT
+  LIGHT/DARK
   
   HEADER, FOOTER:
   background gradient - color-primary/color-primary
@@ -181,26 +143,111 @@ html {
   buttons background - transparent
   icon-close - color-primary
 
-  */ }
+  */
+  --color-primary-dark: #23868b;
+  --color-primary-dark-70: rgba(35, 134, 139, 0.7);
+  --color-primary-dark-90: rgba(35, 134, 139, 0.9);
+  --color-primary-light: #66b7bb;
+  --color-primary-light-70: rgba(102, 183, 187, 0.7);
+  --color-primary-light-90: rgba(102, 183, 187, 0.9);
+  --color-PS-dark: #fe5619;
+  --color-PS-dark-70: rgba(254, 86, 25, 0.7);
+  --color-PS-dark-90: rgba(254, 86, 25, 0.9);
+  --color-PS-light: #fa9c31;
+  --color-PS-light-70: rgba(250, 156, 49, 0.7);
+  --color-PS-light-90: rgba(250, 156, 49, 0.9);
+  --color-TW-dark: #dc4e48;
+  --color-TW-dark-70: rgba(220, 78, 72, 0.7);
+  --color-TW-dark-90: rgba(220, 78, 72, 0.9);
+  --color-TW-light: #e07470;
+  --color-TW-light-70: rgba(224, 116, 112, 0.7);
+  --color-TW-light-90: rgba(224, 116, 112, 0.9);
+  --color-PV-dark: #c67d17;
+  --color-PV-dark-70: rgba(198, 125, 23, 0.7);
+  --color-PV-dark-90: rgba(198, 125, 23, 0.9);
+  --color-PV-light: #fdbc60;
+  --color-PV-light-70: rgba(253, 188, 96, 0.7);
+  --color-PV-light-90: rgba(253, 188, 96, 0.9);
+  --color-EM-dark: #879746;
+  --color-EM-dark-70: rgba(135, 151, 70, 0.7);
+  --color-EM-dark-90: rgba(135, 151, 70, 0.9);
+  --color-EM-light: #abbb6d;
+  --color-EM-light-70: rgba(171, 187, 109, 0.7);
+  --color-EM-light-90: rgba(171, 187, 109, 0.9);
+  --color-ACC-dark: #23868b;
+  --color-ACC-dark-70: rgba(35, 134, 139, 0.7);
+  --color-ACC-dark-90: rgba(35, 134, 139, 0.9);
+  --color-ACC-light: #66b7bb;
+  --color-ACC-light-70: rgba(102, 183, 187, 0.7);
+  --color-ACC-light-90: rgba(102, 183, 187, 0.9);
+  --color-CU-dark: #f5b01e;
+  --color-CU-dark-70: rgba(245, 176, 30, 0.7);
+  --color-CU-dark-90: rgba(245, 176, 30, 0.9);
+  --color-CU-light: #f3bf4f;
+  --color-CU-light-70: rgba(243, 191, 79, 0.7);
+  --color-CU-light-90: rgba(243, 191, 79, 0.9);
+  --color-black: #000;
+  --color-black-20: rgba(0, 0, 0, 0.2);
+  --color-black-50: rgba(0, 0, 0, 0.5);
+  --color-white: #fff;
+  --color-white-50: rgba(255, 255, 255, 0.5);
+  --color-grey-light-1: #e0e0e0;
+  --color-grey-light-2: #f2f2f2;
+  --color-grey-light-3: #dddddd;
+  --color-grey-light-4: #f4f4f4;
+  --color-grey-light-5: #efdab9;
+  --color-grey-dark-1: #171c20;
+  --color-grey-dark-2: #333333;
+  --color-grey-dark-3: #4e5255;
+  --color-grey-mild-1: #9d9d9d;
+  --color-grey-mild-2: #dfe0e0;
+  --color-grey-mild-3: #bfbfbf;
+  --color-yellow-bg: #fff458;
+  --color-accent: #e9690e;
+  /*
+  MENU-BACKGROUND //done
+  MENU-FONT-HOVER //done
+  FONT DARK SCHEMA //done
+  ABOUT PHOTO BORDER //done
+
+  SCORE-ICON-LIGHT/ACTIVITY-BORDER-LIGHT //done
+  SCORE-HOVER-LIGHT/ACTIVITY-BACKGROUND-LIGHT //done
+  SCORE-ICON-DARK/ACTIVITY-BORDER-DARK //done
+  SCORE-HOVER-DARK/ACTIVITY-BACKGROUND-DARK //done
+
+  MESSAGE-INPUT-LIGHT
+  MESSAGE-PLACEHOLDER/LABLE-LIGHT
+  MESSAGE-INPUT-DARK
+  MESSAGE-PLACEHOLDER/LABEL-DARK
+  */
+  --color-sign: var(--color-white);
+  --color-photo-border: var(--color-grey-light-1);
+  --color-menu-bg: var(--color-grey-dark-2);
+  --color-menu-font: var(--color-white);
+  --color-shadow-20: var(--color-black-20);
+  --color-shadow-50: var(--color-black-50); }
 
 body {
   box-sizing: border-box; }
   body[data-theme="light"] {
     --color-bg: var(--color-white);
     --color-font: var(--color-black);
-    --color-sign: var(--color-white);
-    --color-menu-base: var(--color-grey-dark);
-    --color-score: var(--color-score-light);
-    --color-input-bg: var(--color-score-hover);
-    --color-activity: var(--color-score-light);
-    --color-shadow-20: var(--color-black-20);
-    --color-shadow-50: var(--color-black-50); }
+    --color-score: var(--color-grey-light-1);
+    --color-score-hover: var(--color-grey-light-2);
+    --color-activity-bg: var(--color-grey-light-2);
+    --color-activity-border: var(--color-grey-light-1);
+    --color-input-bg: var(--color-grey-mild-3);
+    --color-label-plholder: var(--color-black); }
   body[data-theme="dark"] {
-    --color-bg: #171c20;
-    --color-font: #bfbfbf;
-    --color-score: #bfbfbf;
-    --color-input-bg: #4e5255;
-    --color-activity: var(--color-grey-dark); }
+    --color-bg: var(--color-grey-dark-1);
+    --color-font: var(--color-grey-mild-3);
+    --color-score: var(--color-black-50);
+    --color-score-hover: var(--color-grey-dark-2);
+    --color-input-bg: var(--color-input-bg-dark);
+    --color-activity-bg: var(--color-grey-dark-2);
+    --color-activity-border: var(--color-grey-dark-3);
+    --color-input-bg: var(--color-grey-dark-3);
+    --color-label-plholder: var(--color-grey-mild-3); }
   body[primary-color="blue"] {
     --color-primary-dark: #23868b;
     --color-primary-dark-70: rgba(35, 134, 139, 0.7);
@@ -316,27 +363,50 @@ body.color-theme-in-transition *:after {
   backface-visibility: hidden !important; }
 
 .activity {
-  padding: 1rem;
-  background: var(--color-score-hover);
-  border: 0.1rem solid var(--color-score);
-  border-radius: 0.3rem;
   color: var(--color-font); }
-  @media only screen and (max-width: 22.5em) and (hover: none) {
+  @media only screen and (max-width: 22.5em) {
     .activity {
-      border: 0.1rem solid var(--color-grey-mild);
-      border-radius: 0.3rem; } }
+      background: var(--color-activity-bg);
+      border: 0.1rem solid var(--color-activity-border);
+      border-radius: 0.3rem;
+      padding: 2rem; } }
   .activity:not(:last-child) {
-    margin-bottom: 1rem; }
-    @media only screen and (max-width: 22.5em) and (hover: none) {
+    margin-bottom: 2rem; }
+    @media only screen and (max-width: 22.5em) {
       .activity:not(:last-child) {
-        margin-bottom: 1rem; } }
+        margin-bottom: 2rem; } }
+  .activity__name {
+    text-align: right; }
+    @media only screen and (max-width: 22.5em) {
+      .activity__name {
+        text-align: initial; } }
   .activity__duration {
     font-family: librebaskerville-italic, serif;
     font-size: 1.8rem;
-    font-style: italic; }
-    @media only screen and (max-width: 22.5em) and (hover: none) {
+    font-style: italic;
+    text-align: right; }
+    @media only screen and (max-width: 22.5em) {
       .activity__duration {
-        font-size: 4rem; } }
+        font-size: 4rem;
+        text-align: initial; } }
+  .activity__prop {
+    display: inline-block;
+    text-decoration: none; }
+    .activity__prop-icon {
+      width: 2rem;
+      height: 2rem;
+      fill: var(--color-primary-dark);
+      vertical-align: middle; }
+      @media only screen and (max-width: 22.5em) {
+        .activity__prop-icon {
+          width: 4rem;
+          height: 4rem; } }
+    .activity__prop-text {
+      text-decoration: none;
+      padding-left: 1rem;
+      line-height: 100%;
+      vertical-align: middle;
+      color: var(--color-primary-dark); }
 
 .btn {
   text-transform: uppercase;
@@ -408,37 +478,37 @@ body.color-theme-in-transition *:after {
       transform: rotateY(180deg);
       background-size: cover;
       background-position: top; }
-      @media only screen and (max-width: 22.5em) and (hover: none) {
+      @media only screen and (max-width: 22.5em), only screen and (hover: none) {
         .card__side--back {
           transform: rotateY(0); } }
       .card__side--back--PS {
         background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70)); }
-        @media only screen and (max-width: 22.5em) and (hover: none) {
+        @media only screen and (max-width: 22.5em), only screen and (hover: none) {
           .card__side--back--PS {
             background-image: none; } }
       .card__side--back--TW {
         background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70)); }
-        @media only screen and (max-width: 22.5em) and (hover: none) {
+        @media only screen and (max-width: 22.5em), only screen and (hover: none) {
           .card__side--back--TW {
             background-image: none; } }
       .card__side--back--PV {
         background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70)); }
-        @media only screen and (max-width: 22.5em) and (hover: none) {
+        @media only screen and (max-width: 22.5em), only screen and (hover: none) {
           .card__side--back--PV {
             background-image: none; } }
       .card__side--back--EM {
         background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70)); }
-        @media only screen and (max-width: 22.5em) and (hover: none) {
+        @media only screen and (max-width: 22.5em), only screen and (hover: none) {
           .card__side--back--EM {
             background-image: none; } }
       .card__side--back--ACC {
         background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70)); }
-        @media only screen and (max-width: 22.5em) and (hover: none) {
+        @media only screen and (max-width: 22.5em), only screen and (hover: none) {
           .card__side--back--ACC {
             background-image: none; } }
       .card__side--back--CU {
         background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70)); }
-        @media only screen and (max-width: 22.5em) and (hover: none) {
+        @media only screen and (max-width: 22.5em), only screen and (hover: none) {
           .card__side--back--CU {
             background-image: none; } }
   .card:hover .card__side--front {
@@ -543,7 +613,7 @@ body.color-theme-in-transition *:after {
 
 .color-schema__panel {
   position: fixed;
-  left: 2%;
+  left: 1.5%;
   bottom: 5.5rem;
   z-index: 1;
   width: 16rem;
@@ -556,7 +626,7 @@ body.color-theme-in-transition *:after {
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s ease; }
-  @media only screen and (max-width: 22.5em) and (hover: none) {
+  @media only screen and (max-width: 22.5em), only screen and (hover: none) {
     .color-schema__panel {
       left: -45rem;
       bottom: 0;
@@ -568,7 +638,7 @@ body.color-theme-in-transition *:after {
       padding: 3.5rem;
       border-radius: 0 0.5rem 0 0;
       border-style: none !important;
-      background-color: var(--color-menu-base);
+      background-color: var(--color-menu-bg);
       transition-delay: .4s; } }
   .color-schema__panel:hover {
     opacity: 1;
@@ -576,17 +646,17 @@ body.color-theme-in-transition *:after {
     z-index: 10;
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 1.5rem var(--color-shadow-50); }
-    @media only screen and (max-width: 22.5em) and (hover: none) {
+    @media only screen and (max-width: 22.5em), only screen and (hover: none) {
       .color-schema__panel:hover {
         transform: translateY(0);
         box-shadow: none; } }
-  @media only screen and (max-width: 22.5em) and (hover: none) {
+  @media only screen and (max-width: 22.5em), only screen and (hover: none) {
     .color-schema__panel--hide {
       transform: translateY(0);
       box-shadow: none;
       border-style: none;
       left: -45rem; } }
-  @media only screen and (max-width: 22.5em) and (hover: none) {
+  @media only screen and (max-width: 22.5em), only screen and (hover: none) {
     .color-schema__panel--show {
       transform: translateY(0);
       box-shadow: none;
@@ -605,7 +675,7 @@ body.color-theme-in-transition *:after {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  @media only screen and (max-width: 22.5em) and (hover: none) {
+  @media only screen and (max-width: 22.5em), only screen and (hover: none) {
     .color-schema__palette {
       flex: 0 0 65%;
       padding: 0; } }
@@ -619,7 +689,7 @@ body.color-theme-in-transition *:after {
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 0.2rem; }
-  @media only screen and (max-width: 22.5em) and (hover: none) {
+  @media only screen and (max-width: 22.5em), only screen and (hover: none) {
     .color-schema__color-component {
       width: 10rem;
       height: 10rem;
@@ -648,7 +718,7 @@ body.color-theme-in-transition *:after {
 
 .color-schema__btn {
   position: fixed;
-  left: 5%;
+  left: 4%;
   bottom: 1.8rem;
   z-index: 10;
   display: inline-block;
@@ -660,7 +730,7 @@ body.color-theme-in-transition *:after {
   transition: all 0.2s;
   animation-name: appears;
   animation-duration: 5s; }
-  @media only screen and (max-width: 22.5em) and (hover: none) {
+  @media only screen and (max-width: 22.5em), only screen and (hover: none) {
     .color-schema__btn {
       position: relative;
       top: 3rem;
@@ -671,20 +741,20 @@ body.color-theme-in-transition *:after {
   .color-schema__btn:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 1.5rem var(--color-shadow-50); }
-    @media only screen and (max-width: 22.5em) and (hover: none) {
+    @media only screen and (max-width: 22.5em), only screen and (hover: none) {
       .color-schema__btn:hover {
         transform: translateY(0);
         box-shadow: none; } }
   .color-schema__btn:active {
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem var(--color-shadow-20); }
-    @media only screen and (max-width: 22.5em) and (hover: none) {
+    @media only screen and (max-width: 22.5em), only screen and (hover: none) {
       .color-schema__btn:active {
         transform: translateY(0);
         box-shadow: none; } }
   .color-schema__btn--mobile {
     transition: all 0.4s ease; }
-    @media only screen and (max-width: 22.5em) and (hover: none) {
+    @media only screen and (max-width: 22.5em), only screen and (hover: none) {
       .color-schema__btn--mobile {
         display: inline-block;
         position: fixed;
@@ -703,7 +773,7 @@ body.color-theme-in-transition *:after {
       z-index: 10;
       transform: translateY(-0.3rem);
       box-shadow: 0 1rem 1.5rem var(--color-shadow-50); }
-      @media only screen and (max-width: 22.5em) and (hover: none) {
+      @media only screen and (max-width: 22.5em), only screen and (hover: none) {
         .color-schema__btn--mobile:hover ~ .color-schema__panel {
           transform: translateY(0);
           box-shadow: none;
@@ -806,7 +876,7 @@ body.color-theme-in-transition *:after {
       background-color: var(--color-primary-dark); }
       @media only screen and (max-width: 22.5em) {
         .color-schema__toggle--color-top-bottom .color-schema__toggle-input:checked::before {
-          background-color: var(--color-menu-base); } }
+          background-color: var(--color-menu-bg); } }
   .color-schema__toggle--color-main .color-schema__toggle-text {
     color: var(--color-primary-dark); }
   .color-schema__toggle--color-main .color-schema__toggle-input {
@@ -819,7 +889,7 @@ body.color-theme-in-transition *:after {
       background-color: var(--color-bg); }
       @media only screen and (max-width: 22.5em) {
         .color-schema__toggle--color-main .color-schema__toggle-input:checked::before {
-          background-color: var(--color-menu-base); } }
+          background-color: var(--color-menu-bg); } }
 
 .color-schema--color-top-bottom {
   fill: var(--color-sign);
@@ -828,7 +898,7 @@ body.color-theme-in-transition *:after {
 .color-schema--color-main {
   fill: var(--color-primary-dark);
   border: 0.2rem solid var(--color-primary-dark); }
-  @media only screen and (max-width: 22.5em) and (hover: none) {
+  @media only screen and (max-width: 22.5em), only screen and (hover: none) {
     .color-schema--color-main {
       fill: var(--color-sign);
       border: 0.2rem solid var(--color-sign); } }
@@ -887,7 +957,7 @@ body.color-theme-in-transition *:after {
     font-size: 3rem;
     text-decoration: none;
     line-height: .5;
-    color: var(--color-menu-base);
+    color: var(--color-font);
     transition: all .2s; }
     @media only screen and (max-width: 22.5em) {
       .message__close:link, .message__close:active {
@@ -918,6 +988,8 @@ body.color-theme-in-transition *:after {
   @media only screen and (max-width: 22.5em) {
     .form__input {
       font-size: 3.5rem; } }
+  .form__input::placeholder {
+    color: var(--color-label-plholder); }
   .form__input--message {
     overflow: hidden;
     resize: none; }
@@ -932,7 +1004,7 @@ body.color-theme-in-transition *:after {
   position: relative;
   display: block;
   font-size: 1.6rem;
-  color: var(--color-font);
+  color: var(--color-label-plholder);
   margin-top: 1rem;
   margin-left: 1rem;
   transition: all 0.3s; }
@@ -957,7 +1029,7 @@ body.color-theme-in-transition *:after {
 
 .navigation {
   position: absolute;
-  right: 5%;
+  right: 4%;
   width: 12rem;
   border-radius: 0.2rem;
   -webkit-transition: all 0.3s ease;
@@ -1010,8 +1082,8 @@ body.color-theme-in-transition *:after {
         table-layout: fixed; } }
   .navigation__item {
     height: 8rem;
-    background-color: var(--color-menu-base);
-    color: var(--color-sign); }
+    background-color: var(--color-menu-bg);
+    color: var(--color-menu-font); }
     @media only screen and (max-width: 37.5em) {
       .navigation__item {
         display: table-cell;
@@ -1019,7 +1091,7 @@ body.color-theme-in-transition *:after {
     .navigation__item--active {
       background-color: var(--color-primary-dark); }
     .navigation__item:hover:not(.navigation__item--active) {
-      color: var(--color-input-bg); }
+      color: var(--color-primary-dark); }
       @media only screen and (max-width: 37.5em) {
         .navigation__item:hover:not(.navigation__item--active) {
           color: var(--color-sign); } }
@@ -1043,7 +1115,7 @@ body.color-theme-in-transition *:after {
   font-family: librebaskerville-italic, serif;
   font-size: 2.5rem;
   font-style: italic; }
-  @media only screen and (max-width: 22.5em) and (hover: none) {
+  @media only screen and (max-width: 22.5em), only screen and (hover: none) {
     .section-intro {
       font-size: 4rem; } }
 
@@ -1135,7 +1207,7 @@ body.color-theme-in-transition *:after {
     fill: var(--color-score); }
 
 .tool:hover {
-  background: var(--color-input-bg); }
+  background: var(--color-score-hover); }
   @media only screen and (max-width: 22.5em) {
     .tool:hover {
       background: none; } }
@@ -1168,7 +1240,7 @@ body.color-theme-in-transition *:after {
     height: 100%;
     max-width: 100%;
     border-radius: 50%;
-    border: 0.5rem solid var(--color-sign);
+    border: 0.5rem solid var(--color-photo-border);
     filter: brightness(90%) sepia(20%); }
   .about__text {
     font-size: 1.6rem; }
@@ -1274,10 +1346,10 @@ body.color-theme-in-transition *:after {
     display: inline-block;
     position: absolute;
     top: 0;
-    right: 5%;
+    right: 4%;
     height: 5rem;
     width: 12rem;
-    background-color: var(--color-menu-base);
+    background-color: var(--color-menu-bg);
     text-align: center;
     border-radius: 0 0 0.5rem 0.5rem;
     animation-name: appears;
@@ -1290,7 +1362,7 @@ body.color-theme-in-transition *:after {
     @media only screen and (max-width: 37.5em) {
       .footer__button {
         height: 10rem; } }
-    @media only screen and (max-width: 22.5em) and (hover: none) {
+    @media only screen and (max-width: 22.5em), only screen and (hover: none) {
       .footer__button {
         height: 15rem;
         width: 15rem;
@@ -1306,14 +1378,16 @@ body.color-theme-in-transition *:after {
       .footer__icon-up {
         height: 5rem;
         width: 5rem; } }
-    @media only screen and (max-width: 22.5em) and (hover: none) {
+    @media only screen and (max-width: 22.5em), only screen and (hover: none) {
       .footer__icon-up {
         height: 9rem;
         width: 9rem; } }
   .footer__logo-box {
+    padding-top: 8rem;
     padding-bottom: 2rem; }
     @media only screen and (max-width: 22.5em) {
       .footer__logo-box {
+        padding-top: 0;
         padding-bottom: 5rem; } }
   .footer__logo {
     height: 4.5rem;
@@ -1465,10 +1539,10 @@ body.color-theme-in-transition *:after {
     display: inline-block;
     position: absolute;
     bottom: 0;
-    right: 5%;
+    right: 4%;
     height: 5rem;
     width: 12rem;
-    background-color: var(--color-menu-base);
+    background-color: var(--color-menu-bg);
     text-align: center;
     border-radius: 0.5rem 0.5rem 0 0;
     animation-name: appears;
@@ -1481,7 +1555,7 @@ body.color-theme-in-transition *:after {
     @media only screen and (max-width: 37.5em) {
       .header__button {
         height: 10rem; } }
-    @media only screen and (max-width: 22.5em) and (hover: none) {
+    @media only screen and (max-width: 22.5em), only screen and (hover: none) {
       .header__button {
         height: 15rem;
         width: 15rem;
@@ -1497,13 +1571,13 @@ body.color-theme-in-transition *:after {
       .header__icon-down {
         height: 5rem;
         width: 5rem; } }
-    @media only screen and (max-width: 22.5em) and (hover: none) {
+    @media only screen and (max-width: 22.5em), only screen and (hover: none) {
       .header__icon-down {
         height: 9rem;
         width: 9rem; } }
 
 .section {
-  padding: 2rem 22rem;
+  padding: 2rem 20rem;
   background-color: var(--color-bg); }
   @media only screen and (max-width: 37.5em) {
     .section {

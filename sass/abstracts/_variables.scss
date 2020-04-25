@@ -102,36 +102,6 @@ $color-CU-light: #f3bf4f; //2-#C6C217; //1-#FDF960;
 $color-CU-light-70: rgba($color-CU-light, 0.7);
 $color-CU-light-90: rgba($color-CU-light, 0.9);
 
-// NEW COLOR ARCHITECTURE - NIGHT
-
-// //BACKGROUND
-// $color-bg-night: #22272B;
-$color-bg-night: #171c20; //good ex 1
-// $color-bg-night: #22272B; //2
-// $color-bg-night: #1a1e21; //3
-
-// //FONT
-//day - black
-$color-font-night: #bfbfbf;
-
-
-// //HEADER-FOOTER-MENU-TEXT-ICONS
-$color-sign-night: $color-font-night;
-
-// //MENU
-// $color-menu-base-night: ;
-
-// //SECTION TOOLSET
-$color-score-light: #e0e0e0; //score-light
-$color-score-hover: #f2f2f2; //input, score:hover
-$color-score-light-night: #bfbfbf;
-$color-input-bg-night: #4e5255;
-// $color-input-bg-night: #555555;
-
-// //SHADOWS
-// $color-shadow-night-20: ;
-// $color-shadow-night-50: ;
-
 //COLOR BLACK
 $color-black: #000;
 
@@ -144,37 +114,65 @@ $color-white: #fff;
 
 $color-white-50: rgba($color-white, 0.5);
 
+//COLOR ACCENT (ORANGERED)
 $color-accent: #e9690e; //orangered;
+
+//COLOR GREY
+//MUST BE...
+/*
+MENU-BACKGROUND
+MENU-FONT-HOVER
+FONT DARK SCHEMA
+ABOUT PHOTO BORDER
+
+SCORE-ICON-LIGHT/ACTIVITY-BACKGROUND-LIGHT
+SCORE-HOVER-LIGHT/ACTIVITY-BORDER-LIGHT
+SCORE-ICON-DARK/ACTIVITY-BACKGROUND-DARK
+SCORE-HOVER-DARK/ACTIVITY-BORDER-DARK
+
+MESSAGE-INPUT-LIGHT
+MESSAGE-PLACEHOLDER/LABLE-LIGHT
+MESSAGE-INPUT-DARK
+MESSAGE-PLACEHOLDER/LABEL-DARK
+*/
+
+$color-grey-light-1: #e0e0e0; 
+$color-grey-light-2: #f2f2f2;
+$color-grey-light-3: #dddddd; //old bg
+$color-grey-light-4: #f4f4f4; //commented in activity
+$color-grey-light-5: #efdab9; //commented in card
+
+$color-grey-dark-1: #171c20;
+$color-grey-dark-2: #333333;
+$color-grey-dark-3: #4e5255;
+
+$color-grey-mild-1: #9d9d9d;
+$color-grey-mild-2: #dfe0e0;
+$color-grey-mild-3: #bfbfbf;
+
+// $color-input-bg-night: #555555;
+
+//BACKGROUND
+// $color-bg-dark: #22272B;
+// $color-bg-dark: #171c20; //good ex 1
+// $color-bg-dark: #22272B; //2
+// $color-bg-dark: #1a1e21; //3
+
+//FONT
+// $color-font-dark: #bfbfbf;
+
 
 //OTHER COLORS
 
-//Grey
-$color-grey-bg-1: #dde6c0;
-$color-grey-bg-2: #e9eabe;
 $color-yellow-bg: #fff458; //3-#f1e0c3; //2-#f3f091; 1-#e2e17a;
-
-$color-grey-font-1: #574044;
-$color-grey-font-2: #333333;
-
-// $color-grey-mild: #9d9d9d;
-$color-grey-mild: #dfe0e0;
-// $color-grey-mild: #9d9d9d;
-$color-grey-font: $color-grey-font-2;
-
-$color-grey-bg: #dddddd;
-// $color-grey-bg: $color-grey-bg-1;
-// $color-grey-bg: $color-grey-bg-2;
-
 
 // -- OLD
 // $color-grey-dark: #343233;
-// $color-grey-mild: #574c4f; //near #574044
-// $color-grey-mild-1:#666666;
+// $color-grey-mild-3: #574c4f; //near #574044
+// $color-grey-mild-4:#666666;
 // $color-grey-light: #f2f2f2;
 // $color-grey-dirty: #dedede;
 
-$color-white-light: #f4f4f4;
-$color-white-mild: #efdab9;
 
 //FONT
 $font-size-main: 1.6rem;
@@ -190,7 +188,7 @@ $gutter-horizontal: 6rem;
 //CONTAINER DIMENTIONS
 $container-max-width: 128rem;
 $container-padding-top-bottom: 2rem;
-$container-padding-left-right: 22rem;
+$container-padding-left-right: 20rem;
 
 //NAVIGATION
 $navigation-item-height: 8rem;

@@ -35,6 +35,79 @@ html {
 }
 
 :root {
+  ////////////////////////////////////////////////
+  // NEW COLOR ARCHITECTURE
+  /*
+  LIGHT/DARK
+  
+  HEADER, FOOTER:
+  background gradient - color-primary/color-primary
+  fonts - white/white
+  logo - white/white
+  button background - dark-grey/dark-grey
+  icon-button - white/white
+  COLOR-PANEL & COLOR BUTTON background - transparent
+  COLOR-PANEL & COLOR BUTTON icon/border - white
+  COLOR-PANEL toggler - color-primary
+
+  NAVIGATION:
+  button background - dark-grey
+  active background - color-primary
+  sign - white
+  hover - ...
+
+  SECTIONS:
+  background - white/dark-grey-bg (special for bg)
+  header - color-primary
+  intro - black/grey-light
+  COLOR-PANEL & COLOR BUTTON background - transparent
+  COLOR-PANEL & COLOR BUTTON icon/border - color-primary
+
+  ABOUT:
+  font - black/grey-light
+  photo-border - white
+  icons-media - color-primary
+
+  SKILLS:
+  cards-front gradient - color-primary
+  cards-front font - white
+  cards-back gradient - color-primary
+  cards-front font - black/white
+
+  TOOLS:
+  heading - black/grey-light
+  font - black/grey-light
+  icon-score dark - color-primary
+  icon-score light - ... (border EXPERIENCE, QUALIFICATION - #DFE0E0 ?)
+  score-background - ... (background EXPERIENCE, QUALIFICATION - #F2F2F2 ?)
+
+  EXPERIENCE, QUALIFICATION:
+  background - white/dark-grey-bg
+  font - black/grey-light
+  background-component - white/...
+  border-component - grey-light/... (perhaps, d3...)
+  link - color-primary
+  icon-link - color-primary
+
+  CONTACTS:
+  background - white/dark-grey-bg (special for bg)
+  link - color-primary
+  icon-link - color-primary
+  button - color-primary
+  button background - transparent
+
+  MESSAGE:
+  background - white/dark-grey-bg (special for bg)
+  header - color-primary
+  fields - .../...
+  placeholders - .../...
+  fields font - .../...
+  buttons - color-primary
+  buttons background - transparent
+  icon-close - color-primary
+
+  */
+
   //COLOR SCHEMAS
   //Color primary (light-blue)
   --color-primary-dark: #{$color-primary-dark};
@@ -106,126 +179,76 @@ html {
   --color-white-50: #{$color-white-50};
 
   //grey
-  --color-grey-bg: #{$color-grey-bg};
-  --color-grey-mild: #{$color-grey-mild};
-  --color-grey-dark: #{$color-grey-font};
-  --color-score-light: #{$color-score-light};
-  --color-score-hover: #{$color-score-hover};
+  --color-grey-light-1: #{$color-grey-light-1};
+  --color-grey-light-2: #{$color-grey-light-2};
+  --color-grey-light-3: #{$color-grey-light-3}; //old bg, currently don't use
+  --color-grey-light-4: #{$color-grey-light-4};
+  --color-grey-light-5: #{$color-grey-light-5};
+
+  --color-grey-dark-1: #{$color-grey-dark-1};
+  --color-grey-dark-2: #{$color-grey-dark-2};
+  --color-grey-dark-3: #{$color-grey-dark-3};
+
+  --color-grey-mild-1: #{$color-grey-mild-1};
+  --color-grey-mild-2: #{$color-grey-mild-2};
+  --color-grey-mild-3: #{$color-grey-mild-3};
+
+  //debugging purposes - beginning
+  $color-grey-light-1: #e0e0e0;
+  $color-grey-light-2: #f2f2f2;
+  $color-grey-light-3: #dddddd; //old bg
+  $color-grey-light-4: #f4f4f4; //commented in activity
+  $color-grey-light-5: #efdab9; //commented in card
+  $color-grey-dark-1: #171c20;
+  $color-grey-dark-2: #333333;
+  $color-grey-dark-3: #4e5255;
+  $color-grey-mild-1: #9d9d9d;
+  $color-grey-mild-2: #dfe0e0;
+  $color-grey-mild-3: #bfbfbf;
+  //debugging purposes - end
 
   //other colors
   --color-yellow-bg: #{$color-yellow-bg};
 
   --color-accent: #{$color-accent};
 
-  // --color-primary-dark: #23868b;
-  // --color-primary-light: #92b9a3;
-
-  // --color-white: #fff;
-  // --color-black: #000;
-  // --color-grey-dark: #{$color-grey-dark};
-
-  // --color-accent: orangered;
-
   ////////////////////////////////////////////////
-  // NEW COLOR ARCHITECTURE
+  // NEW COLOR ARCHITECTURE - LIGHT
+
+  //COLOR GREY
+
   /*
-  DAY/NIGHT
-  
-  HEADER, FOOTER:
-  background gradient - color-primary/color-primary
-  fonts - white/white
-  logo - white/white
-  button background - dark-grey/dark-grey
-  icon-button - white/white
-  COLOR-PANEL & COLOR BUTTON background - transparent
-  COLOR-PANEL & COLOR BUTTON icon/border - white
-  COLOR-PANEL toggler - color-primary
+  MENU-BACKGROUND //done
+  MENU-FONT-HOVER //done
+  FONT DARK SCHEMA //done
+  ABOUT PHOTO BORDER //done
 
-  NAVIGATION:
-  button background - dark-grey
-  active background - color-primary
-  sign - white
-  hover - ...
+  SCORE-ICON-LIGHT/ACTIVITY-BORDER-LIGHT //done
+  SCORE-HOVER-LIGHT/ACTIVITY-BACKGROUND-LIGHT //done
+  SCORE-ICON-DARK/ACTIVITY-BORDER-DARK //done
+  SCORE-HOVER-DARK/ACTIVITY-BACKGROUND-DARK //done
 
-  SECTIONS:
-  background - white/dark-grey-bg (special for bg)
-  header - color-primary
-  intro - black/grey-light
-  COLOR-PANEL & COLOR BUTTON background - transparent
-  COLOR-PANEL & COLOR BUTTON icon/border - color-primary
-
-  ABOUT:
-  font - black/grey-light
-  photo-border - white
-  icons-media - color-primary
-
-  SKILLS:
-  cards-front gradient - color-primary
-  cards-front font - white
-  cards-back gradient - color-primary
-  cards-front font - black/white
-
-  TOOLS:
-  heading - black/grey-light
-  font - black/grey-light
-  icon-score dark - color-primary
-  icon-score light - ... (border EXPERIENCE, QUALIFICATION - #DFE0E0 ?)
-  score-background - ... (background EXPERIENCE, QUALIFICATION - #F2F2F2 ?)
-
-  EXPERIENCE, QUALIFICATION:
-  background - white/dark-grey-bg
-  font - black/grey-light
-  background-component - white/...
-  border-component - grey-light/... (perhaps, d3...)
-  link - color-primary
-  icon-link - color-primary
-
-  CONTACTS:
-  background - white/dark-grey-bg (special for bg)
-  link - color-primary
-  icon-link - color-primary
-  button - color-primary
-  button background - transparent
-
-  MESSAGE:
-  background - white/dark-grey-bg (special for bg)
-  header - color-primary
-  fields - .../...
-  placeholders - .../...
-  fields font - .../...
-  buttons - color-primary
-  buttons background - transparent
-  icon-close - color-primary
-
+  MESSAGE-INPUT-LIGHT
+  MESSAGE-PLACEHOLDER/LABLE-LIGHT
+  MESSAGE-INPUT-DARK
+  MESSAGE-PLACEHOLDER/LABEL-DARK
   */
 
-  // ////////////////////////////////////////////////
-  // // NEW COLOR ARCHITECTURE - LIGHT
-  // //BACKGROUND
-  // --color-bg: var(--color-grey-bg);
+  //BOTH SCHEMAS
 
-  // //FONT
-  // --color-font: var(--color-black);
+  //HEADER-FOOTER-MENU-TEXT-ICONS
+  --color-sign: var(--color-white);
 
-  // //HEADER-FOOTER-MENU-TEXT-ICONS
-  // --color-sign: var(--color-white);
+  //SECTION ABOUT
+  --color-photo-border: var(--color-grey-light-1);
 
-  // //MENU
-  // --color-menu-base: var(--color-grey-dark);
+  //MENU
+  --color-menu-bg: var(--color-grey-dark-2);
+  --color-menu-font: var(--color-white);
 
-  // //SECTION TOOLSET
-  // --color-score-light: var(--color-score-light);
-  // // --color-score: var(--color-grey-mild);
-  // --color-score-hover: var(--color-score-hover);
-  // --color-input-bg: var(--color-score-hover);
-  // // --color-input-bg: var(--color-white-50);
-
-  // //SECTION QUALIFICATION
-  // --color-activity: var(--color-score-light);
-
-  // //SHADOWS
-  // --color-shadow-20: var(--color-black-20);
-  // --color-shadow-50: var(--color-black-50);
+  //SHADOWS
+  --color-shadow-20: var(--color-black-20);
+  --color-shadow-50: var(--color-black-50);
 }
 
 body {
@@ -234,54 +257,42 @@ body {
   &[data-theme="light"] {
     //BACKGROUND
     --color-bg: var(--color-white);
-    // --color-bg: var(--color-grey-bg);
 
     //FONT
     --color-font: var(--color-black);
 
-    //HEADER-FOOTER-MENU-TEXT-ICONS
-    --color-sign: var(--color-white);
-
-    //MENU
-    --color-menu-base: var(--color-grey-dark);
-
     //SECTION TOOLSET
-    // --color-score: var(--color-white); //score-light
-    --color-score: var(--color-score-light);
-    --color-input-bg: var(--color-score-hover);
-    // --color-input-bg: var(--color-white-50);
+    --color-score: var(--color-grey-light-1);
+    --color-score-hover: var(--color-grey-light-2);
 
     //SECTION QUALIFICATION
-    --color-activity: var(--color-score-light);
+    --color-activity-bg: var(--color-grey-light-2);
+    --color-activity-border: var(--color-grey-light-1);
 
-    //SHADOWS
-    --color-shadow-20: var(--color-black-20);
-    --color-shadow-50: var(--color-black-50);
+    //MESSAGE
+    --color-input-bg: var(--color-grey-mild-3);
+    --color-label-plholder: var(--color-black);
   }
 
   &[data-theme="dark"] {
     //BACKGROUND
-    --color-bg: #{$color-bg-night};
+    --color-bg: var(--color-grey-dark-1);
 
     //FONT
-    --color-font: #{$color-font-night};
-
-    //HEADER-FOOTER-MENU-TEXT-ICONS
-    // --color-sign: #{$color-sign-night};
-
-    //MENU
-    // --color-menu-base: #{$color-menu-base-night};
+    --color-font: var(--color-grey-mild-3);
 
     //SECTION TOOLSET
-    --color-score: #{$color-score-light-night};
-    --color-input-bg: #{$color-input-bg-night};
+    --color-score: var(--color-black-50);
+    --color-score-hover: var(--color-grey-dark-2);
+    --color-input-bg: var(--color-input-bg-dark);
 
     //SECTION QUALIFICATION
-    --color-activity: var(--color-grey-dark);
+    --color-activity-bg: var(--color-grey-dark-2);
+    --color-activity-border: var(--color-grey-dark-3);
 
-    //SHADOWS
-    // --color-shadow-20: #{$color-shadow-night-20};
-    // --color-shadow-50: #{$color-shadow-night-50};
+    //MESSAGE
+    --color-input-bg: var(--color-grey-dark-3);
+    --color-label-plholder: var(--color-grey-mild-3);
   }
 
   &[primary-color="blue"] {
