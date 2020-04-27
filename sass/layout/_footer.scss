@@ -38,11 +38,17 @@
       height: 10rem;
     }
 
-    @include respond(touch_0-360) {
+    @include respond(_0-360) {
       height: 15rem;
       width: 15rem;
       border-radius: 0 0 $border-radius-mobileS $border-radius-mobileS;
     }
+  }
+
+  &__scroll-up {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
   }
 
   &__icon-up {
@@ -58,7 +64,7 @@
       width: 5rem;
     }
     
-    @include respond(touch_0-360) {
+    @include respond(_0-360) {
       height: 9rem;
       width: 9rem;
     }

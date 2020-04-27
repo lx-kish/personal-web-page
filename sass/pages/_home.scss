@@ -5,7 +5,7 @@
     background-color: var(--color-bg);
 
     @include respond(_360-600) {
-        padding: 5rem 5rem;
+        padding: 5rem 10vw;
     }
 
     @include respond(_0-360) {
@@ -16,7 +16,7 @@
 
 .section-profile {
     @include respond(_360-600) {
-        padding-top: 10rem;
+        padding-top: 20rem;
     }
 
     @include respond(_0-360) {

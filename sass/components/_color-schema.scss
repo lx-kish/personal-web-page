@@ -21,22 +21,31 @@
 
     @include transition4of10;
 
-    @include respond(touch_0-360) {
-      left: -45rem;
+    @include respond(_360-600) {
+      left: -35rem;
       bottom: 0;
       opacity: 1;
       visibility: visible;
 
       z-index: 10;
 
-      width: 45rem;
-      height: 45rem;
-      padding: 3.5rem;
+      width: 35rem;
+      height: 35rem;
+      padding: 3rem;
       border-radius: 0 $border-radius 0 0;
 
       border-style: none !important;
       background-color: var(--color-menu-bg);
       transition-delay: .4s;
+    }
+
+    @include respond(_0-360) {
+      left: -45rem;
+
+      width: 45rem;
+      height: 45rem;
+      padding: 3.5rem;
+      border-radius: 0 $border-radius 0 0;
     }
 
     &:hover {
@@ -48,7 +57,7 @@
       transform: translateY(-0.3rem);
       box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
 
-      @include respond(touch_0-360) {
+      @include respond(_360-600) {
         transform: translateY(0);
         box-shadow: none;
       }
@@ -60,19 +69,22 @@
     /////////////////////////////////////////////////////////
     //TOUCH-SCREEN MOBILE SHOW COLOR-PANEL
     &--hide {
-      @include respond(touch_0-360) {
+      @include respond(_360-600) {
         transform: translateY(0);
         box-shadow: none;
         border-style: none;
         left: -45rem;
-        // left: -36rem;
+      }
+
+      @include respond(_0-360) {
+        left: -45rem;
       }
     }
 
     /////////////////////////////////////////////////////////
     //TOUCH-SCREEN MOBILE SHOW COLOR-PANEL
     &--show {
-      @include respond(touch_0-360) {
+      @include respond(_360-600) {
         transform: translateY(0);
         box-shadow: none;
         border-style: none;
@@ -101,7 +113,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @include respond(touch_0-360) {
+    @include respond(_360-600) {
       flex: 0 0 65%;
       padding: 0;
     }
@@ -122,7 +134,13 @@
     height: 3.2rem;
     border-radius: 0.2rem;
 
-    @include respond(touch_0-360) {
+    @include respond(_360-600) {
+      width: 7.5rem;
+      height: 7.5rem;
+      border-radius: 0.5rem;
+    }
+
+    @include respond(_0-360) {
       width: 10rem;
       height: 10rem;
       border-radius: 0.5rem;
@@ -176,21 +194,31 @@
     animation-name: appears;
     animation-duration: 5s;
 
-    @include respond(touch_0-360) {
+    @include respond(_360-600) {
       position: relative;
-      top: 3rem;
-      left: 3rem;
+      top: 17.5%;
+      left: 17.5%;
 
-      height: 9rem;
-      width: 9rem;
+      height: 65%;
+      width: 65%;
       padding: 1rem;
+    }
+
+    @include respond(_0-360) {
+
+      // top: 3rem;
+      // left: 3rem;
+
+      // height: 9rem;
+      // width: 9rem;
+      // padding: 1rem;
     }
 
     &:hover {
       transform: translateY(-0.3rem);
       box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
 
-      @include respond(touch_0-360) {
+      @include respond(_360-600) {
         transform: translateY(0);
         box-shadow: none;
       }
@@ -200,7 +228,7 @@
       transform: translateY(-0.1rem);
       box-shadow: 0 0.5rem 1rem var(--color-shadow-20);
 
-      @include respond(touch_0-360) {
+      @include respond(_360-600) {
         transform: translateY(0);
         box-shadow: none;
       }
@@ -209,15 +237,15 @@
     &--mobile {
       @include transition4of10;
 
-      @include respond(touch_0-360) {
+      @include respond(_360-600) {
         display: inline-block;
         position: fixed;
         left: 0;
         bottom: 0;
         z-index: 8;
 
-        height: 15rem;
-        width: 15rem;
+        height: 11rem;
+        width: 11rem;
 
         border-radius: 0 $border-radius 0 0;
 
@@ -225,6 +253,14 @@
 
         animation-name: appears;
         animation-duration: 5s;
+      }
+
+      @include respond(_0-360) {
+
+        height: 15rem;
+        width: 15rem;
+
+        // border-radius: 0 $border-radius 0 0;
       }
 
       &:hover ~ .color-schema__panel {
@@ -236,7 +272,7 @@
         transform: translateY(-0.3rem);
         box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
     
-        @include respond(touch_0-360) {
+        @include respond(_360-600) {
           transform: translateY(0);
           box-shadow: none;
           left: 0;
@@ -250,7 +286,7 @@
     height: 100%;
     width: 100%;
 
-    @include respond(_0-360) {
+    @include respond(_360-600) {
       height: 85%;
       width: 85%;
 
@@ -278,7 +314,7 @@
       align-items: center;
       cursor: pointer;
 
-      @include respond(_0-360) {
+      @include respond(_360-600) {
         padding: 0;
       }
     }
@@ -287,6 +323,11 @@
     //GENERAL SETTINGS FOR A DARK-MODE TOGGLER LABEL TEXT
     &-text {
       font-size: 1.2rem;
+
+      @include respond(_360-600) {
+        font-size: 3.2rem;
+        font-weight: 400;
+      }
 
       @include respond(_0-360) {
         font-size: 4.5rem;
@@ -306,6 +347,13 @@
       cursor: pointer;
 
       @include transition4of10;
+
+      @include respond(_360-600) {
+        width: 8rem;
+        height: 4.5rem;
+        border-radius: 2.5rem;
+      }
+
       @include respond(_0-360) {
         width: 8rem;
         height: 4.5rem;
@@ -322,6 +370,14 @@
         left: 64%;
 
         @include transition4of10;
+
+        @include respond(_360-600) {
+          width: 3.5rem;
+          height: 3.5rem;
+          top: .9rem;
+          left: 75%;
+        }
+
         @include respond(_0-360) {
           width: 3.2rem;
           height: 3.2rem;
@@ -332,6 +388,12 @@
 
       &:checked::before {
         left: 78%;
+
+        @include respond(_360-600) {
+          width: 3.4rem;
+          height: 3.4rem;
+          left: 86%;
+        }
 
         @include respond(_0-360) {
           width: 3.4rem;
@@ -354,7 +416,7 @@
           &-text {
             color: var(--color-sign);
 
-            @include respond(_0-360) {
+            @include respond(_360-600) {
               color: var(--color-primary-dark);
             }
           }
@@ -362,14 +424,14 @@
           &-input {
             border: 0.2rem solid var(--color-sign);
 
-            @include respond(_0-360) {
+            @include respond(_360-600) {
               border: 0.2rem solid var(--color-primary-dark);
             }
 
             &::before {
               background-color: var(--color-sign);
 
-              @include respond(_0-360) {
+              @include respond(_360-600) {
                 background-color: var(--color-primary-dark);
               }
             }
@@ -377,7 +439,7 @@
             &:checked {
               background-color: var(--color-sign);
 
-              @include respond(_0-360) {
+              @include respond(_360-600) {
                 background-color: var(--color-primary-dark);
               }
             }
@@ -385,7 +447,7 @@
             &:checked::before {
               background-color: var(--color-primary-dark);
 
-              @include respond(_0-360) {
+              @include respond(_360-600) {
                 background-color: var(--color-menu-bg);
               }
             }
@@ -413,7 +475,7 @@
             &:checked::before {
               background-color: var(--color-bg);
 
-              @include respond(_0-360) {
+              @include respond(_360-600) {
                 background-color: var(--color-menu-bg);
               }
             }
@@ -434,7 +496,7 @@
       fill: var(--color-primary-dark);
       border: 0.2rem solid var(--color-primary-dark);
 
-      @include respond(touch_0-360) {
+      @include respond(_360-600) {
         fill: var(--color-sign);
         border: 0.2rem solid var(--color-sign);
       }

@@ -4,7 +4,7 @@
     font-size: 2.5rem;
     font-style: italic;
 
-    @include respond(touch_0-360) {
+    @include respond(_0-360) {
         font-size: 4rem;
     }
 }

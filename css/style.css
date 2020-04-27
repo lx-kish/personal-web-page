@@ -10,6 +10,16 @@ possible $breakpoint arguments:
 1em = 16px
 */
 /*
+TOUCH SCREENS:
+DESKTOPS CAN BE TOUCH TOO... BUT THEY HAVE :HOVER ANYWAY... SO...
+ONLY(!) MOBILE DEVICES CAN BE TOUCH SCREENS WITHOUT :HOVER...
+SMALL SCREENS CAN BE ONLY ON MOBILE DEVICES => TOUCH-SCREENS
+
+LET ASSUME, MOBILE DEVICES ARE ALL THOSE THAT HAVE 900PX SCREEN AND LESS.
+THAN WE HAVE TO CHECK ONLY DEVICES WITH 900 - 1200PX SCREENS FOR HAVING :HOVER,
+OTHERVICE WE SUGGEST IT AS A MOBILE DEVICE WITH TOUCH SCREEN.
+*/
+/*
 MENU-BACKGROUND
 MENU-FONT-HOVER
 FONT DARK SCHEMA
@@ -144,12 +154,6 @@ html {
   icon-close - color-primary
 
   */
-  --color-primary-dark: #23868b;
-  --color-primary-dark-70: rgba(35, 134, 139, 0.7);
-  --color-primary-dark-90: rgba(35, 134, 139, 0.9);
-  --color-primary-light: #66b7bb;
-  --color-primary-light-70: rgba(102, 183, 187, 0.7);
-  --color-primary-light-90: rgba(102, 183, 187, 0.9);
   --color-PS-dark: #fe5619;
   --color-PS-dark-70: rgba(254, 86, 25, 0.7);
   --color-PS-dark-90: rgba(254, 86, 25, 0.9);
@@ -204,22 +208,6 @@ html {
   --color-grey-mild-3: #bfbfbf;
   --color-yellow-bg: #fff458;
   --color-accent: #e9690e;
-  /*
-  MENU-BACKGROUND //done
-  MENU-FONT-HOVER //done
-  FONT DARK SCHEMA //done
-  ABOUT PHOTO BORDER //done
-
-  SCORE-ICON-LIGHT/ACTIVITY-BORDER-LIGHT //done
-  SCORE-HOVER-LIGHT/ACTIVITY-BACKGROUND-LIGHT //done
-  SCORE-ICON-DARK/ACTIVITY-BORDER-DARK //done
-  SCORE-HOVER-DARK/ACTIVITY-BACKGROUND-DARK //done
-
-  MESSAGE-INPUT-LIGHT
-  MESSAGE-PLACEHOLDER/LABLE-LIGHT
-  MESSAGE-INPUT-DARK
-  MESSAGE-PLACEHOLDER/LABEL-DARK
-  */
   --color-sign: var(--color-white);
   --color-photo-border: var(--color-grey-light-1);
   --color-menu-bg: var(--color-grey-dark-2);
@@ -243,53 +231,52 @@ body {
     --color-font: var(--color-grey-mild-3);
     --color-score: var(--color-black-50);
     --color-score-hover: var(--color-grey-dark-2);
-    --color-input-bg: var(--color-input-bg-dark);
     --color-activity-bg: var(--color-grey-dark-2);
     --color-activity-border: var(--color-grey-dark-3);
     --color-input-bg: var(--color-grey-dark-3);
     --color-label-plholder: var(--color-grey-mild-3); }
   body[primary-color="blue"] {
-    --color-primary-dark: #23868b;
-    --color-primary-dark-70: rgba(35, 134, 139, 0.7);
-    --color-primary-dark-90: rgba(35, 134, 139, 0.9);
-    --color-primary-light: #66b7bb;
-    --color-primary-light-70: rgba(102, 183, 187, 0.7);
-    --color-primary-light-90: rgba(102, 183, 187, 0.9); }
+    --color-primary-dark: var(--color-ACC-dark);
+    --color-primary-dark-70: var(--color-ACC-dark-70);
+    --color-primary-dark-90: var(--color-ACC-dark-90);
+    --color-primary-light: var(--color-ACC-light);
+    --color-primary-light-70: var(--color-ACC-light-70);
+    --color-primary-light-90: var(--color-ACC-light-90); }
   body[primary-color="orange"] {
-    --color-primary-dark: #fe5619;
-    --color-primary-dark-70: rgba(254, 86, 25, 0.7);
-    --color-primary-dark-90: rgba(254, 86, 25, 0.9);
-    --color-primary-light: #fa9c31;
-    --color-primary-light-70: rgba(250, 156, 49, 0.7);
-    --color-primary-light-90: rgba(250, 156, 49, 0.9); }
+    --color-primary-dark: var(--color-PS-dark);
+    --color-primary-dark-70: var(--color-PS-dark-70);
+    --color-primary-dark-90: var(--color-PS-dark-90);
+    --color-primary-light: var(--color-PS-light);
+    --color-primary-light-70: var(--color-PS-light-70);
+    --color-primary-light-90: var(--color-PS-light-90); }
   body[primary-color="red"] {
-    --color-primary-dark: #dc4e48;
-    --color-primary-dark-70: rgba(220, 78, 72, 0.7);
-    --color-primary-dark-90: rgba(220, 78, 72, 0.9);
-    --color-primary-light: #e07470;
-    --color-primary-light-70: rgba(224, 116, 112, 0.7);
-    --color-primary-light-90: rgba(224, 116, 112, 0.9); }
+    --color-primary-dark: var(--color-TW-dark);
+    --color-primary-dark-70: var(--color-TW-dark-70);
+    --color-primary-dark-90: var(--color-TW-dark-90);
+    --color-primary-light: var(--color-TW-light);
+    --color-primary-light-70: var(--color-TW-light-70);
+    --color-primary-light-90: var(--color-TW-light-90); }
   body[primary-color="brown"] {
-    --color-primary-dark: #c67d17;
-    --color-primary-dark-70: rgba(198, 125, 23, 0.7);
-    --color-primary-dark-90: rgba(198, 125, 23, 0.9);
-    --color-primary-light: #fdbc60;
-    --color-primary-light-70: rgba(253, 188, 96, 0.7);
-    --color-primary-light-90: rgba(253, 188, 96, 0.9); }
+    --color-primary-dark: var(--color-PV-dark);
+    --color-primary-dark-70: var(--color-PV-dark-70);
+    --color-primary-dark-90: var(--color-PV-dark-90);
+    --color-primary-light: var(--color-PV-light);
+    --color-primary-light-70: var(--color-PV-light-70);
+    --color-primary-light-90: var(--color-PV-light-90); }
   body[primary-color="green"] {
-    --color-primary-dark: #879746;
-    --color-primary-dark-70: rgba(135, 151, 70, 0.7);
-    --color-primary-dark-90: rgba(135, 151, 70, 0.9);
-    --color-primary-light: #abbb6d;
-    --color-primary-light-70: rgba(171, 187, 109, 0.7);
-    --color-primary-light-90: rgba(171, 187, 109, 0.9); }
+    --color-primary-dark: var(--color-EM-dark);
+    --color-primary-dark-70: var(--color-EM-dark-70);
+    --color-primary-dark-90: var(--color-EM-dark-90);
+    --color-primary-light: var(--color-EM-light);
+    --color-primary-light-70: var(--color-EM-light-70);
+    --color-primary-light-90: var(--color-EM-light-90); }
   body[primary-color="yellow"] {
-    --color-primary-dark: #f5b01e;
-    --color-primary-dark-70: rgba(245, 176, 30, 0.7);
-    --color-primary-dark-90: rgba(245, 176, 30, 0.9);
-    --color-primary-light: #f3bf4f;
-    --color-primary-light-70: rgba(243, 191, 79, 0.7);
-    --color-primary-light-90: rgba(243, 191, 79, 0.9); }
+    --color-primary-dark: var(--color-CU-dark);
+    --color-primary-dark-70: var(--color-CU-dark-70);
+    --color-primary-dark-90: var(--color-CU-dark-90);
+    --color-primary-light: var(--color-CU-light);
+    --color-primary-light-70: var(--color-CU-light-70);
+    --color-primary-light-90: var(--color-CU-light-90); }
 
 ::selection {
   background-color: var(--color-primary-dark);
@@ -451,8 +438,8 @@ body.color-theme-in-transition *:after {
         margin-right: 6rem; } }
 
 .card {
-  perspective: 150rem;
   -moz-perspective: 150rem;
+  perspective: 150rem;
   position: relative;
   height: 40rem; }
   @media only screen and (max-width: 22.5em) {
@@ -478,37 +465,37 @@ body.color-theme-in-transition *:after {
       transform: rotateY(180deg);
       background-size: cover;
       background-position: top; }
-      @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+      @media only screen and (max-width: 22.5em) {
         .card__side--back {
           transform: rotateY(0); } }
       .card__side--back--PS {
         background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70)); }
-        @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+        @media only screen and (max-width: 22.5em) {
           .card__side--back--PS {
             background-image: none; } }
       .card__side--back--TW {
         background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70)); }
-        @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+        @media only screen and (max-width: 22.5em) {
           .card__side--back--TW {
             background-image: none; } }
       .card__side--back--PV {
         background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70)); }
-        @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+        @media only screen and (max-width: 22.5em) {
           .card__side--back--PV {
             background-image: none; } }
       .card__side--back--EM {
         background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70)); }
-        @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+        @media only screen and (max-width: 22.5em) {
           .card__side--back--EM {
             background-image: none; } }
       .card__side--back--ACC {
         background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70)); }
-        @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+        @media only screen and (max-width: 22.5em) {
           .card__side--back--ACC {
             background-image: none; } }
       .card__side--back--CU {
         background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70)); }
-        @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+        @media only screen and (max-width: 22.5em) {
           .card__side--back--CU {
             background-image: none; } }
   .card:hover .card__side--front {
@@ -626,37 +613,47 @@ body.color-theme-in-transition *:after {
   opacity: 0;
   visibility: hidden;
   transition: all 0.4s ease; }
-  @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+  @media only screen and (max-width: 37.5em) {
     .color-schema__panel {
-      left: -45rem;
+      left: -35rem;
       bottom: 0;
       opacity: 1;
       visibility: visible;
       z-index: 10;
-      width: 45rem;
-      height: 45rem;
-      padding: 3.5rem;
+      width: 35rem;
+      height: 35rem;
+      padding: 3rem;
       border-radius: 0 0.5rem 0 0;
       border-style: none !important;
       background-color: var(--color-menu-bg);
       transition-delay: .4s; } }
+  @media only screen and (max-width: 22.5em) {
+    .color-schema__panel {
+      left: -45rem;
+      width: 45rem;
+      height: 45rem;
+      padding: 3.5rem;
+      border-radius: 0 0.5rem 0 0; } }
   .color-schema__panel:hover {
     opacity: 1;
     visibility: visible;
     z-index: 10;
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 1.5rem var(--color-shadow-50); }
-    @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+    @media only screen and (max-width: 37.5em) {
       .color-schema__panel:hover {
         transform: translateY(0);
         box-shadow: none; } }
-  @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+  @media only screen and (max-width: 37.5em) {
     .color-schema__panel--hide {
       transform: translateY(0);
       box-shadow: none;
       border-style: none;
       left: -45rem; } }
-  @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+  @media only screen and (max-width: 22.5em) {
+    .color-schema__panel--hide {
+      left: -45rem; } }
+  @media only screen and (max-width: 37.5em) {
     .color-schema__panel--show {
       transform: translateY(0);
       box-shadow: none;
@@ -675,7 +672,7 @@ body.color-theme-in-transition *:after {
   display: flex;
   flex-direction: column;
   justify-content: space-between; }
-  @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+  @media only screen and (max-width: 37.5em) {
     .color-schema__palette {
       flex: 0 0 65%;
       padding: 0; } }
@@ -689,7 +686,12 @@ body.color-theme-in-transition *:after {
   width: 3.2rem;
   height: 3.2rem;
   border-radius: 0.2rem; }
-  @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+  @media only screen and (max-width: 37.5em) {
+    .color-schema__color-component {
+      width: 7.5rem;
+      height: 7.5rem;
+      border-radius: 0.5rem; } }
+  @media only screen and (max-width: 22.5em) {
     .color-schema__color-component {
       width: 10rem;
       height: 10rem;
@@ -730,50 +732,54 @@ body.color-theme-in-transition *:after {
   transition: all 0.2s;
   animation-name: appears;
   animation-duration: 5s; }
-  @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+  @media only screen and (max-width: 37.5em) {
     .color-schema__btn {
       position: relative;
-      top: 3rem;
-      left: 3rem;
-      height: 9rem;
-      width: 9rem;
+      top: 17.5%;
+      left: 17.5%;
+      height: 65%;
+      width: 65%;
       padding: 1rem; } }
   .color-schema__btn:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 1.5rem var(--color-shadow-50); }
-    @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+    @media only screen and (max-width: 37.5em) {
       .color-schema__btn:hover {
         transform: translateY(0);
         box-shadow: none; } }
   .color-schema__btn:active {
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem var(--color-shadow-20); }
-    @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+    @media only screen and (max-width: 37.5em) {
       .color-schema__btn:active {
         transform: translateY(0);
         box-shadow: none; } }
   .color-schema__btn--mobile {
     transition: all 0.4s ease; }
-    @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+    @media only screen and (max-width: 37.5em) {
       .color-schema__btn--mobile {
         display: inline-block;
         position: fixed;
         left: 0;
         bottom: 0;
         z-index: 8;
-        height: 15rem;
-        width: 15rem;
+        height: 11rem;
+        width: 11rem;
         border-radius: 0 0.5rem 0 0;
         background-color: var(--color-shadow-50);
         animation-name: appears;
         animation-duration: 5s; } }
+    @media only screen and (max-width: 22.5em) {
+      .color-schema__btn--mobile {
+        height: 15rem;
+        width: 15rem; } }
     .color-schema__btn--mobile:hover ~ .color-schema__panel {
       opacity: 1;
       visibility: visible;
       z-index: 10;
       transform: translateY(-0.3rem);
       box-shadow: 0 1rem 1.5rem var(--color-shadow-50); }
-      @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+      @media only screen and (max-width: 37.5em) {
         .color-schema__btn--mobile:hover ~ .color-schema__panel {
           transform: translateY(0);
           box-shadow: none;
@@ -783,7 +789,7 @@ body.color-theme-in-transition *:after {
 .color-schema__icon {
   height: 100%;
   width: 100%; }
-  @media only screen and (max-width: 22.5em) {
+  @media only screen and (max-width: 37.5em) {
     .color-schema__icon {
       height: 85%;
       width: 85%;
@@ -805,11 +811,15 @@ body.color-theme-in-transition *:after {
     justify-content: space-between;
     align-items: center;
     cursor: pointer; }
-    @media only screen and (max-width: 22.5em) {
+    @media only screen and (max-width: 37.5em) {
       .color-schema__toggle-label {
         padding: 0; } }
   .color-schema__toggle-text {
     font-size: 1.2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .color-schema__toggle-text {
+        font-size: 3.2rem;
+        font-weight: 400; } }
     @media only screen and (max-width: 22.5em) {
       .color-schema__toggle-text {
         font-size: 4.5rem;
@@ -823,6 +833,11 @@ body.color-theme-in-transition *:after {
     background: transparent;
     cursor: pointer;
     transition: all 0.4s ease; }
+    @media only screen and (max-width: 37.5em) {
+      .color-schema__toggle-input {
+        width: 8rem;
+        height: 4.5rem;
+        border-radius: 2.5rem; } }
     @media only screen and (max-width: 22.5em) {
       .color-schema__toggle-input {
         width: 8rem;
@@ -837,6 +852,12 @@ body.color-theme-in-transition *:after {
       top: 1.4rem;
       left: 64%;
       transition: all 0.4s ease; }
+      @media only screen and (max-width: 37.5em) {
+        .color-schema__toggle-input::before {
+          width: 3.5rem;
+          height: 3.5rem;
+          top: .9rem;
+          left: 75%; } }
       @media only screen and (max-width: 22.5em) {
         .color-schema__toggle-input::before {
           width: 3.2rem;
@@ -845,6 +866,11 @@ body.color-theme-in-transition *:after {
           left: 81%; } }
     .color-schema__toggle-input:checked::before {
       left: 78%; }
+      @media only screen and (max-width: 37.5em) {
+        .color-schema__toggle-input:checked::before {
+          width: 3.4rem;
+          height: 3.4rem;
+          left: 86%; } }
       @media only screen and (max-width: 22.5em) {
         .color-schema__toggle-input:checked::before {
           width: 3.4rem;
@@ -854,27 +880,27 @@ body.color-theme-in-transition *:after {
       outline: none; }
   .color-schema__toggle--color-top-bottom .color-schema__toggle-text {
     color: var(--color-sign); }
-    @media only screen and (max-width: 22.5em) {
+    @media only screen and (max-width: 37.5em) {
       .color-schema__toggle--color-top-bottom .color-schema__toggle-text {
         color: var(--color-primary-dark); } }
   .color-schema__toggle--color-top-bottom .color-schema__toggle-input {
     border: 0.2rem solid var(--color-sign); }
-    @media only screen and (max-width: 22.5em) {
+    @media only screen and (max-width: 37.5em) {
       .color-schema__toggle--color-top-bottom .color-schema__toggle-input {
         border: 0.2rem solid var(--color-primary-dark); } }
     .color-schema__toggle--color-top-bottom .color-schema__toggle-input::before {
       background-color: var(--color-sign); }
-      @media only screen and (max-width: 22.5em) {
+      @media only screen and (max-width: 37.5em) {
         .color-schema__toggle--color-top-bottom .color-schema__toggle-input::before {
           background-color: var(--color-primary-dark); } }
     .color-schema__toggle--color-top-bottom .color-schema__toggle-input:checked {
       background-color: var(--color-sign); }
-      @media only screen and (max-width: 22.5em) {
+      @media only screen and (max-width: 37.5em) {
         .color-schema__toggle--color-top-bottom .color-schema__toggle-input:checked {
           background-color: var(--color-primary-dark); } }
     .color-schema__toggle--color-top-bottom .color-schema__toggle-input:checked::before {
       background-color: var(--color-primary-dark); }
-      @media only screen and (max-width: 22.5em) {
+      @media only screen and (max-width: 37.5em) {
         .color-schema__toggle--color-top-bottom .color-schema__toggle-input:checked::before {
           background-color: var(--color-menu-bg); } }
   .color-schema__toggle--color-main .color-schema__toggle-text {
@@ -887,7 +913,7 @@ body.color-theme-in-transition *:after {
       background-color: var(--color-primary-dark); }
     .color-schema__toggle--color-main .color-schema__toggle-input:checked::before {
       background-color: var(--color-bg); }
-      @media only screen and (max-width: 22.5em) {
+      @media only screen and (max-width: 37.5em) {
         .color-schema__toggle--color-main .color-schema__toggle-input:checked::before {
           background-color: var(--color-menu-bg); } }
 
@@ -898,7 +924,7 @@ body.color-theme-in-transition *:after {
 .color-schema--color-main {
   fill: var(--color-primary-dark);
   border: 0.2rem solid var(--color-primary-dark); }
-  @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+  @media only screen and (max-width: 37.5em) {
     .color-schema--color-main {
       fill: var(--color-sign);
       border: 0.2rem solid var(--color-sign); } }
@@ -1115,7 +1141,7 @@ body.color-theme-in-transition *:after {
   font-family: librebaskerville-italic, serif;
   font-size: 2.5rem;
   font-style: italic; }
-  @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+  @media only screen and (max-width: 22.5em) {
     .section-intro {
       font-size: 4rem; } }
 
@@ -1362,11 +1388,15 @@ body.color-theme-in-transition *:after {
     @media only screen and (max-width: 37.5em) {
       .footer__button {
         height: 10rem; } }
-    @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+    @media only screen and (max-width: 22.5em) {
       .footer__button {
         height: 15rem;
         width: 15rem;
         border-radius: 0 0 1.5rem 1.5rem; } }
+  .footer__scroll-up {
+    display: inline-block;
+    height: 100%;
+    width: 100%; }
   .footer__icon-up {
     height: 3.2rem;
     width: 3.2rem;
@@ -1378,7 +1408,7 @@ body.color-theme-in-transition *:after {
       .footer__icon-up {
         height: 5rem;
         width: 5rem; } }
-    @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+    @media only screen and (max-width: 22.5em) {
       .footer__icon-up {
         height: 9rem;
         width: 9rem; } }
@@ -1555,11 +1585,15 @@ body.color-theme-in-transition *:after {
     @media only screen and (max-width: 37.5em) {
       .header__button {
         height: 10rem; } }
-    @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+    @media only screen and (max-width: 22.5em) {
       .header__button {
         height: 15rem;
         width: 15rem;
         border-radius: 1.5rem 1.5rem 0 0; } }
+  .header__scroll-down {
+    display: inline-block;
+    height: 100%;
+    width: 100%; }
   .header__icon-down {
     height: 3.2rem;
     width: 3.2rem;
@@ -1571,7 +1605,7 @@ body.color-theme-in-transition *:after {
       .header__icon-down {
         height: 5rem;
         width: 5rem; } }
-    @media only screen and (max-width: 22.5em), only screen and (hover: none) {
+    @media only screen and (max-width: 22.5em) {
       .header__icon-down {
         height: 9rem;
         width: 9rem; } }
@@ -1581,14 +1615,14 @@ body.color-theme-in-transition *:after {
   background-color: var(--color-bg); }
   @media only screen and (max-width: 37.5em) {
     .section {
-      padding: 5rem 5rem; } }
+      padding: 5rem 10vw; } }
   @media only screen and (max-width: 22.5em) {
     .section {
       padding: 15rem 3.5vw 0; } }
 
 @media only screen and (max-width: 37.5em) {
   .section-profile {
-    padding-top: 10rem; } }
+    padding-top: 20rem; } }
 
 @media only screen and (max-width: 22.5em) {
   .section-profile {

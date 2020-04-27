@@ -38,33 +38,64 @@ possible $breakpoint arguments:
 
 1em = 16px
 */
+
+//POSSIBLE OPTIONS:
+/*
+TOUCH SCREENS:
+DESKTOPS CAN BE TOUCH TOO... BUT THEY HAVE :HOVER ANYWAY... SO...
+ONLY(!) MOBILE DEVICES CAN BE TOUCH SCREENS WITHOUT :HOVER...
+SMALL SCREENS CAN BE ONLY ON MOBILE DEVICES => TOUCH-SCREENS
+
+LET ASSUME, MOBILE DEVICES ARE ALL THOSE THAT HAVE 900PX SCREEN AND LESS.
+THAN WE HAVE TO CHECK ONLY DEVICES WITH 900 - 1200PX SCREENS FOR HAVING :HOVER,
+OTHERVICE WE SUGGEST IT AS A MOBILE DEVICE WITH TOUCH SCREEN.
+*/
+
 @mixin respond($breakpoint) {
-  @if $breakpoint == _0-360 { //phone-small {
-    @media only screen and (max-width: 22.5em) { @content }; //18.75em) { @content };
+  @if $breakpoint == _0-360 {
+    //phone-small {
+    @media only screen and (max-width: 22.5em) {
+      @content;
+    } //18.75em) { @content };
   }
 
-  @if $breakpoint == _360-600 { //phone {
-    @media only screen and (max-width: 37.5em) { @content };
+  @if $breakpoint == _360-600 {
+    //phone {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
   }
 
-  @if $breakpoint == _600-900 { //tab-port {
-    @media only screen and (max-width: 56.25em) { @content };
+  @if $breakpoint == _600-900 {
+    //tab-port {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
   }
 
-  @if $breakpoint == _900-1200 { //tab-land {
-    @media only screen and (max-width: 75em) { @content };
+  @if $breakpoint == _900-1200 {
+    //tab-land {
+    @media only screen and (max-width: 75em) {
+      @content;
+    }
   }
 
   @if $breakpoint == big-desktop {
-    @media only screen and (min-width: 112.5em) { @content };
+    @media only screen and (min-width: 112.5em) {
+      @content;
+    }
   }
 
   @if $breakpoint == touch-screen {
-    @media only screen and (hover: none) { @content };
+    @media only screen and (hover: none) {
+      @content;
+    }
   }
 
-  @if $breakpoint == touch_0-360 { //touch-screen small size
-    @media only screen and (max-width: 22.5em),
-    only screen and (hover: none) { @content };
+  @if $breakpoint == touch_900-1200 {
+    //touch-screen big size
+    @media only screen and (max-width: 75em), only screen and (hover: none) {
+      @content;
+    }
   }
 }

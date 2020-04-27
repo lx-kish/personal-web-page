@@ -108,18 +108,9 @@ html {
 
   */
 
-  //COLOR SCHEMAS
-  //Color primary (light-blue)
-  --color-primary-dark: #{$color-primary-dark};
-  --color-primary-dark-70: #{$color-primary-dark-70};
-  --color-primary-dark-90: #{$color-primary-dark-90};
-
-  --color-primary-light: #{$color-primary-light};
-  --color-primary-light-70: #{$color-primary-light-70};
-  --color-primary-light-90: #{$color-primary-light-90};
-
-  //cards
-  //problem-solving
+  ////////////////////////////////////////////////
+  //INITIATING COLORS FOR COLOR SCHEMAS
+  //orange - problem solving
   --color-PS-dark: #{$color-PS-dark};
   --color-PS-dark-70: #{$color-PS-dark-70};
   --color-PS-dark-90: #{$color-PS-dark-90};
@@ -127,7 +118,7 @@ html {
   --color-PS-light-70: #{$color-PS-light-70};
   --color-PS-light-90: #{$color-PS-light-90};
 
-  //teamwork
+  //red - teamwork
   --color-TW-dark: #{$color-TW-dark};
   --color-TW-dark-70: #{$color-TW-dark-70};
   --color-TW-dark-90: #{$color-TW-dark-90};
@@ -135,7 +126,7 @@ html {
   --color-TW-light-70: #{$color-TW-light-70};
   --color-TW-light-90: #{$color-TW-light-90};
 
-  //perseverance
+  //brown - perseverance
   --color-PV-dark: #{$color-PV-dark};
   --color-PV-dark-70: #{$color-PV-dark-70};
   --color-PV-dark-90: #{$color-PV-dark-90};
@@ -143,7 +134,7 @@ html {
   --color-PV-light-70: #{$color-PV-light-70};
   --color-PV-light-90: #{$color-PV-light-90};
 
-  //empathy
+  //green - empathy
   --color-EM-dark: #{$color-EM-dark};
   --color-EM-dark-70: #{$color-EM-dark-70};
   --color-EM-dark-90: #{$color-EM-dark-90};
@@ -151,7 +142,7 @@ html {
   --color-EM-light-70: #{$color-EM-light-70};
   --color-EM-light-90: #{$color-EM-light-90};
 
-  //accountability
+  //blue - accountability
   --color-ACC-dark: #{$color-ACC-dark};
   --color-ACC-dark-70: #{$color-ACC-dark-70};
   --color-ACC-dark-90: #{$color-ACC-dark-90};
@@ -159,7 +150,7 @@ html {
   --color-ACC-light-70: #{$color-ACC-light-70};
   --color-ACC-light-90: #{$color-ACC-light-90};
 
-  //curiosity
+  //yellow - curiosity
   --color-CU-dark: #{$color-CU-dark};
   --color-CU-dark-70: #{$color-CU-dark-70};
   --color-CU-dark-90: #{$color-CU-dark-90};
@@ -193,48 +184,15 @@ html {
   --color-grey-mild-2: #{$color-grey-mild-2};
   --color-grey-mild-3: #{$color-grey-mild-3};
 
-  //debugging purposes - beginning
-  $color-grey-light-1: #e0e0e0;
-  $color-grey-light-2: #f2f2f2;
-  $color-grey-light-3: #dddddd; //old bg
-  $color-grey-light-4: #f4f4f4; //commented in activity
-  $color-grey-light-5: #efdab9; //commented in card
-  $color-grey-dark-1: #171c20;
-  $color-grey-dark-2: #333333;
-  $color-grey-dark-3: #4e5255;
-  $color-grey-mild-1: #9d9d9d;
-  $color-grey-mild-2: #dfe0e0;
-  $color-grey-mild-3: #bfbfbf;
-  //debugging purposes - end
-
   //other colors
   --color-yellow-bg: #{$color-yellow-bg};
 
   --color-accent: #{$color-accent};
 
   ////////////////////////////////////////////////
-  // NEW COLOR ARCHITECTURE - LIGHT
+  //COLOR SCHEMA APPLYING
 
-  //COLOR GREY
-
-  /*
-  MENU-BACKGROUND //done
-  MENU-FONT-HOVER //done
-  FONT DARK SCHEMA //done
-  ABOUT PHOTO BORDER //done
-
-  SCORE-ICON-LIGHT/ACTIVITY-BORDER-LIGHT //done
-  SCORE-HOVER-LIGHT/ACTIVITY-BACKGROUND-LIGHT //done
-  SCORE-ICON-DARK/ACTIVITY-BORDER-DARK //done
-  SCORE-HOVER-DARK/ACTIVITY-BACKGROUND-DARK //done
-
-  MESSAGE-INPUT-LIGHT
-  MESSAGE-PLACEHOLDER/LABLE-LIGHT
-  MESSAGE-INPUT-DARK
-  MESSAGE-PLACEHOLDER/LABEL-DARK
-  */
-
-  //BOTH SCHEMAS
+  //BOTH LIGHT AND DARK
 
   //HEADER-FOOTER-MENU-TEXT-ICONS
   --color-sign: var(--color-white);
@@ -284,7 +242,6 @@ body {
     //SECTION TOOLSET
     --color-score: var(--color-black-50);
     --color-score-hover: var(--color-grey-dark-2);
-    --color-input-bg: var(--color-input-bg-dark);
 
     //SECTION QUALIFICATION
     --color-activity-bg: var(--color-grey-dark-2);
@@ -296,72 +253,74 @@ body {
   }
 
   &[primary-color="blue"] {
-    --color-primary-dark: #{$color-ACC-dark};
-    --color-primary-dark-70: #{$color-ACC-dark-70};
-    --color-primary-dark-90: #{$color-ACC-dark-90};
+    --color-primary-dark: var(--color-ACC-dark);
+    --color-primary-dark-70: var(--color-ACC-dark-70);
+    --color-primary-dark-90: var(--color-ACC-dark-90);
 
-    --color-primary-light: #{$color-ACC-light};
-    --color-primary-light-70: #{$color-ACC-light-70};
-    --color-primary-light-90: #{$color-ACC-light-90};
+    --color-primary-light: var(--color-ACC-light);
+    --color-primary-light-70: var(--color-ACC-light-70);
+    --color-primary-light-90: var(--color-ACC-light-90);
   }
 
   &[primary-color="orange"] {
-    --color-primary-dark: #{$color-PS-dark};
-    --color-primary-dark-70: #{$color-PS-dark-70};
-    --color-primary-dark-90: #{$color-PS-dark-90};
+    --color-primary-dark: var(--color-PS-dark);
+    --color-primary-dark-70: var(--color-PS-dark-70);
+    --color-primary-dark-90: var(--color-PS-dark-90);
 
-    --color-primary-light: #{$color-PS-light};
-    --color-primary-light-70: #{$color-PS-light-70};
-    --color-primary-light-90: #{$color-PS-light-90};
+    --color-primary-light: var(--color-PS-light);
+    --color-primary-light-70: var(--color-PS-light-70);
+    --color-primary-light-90: var(--color-PS-light-90);
   }
 
   &[primary-color="red"] {
-    --color-primary-dark: #{$color-TW-dark};
-    --color-primary-dark-70: #{$color-TW-dark-70};
-    --color-primary-dark-90: #{$color-TW-dark-90};
+    --color-primary-dark: var(--color-TW-dark);
+    --color-primary-dark-70: var(--color-TW-dark-70);
+    --color-primary-dark-90: var(--color-TW-dark-90);
 
-    --color-primary-light: #{$color-TW-light};
-    --color-primary-light-70: #{$color-TW-light-70};
-    --color-primary-light-90: #{$color-TW-light-90};
+    --color-primary-light: var(--color-TW-light);
+    --color-primary-light-70: var(--color-TW-light-70);
+    --color-primary-light-90: var(--color-TW-light-90);
   }
 
   &[primary-color="brown"] {
-    --color-primary-dark: #{$color-PV-dark};
-    --color-primary-dark-70: #{$color-PV-dark-70};
-    --color-primary-dark-90: #{$color-PV-dark-90};
+    --color-primary-dark: var(--color-PV-dark);
+    --color-primary-dark-70: var(--color-PV-dark-70);
+    --color-primary-dark-90: var(--color-PV-dark-90);
 
-    --color-primary-light: #{$color-PV-light};
-    --color-primary-light-70: #{$color-PV-light-70};
-    --color-primary-light-90: #{$color-PV-light-90};
+    --color-primary-light: var(--color-PV-light);
+    --color-primary-light-70: var(--color-PV-light-70);
+    --color-primary-light-90: var(--color-PV-light-90);
   }
 
   &[primary-color="green"] {
-    --color-primary-dark: #{$color-EM-dark};
-    --color-primary-dark-70: #{$color-EM-dark-70};
-    --color-primary-dark-90: #{$color-EM-dark-90};
+    --color-primary-dark: var(--color-EM-dark);
+    --color-primary-dark-70: var(--color-EM-dark-70);
+    --color-primary-dark-90: var(--color-EM-dark-90);
 
-    --color-primary-light: #{$color-EM-light};
-    --color-primary-light-70: #{$color-EM-light-70};
-    --color-primary-light-90: #{$color-EM-light-90};
+    --color-primary-light: var(--color-EM-light);
+    --color-primary-light-70: var(--color-EM-light-70);
+    --color-primary-light-90: var(--color-EM-light-90);
   }
 
   &[primary-color="yellow"] {
-    --color-primary-dark: #{$color-CU-dark};
-    --color-primary-dark-70: #{$color-CU-dark-70};
-    --color-primary-dark-90: #{$color-CU-dark-90};
+    --color-primary-dark: var(--color-CU-dark);
+    --color-primary-dark-70: var(--color-CU-dark-70);
+    --color-primary-dark-90: var(--color-CU-dark-90);
 
-    --color-primary-light: #{$color-CU-light};
-    --color-primary-light-70: #{$color-CU-light-70};
-    --color-primary-light-90: #{$color-CU-light-90};
+    --color-primary-light: var(--color-CU-light);
+    --color-primary-light-70: var(--color-CU-light-70);
+    --color-primary-light-90: var(--color-CU-light-90);
   }
 }
 
+////////////////////////////////////////////////
 //STYLING SELECTION
 ::selection {
   background-color: var(--color-primary-dark);
   color: $color-white;
 }
 
+////////////////////////////////////////////////
 //COMPATIBILITY WITH NON-HTML5 BROWSERS
 footer,
 header,
@@ -370,6 +329,8 @@ section {
   display: block;
 }
 
+////////////////////////////////////////////////
+//POSITIONING FOR FIXED ELEMENTS (COLOR SCHEMA PANEL AND BTN, NAVIGATION)
 .main {
   position: relative;
 }
