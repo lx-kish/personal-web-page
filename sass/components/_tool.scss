@@ -8,6 +8,12 @@
     display: inline-block;
     width: 70%;
 
+    @include respond(_360-600) {
+      top: 5%;
+      max-width: 65%;
+      font-size: $font-size-mobile;
+    }
+
     @include respond(_0-360) {
       top: 5%;
       max-width: 65%;
@@ -17,6 +23,10 @@
 
   &__score {
     float: right;
+
+    @include respond(_360-600) {
+      max-width: 35%;
+    }
 
     @include respond(_0-360) {
       max-width: 35%;
@@ -33,6 +43,12 @@
     transition: all 0.3s;
     animation-timing-function: ease-in;
     backface-visibility: hidden;
+
+    @include respond(_360-600) {
+      top: .7rem;
+      height: 3.4rem;
+      width: 3.4rem;
+    }
 
     @include respond(_0-360) {
       top: .5rem;
@@ -55,14 +71,14 @@
     background: var(--color-score-hover);
     // background: var(--color-yellow-bg);
 
-    @include respond(_0-360) {
+    @include respond(touch-screen) {
       background: none;
     }
 
     .tool__icon {
       margin-left: 1.5px;
 
-      @include respond(_0-360) {
+      @include respond(touch-screen) {
         margin-left: 0;
       }
     }

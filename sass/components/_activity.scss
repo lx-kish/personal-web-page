@@ -2,19 +2,9 @@
   // margin: 1rem;
   // padding: 2rem;
 
-  // background: var(--color-activity-bg);
-  // border: 0.1rem solid var(--color-activity-border);
-  // border-radius: 0.3rem;
-
-  // border: 0.1rem solid var(--color-grey-mild-2);
-  // background: var(--color-input-bg);
-  // background: $color-grey-light-4;
   color: var(--color-font);
 
-  // transition: transform .2s linear;
-  // backface-visibility: hidden;
-
-  @include respond(_0-360) {
+  @include respond(_360-600) {
 
     background: var(--color-activity-bg);
     border: 0.1rem solid var(--color-activity-border);
@@ -24,23 +14,30 @@
     // border-radius: 0.3rem;
   }
 
+  @include respond(_0-360) {
+
+    border-radius: 0.3rem;
+    padding: 2rem;
+    // border: 0.1rem solid var(--color-grey-mild-2);
+    // border-radius: 0.3rem;
+  }
+
   &:not(:last-child) {
     margin-bottom: 2rem;
+
+    @include respond(_360-600) {
+      margin-bottom: 2rem;
+    }
+
     @include respond(_0-360) {
       margin-bottom: 2rem;
     }
   }
 
-  // &:hover {
-  //   transform: translateY(-0.3rem) scale(1.01, 1.01);
-  //   box-shadow: 0 0 1rem .4rem var(--color-shadow-20);
-  //   backface-visibility: hidden;
-  // }
-
   &__name {
     text-align: right;
 
-    @include respond(_0-360) {
+    @include respond(_360-600) {
       text-align: initial;
     }
   }
@@ -52,9 +49,13 @@
 
     text-align: right;
 
+    @include respond(_360-600) {
+      text-align: initial;
+      font-size: 3rem;
+    }
+
     @include respond(_0-360) {
       font-size: 4rem;
-      text-align: initial;
     }
   }
 
@@ -69,6 +70,11 @@
       fill: var(--color-primary-dark);
 
       vertical-align: middle;
+
+      @include respond(_360-600) {
+        width: 3rem;
+        height: 3rem;
+      }
 
       @include respond(_0-360) {
         width: 4rem;

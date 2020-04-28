@@ -5,18 +5,19 @@
     background-color: var(--color-bg);
 
     @include respond(_360-600) {
-        padding: 5rem 10vw;
+        padding: 15rem 10vw 2rem;
     }
 
     @include respond(_0-360) {
         // width: 100%;
-        padding: 15rem 3.5vw 0;
+        padding: 18rem 3.5vw 2rem;
+        // padding: 15rem 3.5vw 0;
     }
 }
 
 .section-profile {
     @include respond(_360-600) {
-        padding-top: 20rem;
+        padding-top: 15rem;
     }
 
     @include respond(_0-360) {

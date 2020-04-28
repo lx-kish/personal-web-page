@@ -10,6 +10,17 @@
   visibility: hidden;
   transition: all 0.5s;
 
+  @include respond(touch-screen) {
+
+    position: initial;
+    background-color: transparent;
+    z-index: 0;
+    opacity: 1;
+    visibility: visible;
+    height: auto;
+    width: 100%;
+  }
+
   &__form {
     @include absCenter;
 
@@ -23,11 +34,40 @@
     transform: translate(-50%, -50%) scale(.5);
     transition: all .4s .2s;
 
-    @include respond(_0-360) {
-      height: 80vh;
-      width: 90vw;
-      padding: 5rem 3.5rem;
+    @include respond(touch-screen) {
+      display: block;
+      position: initial;
+      opacity: 1;
+      visibility: visible;
+      transform: initial;
+      border-style: none;
+      background-color: transparent;
+
+      height: auto;
+      width: auto;
+      padding: 0;
+      overflow-y: initial;
     }
+
+    // @include respond(_360-600) {
+    //   display: block;
+    //   position: initial;
+    //   opacity: 1;
+    //   visibility: visible;
+    //   transform: initial;
+    //   border-style: none;
+    //   background-color: transparent;
+
+    //   height: auto;
+    //   width: auto;
+    //   padding: 0;
+    // }
+
+    // @include respond(_0-360) {
+    //   height: 80vh;
+    //   width: 90vw;
+    //   padding: 5rem 3.5rem;
+    // }
   }
 
   &__header {
@@ -38,10 +78,13 @@
     font-weight: 700;
     color: var(--color-primary-dark);
 
+    @include respond(_360-600) {
+      font-size: $font-size-mobile;
+    }
+
     @include respond(_0-360) {
       font-size: $font-size-mobile-small;
     }
-
   }
   
   &:target {
@@ -67,6 +110,10 @@
       // z-index: 101;
       color: var(--color-font);
       transition: all .2s;
+
+      @include respond(touch-screen) {
+        display: none;
+      }
 
       @include respond(_0-360) {
         font-size: 10rem;
@@ -103,13 +150,17 @@
     padding: 0.7rem 1rem;
     border-radius: .2rem;
     background-color: var(--color-input-bg);
-    border: none;
-    // border-bottom: 2px solid transparent;
-    // border-right: 2px solid transparent;
+    // border: none;
+    border: 2px solid var(--color-input-bg);
     transition: all 0.3s;
 
+    @include respond(_360-600) {
+      font-size: $font-size-mobile;
+    }
+
     @include respond(_0-360) {
-      font-size: 3.5rem;
+      font-size: $font-size-mobile-small;
+      // font-size: 3.5rem;
     }
 
     &::placeholder {
@@ -128,6 +179,10 @@
       border-bottom: 2px solid var(--color-primary-dark);
       // border-right: 2px solid var(--color-primary-dark);
 
+      @include respond(touch-screen) {
+        box-shadow: none;
+      }
+
       &:invalid {
         border-bottom: 2px solid var(--color-accent);
         // border-right: 2px solid var(--color__accent);
@@ -145,8 +200,13 @@
     margin-left: 1rem;
     transition: all 0.3s;
 
+    @include respond(_360-600) {
+      font-size: $font-size-mobile;
+    }
+
     @include respond(_0-360) {
-      font-size: 3.5rem;
+      font-size: $font-size-mobile-small;
+      // font-size: 3.5rem;
     }
 
     &--not-last {

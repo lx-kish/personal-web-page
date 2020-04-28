@@ -81,12 +81,14 @@ OTHERVICE WE SUGGEST IT AS A MOBILE DEVICE WITH TOUCH SCREEN.
   }
 
   @if $breakpoint == big-desktop {
+    //big-desktop
     @media only screen and (min-width: 112.5em) {
       @content;
     }
   }
 
   @if $breakpoint == touch-screen {
+    //any size touch-screen
     @media only screen and (hover: none) {
       @content;
     }

@@ -6,6 +6,11 @@
   text-align: center;
   position: relative;
 
+  @include respond(_360-600) {
+    padding: 5rem 15rem;
+    font-size: 2rem;
+  }
+
   @include respond(_0-360) {
     padding: 5rem 15rem;
     font-size: 2.5rem;
@@ -24,15 +29,10 @@
     border-radius: 0 0 $border-radius $border-radius;
 
     @include animationAppears;
-    // animation-name: appears;
-    // animation-duration: 5.5s;
-    // animation-timing-function: ease-in;
-    // backface-visibility: hidden;
 
     @include respond(_600-900) {
       right: 1.5%;
     }
-
 
     @include respond(_360-600) {
       height: 10rem;
@@ -52,21 +52,21 @@
   }
 
   &__icon-up {
-    height: 3.2rem;
-    width: 3.2rem;
+    height: $btn-icon-size-main;
+    width: $btn-icon-size-main;
     fill: var(--color-sign);
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 
     @include respond(_360-600) {
-      height: 5rem;
-      width: 5rem;
+      height: $btn-icon-size-mobile;
+      width: $btn-icon-size-mobile;
     }
     
     @include respond(_0-360) {
-      height: 9rem;
-      width: 9rem;
+      height: $btn-icon-size-mobile-small;
+      width: $btn-icon-size-mobile-small;
     }
   }
 
@@ -81,15 +81,20 @@
   }
 
   &__logo {
-    height: 4.5rem;
-    width: 4.5rem;
+    height: $logo-size-main;
+    width: $logo-size-main;
     stroke: var(--color-sign);
     fill: var(--color-sign);
     stroke-width: 0.5;
 
+    @include respond(_360-600) {
+      height: $logo-size-mobile;
+      width: $logo-size-mobile;
+    }
+
     @include respond(_0-360) {
-      height: 9rem;
-      width: 9rem;
+      height: $logo-size-mobile-small;
+      width: $logo-size-mobile-small;
     }
   }
 

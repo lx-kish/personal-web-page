@@ -78,7 +78,7 @@
 
     @include respond(_360-600) {
       display: table-cell;
-      height: 15rem;
+      // height: 15rem;
     }
 
     &--active {
@@ -106,13 +106,13 @@
     color: inherit;
 
     @include respond(_360-600) {
-      line-height: 15rem;
+      line-height: 12rem;
       font-size: 2rem;
       // font-weight: 600;
     }
 
     @include respond(_0-360) {
-      // line-height: 10rem;
+      line-height: 15rem;
       // font-size: 2rem;
       // font-weight: 600;
     }

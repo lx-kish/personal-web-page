@@ -11,8 +11,8 @@
     transform: translate(-2rem);
 
     @include respond(_360-600) {
-      width: 33rem;
-      height: 33rem;
+      width: 30rem;
+      height: 30rem;
       transform: translate(-1rem);
     }
 
@@ -75,18 +75,18 @@
   }
 
   &__icon {
-    height: 3.2rem;
-    width: 3.2rem;
+    height: $icon-size-main;
+    width: $icon-size-main;
     fill: var(--color-primary-dark);
 
     @include respond(_360-600) {
-      height: 8rem;
-      width: 8rem;
+      height: $icon-size-mobile;
+      width: $icon-size-mobile;
     }
 
     @include respond(_0-360) {
-      height: 7rem;
-      width: 7rem;
+      height: $icon-size-mobile-small;
+      width: $icon-size-mobile-small;
     }
 
     &:hover {

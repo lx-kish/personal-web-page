@@ -4,6 +4,10 @@
     font-size: 2.5rem;
     font-style: italic;
 
+    @include respond(_360-600) {
+        font-size: 3rem;
+    }
+
     @include respond(_0-360) {
         font-size: 4rem;
     }

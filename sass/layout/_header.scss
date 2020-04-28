@@ -39,13 +39,18 @@
   }
 
   &__logo {
-    height: 5rem;
-    width: 5rem;
+    height: $logo-size-main;
+    width: $logo-size-main;
     // stroke: var(--color-sign);
     fill: var(--color-sign);
     // stroke-width: 0.5;
 
     @include respond(_360-600) {
+      height: 9rem;
+      width: 9rem;
+    }
+
+    @include respond(_0-360) {
       height: 12rem;
       width: 12rem;
     }
@@ -75,6 +80,11 @@
     }
 
     @include respond(_360-600) {
+      font-size: 7.5rem;
+      letter-spacing: 0.75rem;
+    }
+
+    @include respond(_0-360) {
       font-size: 11rem;
       letter-spacing: 0.75rem;
     }
@@ -98,7 +108,7 @@
     }
 
     @include respond(_360-600) {
-      width: 52.5rem;
+      width: 68.5rem;
       margin: 0 auto 1rem;
     }
 
@@ -122,10 +132,12 @@
 
     @include respond(_600-900) {
       letter-spacing: 0.76rem;
+      font-size: 3.3rem;
     }
 
     @include respond(_360-600) {
-      letter-spacing: 0.56rem;
+      letter-spacing: 0.4rem;
+      font-size: 3.5rem;
     }
 
     @include respond(_0-360) {
@@ -182,21 +194,21 @@
   }
 
   &__icon-down {
-    height: 3.2rem;
-    width: 3.2rem;
+    height: $btn-icon-size-main;
+    width: $btn-icon-size-main;
     fill: var(--color-sign);
     position: relative;
     top: 50%;
     transform: translateY(-50%);
 
     @include respond(_360-600) {
-      height: 5rem;
-      width: 5rem;
+      height: $btn-icon-size-mobile;
+      width: $btn-icon-size-mobile;
     }
 
     @include respond(_0-360) {
-      height: 9rem;
-      width: 9rem;
+      height: $btn-icon-size-mobile-small;
+      width: $btn-icon-size-mobile-small;
     }
   }
 }

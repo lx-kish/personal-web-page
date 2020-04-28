@@ -35,6 +35,12 @@
         //     vertical-align: -0.7rem;
         // }
 
+        @include respond(_360-600) {
+            height: 7rem;
+            width: 7rem;
+            vertical-align: -1rem;
+        }
+
         @include respond(_0-360) {
             height: 9rem;
             width: 9rem;
@@ -54,7 +60,7 @@
         // text-transform: uppercase;
 
         @include respond(_360-600) {
-            font-size: 5.5rem;
+            font-size: 7.9rem;
             font-weight: 300;
             letter-spacing: 0.3rem;
         }

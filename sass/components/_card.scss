@@ -5,6 +5,10 @@
   position: relative;
   height: 40rem;
 
+  @include respond(_360-600) {
+    height: 80vh;
+  }
+
   @include respond(_0-360) {
     height: 80vh;
   }
@@ -25,6 +29,10 @@
 
     &--front {
       background-color: var(--color-white-light);
+      
+      @include respond(_360-600) {
+        background-color: var(--color-shadow-50);
+      }
 
       @include respond(_0-360) {
         background-color: var(--color-shadow-50);
@@ -39,57 +47,86 @@
       background-size: cover;
       background-position: top;
 
-      @include respond(_0-360) {
+      @include respond(touch-screen) {
         // background-color: transparent;
         transform: rotateY(0);
       }
 
+      // @include respond(_0-360) {
+      //   // background-color: transparent;
+      //   transform: rotateY(0);
+      // }
+
       &--PS {
         background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70));
 
-        @include respond(_0-360) {
+        @include respond(touch-screen) {
           background-image: none;
         }
+
+        // @include respond(_0-360) {
+        //   background-image: none;
+        // }
       }
 
       &--TW {
         background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70));
 
-        @include respond(_0-360) {
+        @include respond(touch-screen) {
           background-image: none;
         }
+
+        // @include respond(_0-360) {
+        //   background-image: none;
+        // }
       }
 
       &--PV {
         background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70));
         
-        @include respond(_0-360) {
+        @include respond(touch-screen) {
           background-image: none;
         }
+
+        // @include respond(_0-360) {
+        //   background-image: none;
+        // }
       }
 
       &--EM {
         background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70));
         
-        @include respond(_0-360) {
+        @include respond(touch-screen) {
           background-image: none;
         }
+
+        // @include respond(_0-360) {
+        //   background-image: none;
+        // }
       }
 
       &--ACC {
         background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70));
         
-        @include respond(_0-360) {
+        @include respond(touch-screen) {
           background-image: none;
         }
+
+        // @include respond(_0-360) {
+        //   background-image: none;
+        // }
       }
 
       &--CU {
         background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70));
         
-        @include respond(_0-360) {
+        @include respond(touch-screen) {
           background-image: none;
         }
+
+        // @include respond(_0-360) {
+        //   background-image: none;
+        // }
       }
     }
   }
@@ -97,17 +134,25 @@
   &:hover &__side--front {
     transform: rotateY(-180deg);
 
-    @include respond(_0-360) {
+    @include respond(touch-screen) {
       transform: rotateY(0);
     }
+
+    // @include respond(_0-360) {
+    //   transform: rotateY(0);
+    // }
   }
 
   &:hover &__side--back {
     transform: rotateY(0);
 
-    @include respond(_0-360) {
+    @include respond(touch-screen) {
       transform: rotateY(0);
     }
+
+    // @include respond(_0-360) {
+    //   transform: rotateY(0);
+    // }
   }
 
   //FRONT SIDE STYLING
@@ -199,6 +244,11 @@
       top: 75%;
     }
 
+    @include respond(_360-600) {
+      top: 5%;
+      font-size: 6rem;
+    }
+
     @include respond(_0-360) {
       top: 3%;
       font-size: 7rem;
@@ -244,6 +294,17 @@
     //   margin: auto 0;
     //   vertical-align: 15%;
 
+    @include respond(_360-600) {
+      width: 90%;
+      // height: 80%;
+      position: absolute;
+      // bottom: 0;
+      font-size: $font-size-mobile;
+      font-weight: 300;
+      line-height: 1.5;
+      color: var(--color-white);
+    }
+
     @include respond(_0-360) {
       width: 90%;
       // height: 80%;
@@ -256,45 +317,63 @@
     }
 
     &--PS {
-      @include respond(_0-360) {
+      @include respond(touch-screen) {
         background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70));
-        // background-color: var(--color-PS-light-70);
       }
+
+      // @include respond(_0-360) {
+      //   background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70));
+      // }
     }
 
     &--TW {
-      @include respond(_0-360) {
+      @include respond(touch-screen) {
         background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70));
-        // background-color: var(--color-TW-light-70);
       }
+
+      // @include respond(_0-360) {
+      //   background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70));
+      // }
     }
 
     &--PV {
-      @include respond(_0-360) {
+      @include respond(touch-screen) {
         background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70));
-        // background-color: var(--color-PV-light-70);
       }
+
+      // @include respond(_0-360) {
+      //   background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70));
+      // }
     }
 
     &--EM {
-      @include respond(_0-360) {
+      @include respond(touch-screen) {
         background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70));
-        // background-color: var(--color-EM-light-70);
       }
+
+      // @include respond(_0-360) {
+      //   background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70));
+      // }
     }
 
     &--ACC {
-      @include respond(_0-360) {
+      @include respond(touch-screen) {
         background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70));
-        // background-color: var(--color-ACC-light-70);
       }
+
+      // @include respond(_0-360) {
+      //   background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70));
+      // }
     }
 
     &--CU {
-      @include respond(_0-360) {
+      @include respond(touch-screen) {
         background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70));
-        // background-color: var(--color-CU-light-70);
       }
+
+      // @include respond(_0-360) {
+      //   background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70));
+      // }
     }
   }
 }
