@@ -376,7 +376,7 @@ body.color-theme-in-transition *:after {
         margin-bottom: 2rem; } }
     @media only screen and (max-width: 22.5em) {
       .activity:not(:last-child) {
-        margin-bottom: 2rem; } }
+        margin-bottom: 3rem; } }
   .activity__name {
     text-align: right; }
     @media only screen and (max-width: 37.5em) {
@@ -427,6 +427,10 @@ body.color-theme-in-transition *:after {
   font-size: 1.6rem;
   font-weight: 700;
   cursor: pointer; }
+  @media only screen and (max-width: 37.5em) {
+    .btn {
+      font-size: 3rem;
+      padding: 1rem 4rem; } }
   @media only screen and (max-width: 22.5em) {
     .btn {
       font-size: 4.3rem;
@@ -434,12 +438,23 @@ body.color-theme-in-transition *:after {
   .btn:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 1.5rem var(--color-shadow-50); }
+    @media only screen and (hover: none) {
+      .btn:hover {
+        transform: none;
+        box-shadow: none; } }
     .btn:hover::after {
       transform: scaleX(1.4) scaleY(1.6);
       opacity: 0; }
+      @media only screen and (hover: none) {
+        .btn:hover::after {
+          transform: none; } }
   .btn:active {
     transform: translateY(-0.1rem);
     box-shadow: 0 0.5rem 1rem var(--color-shadow-20); }
+    @media only screen and (hover: none) {
+      .btn:active {
+        transform: none;
+        box-shadow: none; } }
   .btn:hover, .btn:focus, .btn:active {
     outline: none; }
   .btn-contacts {
@@ -451,10 +466,16 @@ body.color-theme-in-transition *:after {
     border: 0.2rem solid var(--color-primary-dark);
     background-color: transparent;
     color: var(--color-primary-dark); }
-    @media only screen and (max-width: 22.5em) {
+    @media only screen and (max-width: 37.5em) {
       .btn-form {
         width: 23rem;
         padding: 3rem 4rem; } }
+    @media only screen and (max-width: 22.5em) {
+      .btn-form {
+        width: 23rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .btn-form:not(:last-child) {
+        margin-right: 6rem; } }
     @media only screen and (max-width: 22.5em) {
       .btn-form:not(:last-child) {
         margin-right: 6rem; } }
@@ -987,8 +1008,8 @@ body.color-theme-in-transition *:after {
       z-index: 0;
       opacity: 1;
       visibility: visible;
-      height: auto;
-      width: 100%; } }
+      width: 100%;
+      margin-bottom: 3vh; } }
   .message__form {
     position: absolute;
     top: 50%;
@@ -1012,8 +1033,7 @@ body.color-theme-in-transition *:after {
         transform: initial;
         border-style: none;
         background-color: transparent;
-        height: auto;
-        width: auto;
+        width: 100%;
         padding: 0;
         overflow-y: initial; } }
   .message__header {
@@ -1025,9 +1045,11 @@ body.color-theme-in-transition *:after {
     color: var(--color-primary-dark); }
     @media only screen and (max-width: 37.5em) {
       .message__header {
+        padding: 0 1rem 6rem;
         font-size: 3rem; } }
     @media only screen and (max-width: 22.5em) {
       .message__header {
+        padding: 0 1rem 8rem;
         font-size: 4.3rem; } }
   .message:target {
     opacity: 1;
@@ -1055,6 +1077,12 @@ body.color-theme-in-transition *:after {
         color: var(--color-primary-dark); } }
   .message__close:hover {
     color: var(--color-primary-dark); }
+
+@media only screen and (hover: none) {
+  .form {
+    overflow: auto;
+    width: 100%;
+    padding-bottom: 3rem; } }
 
 .form__group--btns {
   text-align: center;
@@ -1105,25 +1133,41 @@ body.color-theme-in-transition *:after {
   transition: all 0.3s; }
   @media only screen and (max-width: 37.5em) {
     .form__label {
-      font-size: 3rem; } }
+      font-size: 3rem;
+      margin-top: 2rem;
+      margin-left: 1.5rem; } }
   @media only screen and (max-width: 22.5em) {
     .form__label {
-      font-size: 4.3rem; } }
+      font-size: 4.3rem;
+      margin-top: 2.5rem;
+      margin-left: 1.8rem; } }
   .form__label--not-last {
     top: -7.9rem; }
+    @media only screen and (max-width: 37.5em) {
+      .form__label--not-last {
+        top: -13.5rem; } }
     @media only screen and (max-width: 22.5em) {
       .form__label--not-last {
-        top: -13.6rem; } }
+        top: -18rem; } }
   .form__label--last {
     top: -24.1rem; }
+    @media only screen and (max-width: 37.5em) {
+      .form__label--last {
+        top: -42.5rem; } }
     @media only screen and (max-width: 22.5em) {
       .form__label--last {
-        top: -47.5rem; } }
+        top: -59.3rem; } }
 
 .form__input:placeholder-shown + .form__label {
   opacity: 0;
   visibility: hidden;
   transform: translateY(4.5rem); }
+  @media only screen and (max-width: 37.5em) {
+    .form__input:placeholder-shown + .form__label {
+      transform: translateY(6.1rem); } }
+  @media only screen and (max-width: 22.5em) {
+    .form__input:placeholder-shown + .form__label {
+      transform: translateY(8.3rem); } }
 
 .navigation {
   position: absolute;

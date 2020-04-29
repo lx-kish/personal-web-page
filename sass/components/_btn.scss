@@ -9,6 +9,11 @@
   font-weight: 700;
   cursor: pointer;
 
+  @include respond(_360-600) {
+    font-size: $font-size-mobile;
+    padding: 1rem 4rem;
+  }
+
   @include respond(_0-360) {
     font-size: $font-size-mobile-small;
     padding: 1rem 4rem;
@@ -17,42 +22,65 @@
   &:hover {
     transform: translateY(-0.3rem);
     box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
-  
-    &::after {
-        transform: scaleX(1.4) scaleY(1.6);
-        opacity: 0;
+
+    @include respond(touch-screen) {
+      transform: none;
+      box-shadow: none;
     }
-  }  
+
+    &::after {
+      transform: scaleX(1.4) scaleY(1.6);
+      opacity: 0;
+
+      @include respond(touch-screen) {
+        transform: none;
+      }
+    }
+  }
 
   &:active {
     transform: translateY(-0.1rem);
-    box-shadow: 0 .5rem 1rem var(--color-shadow-20);
+    box-shadow: 0 0.5rem 1rem var(--color-shadow-20);
+
+    @include respond(touch-screen) {
+      transform: none;
+      box-shadow: none;
+    }
   }
 
   &:hover,
   &:focus,
   &:active {
-      outline: none;
+    outline: none;
   }
 
   &-contacts {
-    border: .2rem solid var(--color-primary-dark);
+    border: 0.2rem solid var(--color-primary-dark);
     background-color: transparent;
     color: var(--color-primary-dark);
   }
 
   &-form {
     width: 9.8rem;
-    border: .2rem solid var(--color-primary-dark);
+    border: 0.2rem solid var(--color-primary-dark);
     background-color: transparent;
     color: var(--color-primary-dark);
 
-    @include respond(_0-360) {
+    @include respond(_360-600) {
       width: 23rem;
       padding: 3rem 4rem;
     }
 
+    @include respond(_0-360) {
+      width: 23rem;
+      // padding: 3rem 4rem;
+    }
+
     &:not(:last-child) {
+      @include respond(_360-600) {
+        margin-right: 6rem;
+      }
+
       @include respond(_0-360) {
         margin-right: 6rem;
       }

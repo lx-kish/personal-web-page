@@ -17,8 +17,10 @@
     z-index: 0;
     opacity: 1;
     visibility: visible;
-    height: auto;
+    // height: 100%;
+    // overflow: auto;
     width: 100%;
+    margin-bottom: 3vh;
   }
 
   &__form {
@@ -43,8 +45,9 @@
       border-style: none;
       background-color: transparent;
 
-      height: auto;
-      width: auto;
+      // height: 100%;
+      // overflow: auto;
+      width: 100%;
       padding: 0;
       overflow-y: initial;
     }
@@ -79,10 +82,12 @@
     color: var(--color-primary-dark);
 
     @include respond(_360-600) {
+      padding: 0 1rem 6rem;
       font-size: $font-size-mobile;
     }
 
     @include respond(_0-360) {
+      padding: 0 1rem 8rem;
       font-size: $font-size-mobile-small;
     }
   }
@@ -129,6 +134,13 @@
 }
 
 .form {
+
+  @include respond(touch-screen) {
+    // height: 100%;
+    overflow: auto;
+    width: 100%;
+    padding-bottom: 3rem;
+  }
 
   &__group--btns {
     // margin: 0 auto;
@@ -202,26 +214,38 @@
 
     @include respond(_360-600) {
       font-size: $font-size-mobile;
+      margin-top: 2rem;
+      margin-left: 1.5rem;
     }
 
     @include respond(_0-360) {
       font-size: $font-size-mobile-small;
+      margin-top: 2.5rem;
+      margin-left: 1.8rem;
       // font-size: 3.5rem;
     }
 
     &--not-last {
       top: -7.9rem;
 
+      @include respond(_360-600) {
+        top: -13.5rem;
+      }
+
       @include respond(_0-360) {
-        top: -13.6rem;
+        top: -18rem; //-16rem;
       }
     }
 
     &--last {
       top: -24.1rem;
 
+      @include respond(_360-600) {
+        top: -42.5rem;
+      }
+
       @include respond(_0-360) {
-        top: -47.5rem;
+        top: -59.3rem;
       }
     }
   }
@@ -230,5 +254,13 @@
     opacity: 0;
     visibility: hidden;
     transform: translateY(4.5rem);
+
+    @include respond(_360-600) {
+      transform: translateY(6.1rem);
+    }
+
+    @include respond(_0-360) {
+      transform: translateY(8.3rem);
+    }
   }
 }

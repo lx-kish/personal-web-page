@@ -6,6 +6,9 @@
 
     @include respond(_360-600) {
         padding: 15rem 10vw 2rem;
+
+        // max-width: 80rem;
+        // margin: 0 auto;
     }
 
     @include respond(_0-360) {
