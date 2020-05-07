@@ -20,8 +20,11 @@
   backface-visibility: hidden;
 }
 
-@mixin transition4of10 {
-  transition: all 0.4s ease;
+@mixin transition($duration) {
+  -webkit-transition: all $duration ease;
+  -moz-transition: all $duration ease;
+  -o-transition: all $duration ease;
+  transition: all $duration ease;
 }
 
 ////////////////////////////////////////////////

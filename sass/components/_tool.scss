@@ -40,9 +40,11 @@
     width: 1.6rem;
     stroke-width: 0.5;
     margin: 0;
-    transition: all 0.3s;
+    // transition: all 0.3s;
     animation-timing-function: ease-in;
     backface-visibility: hidden;
+
+    @include transition(0.3s);
 
     @include respond(_360-600) {
       top: .7rem;

@@ -4,15 +4,13 @@
   width: 12rem;
   border-radius: 0.2rem;
 
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease;
+  @include transition(0.3s);
 
   @include animationAppears;
 
   @include respond(_600-900) {
     right: 1.5%;
+    width: 11rem;
   }
 
   @include respond(_360-600) {

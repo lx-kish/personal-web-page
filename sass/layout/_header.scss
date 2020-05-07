@@ -23,19 +23,22 @@
 
   &__logo-box {
     position: absolute;
-    top: 4rem;
-    left: 4rem;
+    // top: 4rem;
+    // left: 4rem;
+    top: 15%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
     animation-name: appears;
     // animation-delay: 1.5s;
     animation-duration: 5.5s;
     // animation-timing-function: ease-in;
 
-    @include respond(_360-600) {
-      top: 15%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-    }
+    // @include respond(_360-600) {
+    //   top: 15%;
+    //   // left: 50%;
+    //   // transform: translate(-50%, -50%);
+    // }
   }
 
   &__logo {
@@ -43,16 +46,21 @@
     width: $logo-size-main;
     // stroke: var(--color-sign);
     fill: var(--color-sign);
-    // stroke-width: 0.5;
+    // stroke-width: 0.5; 
+
+    @include respond(_600-900) {
+      height: $logo-size-tab-port;
+      width: $logo-size-tab-port;
+    }
 
     @include respond(_360-600) {
-      height: 9rem;
-      width: 9rem;
+      height: $logo-size-mobile;
+      width: $logo-size-mobile;
     }
 
     @include respond(_0-360) {
-      height: 12rem;
-      width: 12rem;
+      height: $logo-size-mobile-small;
+      width: $logo-size-mobile-small;
     }
   }
 
@@ -131,8 +139,8 @@
     // backface-visibility: hidden;
 
     @include respond(_600-900) {
-      letter-spacing: 0.76rem;
-      font-size: 3.3rem;
+      letter-spacing: 0.45rem;
+      font-size: 2.8rem;
     }
 
     @include respond(_360-600) {
@@ -164,17 +172,13 @@
     border-radius: $border-radius $border-radius 0 0;
 
     @include animationAppears;
-    // animation-name: appears;
-    // animation-duration: 5.5s;
-    // animation-timing-function: ease-in;
-    // backface-visibility: hidden;
 
     @include respond(_600-900) {
       right: 1.5%;
+      width: 11rem;
     }
 
     @include respond(_360-600) {
-      // right: 1.5%;
       height: 10rem;
       // border-radius: 0 0 $border-radius $border-radius;
     }

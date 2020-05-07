@@ -8,7 +8,9 @@
   z-index: 100;
   opacity: 0;
   visibility: hidden;
-  transition: all 0.5s;
+  // transition: all 0.5s;
+
+  @include transition(0.5s);
 
   @include respond(touch-screen) {
 
@@ -18,6 +20,7 @@
     opacity: 1;
     visibility: visible;
     // height: 100%;
+    height: auto;
     // overflow: auto;
     width: 100%;
     margin-bottom: 3vh;
@@ -46,6 +49,7 @@
       background-color: transparent;
 
       // height: 100%;
+      max-height: fit-content;
       // overflow: auto;
       width: 100%;
       padding: 0;
@@ -87,7 +91,8 @@
     }
 
     @include respond(_0-360) {
-      padding: 0 1rem 8rem;
+      padding: 0 1rem;
+      margin-bottom: 8rem;
       font-size: $font-size-mobile-small;
     }
   }
@@ -114,16 +119,19 @@
       line-height: .5;
       // z-index: 101;
       color: var(--color-font);
-      transition: all .2s;
+      // transition: all .2s;
+
+      @include transition(0.2s);
 
       @include respond(touch-screen) {
         display: none;
       }
 
       @include respond(_0-360) {
-        font-size: 10rem;
-        line-height: .5;
-        color: var(--color-primary-dark);
+        // font-size: 10rem;
+        // line-height: .5;
+        // color: var(--color-primary-dark);
+        display: none;
       }
     }
 
@@ -164,7 +172,9 @@
     background-color: var(--color-input-bg);
     // border: none;
     border: 2px solid var(--color-input-bg);
-    transition: all 0.3s;
+    // transition: all 0.3s;
+
+    @include transition(0.3s);
 
     @include respond(_360-600) {
       font-size: $font-size-mobile;
@@ -210,7 +220,9 @@
     color: var(--color-label-plholder);
     margin-top: 1rem;
     margin-left: 1rem;
-    transition: all 0.3s;
+    // transition: all 0.3s;
+
+    @include transition(0.3s);
 
     @include respond(_360-600) {
       font-size: $font-size-mobile;
@@ -245,7 +257,7 @@
       }
 
       @include respond(_0-360) {
-        top: -59.3rem;
+        top: -60.1rem;
       }
     }
   }
@@ -260,7 +272,7 @@
     }
 
     @include respond(_0-360) {
-      transform: translateY(8.3rem);
+      transform: translateY(8.4rem);
     }
   }
 }

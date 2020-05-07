@@ -32,6 +32,7 @@
 
     @include respond(_600-900) {
       right: 1.5%;
+      width: 11rem;
     }
 
     @include respond(_360-600) {
@@ -86,6 +87,11 @@
     stroke: var(--color-sign);
     fill: var(--color-sign);
     stroke-width: 0.5;
+
+    @include respond(_600-900) {
+      height: $logo-size-tab-port;
+      width: $logo-size-tab-port;
+    }
 
     @include respond(_360-600) {
       height: $logo-size-mobile;

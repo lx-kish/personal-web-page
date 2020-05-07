@@ -2,22 +2,64 @@
   //FUNCTIONALITY
   -moz-perspective: 150rem;
   perspective: 150rem;
-  position: relative;
-  height: 40rem;
+  // position: relative;
+  // height: 40rem;
+  
+  //ASPECT RATIO 1:2
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
 
   @include respond(_360-600) {
-    height: 80vh;
+    // height: 80vh;
     // height: calc(width * 2);
+    max-width: 80rem;
+    margin: 0 auto;
   }
 
   @include respond(_0-360) {
-    height: 80vh;
+    // height: 80vh;
+    max-width: 100rem;
+    margin: 0 auto;
   }
+
+  //ASPECT RATIO 1:2
+  &__container {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+
+    @include respond(_600-900) {
+      width: 50%;
+    }
+
+    @include respond(_360-600) {
+      width: 100%;
+    }
+  }
+
+  &__container:after {
+    content: "";
+    display: block;
+    margin-top: 150%;
+
+    // @include respond(_600-900) {
+    //   margin-top: 150%;
+    // }
+
+    // @include respond(_600-900) {
+    //   margin-top: 150%;
+    // }
+  }
+
+  
 
   &__side {
     // background-color: $color-grey-light-5;
     // height: 40rem;
-    transition: all 0.8s ease;
+    // transition: all 0.8s ease;
     position: absolute;
     top: 0;
     left: 0;
@@ -28,9 +70,11 @@
     overflow: hidden;
     box-shadow: 0 1.5rem 4rem var(--color-shadow-20);
 
+    @include transition(0.8s);
+
     &--front {
       background-color: var(--color-white-light);
-      
+
       @include respond(_360-600) {
         background-color: var(--color-shadow-50);
       }
@@ -84,7 +128,7 @@
 
       &--PV {
         background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70));
-        
+
         @include respond(touch-screen) {
           background-image: none;
         }
@@ -96,7 +140,7 @@
 
       &--EM {
         background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70));
-        
+
         @include respond(touch-screen) {
           background-image: none;
         }
@@ -108,7 +152,7 @@
 
       &--ACC {
         background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70));
-        
+
         @include respond(touch-screen) {
           background-image: none;
         }
@@ -120,7 +164,7 @@
 
       &--CU {
         background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70));
-        
+
         @include respond(touch-screen) {
           background-image: none;
         }
@@ -159,6 +203,7 @@
   //FRONT SIDE STYLING
   &__picture {
     background-size: cover;
+    // background-size: auto;
     height: 100%;
     // background-blend-mode: screen;
     background-blend-mode: multiply;
@@ -168,6 +213,7 @@
       background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70)),
         url(../img/card-1.jpg);
       filter: brightness(0.85);
+
 
       // @include respond(_0-360) {
       //   background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70));
