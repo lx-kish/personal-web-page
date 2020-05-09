@@ -33,12 +33,12 @@
         &:not(:last-child) {
             margin-right: $gutter-horizontal;
 
-            @include respond(_360-600) {
+            @include respond(_720-880) { //_360-580
                 margin-right: 0;
             }
         }
 
-        @include respond(_360-600) {
+        @include respond(_720-880) { //_360-580
             width: 100%;
             // width: 100% !important;
         }

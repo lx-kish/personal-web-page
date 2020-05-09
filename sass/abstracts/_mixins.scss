@@ -62,21 +62,35 @@ OTHERVICE WE SUGGEST IT AS A MOBILE DEVICE WITH TOUCH SCREEN.
     } //18.75em) { @content };
   }
 
-  @if $breakpoint == _360-600 {
+  @if $breakpoint == _360-580 {
     //phone {
-    @media only screen and (max-width: 37.5em) {
+    @media only screen and (max-width: 36.25em) {
       @content;
     }
   }
 
-  @if $breakpoint == _600-900 {
+  @if $breakpoint == _580-720 {
     //tab-port {
-    @media only screen and (max-width: 56.25em) {
+    @media only screen and (max-width: 45em) {
       @content;
     }
   }
 
-  @if $breakpoint == _900-1200 {
+  @if $breakpoint == _720-880 {
+    //tab-port {
+    @media only screen and (max-width: 55em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == _880-1040 {
+    //tab-port {
+    @media only screen and (max-width: 65em) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == _1040-1200 {
     //tab-land {
     @media only screen and (max-width: 75em) {
       @content;
@@ -97,7 +111,14 @@ OTHERVICE WE SUGGEST IT AS A MOBILE DEVICE WITH TOUCH SCREEN.
     }
   }
 
-  @if $breakpoint == touch_900-1200 {
+  @if $breakpoint == touch_880-1040 {
+    //touch-screen big size
+    @media only screen and (max-width: 65em), only screen and (hover: none) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == touch_1040-1200 {
     //touch-screen big size
     @media only screen and (max-width: 75em), only screen and (hover: none) {
       @content;

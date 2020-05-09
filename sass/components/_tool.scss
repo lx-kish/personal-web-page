@@ -8,7 +8,7 @@
     display: inline-block;
     width: 70%;
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       top: 5%;
       max-width: 65%;
       font-size: $font-size-mobile;
@@ -24,7 +24,7 @@
   &__score {
     float: right;
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       max-width: 35%;
     }
 
@@ -46,7 +46,7 @@
 
     @include transition(0.3s);
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       top: .7rem;
       height: 3.4rem;
       width: 3.4rem;

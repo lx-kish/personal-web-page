@@ -13,15 +13,23 @@ html {
   //for correct calculations rem units in Safari
   -webkit-text-size-adjust: none;
 
-  @include respond(_900-1200) {
+  @include respond(_1040-1200) {
     font-size: 56.25%; //1rem = 9px (9px/16px = 56.25%)
   }
 
-  @include respond(_600-900) {
+  @include respond(_880-1040) {
     font-size: 50%; //1rem = 8px (8px/16px = 50%)
   }
 
-  @include respond(_360-600) {
+  @include respond(_720-880) {
+    font-size: 43.75%; //1rem = 7px (7/16 = 43.75%)
+  }
+
+  @include respond(_580-720) {
+    font-size: 37.5%; //1rem = 6px (6px/16px = 37.5%)
+  }
+
+  @include respond(_360-580) {
     font-size: 31.25%; //1rem = 5px (5px/16px = 31.25%)
   }
 

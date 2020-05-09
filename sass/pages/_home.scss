@@ -4,14 +4,14 @@
     padding: $container-padding-top-bottom $container-padding-left-right;
     background-color: var(--color-bg);
 
-    @include respond(_600-900) {
+    @include respond(_580-720) {
         padding: $container-padding-top-bottom 17vw;
 
         // max-width: 80rem;
         // margin: 0 auto;
     }
     
-    @include respond(_360-600) {
+    @include respond(_360-580) {
         padding: 15rem 10vw 2rem;
 
         // max-width: 80rem;
@@ -26,7 +26,7 @@
 }
 
 .section-profile {
-    @include respond(_360-600) {
+    @include respond(_360-580) {
         padding-top: 15rem;
     }
 

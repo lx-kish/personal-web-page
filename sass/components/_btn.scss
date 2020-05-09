@@ -10,7 +10,7 @@
 
   @include transition(0.2s);
 
-  @include respond(_360-600) {
+  @include respond(_360-580) {
     font-size: $font-size-mobile;
     padding: 1rem 4rem;
   }
@@ -67,7 +67,7 @@
     background-color: transparent;
     color: var(--color-primary-dark);
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       width: 23rem;
       padding: 3rem 4rem;
     }
@@ -78,7 +78,7 @@
     }
 
     &:not(:last-child) {
-      @include respond(_360-600) {
+      @include respond(_360-580) {
         margin-right: 6rem;
       }
 

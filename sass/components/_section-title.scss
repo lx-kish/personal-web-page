@@ -2,12 +2,12 @@
     padding: 5rem;
 
     //TODO - decide about padding-bottom for 600-900 and fewer
-    @include respond(_600-900) {
+    @include respond(_580-720) {
         padding: 0;
         padding-bottom: 5rem;
     }
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
         padding: 0;
         padding-bottom: 5rem;
     }
@@ -19,11 +19,11 @@
         display: inline-block;
         margin-right: 1.5rem;
 
-        @include respond(_600-900) {
+        @include respond(_580-720) {
             margin-right: 1.5rem;
         }
 
-        @include respond(_360-600) {
+        @include respond(_360-580) {
             margin-right: 1.5rem;
         }
 
@@ -40,13 +40,13 @@
         fill: var(--color-primary-dark);
         stroke-width: 0.5;
 
-        @include respond(_600-900) {
+        @include respond(_580-720) {
             height: 7rem;
             width: 7rem;
             vertical-align: -1rem;
         }
 
-        @include respond(_360-600) {
+        @include respond(_360-580) {
             height: 7rem;
             width: 7rem;
             vertical-align: -1rem;
@@ -70,13 +70,13 @@
         letter-spacing: 0.3rem;
         // text-transform: uppercase;
 
-        @include respond(_600-900) {
+        @include respond(_580-720) {
             font-size: 6.5rem;
             font-weight: 300;
             letter-spacing: 0.3rem;
         }
 
-        @include respond(_360-600) {
+        @include respond(_360-580) {
             font-size: 7.9rem;
             font-weight: 300;
             letter-spacing: 0.3rem;

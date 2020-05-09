@@ -20,7 +20,7 @@
 
     @include transition(0.4s);
 
-    @include respond(_600-900) {
+    @include respond(_720-880) {
       opacity: 1;
       visibility: visible;
       z-index: 10;
@@ -29,6 +29,14 @@
       transition-delay: 0.4s;
       bottom: 0;
 
+      left: -18rem;
+      width: 18rem;
+      height: 18rem;
+      padding: 1.1rem;
+      border-radius: 0 $border-radius 0 0;
+    }
+
+    @include respond(_580-720) {
       left: -21rem;
       width: 21rem;
       height: 21rem;
@@ -36,7 +44,7 @@
       border-radius: 0 $border-radius 0 0;
     }
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       left: -35rem;
       width: 35rem;
       height: 35rem;
@@ -61,7 +69,7 @@
       transform: translateY(-0.3rem);
       box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
 
-      @include respond(_600-900) {
+      @include respond(_720-880) {
         transform: translateY(0);
         box-shadow: none;
       }
@@ -73,14 +81,18 @@
     /////////////////////////////////////////////////////////
     //TOUCH-SCREEN MOBILE SHOW COLOR-PANEL
     &--hide {
-      @include respond(_600-900) {
+      @include respond(_720-880) {
         transform: translateY(0);
         box-shadow: none;
         border-style: none;
         left: -35rem;
       }
 
-      @include respond(_360-600) {
+      @include respond(_580-720) {
+        left: -35rem;
+      }
+
+      @include respond(_360-580) {
         left: -35rem;
       }
 
@@ -92,7 +104,7 @@
     /////////////////////////////////////////////////////////
     //TOUCH-SCREEN MOBILE SHOW COLOR-PANEL
     &--show {
-      @include respond(_600-900) {
+      @include respond(_720-880) {
         transform: translateY(0);
         box-shadow: none;
         border-style: none;
@@ -121,7 +133,7 @@
     flex-direction: column;
     justify-content: space-between;
 
-    @include respond(_600-900) {
+    @include respond(_720-880) {
       flex: 0 0 65%;
       padding: 0;
     }
@@ -142,13 +154,19 @@
     height: 3.2rem;
     border-radius: 0.2rem;
 
-    @include respond(_600-900) {
+    @include respond(_720-880) {
+      width: 4.5rem;
+      height: 4.5rem;
+      border-radius: 0.3rem;
+    }
+    
+    @include respond(_580-720) {
       width: 5rem;
       height: 5rem;
       border-radius: 0.3rem;
     }
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       width: 7.5rem;
       height: 7.5rem;
       border-radius: 0.4rem;
@@ -207,7 +225,7 @@
     animation-name: appears;
     animation-duration: 5s;
 
-    @include respond(_600-900) {
+    @include respond(_720-880) {
       position: relative;
       top: 17.5%;
       left: 17.5%;
@@ -221,7 +239,7 @@
       transform: translateY(-0.3rem);
       box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
 
-      @include respond(_600-900) {
+      @include respond(_720-880) {
         transform: translateY(0);
         box-shadow: none;
       }
@@ -231,7 +249,7 @@
       transform: translateY(-0.1rem);
       box-shadow: 0 0.5rem 1rem var(--color-shadow-20);
 
-      @include respond(_600-900) {
+      @include respond(_720-880) {
         transform: translateY(0);
         box-shadow: none;
       }
@@ -240,7 +258,7 @@
     &--mobile {
       @include transition(0.4s);
 
-      @include respond(_600-900) {
+      @include respond(_720-880) {
         display: inline-block;
         position: fixed;
         left: 0;
@@ -254,11 +272,16 @@
         animation-name: appears;
         animation-duration: 5s;
 
+        height: 5rem;
+        width: 5rem;
+      }
+
+      @include respond(_580-720) {
         height: 6rem;
         width: 6rem;
       }
 
-      @include respond(_360-600) {
+      @include respond(_360-580) {
         height: 11rem;
         width: 11rem;
 
@@ -281,7 +304,7 @@
         transform: translateY(-0.3rem);
         box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
 
-        @include respond(_600-900) {
+        @include respond(_720-880) {
           transform: translateY(0);
           box-shadow: none;
           left: 0;
@@ -295,7 +318,7 @@
     height: 100%;
     width: 100%;
 
-    @include respond(_600-900) {
+    @include respond(_720-880) {
       height: 85%;
       width: 85%;
 
@@ -323,7 +346,7 @@
       align-items: center;
       cursor: pointer;
 
-      @include respond(_600-900) {
+      @include respond(_720-880) {
         padding: 0;
       }
     }
@@ -333,12 +356,17 @@
     &-text {
       font-size: 1.2rem;
 
-      @include respond(_600-900) {
+      @include respond(_720-880) {
+        font-size: 1.8rem;
+        font-weight: 400;
+      }
+
+      @include respond(_580-720) {
         font-size: 2.2rem;
         font-weight: 400;
       }
 
-      @include respond(_360-600) {
+      @include respond(_360-580) {
         font-size: 3.2rem;
         font-weight: 400;
       }
@@ -362,13 +390,19 @@
 
       @include transition(0.4s);
 
-      @include respond(_600-900) {
+      @include respond(_720-880) {
         width: 5rem;
         height: 3rem;
         border-radius: 2.5rem;
       }
 
-      @include respond(_360-600) {
+      @include respond(_580-720) {
+        width: 5rem;
+        height: 3rem;
+        border-radius: 2.5rem;
+      }
+
+      @include respond(_360-580) {
         width: 8rem;
         height: 4.5rem;
         border-radius: 2.5rem;
@@ -391,14 +425,21 @@
 
         @include transition(0.4s);
 
-        @include respond(_600-900) {
+        @include respond(_720-880) {
+          width: 2.3rem;
+          height: 2.3rem;
+          top: 0.3rem;
+          left: 71%;
+        }
+
+        @include respond(_580-720) {
           width: 2.3rem;
           height: 2.3rem;
           top: 0.7rem;
           left: 75%;
         }
 
-        @include respond(_360-600) {
+        @include respond(_360-580) {
           width: 3.3rem;
           height: 3.3rem;
           top: 0.7rem;
@@ -416,13 +457,19 @@
       &:checked::before {
         left: 78%;
 
-        @include respond(_600-900) {
+        @include respond(_720-880) {
+          width: 2.4rem;
+          height: 2.4rem;
+          left: 83%;
+        }
+
+        @include respond(_580-720) {
           width: 2.4rem;
           height: 2.4rem;
           left: 85%;
         }
 
-        @include respond(_360-600) {
+        @include respond(_360-580) {
           width: 3.4rem;
           height: 3.4rem;
           left: 86%;
@@ -449,7 +496,7 @@
           &-text {
             color: var(--color-sign);
 
-            @include respond(_600-900) {
+            @include respond(_720-880) {
               color: var(--color-primary-dark);
             }
           }
@@ -457,14 +504,14 @@
           &-input {
             border: 0.2rem solid var(--color-sign);
 
-            @include respond(_600-900) {
+            @include respond(_720-880) {
               border: 0.2rem solid var(--color-primary-dark);
             }
 
             &::before {
               background-color: var(--color-sign);
 
-              @include respond(_600-900) {
+              @include respond(_720-880) {
                 background-color: var(--color-primary-dark);
               }
             }
@@ -472,7 +519,7 @@
             &:checked {
               background-color: var(--color-sign);
 
-              @include respond(_600-900) {
+              @include respond(_720-880) {
                 background-color: var(--color-primary-dark);
               }
             }
@@ -480,7 +527,7 @@
             &:checked::before {
               background-color: var(--color-primary-dark);
 
-              @include respond(_600-900) {
+              @include respond(_720-880) {
                 background-color: var(--color-menu-bg);
               }
             }
@@ -508,7 +555,7 @@
             &:checked::before {
               background-color: var(--color-bg);
 
-              @include respond(_600-900) {
+              @include respond(_720-880) {
                 background-color: var(--color-menu-bg);
               }
             }
@@ -529,7 +576,7 @@
       fill: var(--color-primary-dark);
       border: 0.2rem solid var(--color-primary-dark);
 
-      @include respond(_600-900) {
+      @include respond(_720-880) {
         fill: var(--color-sign);
         border: 0.2rem solid var(--color-sign);
       }

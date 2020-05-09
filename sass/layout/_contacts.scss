@@ -9,7 +9,7 @@
     text-align: center;
     margin: 2rem auto;
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       margin: 2rem auto;
     }
 
@@ -38,7 +38,7 @@
 
     vertical-align: middle;
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       height: $icon-size-mobile;
       width: $icon-size-mobile;
     }
@@ -58,7 +58,7 @@
     font-weight: 400;
     // color: var(--color-primary-dark);
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       font-size: 3rem;
       line-height: 100%;
     }
@@ -79,7 +79,7 @@
       display: none;
     }
 
-    // @include respond(_360-600) {
+    // @include respond(_360-580) {
     //   // margin: 7rem 0 20rem; touch-screen
     //   display: none;
     // }

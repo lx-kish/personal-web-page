@@ -4,7 +4,7 @@
   perspective: 150rem;
   // position: relative;
   // height: 40rem;
-  
+
   //ASPECT RATIO 1:2
   position: absolute;
   top: 0;
@@ -12,7 +12,7 @@
   left: 0;
   right: 0;
 
-  @include respond(_360-600) {
+  @include respond(_360-580) {
     // height: 80vh;
     // height: calc(width * 2);
     max-width: 80rem;
@@ -31,11 +31,11 @@
     position: relative;
     width: 100%;
 
-    @include respond(_600-900) {
-      width: 50%;
+    @include respond(_720-880) {
+      width: 33.33333333%;
     }
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       width: 100%;
     }
   }
@@ -44,17 +44,7 @@
     content: "";
     display: block;
     margin-top: 150%;
-
-    // @include respond(_600-900) {
-    //   margin-top: 150%;
-    // }
-
-    // @include respond(_600-900) {
-    //   margin-top: 150%;
-    // }
   }
-
-  
 
   &__side {
     // background-color: $color-grey-light-5;
@@ -75,12 +65,24 @@
     &--front {
       background-color: var(--color-white-light);
 
-      @include respond(_360-600) {
+      @include respond(_360-580) {
         background-color: var(--color-shadow-50);
       }
 
       @include respond(_0-360) {
         background-color: var(--color-shadow-50);
+      }
+
+      &--TW,
+      &--EM,
+      &--CU {
+        @include respond(_720-880) {
+          left: 200%;
+        }
+
+        @include respond(_360-580) {
+          left: 0;
+        }
       }
     }
 
@@ -97,10 +99,27 @@
         transform: rotateY(0);
       }
 
-      // @include respond(_0-360) {
-      //   // background-color: transparent;
-      //   transform: rotateY(0);
-      // }
+      @include respond(_720-880) {
+        position: absolute;
+        width: 200%;
+      }
+
+      @include respond(_360-580) {
+        position: initial;
+        width: 100%;
+      }
+
+      &--PS,
+      &--PV,
+      &--ACC {
+        @include respond(_720-880) {
+          left: 100%;
+        }
+
+        @include respond(_360-580) {
+          left: 0;
+        }
+      }
 
       &--PS {
         background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70));
@@ -108,10 +127,6 @@
         @include respond(touch-screen) {
           background-image: none;
         }
-
-        // @include respond(_0-360) {
-        //   background-image: none;
-        // }
       }
 
       &--TW {
@@ -120,10 +135,6 @@
         @include respond(touch-screen) {
           background-image: none;
         }
-
-        // @include respond(_0-360) {
-        //   background-image: none;
-        // }
       }
 
       &--PV {
@@ -132,10 +143,6 @@
         @include respond(touch-screen) {
           background-image: none;
         }
-
-        // @include respond(_0-360) {
-        //   background-image: none;
-        // }
       }
 
       &--EM {
@@ -144,10 +151,6 @@
         @include respond(touch-screen) {
           background-image: none;
         }
-
-        // @include respond(_0-360) {
-        //   background-image: none;
-        // }
       }
 
       &--ACC {
@@ -156,10 +159,6 @@
         @include respond(touch-screen) {
           background-image: none;
         }
-
-        // @include respond(_0-360) {
-        //   background-image: none;
-        // }
       }
 
       &--CU {
@@ -168,10 +167,6 @@
         @include respond(touch-screen) {
           background-image: none;
         }
-
-        // @include respond(_0-360) {
-        //   background-image: none;
-        // }
       }
     }
   }
@@ -182,10 +177,6 @@
     @include respond(touch-screen) {
       transform: rotateY(0);
     }
-
-    // @include respond(_0-360) {
-    //   transform: rotateY(0);
-    // }
   }
 
   &:hover &__side--back {
@@ -213,7 +204,6 @@
       background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70)),
         url(../img/card-1.jpg);
       filter: brightness(0.85);
-
 
       // @include respond(_0-360) {
       //   background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70));
@@ -279,6 +269,8 @@
     position: absolute;
     right: 0;
 
+    transform: rotate(-90deg);
+
     &--top {
       top: 25%;
     }
@@ -291,7 +283,13 @@
       top: 75%;
     }
 
-    @include respond(_360-600) {
+    // @include respond(_360-580) {
+    //   top: 5%;
+    //   font-size: 6rem;
+    // }
+
+    @include respond(_360-580) {
+      transform: rotate(0);
       top: 5%;
       font-size: 6rem;
     }
@@ -341,7 +339,7 @@
     //   margin: auto 0;
     //   vertical-align: 15%;
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       width: 90%;
       // height: 80%;
       position: absolute;

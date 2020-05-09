@@ -4,7 +4,7 @@
     font-size: 2.5rem;
     font-style: italic;
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
         font-size: 3rem;
     }
 

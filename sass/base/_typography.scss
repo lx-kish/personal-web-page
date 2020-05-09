@@ -8,7 +8,7 @@ body {
     color: var(--color-font);
     // color: $color-grey-dark;
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
         font-size: $font-size-mobile;
         font-weight: 300;
         line-height: 1.5;
@@ -25,7 +25,7 @@ body {
     font-size: $font-size-main;
     font-weight: 700;
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
         font-size: $font-size-mobile;
     }
 

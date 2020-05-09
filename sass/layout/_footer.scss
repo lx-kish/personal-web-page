@@ -6,7 +6,7 @@
   text-align: center;
   position: relative;
 
-  @include respond(_360-600) {
+  @include respond(_360-580) {
     padding: 5rem 15rem;
     font-size: 2rem;
   }
@@ -30,12 +30,12 @@
 
     @include animationAppears;
 
-    @include respond(_600-900) {
+    @include respond(_880-1040) {
       right: 1.5%;
       width: 11rem;
     }
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       height: 10rem;
     }
 
@@ -60,7 +60,7 @@
     top: 50%;
     transform: translateY(-50%);
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       height: $btn-icon-size-mobile;
       width: $btn-icon-size-mobile;
     }
@@ -88,12 +88,12 @@
     fill: var(--color-sign);
     stroke-width: 0.5;
 
-    @include respond(_600-900) {
+    @include respond(_580-720) {
       height: $logo-size-tab-port;
       width: $logo-size-tab-port;
     }
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       height: $logo-size-mobile;
       width: $logo-size-mobile;
     }

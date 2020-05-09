@@ -8,12 +8,12 @@
 
   @include animationAppears;
 
-  @include respond(_600-900) {
+  @include respond(_880-1040) {
     right: 1.5%;
     width: 11rem;
   }
 
-  @include respond(_360-600) {
+  @include respond(_360-580) {
     top: 0;
     left: 0;
     width: 100vw;
@@ -24,7 +24,7 @@
   &--top {
     top: 0;
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       top: 0;
       left: 0;
       width: 100%;
@@ -35,7 +35,7 @@
   &--bottom {
     bottom: 0rem;
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       top: 0;
       left: 0;
       width: 100%;
@@ -47,7 +47,7 @@
     position: fixed;
     top: 5rem;
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       top: 0;
       left: 0;
     }
@@ -56,7 +56,7 @@
   &__list {
     list-style: none;
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       display: table;
       width: 100%;
       table-layout: fixed;
@@ -74,7 +74,7 @@
     background-color: var(--color-menu-bg);
     color: var(--color-menu-font);
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       display: table-cell;
       // height: 15rem;
     }
@@ -86,7 +86,7 @@
     &:hover:not(.navigation__item--active) {
       color: var(--color-primary-dark);
 
-      @include respond(_360-600) {
+      @include respond(_360-580) {
         color: var(--color-sign);
       }
     }
@@ -103,7 +103,7 @@
     font-weight: 600;
     color: inherit;
 
-    @include respond(_360-600) {
+    @include respond(_360-580) {
       line-height: 12rem;
       font-size: 2rem;
       // font-weight: 600;
