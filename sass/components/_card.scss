@@ -124,49 +124,73 @@
       &--PS {
         background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70));
 
-        @include respond(touch-screen) {
+        @include respond(_360-580) {
           background-image: none;
         }
+
+        // @include respond(touch-screen) {
+        //   background-image: none;
+        // }
       }
 
       &--TW {
         background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70));
 
-        @include respond(touch-screen) {
+        @include respond(_360-580) {
           background-image: none;
         }
+
+        // @include respond(touch-screen) {
+        //   background-image: none;
+        // }
       }
 
       &--PV {
         background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70));
 
-        @include respond(touch-screen) {
+        @include respond(_360-580) {
           background-image: none;
         }
+
+        // @include respond(touch-screen) {
+        //   background-image: none;
+        // }
       }
 
       &--EM {
         background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70));
 
-        @include respond(touch-screen) {
+        @include respond(_360-580) {
           background-image: none;
         }
+
+        // @include respond(touch-screen) {
+        //   background-image: none;
+        // }
       }
 
       &--ACC {
         background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70));
 
-        @include respond(touch-screen) {
+        @include respond(_360-580) {
           background-image: none;
         }
+
+        // @include respond(touch-screen) {
+        //   background-image: none;
+        // }
       }
 
       &--CU {
         background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70));
 
-        @include respond(touch-screen) {
+        @include respond(_360-580) {
           background-image: none;
         }
+
+        // @include respond(touch-screen) {
+        //   background-image: none;
+        // }
       }
     }
   }
@@ -269,18 +293,36 @@
     position: absolute;
     right: 0;
 
-    transform: rotate(-90deg);
+    // transform: rotate(-90deg);
 
-    &--top {
+    &--PV,
+    &--CU {
       top: 25%;
     }
 
-    &--middle {
+    &--PS,
+    &--EM {
       top: 50%;
     }
 
-    &--bottom {
+    &--TW,
+    &--ACC {
       top: 75%;
+    }
+
+    &--TW,
+    &--EM,
+    &--CU {
+
+      @include respond(_720-880) {
+        text-align: left;
+        left: 0;
+      }
+
+      @include respond(_360-580) {
+        text-align: right;
+        right: 0;
+      }
     }
 
     // @include respond(_360-580) {
@@ -362,63 +404,39 @@
     }
 
     &--PS {
-      @include respond(touch-screen) {
+      @include respond(_360-580) {
         background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70));
       }
-
-      // @include respond(_0-360) {
-      //   background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70));
-      // }
     }
 
     &--TW {
-      @include respond(touch-screen) {
+      @include respond(_360-580) {
         background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70));
       }
-
-      // @include respond(_0-360) {
-      //   background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70));
-      // }
     }
 
     &--PV {
-      @include respond(touch-screen) {
+      @include respond(_360-580) {
         background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70));
       }
-
-      // @include respond(_0-360) {
-      //   background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70));
-      // }
     }
 
     &--EM {
-      @include respond(touch-screen) {
+      @include respond(_360-580) {
         background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70));
       }
-
-      // @include respond(_0-360) {
-      //   background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70));
-      // }
     }
 
     &--ACC {
-      @include respond(touch-screen) {
+      @include respond(_360-580) {
         background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70));
       }
-
-      // @include respond(_0-360) {
-      //   background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70));
-      // }
     }
 
     &--CU {
-      @include respond(touch-screen) {
+      @include respond(_360-580) {
         background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70));
       }
-
-      // @include respond(_0-360) {
-      //   background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70));
-      // }
     }
   }
 }

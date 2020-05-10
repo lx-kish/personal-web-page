@@ -575,32 +575,32 @@ body.color-theme-in-transition *:after {
           left: 0; } }
       .card__side--back--PS {
         background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70)); }
-        @media only screen and (hover: none) {
+        @media only screen and (max-width: 36.25em) {
           .card__side--back--PS {
             background-image: none; } }
       .card__side--back--TW {
         background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70)); }
-        @media only screen and (hover: none) {
+        @media only screen and (max-width: 36.25em) {
           .card__side--back--TW {
             background-image: none; } }
       .card__side--back--PV {
         background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70)); }
-        @media only screen and (hover: none) {
+        @media only screen and (max-width: 36.25em) {
           .card__side--back--PV {
             background-image: none; } }
       .card__side--back--EM {
         background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70)); }
-        @media only screen and (hover: none) {
+        @media only screen and (max-width: 36.25em) {
           .card__side--back--EM {
             background-image: none; } }
       .card__side--back--ACC {
         background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70)); }
-        @media only screen and (hover: none) {
+        @media only screen and (max-width: 36.25em) {
           .card__side--back--ACC {
             background-image: none; } }
       .card__side--back--CU {
         background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70)); }
-        @media only screen and (hover: none) {
+        @media only screen and (max-width: 36.25em) {
           .card__side--back--CU {
             background-image: none; } }
   .card:hover .card__side--front {
@@ -640,14 +640,21 @@ body.color-theme-in-transition *:after {
     color: var(--color-white);
     text-align: right;
     position: absolute;
-    right: 0;
-    transform: rotate(-90deg); }
-    .card__heading--top {
+    right: 0; }
+    .card__heading--PV, .card__heading--CU {
       top: 25%; }
-    .card__heading--middle {
+    .card__heading--PS, .card__heading--EM {
       top: 50%; }
-    .card__heading--bottom {
+    .card__heading--TW, .card__heading--ACC {
       top: 75%; }
+    @media only screen and (max-width: 55em) {
+      .card__heading--TW, .card__heading--EM, .card__heading--CU {
+        text-align: left;
+        left: 0; } }
+    @media only screen and (max-width: 36.25em) {
+      .card__heading--TW, .card__heading--EM, .card__heading--CU {
+        text-align: right;
+        right: 0; } }
     @media only screen and (max-width: 36.25em) {
       .card__heading {
         transform: rotate(0);
@@ -698,22 +705,22 @@ body.color-theme-in-transition *:after {
         font-weight: 300;
         line-height: 1.5;
         color: var(--color-white); } }
-    @media only screen and (hover: none) {
+    @media only screen and (max-width: 36.25em) {
       .card__description--PS {
         background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70)); } }
-    @media only screen and (hover: none) {
+    @media only screen and (max-width: 36.25em) {
       .card__description--TW {
         background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70)); } }
-    @media only screen and (hover: none) {
+    @media only screen and (max-width: 36.25em) {
       .card__description--PV {
         background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70)); } }
-    @media only screen and (hover: none) {
+    @media only screen and (max-width: 36.25em) {
       .card__description--EM {
         background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70)); } }
-    @media only screen and (hover: none) {
+    @media only screen and (max-width: 36.25em) {
       .card__description--ACC {
         background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70)); } }
-    @media only screen and (hover: none) {
+    @media only screen and (max-width: 36.25em) {
       .card__description--CU {
         background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70)); } }
 
