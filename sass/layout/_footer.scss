@@ -60,6 +60,16 @@
     top: 50%;
     transform: translateY(-50%);
 
+    @include respond(_1040-1200) {
+      height: $btn-icon-size-tab-land;
+      width: $btn-icon-size-tab-land;
+    }
+
+    @include respond(_720-880) {
+      height: $btn-icon-size-tab-port;
+      width: $btn-icon-size-tab-port;
+    }
+
     @include respond(_360-580) {
       height: $btn-icon-size-mobile;
       width: $btn-icon-size-mobile;
@@ -88,7 +98,12 @@
     fill: var(--color-sign);
     stroke-width: 0.5;
 
-    @include respond(_580-720) {
+    @include respond(_1040-1200) {
+      height: $logo-size-tab-land;
+      width: $logo-size-tab-land;
+    }
+
+    @include respond(_720-880) {
       height: $logo-size-tab-port;
       width: $logo-size-tab-port;
     }

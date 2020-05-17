@@ -13,7 +13,6 @@
   @include transition(0.5s);
 
   @include respond(touch-screen) {
-
     position: initial;
     background-color: transparent;
     z-index: 0;
@@ -36,8 +35,8 @@
     background-color: var(--color-bg);
     overflow-y: auto;
     opacity: 0;
-    transform: translate(-50%, -50%) scale(.5);
-    transition: all .4s .2s;
+    transform: translate(-50%, -50%) scale(0.5);
+    transition: all 0.4s 0.2s;
 
     @include respond(touch-screen) {
       display: block;
@@ -85,6 +84,16 @@
     font-weight: 700;
     color: var(--color-primary-dark);
 
+    @include respond(_1040-1200) {
+      padding: 0 1rem 3.5rem;
+      font-size: $font-size-tab-land;
+    }
+
+    @include respond(_720-880) {
+      padding: 0 1rem 3.5rem;
+      font-size: $font-size-tab-port;
+    }
+
     @include respond(_360-580) {
       padding: 0 1rem 6rem;
       font-size: $font-size-mobile;
@@ -96,7 +105,7 @@
       font-size: $font-size-mobile-small;
     }
   }
-  
+
   &:target {
     opacity: 1;
     visibility: visible;
@@ -116,7 +125,7 @@
       right: 2rem;
       font-size: 3rem;
       text-decoration: none;
-      line-height: .5;
+      line-height: 0.5;
       // z-index: 101;
       color: var(--color-font);
       // transition: all .2s;
@@ -142,7 +151,6 @@
 }
 
 .form {
-
   @include respond(touch-screen) {
     // height: 100%;
     overflow: auto;
@@ -168,13 +176,21 @@
     font-family: inherit;
     color: inherit;
     padding: 0.7rem 1rem;
-    border-radius: .2rem;
+    border-radius: 0.2rem;
     background-color: var(--color-input-bg);
     // border: none;
     border: 2px solid var(--color-input-bg);
     // transition: all 0.3s;
 
     @include transition(0.3s);
+
+    @include respond(_1040-1200) {
+      font-size: $font-size-tab-land;
+    }
+
+    @include respond(_720-880) {
+      font-size: $font-size-tab-port;
+    }
 
     @include respond(_360-580) {
       font-size: $font-size-mobile;
@@ -224,6 +240,18 @@
 
     @include transition(0.3s);
 
+    @include respond(_1040-1200) {
+      font-size: $font-size-tab-land;
+      margin-top: 1rem;
+      margin-left: 1rem;
+    }
+
+    @include respond(_720-880) {
+      font-size: $font-size-tab-port;
+      margin-top: 1rem;
+      margin-left: 1rem;
+    }
+
     @include respond(_360-580) {
       font-size: $font-size-mobile;
       margin-top: 2rem;
@@ -240,6 +268,14 @@
     &--not-last {
       top: -7.9rem;
 
+      @include respond(_1040-1200) {
+        top: -7.9rem;
+      }
+  
+      @include respond(_720-880) {
+        top: -7.9rem;
+      }
+
       @include respond(_360-580) {
         top: -13.5rem;
       }
@@ -251,6 +287,14 @@
 
     &--last {
       top: -24.1rem;
+
+      @include respond(_1040-1200) {
+        top: -24.1rem;
+      }
+  
+      @include respond(_720-880) {
+        top: -24.1rem;
+      }
 
       @include respond(_360-580) {
         top: -42.5rem;
@@ -266,6 +310,14 @@
     opacity: 0;
     visibility: hidden;
     transform: translateY(4.5rem);
+
+    @include respond(_1040-1200) {
+      transform: translateY(4.5rem);
+    }
+
+    @include respond(_720-880) {
+      transform: translateY(4.5rem);
+    }
 
     @include respond(_360-580) {
       transform: translateY(6.1rem);

@@ -303,6 +303,16 @@ body {
   font-size: 1.6rem;
   line-height: 1.7;
   color: var(--color-font); }
+  @media only screen and (max-width: 75em) {
+    body {
+      font-size: 2rem;
+      font-weight: 400;
+      line-height: 1.7; } }
+  @media only screen and (max-width: 55em) {
+    body {
+      font-size: 2.2rem;
+      font-weight: 400;
+      line-height: 1.7; } }
   @media only screen and (max-width: 36.25em) {
     body {
       font-size: 3rem;
@@ -317,6 +327,12 @@ body {
 .heading-tertiary {
   font-size: 1.6rem;
   font-weight: 700; }
+  @media only screen and (max-width: 75em) {
+    .heading-tertiary {
+      font-size: 2rem; } }
+  @media only screen and (max-width: 55em) {
+    .heading-tertiary {
+      font-size: 2.2rem; } }
   @media only screen and (max-width: 36.25em) {
     .heading-tertiary {
       font-size: 3rem; } }
@@ -441,6 +457,14 @@ body.color-theme-in-transition *:after {
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease; }
+  @media only screen and (max-width: 75em) {
+    .btn {
+      font-size: 2rem;
+      padding: 1rem 2rem; } }
+  @media only screen and (max-width: 55em) {
+    .btn {
+      font-size: 2.2rem;
+      padding: 1rem 2rem; } }
   @media only screen and (max-width: 36.25em) {
     .btn {
       font-size: 3rem;
@@ -480,13 +504,24 @@ body.color-theme-in-transition *:after {
     border: 0.2rem solid var(--color-primary-dark);
     background-color: transparent;
     color: var(--color-primary-dark); }
+    @media only screen and (max-width: 75em) {
+      .btn-form {
+        width: 23rem;
+        padding: 3rem 4rem; } }
+    @media only screen and (max-width: 55em) {
+      .btn-form {
+        width: 23rem;
+        padding: 3rem 4rem; } }
     @media only screen and (max-width: 36.25em) {
       .btn-form {
         width: 23rem;
         padding: 3rem 4rem; } }
-    @media only screen and (max-width: 22.5em) {
-      .btn-form {
-        width: 23rem; } }
+    @media only screen and (max-width: 75em) {
+      .btn-form:not(:last-child) {
+        margin-right: 6rem; } }
+    @media only screen and (max-width: 55em) {
+      .btn-form:not(:last-child) {
+        margin-right: 6rem; } }
     @media only screen and (max-width: 36.25em) {
       .btn-form:not(:last-child) {
         margin-right: 6rem; } }
@@ -1185,7 +1220,7 @@ body.color-theme-in-transition *:after {
     overflow-y: auto;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.5);
-    transition: all .4s .2s; }
+    transition: all 0.4s 0.2s; }
     @media only screen and (hover: none) {
       .message__form {
         display: block;
@@ -1206,6 +1241,14 @@ body.color-theme-in-transition *:after {
     font-size: 1.6rem;
     font-weight: 700;
     color: var(--color-primary-dark); }
+    @media only screen and (max-width: 75em) {
+      .message__header {
+        padding: 0 1rem 3.5rem;
+        font-size: 2rem; } }
+    @media only screen and (max-width: 55em) {
+      .message__header {
+        padding: 0 1rem 3.5rem;
+        font-size: 2.2rem; } }
     @media only screen and (max-width: 36.25em) {
       .message__header {
         padding: 0 1rem 6rem;
@@ -1228,7 +1271,7 @@ body.color-theme-in-transition *:after {
     right: 2rem;
     font-size: 3rem;
     text-decoration: none;
-    line-height: .5;
+    line-height: 0.5;
     color: var(--color-font);
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
@@ -1263,13 +1306,19 @@ body.color-theme-in-transition *:after {
   font-family: inherit;
   color: inherit;
   padding: 0.7rem 1rem;
-  border-radius: .2rem;
+  border-radius: 0.2rem;
   background-color: var(--color-input-bg);
   border: 2px solid var(--color-input-bg);
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
+  @media only screen and (max-width: 75em) {
+    .form__input {
+      font-size: 2rem; } }
+  @media only screen and (max-width: 55em) {
+    .form__input {
+      font-size: 2.2rem; } }
   @media only screen and (max-width: 36.25em) {
     .form__input {
       font-size: 3rem; } }
@@ -1302,6 +1351,16 @@ body.color-theme-in-transition *:after {
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
+  @media only screen and (max-width: 75em) {
+    .form__label {
+      font-size: 2rem;
+      margin-top: 1rem;
+      margin-left: 1rem; } }
+  @media only screen and (max-width: 55em) {
+    .form__label {
+      font-size: 2.2rem;
+      margin-top: 1rem;
+      margin-left: 1rem; } }
   @media only screen and (max-width: 36.25em) {
     .form__label {
       font-size: 3rem;
@@ -1314,6 +1373,12 @@ body.color-theme-in-transition *:after {
       margin-left: 1.8rem; } }
   .form__label--not-last {
     top: -7.9rem; }
+    @media only screen and (max-width: 75em) {
+      .form__label--not-last {
+        top: -7.9rem; } }
+    @media only screen and (max-width: 55em) {
+      .form__label--not-last {
+        top: -7.9rem; } }
     @media only screen and (max-width: 36.25em) {
       .form__label--not-last {
         top: -13.5rem; } }
@@ -1322,6 +1387,12 @@ body.color-theme-in-transition *:after {
         top: -18rem; } }
   .form__label--last {
     top: -24.1rem; }
+    @media only screen and (max-width: 75em) {
+      .form__label--last {
+        top: -24.1rem; } }
+    @media only screen and (max-width: 55em) {
+      .form__label--last {
+        top: -24.1rem; } }
     @media only screen and (max-width: 36.25em) {
       .form__label--last {
         top: -42.5rem; } }
@@ -1333,6 +1404,12 @@ body.color-theme-in-transition *:after {
   opacity: 0;
   visibility: hidden;
   transform: translateY(4.5rem); }
+  @media only screen and (max-width: 75em) {
+    .form__input:placeholder-shown + .form__label {
+      transform: translateY(4.5rem); } }
+  @media only screen and (max-width: 55em) {
+    .form__input:placeholder-shown + .form__label {
+      transform: translateY(4.5rem); } }
   @media only screen and (max-width: 36.25em) {
     .form__input:placeholder-shown + .form__label {
       transform: translateY(6.1rem); } }
@@ -1418,6 +1495,9 @@ body.color-theme-in-transition *:after {
     font-size: inherit;
     font-weight: 600;
     color: inherit; }
+    @media only screen and (max-width: 75em) {
+      .navigation__link {
+        font-size: 1.6rem; } }
     @media only screen and (max-width: 36.25em) {
       .navigation__link {
         line-height: 12rem;
@@ -1513,29 +1593,30 @@ body.color-theme-in-transition *:after {
 .tool__name {
   display: inline-block;
   width: 70%; }
-  @media only screen and (max-width: 36.25em) {
+  @media only screen and (max-width: 75em) {
     .tool__name {
       top: 5%;
       max-width: 65%;
+      font-size: 2rem; } }
+  @media only screen and (max-width: 55em) {
+    .tool__name {
+      font-size: 2.2rem; } }
+  @media only screen and (max-width: 36.25em) {
+    .tool__name {
       font-size: 3rem; } }
   @media only screen and (max-width: 22.5em) {
     .tool__name {
-      top: 5%;
-      max-width: 65%;
       font-size: 4.3rem; } }
 
 .tool__score {
   float: right; }
-  @media only screen and (max-width: 36.25em) {
-    .tool__score {
-      max-width: 35%; } }
-  @media only screen and (max-width: 22.5em) {
+  @media only screen and (max-width: 75em) {
     .tool__score {
       max-width: 35%; } }
 
 .tool__icon {
   position: relative;
-  top: .3rem;
+  top: 0.3rem;
   height: 1.6rem;
   width: 1.6rem;
   stroke-width: 0.5;
@@ -1546,14 +1627,24 @@ body.color-theme-in-transition *:after {
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease; }
+  @media only screen and (max-width: 75em) {
+    .tool__icon {
+      top: 0.3rem;
+      height: 1.6rem;
+      width: 1.6rem; } }
+  @media only screen and (max-width: 55em) {
+    .tool__icon {
+      top: 0.3rem;
+      height: 1.6rem;
+      width: 1.6rem; } }
   @media only screen and (max-width: 36.25em) {
     .tool__icon {
-      top: .7rem;
+      top: 0.7rem;
       height: 3.4rem;
       width: 3.4rem; } }
   @media only screen and (max-width: 22.5em) {
     .tool__icon {
-      top: .5rem;
+      top: 0.5rem;
       height: 4rem;
       width: 4rem; } }
   .tool__icon--bright {
@@ -1601,6 +1692,12 @@ body.color-theme-in-transition *:after {
     filter: brightness(90%) sepia(20%); }
   .about__text {
     font-size: 1.6rem; }
+    @media only screen and (max-width: 75em) {
+      .about__text {
+        font-size: 2rem; } }
+    @media only screen and (max-width: 55em) {
+      .about__text {
+        font-size: 2.2rem; } }
     @media only screen and (max-width: 36.25em) {
       .about__text {
         font-size: 3rem; } }
@@ -1613,9 +1710,6 @@ body.color-theme-in-transition *:after {
     @media only screen and (max-width: 36.25em) {
       .about__social-media-box {
         margin: 5rem 0 3rem; } }
-    @media only screen and (max-width: 22.5em) {
-      .about__social-media-box {
-        margin: 5rem 0 3rem; } }
   .about__link:link, .about__link:visited, .about__link:hover, .about__link:active {
     text-decoration: none; }
   .about__link:not(:last-child) {
@@ -1623,13 +1717,18 @@ body.color-theme-in-transition *:after {
     @media only screen and (max-width: 36.25em) {
       .about__link:not(:last-child) {
         margin-right: 8rem; } }
-    @media only screen and (max-width: 22.5em) {
-      .about__link:not(:last-child) {
-        margin-right: 8rem; } }
   .about__icon {
     height: 3.2rem;
     width: 3.2rem;
     fill: var(--color-primary-dark); }
+    @media only screen and (max-width: 75em) {
+      .about__icon {
+        height: 3.2rem;
+        width: 3.2rem; } }
+    @media only screen and (max-width: 55em) {
+      .about__icon {
+        height: 3.2rem;
+        width: 3.2rem; } }
     @media only screen and (max-width: 36.25em) {
       .about__icon {
         height: 6rem;
@@ -1748,6 +1847,14 @@ body.color-theme-in-transition *:after {
     position: relative;
     top: 50%;
     transform: translateY(-50%); }
+    @media only screen and (max-width: 75em) {
+      .footer__icon-up {
+        height: 4.5rem;
+        width: 4.5rem; } }
+    @media only screen and (max-width: 55em) {
+      .footer__icon-up {
+        height: 5rem;
+        width: 5rem; } }
     @media only screen and (max-width: 36.25em) {
       .footer__icon-up {
         height: 7rem;
@@ -1769,7 +1876,11 @@ body.color-theme-in-transition *:after {
     stroke: var(--color-sign);
     fill: var(--color-sign);
     stroke-width: 0.5; }
-    @media only screen and (max-width: 45em) {
+    @media only screen and (max-width: 75em) {
+      .footer__logo {
+        height: 6.5rem;
+        width: 6.5rem; } }
+    @media only screen and (max-width: 55em) {
       .footer__logo {
         height: 7rem;
         width: 7rem; } }
@@ -1848,7 +1959,11 @@ body.color-theme-in-transition *:after {
     height: 6rem;
     width: 6rem;
     fill: var(--color-sign); }
-    @media only screen and (max-width: 45em) {
+    @media only screen and (max-width: 75em) {
+      .header__logo {
+        height: 6.5rem;
+        width: 6.5rem; } }
+    @media only screen and (max-width: 55em) {
       .header__logo {
         height: 7rem;
         width: 7rem; } }
@@ -1964,6 +2079,14 @@ body.color-theme-in-transition *:after {
     position: relative;
     top: 50%;
     transform: translateY(-50%); }
+    @media only screen and (max-width: 75em) {
+      .header__icon-down {
+        height: 4.5rem;
+        width: 4.5rem; } }
+    @media only screen and (max-width: 55em) {
+      .header__icon-down {
+        height: 5rem;
+        width: 5rem; } }
     @media only screen and (max-width: 36.25em) {
       .header__icon-down {
         height: 7rem;

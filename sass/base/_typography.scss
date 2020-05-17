@@ -8,6 +8,18 @@ body {
     color: var(--color-font);
     // color: $color-grey-dark;
 
+    @include respond(_1040-1200) {
+        font-size: $font-size-tab-land;
+        font-weight: 400;
+        line-height: 1.7;
+    }
+
+    @include respond(_720-880) {
+        font-size: $font-size-tab-port;
+        font-weight: 400;
+        line-height: 1.7;
+    }
+
     @include respond(_360-580) {
         font-size: $font-size-mobile;
         font-weight: 300;
@@ -24,6 +36,14 @@ body {
 .heading-tertiary {
     font-size: $font-size-main;
     font-weight: 700;
+
+    @include respond(_1040-1200) {
+        font-size: $font-size-tab-land;
+    }
+
+    @include respond(_720-880) {
+        font-size: $font-size-tab-port;
+    }
 
     @include respond(_360-580) {
         font-size: $font-size-mobile;

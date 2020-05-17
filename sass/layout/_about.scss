@@ -33,6 +33,14 @@
   &__text {
     font-size: $font-size-main;
 
+    @include respond(_1040-1200) {
+      font-size: $font-size-tab-land;
+    }
+
+    @include respond(_720-880) {
+      font-size: $font-size-tab-port;
+    }
+
     @include respond(_360-580) {
       font-size: $font-size-mobile;
     }
@@ -50,9 +58,9 @@
       margin: 5rem 0 3rem;
     }
 
-    @include respond(_0-360) {
-      margin: 5rem 0 3rem;
-    }
+    // @include respond(_0-360) {
+    //   margin: 5rem 0 3rem;
+    // }
   }
 
   &__link:link,
@@ -69,15 +77,25 @@
       margin-right: 8rem;
     }
 
-    @include respond(_0-360) {
-      margin-right: 8rem;
-    }
+    // @include respond(_0-360) {
+    //   margin-right: 8rem;
+    // }
   }
 
   &__icon {
     height: $icon-size-main;
     width: $icon-size-main;
     fill: var(--color-primary-dark);
+
+    @include respond(_1040-1200) {
+      height: $icon-size-tab-land;
+      width: $icon-size-tab-land;
+    }
+
+    @include respond(_720-880) {
+      height: $icon-size-tab-port;
+      width: $icon-size-tab-port;
+    }
 
     @include respond(_360-580) {
       height: $icon-size-mobile;

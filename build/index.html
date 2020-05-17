@@ -12,6 +12,7 @@
     <title>lx-kish web-dev</title>
     <link rel="shortcut icon" href="img/favicon.ico" />
 
+    <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
     <script type="text/javascript" src="js/index.js"></script>
     <noscript>
         <p><strong>This web page requires JavaScript to be enabled.</strong></p>
@@ -22,13 +23,13 @@
 
 <body data-theme="light" primary-color="blue">
     <!-- SVG logo - will use further across the page 
-        <svg version="1.1" viewBox="0 0 60 60" style="display: none;">
-            <symbol id="lx-logo">
-                <polygon points="1 8 8 1 8 52 59 52 52 59 1 59" class="shape" />
-                <polygon points="15.75 13.5 22.5 6.75 52.25 36.5 45.5 43.25" class="shape" />
-                <polygon points="15.75 36.5 45.5 6.75 52.25 13.5 22.5 43.25" class="shape" />
-            </symbol>
-        </svg> -->
+    <svg version="1.1" viewBox="0 0 60 60" style="display: none;">
+        <symbol id="lx-logo">
+            <polygon points="1 8 8 1 8 52 59 52 52 59 1 59" class="shape" />
+            <polygon points="15.75 13.5 22.5 6.75 52.25 36.5 45.5 43.25" class="shape" />
+            <polygon points="15.75 36.5 45.5 6.75 52.25 13.5 22.5 43.25" class="shape" />
+        </symbol>
+    </svg> -->
 
     <div class="color-schema">
         <div class="color-schema__btn--mobile">
@@ -158,8 +159,8 @@
                 <h2 class="section-title__text">About</h2>
             </header>
             <p class="section-intro">
-                Hi! I'm Alexander, or simpler Alex. I'm a software engineer, currently focused on
-                web development.
+                Hi! I'm Alex, a software engineer, currently focused on web development and specializing in JavaScript
+                technology stack.
             </p>
             <div class="row">
                 <div class="about">
@@ -167,17 +168,13 @@
                         <img src="img/lx-photo-in.png" alt="Alex photo" class="about__img">
                     </figure>
                     <p class="about__text">
-                        Microsoft 70-480 and ITILv3 Foundation certified software engineer with
-                        14+ years of commercial experience in IT industry, focused on development of web applications, I
-                        would like to utilize my knowledge, skills, and passion in the fast-paced challenging
-                        environment, providing first-rate outcomes and developing better user experience . With a wide
-                        experience across all the software development lifecycle, combination of engineering approach
-                        and best practices, and perseverance in mastering of advanced technologies, I am the person who
-                        makes the difference to enhance the value of IT solutions.
-                        <!-- Имея опыт не только разработки и внедрения, но также поддержки и дальнейшего развития систем,
-                        уделяю большое внимание архитектурным решениям. Это позволяет не просто легко разбираться в
-                        устройстве систем незнакомому с ними человеку, но также сопровождать их работу, масштабировать
-                        их в дальнейшем при необходимости, добавлять и изменять нужный функционал. -->
+                        I like to develop good IT solutions. My role is to get things worked and to make miracles
+                        happened. I enjoy watching my solutions make other’s quality of life better.
+                        Before diving into web development, I spent a lot of time building and supporting business
+                        applications for corporate needs, where I’ve got a wide experience across all the software
+                        development lifecycle. Based on that experience, I’m focused on good architectural design, as it
+                        allows me to achieve more putting fewer efforts into it. Engineering background helps me to
+                        recognize good approach and propose a proper solution for each specific case.
                     </p>
                     <div class="about__social-media-box">
                         <a href="mailto:alexander.kish@gmail.com" class="about__link">
@@ -211,8 +208,7 @@
                 <h2 class="section-title__text">Skills</h2>
             </header>
             <p class="section-intro">
-                These are skills I suggest as a key-skills for both professional and personal growth,
-                therefore I'm developing them whole my life and career.
+                These few compose a backbone, which makes things work. I'm polishing them my whole live and career.
             </p>
             <div class="row">
                 <div class="col-1-of-3 u-margin-bottom">
@@ -222,7 +218,7 @@
                                 <div class="card__picture card__picture--PS">
                                     &nbsp;
                                 </div>
-                                <h3 class="card__heading card__heading--middle">
+                                <h3 class="card__heading card__heading--PS">
                                     <span class="card__heading-span card__heading-span--PS">
                                         Problem solving
                                     </span>
@@ -247,7 +243,7 @@
                                 <div class="card__picture card__picture--TW">
                                     &nbsp;
                                 </div>
-                                <h3 class="card__heading card__heading--bottom">
+                                <h3 class="card__heading card__heading--TW">
                                     <span class="card__heading-span card__heading-span--TW">
                                         Teamwork
                                     </span>
@@ -270,7 +266,7 @@
                                 <div class="card__picture card__picture--PV">
                                     &nbsp;
                                 </div>
-                                <h3 class="card__heading card__heading--top">
+                                <h3 class="card__heading card__heading--PV">
                                     <span class="card__heading-span card__heading-span--PV">
                                         Perseverance
                                     </span>
@@ -297,7 +293,7 @@
                                 <div class="card__picture card__picture--EM">
                                     &nbsp;
                                 </div>
-                                <h3 class="card__heading card__heading--middle">
+                                <h3 class="card__heading card__heading--EM">
                                     <span class="card__heading-span card__heading-span--EM">
                                         Empathy
                                     </span>
@@ -320,7 +316,7 @@
                                 <div class="card__picture card__picture--ACC">
                                     &nbsp;
                                 </div>
-                                <h3 class="card__heading card__heading--bottom">
+                                <h3 class="card__heading card__heading--ACC">
                                     <span class="card__heading-span card__heading-span--ACC">
                                         Accountability
                                     </span>
@@ -342,7 +338,7 @@
                                 <div class="card__picture card__picture--CU">
                                     &nbsp;
                                 </div>
-                                <h3 class="card__heading card__heading--top">
+                                <h3 class="card__heading card__heading--CU">
                                     <span class="card__heading-span card__heading-span--CU">
                                         Curiosity
                                     </span>
@@ -1498,7 +1494,9 @@
                     <h3 class="heading-tertiary activity__title">Course - Software Architecture: Meta and SOLID
                         Principles in C#</h3>
                     <p class="activity__description">
-                        Course description - get from udemy.com
+                        Course provides good explanations of SOLID principles as well as some other programming principles
+                        such as DRY, KISS, YAGNI and some other architectural approaches and features. It helps to understand
+                        OOP and software architectural design in general.
                     </p>
                     <div class="activity__prop">
                         <svg class="activity__prop-icon">
@@ -1524,7 +1522,9 @@
                     <h3 class="heading-tertiary activity__title">Sertification exam 70-480 - Programming in HTML5 with
                         JavaScript and CSS3</h3>
                     <p class="activity__description">
-                        Exam description - get from microsoft.com
+                        Certification covers full area of front end web development, including rare used and resently added
+                        technologies and standards. In fact, preparation to this certification exam is the best educational
+                        programm for front end web development.
                     </p>
                     <div class="activity__prop">
                         <svg class="activity__prop-icon">
@@ -1549,7 +1549,9 @@
                 <div class="col-2-of-3">
                     <h3 class="heading-tertiary activity__title">Course - AI Developer</h3>
                     <p class="activity__description">
-                        Course programme from mrhq.com
+                        Course programme built to provide experienced IT specialists an opportunity to utilize their knowledge 
+                        in real a real world projects on NZ local IT market and at the same time learn new modern technics and methodologies,
+                        such as Agile - SCRUM, web-services, AI applications development using AI web-services.
                     </p>
                     <div class="activity__prop">
                         <svg class="activity__prop-icon">
@@ -1574,7 +1576,10 @@
                 <div class="col-2-of-3">
                     <h3 class="heading-tertiary activity__title">Course - Advanced CSS and SASS</h3>
                     <p class="activity__description">
-                        Course programme from udemy.com
+                        Excellent and comprehensive diving into building front-end applications, using browser native capabilities.
+                        Course provides solid understanding of different aspects of front end web development, including CSS basics
+                        and advanced features, CSS preprocessor SASS/SCSS, modern CSS methodologies and design approaches,
+                        application building and compiling processes.
                     </p>
                     <div class="activity__prop">
                         <svg class="activity__prop-icon">
@@ -1599,7 +1604,10 @@
                 <div class="col-2-of-3">
                     <h3 class="heading-tertiary activity__title">Course - The complete React Full stack course</h3>
                     <p class="activity__description">
-                        Course programme from udemy.com
+                        Course provides solid knowledge of design and development of modern client-server web applications
+                        using cutting edge technological stack of JavaScript libraries and frameworks. Course programme covers
+                        ES6 syntax, React js, Node js, Express, MongoDB. Also it provides explanation of TDD and BDD methodologies
+                        as well as web-project development tools like npm, webpack, Babel and it applying in a real projects.
                     </p>
                     <div class="activity__prop">
                         <svg class="activity__prop-icon">
@@ -1624,7 +1632,8 @@
                 <div class="col-2-of-3">
                     <h3 class="heading-tertiary activity__title">Course - Javarush</h3>
                     <p class="activity__description">
-                        Course programme from Javarush.com
+                        Course gave me from top to bottom understanding of one of the most popular modern programming language,
+                        it concepts and capabilities as well as solid understanding of OOP concepts, principles and techniques.
                     </p>
                     <div class="activity__prop">
                         <svg class="activity__prop-icon">
@@ -1649,7 +1658,9 @@
                 <div class="col-2-of-3">
                     <h3 class="heading-tertiary activity__title">Exam - ITIL&reg;v3 Foundation, Cert. No 00260407</h3>
                     <p class="activity__description">
-                        Certification programme
+                        Preparation to the sertification is giving the comprehensive knowledge about IT service model,
+                        service lifecycle (including software development), and solid understanding of purposes of 
+                        Information Technologies from both business and technical perspectives.
                     </p>
                     <div class="activity__prop">
                         <svg class="activity__prop-icon">
@@ -1885,9 +1896,9 @@
         <div class="row">
             <div class="footer__logo-box">
                 <!-- <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 60 60"
-                        class="footer__logo">
-                        <use xlink:href="#lx-logo" />
-                    </svg> -->
+                    class="footer__logo">
+                    <use xlink:href="#lx-logo" />
+                </svg> -->
                 <svg class="footer__logo">
                     <use xlink:href="../img/sprite.svg#icon-lx-logo" />
                 </svg>
@@ -1900,69 +1911,69 @@
     </footer>
 
     <!--
-        <section class="grid-test">
-            <div class="row">
-                <div class="col-1-of-2">
-                    Col-1-of-2
-                </div>
-                <div class="col-1-of-2">
-                    Col-1-of-2
-                </div>
+    <section class="grid-test">
+        <div class="row">
+            <div class="col-1-of-2">
+                Col-1-of-2
             </div>
-            <div class="row">
-                <div class="col-1-of-3">
-                    Col-1-of-3
-                </div>
-                <div class="col-1-of-3">
-                    Col-1-of-3
-                </div>
-                <div class="col-1-of-3">
-                    Col-1-of-3
-                </div>
+            <div class="col-1-of-2">
+                Col-1-of-2
             </div>
-            <div class="row">
-                <div class="col-1-of-3">
-                    Col-1-of-3
-                </div>
-                <div class="col-2-of-3">
-                    Col-2-of-3
-                </div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-3">
+                Col-1-of-3
             </div>
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col-1-of-4
-                </div>
-                <div class="col-1-of-4">
-                    Col-1-of-4
-                </div>
-                <div class="col-1-of-4">
-                    Col-1-of-4
-                </div>
-                <div class="col-1-of-4">
-                    Col-1-of-4
-                </div>
+            <div class="col-1-of-3">
+                Col-1-of-3
             </div>
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col-1-of-4
-                </div>
-                <div class="col-1-of-4">
-                    Col-1-of-4
-                </div>
-                <div class="col-2-of-4">
-                    Col-2-of-4
-                </div>
+            <div class="col-1-of-3">
+                Col-1-of-3
             </div>
-            <div class="row">
-                <div class="col-1-of-4">
-                    Col-1-of-4
-                </div>
-                <div class="col-3-of-4">
-                    Col-3-of-4
-                </div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-3">
+                Col-1-of-3
             </div>
-        </section>
-        -->
+            <div class="col-2-of-3">
+                Col-2-of-3
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-4">
+                Col-1-of-4
+            </div>
+            <div class="col-1-of-4">
+                Col-1-of-4
+            </div>
+            <div class="col-1-of-4">
+                Col-1-of-4
+            </div>
+            <div class="col-1-of-4">
+                Col-1-of-4
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-4">
+                Col-1-of-4
+            </div>
+            <div class="col-1-of-4">
+                Col-1-of-4
+            </div>
+            <div class="col-2-of-4">
+                Col-2-of-4
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-1-of-4">
+                Col-1-of-4
+            </div>
+            <div class="col-3-of-4">
+                Col-3-of-4
+            </div>
+        </div>
+    </section>
+    -->
 </body>
 
 </html>

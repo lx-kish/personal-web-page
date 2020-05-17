@@ -84,14 +84,14 @@ OTHERVICE WE SUGGEST IT AS A MOBILE DEVICE WITH TOUCH SCREEN.
   }
 
   @if $breakpoint == _880-1040 {
-    //tab-port {
+    //tab-land {
     @media only screen and (max-width: 65em) {
       @content;
     }
   }
 
   @if $breakpoint == _1040-1200 {
-    //tab-land {
+    //small-desktop {
     @media only screen and (max-width: 75em) {
       @content;
     }

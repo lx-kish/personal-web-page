@@ -103,6 +103,14 @@
     font-weight: 600;
     color: inherit;
 
+    @include respond(_1040-1200) {
+      font-size: 1.6rem;
+    }
+
+    // @include respond(_720-880) {
+    //   font-size: inherit;
+    // }
+
     @include respond(_360-580) {
       line-height: 12rem;
       font-size: 2rem;

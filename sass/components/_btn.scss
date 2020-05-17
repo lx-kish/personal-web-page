@@ -10,6 +10,16 @@
 
   @include transition(0.2s);
 
+  @include respond(_1040-1200) {
+    font-size: $font-size-tab-land;
+    padding: 1rem 2rem;
+  }
+
+  @include respond(_720-880) {
+    font-size: $font-size-tab-port;
+    padding: 1rem 2rem;
+  }
+
   @include respond(_360-580) {
     font-size: $font-size-mobile;
     padding: 1rem 4rem;
@@ -67,17 +77,36 @@
     background-color: transparent;
     color: var(--color-primary-dark);
 
+    @include respond(_1040-1200) {
+      width: 23rem;
+      padding: 3rem 4rem;
+    }
+  
+    @include respond(_720-880) {
+      width: 23rem;
+      padding: 3rem 4rem;
+    }
+
     @include respond(_360-580) {
       width: 23rem;
       padding: 3rem 4rem;
     }
 
     @include respond(_0-360) {
-      width: 23rem;
+      // width: 23rem;
       // padding: 3rem 4rem;
     }
 
     &:not(:last-child) {
+
+      @include respond(_1040-1200) {
+        margin-right: 6rem;
+      }
+    
+      @include respond(_720-880) {
+        margin-right: 6rem;
+      }
+
       @include respond(_360-580) {
         margin-right: 6rem;
       }
