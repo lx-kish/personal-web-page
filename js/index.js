@@ -237,8 +237,6 @@ function scrollAnimation() {
 function resizeEvent() {
     $(window).on('resize', function () {
 
-        // $('header.header').css({ 'height': $(window).height() });
-        // $('body').css({ 'width': $(window).width() });
         ititiateInterfaceValues();
     });
 }

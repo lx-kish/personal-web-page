@@ -79,12 +79,12 @@
 
     @include respond(_1040-1200) {
       width: 23rem;
-      padding: 3rem 4rem;
+      padding: 1.5rem 2rem;
     }
   
     @include respond(_720-880) {
       width: 23rem;
-      padding: 3rem 4rem;
+      padding: 1.5rem 2rem;
     }
 
     @include respond(_360-580) {
