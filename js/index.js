@@ -115,7 +115,7 @@ function scrollSpy() {
     var i = 0;
 
     for (i in allSectionsOffsetTop) {
-        if (allSectionsOffsetTop[i] <= scrollPosition) {
+        if (allSectionsOffsetTop[i] <= scrollPosition + 1) { // adding 1 to cover fractional part 
 
             $('.navigation__list').children('.navigation__item--active').removeClass('navigation__item--active');
             $('.navigation__link[href*=' + i + ']').parent().addClass('navigation__item--active');
