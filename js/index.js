@@ -42,7 +42,8 @@ function getElementWidth(e) {
  * @return {Number} The offset top of the element in pixels
  */
 function getElementOffsetTop(e) {
-    return $(e).offset().top;
+    return Math.round($(e).offset().top);
+    // return $(e).offset().top;
 }
 
 /**
@@ -115,7 +116,9 @@ function scrollSpy() {
     var i = 0;
 
     for (i in allSectionsOffsetTop) {
-        if (allSectionsOffsetTop[i] <= scrollPosition + 1) { // adding 1 to cover fractional part 
+        if (allSectionsOffsetTop[i] <= scrollPosition) { // + 1) { // adding 1 to cover fractional part 
+
+            // console.log(`scroll position = ${scrollPosition} : active item = ${i} : active item scroll top = ${allSectionsOffsetTop[i]} : `);
 
             $('.navigation__list').children('.navigation__item--active').removeClass('navigation__item--active');
             $('.navigation__link[href*=' + i + ']').parent().addClass('navigation__item--active');
