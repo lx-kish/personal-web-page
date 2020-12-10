@@ -66,6 +66,10 @@
     }
   }
 
+  &__description {
+    text-align: justify;
+  }
+
   &__prop {
     display: inline-block;
     text-decoration: none;
