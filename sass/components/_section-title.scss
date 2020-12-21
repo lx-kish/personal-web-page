@@ -1,15 +1,18 @@
 .section-title {
-    padding: 5rem;
+    margin: 5rem 0;
+    // padding: 5rem;
 
     //TODO - decide about padding-bottom for 600-900 and fewer
     @include respond(_580-720) {
         padding: 0;
-        padding-bottom: 5rem;
+        margin-bottom: 5rem;
+        // padding-bottom: 5rem;
     }
 
     @include respond(_360-580) {
         padding: 0;
-        padding-bottom: 5rem;
+        margin-bottom: 5rem;
+        // padding-bottom: 5rem;
     }
 
     @include respond(_0-360) {

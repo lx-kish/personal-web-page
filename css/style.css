@@ -421,6 +421,8 @@ body.color-theme-in-transition *:after {
     @media only screen and (max-width: 22.5em) {
       .activity__duration {
         font-size: 4rem; } }
+  .activity__description {
+    text-align: justify; }
   .activity__prop {
     display: inline-block;
     text-decoration: none; }
@@ -1519,15 +1521,15 @@ body.color-theme-in-transition *:after {
       font-size: 4rem; } }
 
 .section-title {
-  padding: 5rem; }
+  margin: 5rem 0; }
   @media only screen and (max-width: 45em) {
     .section-title {
       padding: 0;
-      padding-bottom: 5rem; } }
+      margin-bottom: 5rem; } }
   @media only screen and (max-width: 36.25em) {
     .section-title {
       padding: 0;
-      padding-bottom: 5rem; } }
+      margin-bottom: 5rem; } }
   .section-title__logo-box {
     display: inline-block;
     margin-right: 1.5rem; }
@@ -1691,7 +1693,8 @@ body.color-theme-in-transition *:after {
     border: 0.5rem solid var(--color-photo-border);
     filter: brightness(90%) sepia(20%); }
   .about__text {
-    font-size: 1.6rem; }
+    font-size: 1.6rem;
+    text-align: justify; }
     @media only screen and (max-width: 75em) {
       .about__text {
         font-size: 1.8rem; } }
