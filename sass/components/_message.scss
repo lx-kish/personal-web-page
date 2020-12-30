@@ -54,30 +54,11 @@
       padding: 0;
       overflow-y: initial;
     }
-
-    // @include respond(_360-580) {
-    //   display: block;
-    //   position: initial;
-    //   opacity: 1;
-    //   visibility: visible;
-    //   transform: initial;
-    //   border-style: none;
-    //   background-color: transparent;
-
-    //   height: auto;
-    //   width: auto;
-    //   padding: 0;
-    // }
-
-    // @include respond(_0-360) {
-    //   height: 80vh;
-    //   width: 90vw;
-    //   padding: 5rem 3.5rem;
-    // }
   }
 
   &__header {
-    padding: 0 1rem 3.5rem;
+    // padding: 0 1rem 3.5rem;
+    margin-bottom: 3rem;
     text-align: center;
     text-transform: uppercase;
     font-size: $font-size-main;
@@ -85,23 +66,27 @@
     color: var(--color-primary-dark);
 
     @include respond(_1040-1200) {
-      padding: 0 1rem 3.5rem;
+      // padding: 0 1rem 3.5rem;
+      margin-bottom: 3rem;
       font-size: $font-size-tab-land;
     }
 
     @include respond(_720-880) {
-      padding: 0 1rem 3.5rem;
+      // padding: 0 1rem 3.5rem;
+      margin-bottom: 3rem;
       font-size: $font-size-tab-port;
     }
 
     @include respond(_360-580) {
-      padding: 0 1rem 6rem;
+      // padding: 0 1rem 6rem;
+      margin-bottom: 3rem;
       font-size: $font-size-mobile;
     }
 
     @include respond(_0-360) {
       padding: 0 1rem;
-      margin-bottom: 8rem;
+      margin-bottom: 3rem;
+      // margin-bottom: 8rem;
       font-size: $font-size-mobile-small;
     }
   }
@@ -114,6 +99,11 @@
   &:target &__form {
     opacity: 1;
     transform: translate(-50%, -50%) scale(1);
+
+    @include respond(touch-screen) {
+      transform: initial;
+      overflow-y: initial;
+    }
   }
 
   &__close {
@@ -153,178 +143,284 @@
 .form {
   @include respond(touch-screen) {
     // height: 100%;
-    overflow: auto;
+    // overflow: auto;
     width: 100%;
     padding-bottom: 3rem;
   }
 
-  &__group--btns {
-    // margin: 0 auto;
-    // width: 25.5%;
-    text-align: center;
-    position: relative;
-    top: -3rem;
+  &__group {
+
+
+
+    &--btns {
+      text-align: center;
+      position: relative;
+    }
+
+    &--message {
+      height: $textarea-height-main;
+      margin-bottom: 2rem;
+
+      @include respond(_1040-1200) {
+        height: $textarea-height-tab-land;
+        margin-bottom: 3rem;
+      }
+      @include respond(_720-880) {
+        height: $textarea-height-tab-port;
+        margin-bottom: 3rem;
+      }
+      @include respond(_360-580) {
+        height: $textarea-height-mobile;
+        margin-bottom: 3rem;
+      }
+      @include respond(_0-360) {
+        height: $textarea-height-mobile-small;
+        margin-bottom: 3rem;
+      }
+    }
+  }
+
+  &__field {
+    height: $input-height-main;
+    margin-bottom: 1.5rem;
+
+    @include respond(_1040-1200) {
+      height: $input-height-tab-land;
+      margin-bottom: 2rem;
+    }
+
+    @include respond(_720-880) {
+      height: $input-height-tab-port;
+      margin-bottom: 3rem;
+    }
+
+    @include respond(_360-580) {
+      height: $input-height-mobile;
+      margin-bottom: 3rem;
+    }
 
     @include respond(_0-360) {
-      top: -1rem;
+      height: $input-height-mobile-small;
+      margin-bottom: 3rem;
     }
   }
 
   &__input {
+    display: inline-block;
+
+    height: $input-height-main;
+    
     width: 100%;
     font-size: $font-size-main;
     font-family: inherit;
     color: inherit;
-    padding: 0.7rem 1rem;
-    border-radius: 0.2rem;
-    background-color: var(--color-input-bg);
-    // border: none;
-    border: 2px solid var(--color-input-bg);
-    // transition: all 0.3s;
-
+    padding: 1.1rem .8rem .2rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    border: .2rem solid var(--color-primary-dark);
     @include transition(0.3s);
 
     @include respond(_1040-1200) {
       font-size: $font-size-tab-land;
+      height: $input-height-tab-land;
+      padding: 1.1rem .8rem .2rem;
     }
 
     @include respond(_720-880) {
       font-size: $font-size-tab-port;
+      height: $input-height-tab-port;
+      padding: 3rem 1rem .5rem;
     }
 
     @include respond(_360-580) {
       font-size: $font-size-mobile;
+      height: $input-height-mobile;
     }
 
     @include respond(_0-360) {
       font-size: $font-size-mobile-small;
-      // font-size: 3.5rem;
+      height: $input-height-mobile-small;
     }
 
     &::placeholder {
-      color: var(--color-label-plholder);
+      color: transparent;
     }
 
     &--message {
-      overflow: hidden;
+      // overflow: hidden;
       resize: none;
+
+      height: $textarea-height-main;
+
+      @include respond(_1040-1200) {
+        height: $textarea-height-tab-land;
+      }
+      @include respond(_720-880) {
+        height: $textarea-height-tab-port;
+      }
+      @include respond(_360-580) {
+        height: $textarea-height-mobile;
+      }
+      @include respond(_0-360) {
+        height: $textarea-height-mobile-small;
+      }
     }
 
     &:focus {
       outline: none;
       box-shadow: 0 1rem 2rem var(--color-shadow-20);
-      //   border-radius: .8rem;
-      border-bottom: 2px solid var(--color-primary-dark);
-      // border-right: 2px solid var(--color-primary-dark);
 
       @include respond(touch-screen) {
         box-shadow: none;
       }
 
       &:invalid {
-        border-bottom: 2px solid var(--color-accent);
-        // border-right: 2px solid var(--color__accent);
+        border: .2rem solid var(--color-accent);
       }
     }
   }
 
   &__label {
+    display: inline-block;
     position: relative;
 
-    display: block;
-    font-size: $font-size-main;
-    color: var(--color-label-plholder);
-    margin-top: 1rem;
-    margin-left: 1rem;
-    // transition: all 0.3s;
+    height: $input-height-main;
+    width: 100%;
 
+    font-size: calc(#{$font-size-main} * .6);
+    color: var(--color-primary-dark);
+    padding-top: .5rem;
+    padding-left: 1rem;
+    
     @include transition(0.3s);
 
     @include respond(_1040-1200) {
-      font-size: $font-size-tab-land;
-      margin-top: 1rem;
-      margin-left: 1rem;
+      height: $input-height-tab-land;
+      font-size: calc(#{$font-size-tab-land} * .6);
+      padding-top: .5rem;
+      padding-left: 1rem;
     }
 
     @include respond(_720-880) {
-      font-size: $font-size-tab-port;
-      margin-top: 1rem;
-      margin-left: 1rem;
+      height: $input-height-tab-port;
+      font-size: calc(#{$font-size-tab-port} * .7);
+      padding-top: 1rem;
+      padding-left: 1rem;
     }
 
     @include respond(_360-580) {
-      font-size: $font-size-mobile;
-      margin-top: 2rem;
-      margin-left: 1.5rem;
+      height: $input-height-mobile;
+      font-size: calc(#{$font-size-mobile} * .6);
+      padding-top: 1rem;
+      padding-left: 1rem;
     }
 
     @include respond(_0-360) {
-      font-size: $font-size-mobile-small;
-      margin-top: 2.5rem;
-      margin-left: 1.8rem;
-      // font-size: 3.5rem;
+      height: $input-height-mobile-small;
+      font-size: calc(#{$font-size-mobile-small} * .5);
+      padding-top: 1rem;
+      padding-left: 1rem;
     }
 
     &--not-last {
-      top: -7.9rem;
+      top: -4.3rem;
 
       @include respond(_1040-1200) {
-        top: -7.9rem;
+        top: -4.7rem;
       }
   
       @include respond(_720-880) {
-        top: -7.9rem;
+        top: -7rem;
       }
 
       @include respond(_360-580) {
-        top: -13.5rem;
+        top: -9rem;
       }
 
       @include respond(_0-360) {
-        top: -18rem; //-16rem;
+        top: -11.5rem; //-18rem; //-16rem;
       }
     }
 
     &--last {
-      top: -24.1rem;
+      top: -16.5rem;
+
+      height: $textarea-height-main;
 
       @include respond(_1040-1200) {
-        top: -24.1rem;
+        top: -19.5rem;
       }
-  
+      
       @include respond(_720-880) {
-        top: -24.1rem;
+        top: -24.5rem;
       }
 
       @include respond(_360-580) {
-        top: -42.5rem;
+        top: -29rem;
       }
 
       @include respond(_0-360) {
-        top: -60.1rem;
+        top: -33.1rem;
       }
     }
   }
 
-  &__input:placeholder-shown + &__label {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(4.5rem);
+  &__input:placeholder-shown + &__label--not-last {
+    top: -3.7rem;
+    font-size: calc(#{$font-size-main} * 1);
+    padding-top: .5rem;
 
     @include respond(_1040-1200) {
-      transform: translateY(4.5rem);
+      top: -4rem;
+      font-size: calc(#{$font-size-tab-land} * 1);
+      padding-top: .5rem;
     }
 
     @include respond(_720-880) {
-      transform: translateY(4.5rem);
+      top: -6.5rem; 
+      font-size: calc(#{$font-size-tab-port} * 1);
+      padding-top: 1.5rem;
     }
 
     @include respond(_360-580) {
-      transform: translateY(6.1rem);
+      top: -8rem; 
+      font-size: calc(#{$font-size-mobile} * 1);
+      padding-top: 1.8rem;
     }
 
     @include respond(_0-360) {
-      transform: translateY(8.4rem);
+      top: -10rem; //-18rem; //-16rem;
+      font-size: calc(#{$font-size-mobile-small} * .8);
+      padding-top: 2.5rem;
+    }
+  }
+  &__input:placeholder-shown + &__label--last {
+    top: -17rem; 
+    font-size: calc(#{$font-size-tab-land} * 1);
+    padding-top: 1.5rem;
+
+    @include respond(_1040-1200) {
+      top: -20rem; 
+      font-size: calc(#{$font-size-tab-land} * 1);
+      padding-top: 1.5rem;
+    }
+
+    @include respond(_720-880) {
+      top: -24rem; 
+      font-size: calc(#{$font-size-tab-port} * 1);
+      padding-top: 1.5rem;
+    }
+
+    @include respond(_360-580) {
+      top: -28rem; 
+      font-size: calc(#{$font-size-mobile} * 1);
+      padding-top: 1.8rem;
+    }
+
+    @include respond(_0-360) {
+      top: -32rem; //-18rem; //-16rem;
+      font-size: calc(#{$font-size-mobile-small} * .8);
+      padding-top: 2.5rem;
     }
   }
 }

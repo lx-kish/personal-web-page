@@ -28,6 +28,7 @@
   @include respond(_0-360) {
     font-size: $font-size-mobile-small;
     padding: 1rem 4rem;
+    border-radius: $border-radius-mobileS;
   }
 
   &:hover {
@@ -76,10 +77,11 @@
     border: 0.2rem solid var(--color-primary-dark);
     background-color: transparent;
     color: var(--color-primary-dark);
+    padding: .7rem 2rem;
 
     @include respond(_1040-1200) {
       width: 23rem;
-      padding: 1.5rem 2rem;
+      // padding: 1rem 2rem;
     }
   
     @include respond(_720-880) {
@@ -89,7 +91,7 @@
 
     @include respond(_360-580) {
       width: 23rem;
-      padding: 3rem 4rem;
+      padding: 2rem 4rem;
     }
 
     @include respond(_0-360) {
