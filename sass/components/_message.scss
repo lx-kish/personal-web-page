@@ -248,21 +248,27 @@
 
     &--message {
       // overflow: hidden;
+      // overflow-y: scroll;
       resize: none;
 
       height: $textarea-height-main;
+      max-height: $textarea-height-main;
 
       @include respond(_1040-1200) {
         height: $textarea-height-tab-land;
+        max-height: $textarea-height-tab-land;
       }
       @include respond(_720-880) {
         height: $textarea-height-tab-port;
+        max-height: $textarea-height-tab-port;
       }
       @include respond(_360-580) {
         height: $textarea-height-mobile;
+        max-height: $textarea-height-mobile;
       }
       @include respond(_0-360) {
         height: $textarea-height-mobile-small;
+        max-height: $textarea-height-mobile-small;
       }
     }
 
@@ -285,7 +291,7 @@
     position: relative;
 
     height: $input-height-main;
-    width: 100%;
+    // width: 100%;
 
     font-size: calc(#{$font-size-main} * .6);
     color: var(--color-primary-dark);
@@ -345,7 +351,7 @@
     &--last {
       top: -16.5rem;
 
-      height: $textarea-height-main;
+      // height: $textarea-height-main;
 
       @include respond(_1040-1200) {
         top: -19.5rem;

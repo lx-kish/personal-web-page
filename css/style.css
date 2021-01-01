@@ -1380,19 +1380,24 @@ body.color-theme-in-transition *:after {
     color: transparent; }
   .form__input--message {
     resize: none;
-    height: 15rem; }
+    height: 15rem;
+    max-height: 15rem; }
     @media only screen and (max-width: 75em) {
       .form__input--message {
-        height: 18rem; } }
+        height: 18rem;
+        max-height: 18rem; } }
     @media only screen and (max-width: 55em) {
       .form__input--message {
-        height: 23rem; } }
+        height: 23rem;
+        max-height: 23rem; } }
     @media only screen and (max-width: 36.25em) {
       .form__input--message {
-        height: 27rem; } }
+        height: 27rem;
+        max-height: 27rem; } }
     @media only screen and (max-width: 22.5em) {
       .form__input--message {
-        height: 30rem; } }
+        height: 30rem;
+        max-height: 30rem; } }
   .form__input:focus {
     outline: none;
     box-shadow: 0 1rem 2rem var(--color-shadow-20); }
@@ -1406,7 +1411,6 @@ body.color-theme-in-transition *:after {
   display: inline-block;
   position: relative;
   height: 3.5rem;
-  width: 100%;
   font-size: calc(1.6rem * .6);
   color: var(--color-primary-dark);
   padding-top: .5rem;
@@ -1454,8 +1458,7 @@ body.color-theme-in-transition *:after {
       .form__label--not-last {
         top: -11.5rem; } }
   .form__label--last {
-    top: -16.5rem;
-    height: 15rem; }
+    top: -16.5rem; }
     @media only screen and (max-width: 75em) {
       .form__label--last {
         top: -19.5rem; } }

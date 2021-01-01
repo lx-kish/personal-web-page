@@ -52,7 +52,7 @@ function getElementOffsetTop(e) {
  * @return {Object} The list of all <section> elements 
  * offsets top in pixels
  */
-//TODO - refactor with less lines of code later
+//@TODO - refactor with less lines of code later
 function getAllSectionsOffsetTop() {
 
     var sections = {};
