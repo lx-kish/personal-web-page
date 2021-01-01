@@ -94,7 +94,8 @@
       background-size: cover;
       background-position: top;
 
-      @include respond(touch-screen) {
+      @include respond(_720-880) {
+      // @include respond(touch-screen) {
         // background-color: transparent;
         transform: rotateY(0);
       }
@@ -127,10 +128,6 @@
         @include respond(_360-580) {
           background-image: none;
         }
-
-        // @include respond(touch-screen) {
-        //   background-image: none;
-        // }
       }
 
       &--TW {
@@ -139,10 +136,6 @@
         @include respond(_360-580) {
           background-image: none;
         }
-
-        // @include respond(touch-screen) {
-        //   background-image: none;
-        // }
       }
 
       &--PV {
@@ -151,10 +144,6 @@
         @include respond(_360-580) {
           background-image: none;
         }
-
-        // @include respond(touch-screen) {
-        //   background-image: none;
-        // }
       }
 
       &--EM {
@@ -163,10 +152,6 @@
         @include respond(_360-580) {
           background-image: none;
         }
-
-        // @include respond(touch-screen) {
-        //   background-image: none;
-        // }
       }
 
       &--ACC {
@@ -175,10 +160,6 @@
         @include respond(_360-580) {
           background-image: none;
         }
-
-        // @include respond(touch-screen) {
-        //   background-image: none;
-        // }
       }
 
       &--CU {
@@ -187,10 +168,6 @@
         @include respond(_360-580) {
           background-image: none;
         }
-
-        // @include respond(touch-screen) {
-        //   background-image: none;
-        // }
       }
     }
   }
@@ -198,7 +175,8 @@
   &:hover &__side--front {
     transform: rotateY(-180deg);
 
-    @include respond(touch-screen) {
+    @include respond(_720-880) {
+    // @include respond(touch-screen) {
       transform: rotateY(0);
     }
   }
@@ -206,7 +184,8 @@
   &:hover &__side--back {
     transform: rotateY(0);
 
-    @include respond(touch-screen) {
+    @include respond(_720-880) {
+    // @include respond(touch-screen) {
       transform: rotateY(0);
     }
 
