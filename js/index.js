@@ -5,6 +5,24 @@ var navbarTopPoint;
 var navbarBottomPoint;
 
 /**
+ * Firebase config
+ */
+var firebaseConfig = {
+    apiKey: "AIzaSyCjPWWe-agx2pM8jE70HUHrrG5PVaTCNZI",
+    authDomain: "lx-kish.firebaseapp.com",
+    projectId: "lx-kish",
+    storageBucket: "lx-kish.appspot.com",
+    messagingSenderId: "901503787573",
+    appId: "1:901503787573:web:60236d20b3f8621473877c",
+    measurementId: "G-5EW4GQ4PZ2"
+};
+/**
+ * Firebase initialization
+ */
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
+/**
 * Initialize page interface, load all variables and events handlers
 */
 $(document).ready(function () {
@@ -15,7 +33,35 @@ $(document).ready(function () {
     resizeEvent();
     colorManagement();
     mobileColorPanelShowHide();
+    submitFormHandler();
 });
+
+/**
+ * Hides alert message
+ * @return void
+ */
+function hideAlert() {
+    var el = $('.alert');
+    if (el) el.remove();
+};
+
+/**
+ * Shows alert message
+ * @param {String} msg The message for showing
+ * @param {String} type Message type: 'success' or 'error'
+ * @return void
+ */
+function showAlert(type, msg) {
+    var markup = '<div class="alert alert--' + type + '">' + msg + '</div>';
+    $('body').prepend(markup);
+    // $('body').html(markup);
+    window.setTimeout(hideAlert, 5000);
+}
+
+// Creating reference to the firebase collection
+// console.log('%c messagesRef ===> ', 'color: yellowgreen;', firebase.database());
+var messagesRef = firebase.database().ref('messages');
+// console.log('%c messagesRef ===> ', 'color: yellowgreen; font-weight: bold; text-transform: uppercase;', messagesRef);
 
 /**
  * Get height of an element in pixels
@@ -83,22 +129,42 @@ function ititiateInterfaceValues() {
 }
 
 /**
+ * Adds and removes class attributes to an html element
+ * @param  {Node} e The element which class is adding
+ * @param  {String} addedClass The class attribute is adding to the element
+ * @param  {String} removedClass The class attribute is removing from the element
+ * @return void
+ */
+function addRemoveClass(el, addedClass, removedClass) {
+    if (addedClass) el.addClass(addedClass);
+    if (removedClass) el.removeClass(removedClass);
+}
+
+/**
 * Hides/shows color panel on touch-screens
 * Showing by clicking the button, hiding by clicking outside the color pannel
 */
 function mobileColorPanelShowHide() {
 
     $('.color-schema__btn--mobile').on('touchstart', function (e) {
-        $('.color-schema__panel')
-        .removeClass('color-schema__panel--hide')
-        .addClass('color-schema__panel--show');
+        addRemoveClass(
+            $('.color-schema__panel'),
+            'color-schema__panel--show',
+            'color-schema__panel--hide');
+        // $('.color-schema__panel')
+        //     .removeClass('color-schema__panel--hide')
+        //     .addClass('color-schema__panel--show');
         e.stopPropagation();
     });
 
     $('body').on('touchstart', function () {
-        $('.color-schema__panel')
-        .removeClass('color-schema__panel--show')
-        .addClass('color-schema__panel--hide');
+        addRemoveClass(
+            $('.color-schema__panel'),
+            'color-schema__panel--hide',
+            'color-schema__panel--show');
+        // $('.color-schema__panel')
+        //     .removeClass('color-schema__panel--show')
+        //     .addClass('color-schema__panel--hide');
     });
 
     // Prevent events from getting pass .color-schema__panel{
@@ -120,8 +186,10 @@ function scrollSpy() {
 
             // console.log(`scroll position = ${scrollPosition} : active item = ${i} : active item scroll top = ${allSectionsOffsetTop[i]} : `);
 
-            $('.navigation__list').children('.navigation__item--active').removeClass('navigation__item--active');
-            $('.navigation__link[href*=' + i + ']').parent().addClass('navigation__item--active');
+            addRemoveClass($('.navigation__list').children('.navigation__item--active'), '', 'navigation__item--active');
+            addRemoveClass($('.navigation__link[href*=' + i + ']').parent(), 'navigation__item--active', '');
+            // $('.navigation__list').children('.navigation__item--active').removeClass('navigation__item--active');
+            // $('.navigation__link[href*=' + i + ']').parent().addClass('navigation__item--active');
         }
     }
 }
@@ -134,22 +202,34 @@ function stickNavbar() {
     if ($(window).scrollTop() > navbarTopPoint &&
         $(window).scrollTop() < navbarBottomPoint) {
 
-        $('.navigation')
-            .removeClass('navigation--top navigation--bottom')
-            .addClass('navigation--fixed');
+        addRemoveClass(
+            $('.navigation'),
+            'navigation--fixed',
+            'navigation--top navigation--bottom');
+        // $('.navigation')
+        //     .removeClass('navigation--top navigation--bottom')
+        //     .addClass('navigation--fixed');
     }
     else {
         if ($(window).scrollTop() <= navbarTopPoint) {
 
-            $('.navigation')
-                .removeClass('navigation--fixed navigation--bottom')
-                .addClass('navigation--top');
+            addRemoveClass(
+                $('.navigation'),
+                'navigation--top',
+                'navigation--fixed navigation--bottom');
+            // $('.navigation')
+            //     .removeClass('navigation--fixed navigation--bottom')
+            //     .addClass('navigation--top');
         }
         else if ($(window).scrollTop() >= navbarBottomPoint) {
 
-            $('.navigation')
-                .removeClass('navigation--fixed navigation--top')
-                .addClass('navigation--bottom');
+            addRemoveClass(
+                $('.navigation'),
+                'navigation--bottom',
+                'navigation--fixed navigation--top');
+            // $('.navigation')
+            //     .removeClass('navigation--fixed navigation--top')
+            //     .addClass('navigation--bottom');
         }
     }
 }
@@ -167,38 +247,63 @@ function switchColorSchemaBtn() {
 
     //changing panel color
     if (panelPoint > getElementHeight('.header') && panelPoint < getElementOffsetTop('.footer')) {
-        $('.color-schema__panel')
-            .removeClass('color-schema--color-top-bottom')
-            .addClass('color-schema--color-main');
+
+        addRemoveClass(
+            $('.color-schema__panel'),
+            'color-schema--color-main',
+            'color-schema--color-top-bottom');
+        // $('.color-schema__panel')
+        //     .removeClass('color-schema--color-top-bottom')
+        //     .addClass('color-schema--color-main');
     }
     else {
-        $('.color-schema__panel')
-            .removeClass('color-schema--color-main')
-            .addClass('color-schema--color-top-bottom');
+        addRemoveClass(
+            $('.color-schema__panel'),
+            'color-schema--color-top-bottom',
+            'color-schema--color-main');
+        // $('.color-schema__panel')
+        //     .removeClass('color-schema--color-main')
+        //     .addClass('color-schema--color-top-bottom');
     }
 
     //changing toggle color
     if (togglePoint > getElementHeight('.header') && togglePoint < getElementOffsetTop('.footer')) {
-        $('.color-schema__toggle')
-            .removeClass('color-schema__toggle--color-top-bottom')
-            .addClass('color-schema__toggle--color-main');
+        addRemoveClass(
+            $('.color-schema__toggle'),
+            'color-schema__toggle--color-main',
+            'color-schema__toggle--color-top-bottom');
+        // $('.color-schema__toggle')
+        //     .removeClass('color-schema__toggle--color-top-bottom')
+        //     .addClass('color-schema__toggle--color-main');
     }
     else {
-        $('.color-schema__toggle')
-            .removeClass('color-schema__toggle--color-main')
-            .addClass('color-schema__toggle--color-top-bottom');
+        addRemoveClass(
+            $('.color-schema__toggle'),
+            'color-schema__toggle--color-top-bottom',
+            'color-schema__toggle--color-main');
+        // $('.color-schema__toggle')
+        //     .removeClass('color-schema__toggle--color-main')
+        //     .addClass('color-schema__toggle--color-top-bottom');
     }
 
     //changing button color
     if (btnPoint > getElementHeight('.header') && btnPoint < getElementOffsetTop('.footer')) {
-        $('.color-schema__btn')
-            .removeClass('color-schema--color-top-bottom')
-            .addClass('color-schema--color-main');
+        addRemoveClass(
+            $('.color-schema__btn'),
+            'color-schema--color-main',
+            'color-schema--color-top-bottom');
+        // $('.color-schema__btn')
+        //     .removeClass('color-schema--color-top-bottom')
+        //     .addClass('color-schema--color-main');
     }
     else {
-        $('.color-schema__btn')
-            .removeClass('color-schema--color-main')
-            .addClass('color-schema--color-top-bottom');
+        addRemoveClass(
+            $('.color-schema__btn'),
+            'color-schema--color-top-bottom',
+            'color-schema--color-main');
+        // $('.color-schema__btn')
+        //     .removeClass('color-schema--color-main')
+        //     .addClass('color-schema--color-top-bottom');
     }
 }
 
@@ -259,10 +364,50 @@ function colorManagement() {
     //light/dark mode
     $('.color-schema__toggle-input').on('change', function () {
 
-        $('body').addClass('color-theme-in-transition');
+        addRemoveClass($('body'), 'color-theme-in-transition', '');
+        // $('body').addClass('color-theme-in-transition');
         $('body').attr('data-theme', $(this).is(':checked') ? "dark" : "light");
         window.setTimeout(function () {
-            $('body').removeClass('color-theme-in-transition')
+            addRemoveClass($('body'), '', 'color-theme-in-transition')
+            // $('body').removeClass('color-theme-in-transition')
         }, 1000)
     });
+}
+
+/**
+ * Submit form handler - adding event listener to the contactForm form
+ */
+function submitFormHandler() {
+    $('#contactForm').on('submit', function (e) {
+        e.preventDefault();
+
+        var values = {};
+        $('#name, #email, #subject, #message-text').each(
+            // $('#contactForm :input, #contactForm textarea').each(
+            function (index) {
+                values[this.name] = $(this).val();
+                var input = $(this);
+            }
+        );
+        values['date'] = Date.now();
+
+        try {
+            saveMessage(values);
+            showAlert('success', 'Message sent successfully!');
+        }
+        catch (e) {
+            showAlert('error', 'An error occured while message sending: ' + e);
+        }
+
+        // showAlert('success', JSON.stringify(values));
+        // console.log('%c submitted ===> ', 'color: orangered; font-weight: bold;', values);
+    });
+}
+
+/**
+ * Saves message to the firebase
+ */
+function saveMessage(values) {
+    var newMessage = messagesRef.push();
+    return newMessage.set(values);
 }
