@@ -33,6 +33,7 @@ $(document).ready(function () {
     resizeEvent();
     colorManagement();
     mobileColorPanelShowHide();
+    popupMessageShowHide();
     submitFormHandler();
 });
 
@@ -169,6 +170,44 @@ function mobileColorPanelShowHide() {
 
     // Prevent events from getting pass .color-schema__panel{
     $('.color-schema').on('touchstart', function (e) {
+        e.stopPropagation();
+    });
+}
+
+/**
+* Hides/shows pop up message for desktop
+* Showing by clicking the button, hiding by clicking
+* outside the pop up, or '&times' symbol.
+*/
+function popupMessageShowHide() {
+
+    $('#btn-contacts').on('click', function (e) {
+        // console.log('%c btn-contacts ===> ', 'color: orangered;');
+        addRemoveClass(
+            $('#message'),
+            'message--shown',
+            '');
+        e.stopPropagation();
+    });
+
+    $('#message').on('click', function (e) {
+        addRemoveClass(
+            $('#message'),
+            '',
+            'message--shown');
+        e.stopPropagation();
+    });
+
+    $('#contact-form').on('click', function (e) {
+        e.stopPropagation();
+    });
+
+    // Prevent events from getting pass .color-schema__panel{
+    $('.message__close').on('click', function (e) {
+        addRemoveClass(
+            $('#message'),
+            '',
+            'message--shown');
         e.stopPropagation();
     });
 }
@@ -393,14 +432,18 @@ function submitFormHandler() {
 
         try {
             saveMessage(values);
+
+            addRemoveClass(
+                $('#message'),
+                '',
+                'message--shown');
+            
+            document.getElementById('contactForm').reset();
             showAlert('success', 'Message sent successfully!');
         }
         catch (e) {
             showAlert('error', 'An error occured while message sending: ' + e);
         }
-
-        // showAlert('success', JSON.stringify(values));
-        // console.log('%c submitted ===> ', 'color: orangered; font-weight: bold;', values);
     });
 }
 
