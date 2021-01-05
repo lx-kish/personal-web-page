@@ -27,7 +27,7 @@ firebase.analytics();
 */
 $(document).ready(function () {
 
-    ititiateInterfaceValues();
+    initiateInterfaceValues();
     scrollEvents();
     scrollAnimation();
     resizeEvent();
@@ -55,7 +55,6 @@ function hideAlert() {
 function showAlert(type, msg) {
     var markup = '<div class="alert alert--' + type + '">' + msg + '</div>';
     $('body').prepend(markup);
-    // $('body').html(markup);
     window.setTimeout(hideAlert, 5000);
 }
 
@@ -90,7 +89,6 @@ function getElementWidth(e) {
  */
 function getElementOffsetTop(e) {
     return Math.round($(e).offset().top);
-    // return $(e).offset().top;
 }
 
 /**
@@ -116,14 +114,12 @@ function getAllSectionsOffsetTop() {
 /**
 * Initialize values for fixed elements positioning
 */
-function ititiateInterfaceValues() {
+function initiateInterfaceValues() {
 
     allSectionsOffsetTop = getAllSectionsOffsetTop();
     navbarTopPoint = getElementHeight('.header') - 20; //50;
     navbarBottomPoint = getElementOffsetTop('.footer') - getElementHeight('.navigation') - 20; //50;
 
-    // setElementWidth('body', getElementWidth(window));
-    // setElementHeight('header.header', getElementHeight(window));
     scrollSpy();
     stickNavbar();
     switchColorSchemaBtn();
@@ -152,9 +148,6 @@ function mobileColorPanelShowHide() {
             $('.color-schema__panel'),
             'color-schema__panel--show',
             'color-schema__panel--hide');
-        // $('.color-schema__panel')
-        //     .removeClass('color-schema__panel--hide')
-        //     .addClass('color-schema__panel--show');
         e.stopPropagation();
     });
 
@@ -163,9 +156,6 @@ function mobileColorPanelShowHide() {
             $('.color-schema__panel'),
             'color-schema__panel--hide',
             'color-schema__panel--show');
-        // $('.color-schema__panel')
-        //     .removeClass('color-schema__panel--show')
-        //     .addClass('color-schema__panel--hide');
     });
 
     // Prevent events from getting pass .color-schema__panel{
@@ -223,12 +213,8 @@ function scrollSpy() {
     for (i in allSectionsOffsetTop) {
         if (allSectionsOffsetTop[i] <= scrollPosition) { // + 1) { // adding 1 to cover fractional part 
 
-            // console.log(`scroll position = ${scrollPosition} : active item = ${i} : active item scroll top = ${allSectionsOffsetTop[i]} : `);
-
             addRemoveClass($('.navigation__list').children('.navigation__item--active'), '', 'navigation__item--active');
             addRemoveClass($('.navigation__link[href*=' + i + ']').parent(), 'navigation__item--active', '');
-            // $('.navigation__list').children('.navigation__item--active').removeClass('navigation__item--active');
-            // $('.navigation__link[href*=' + i + ']').parent().addClass('navigation__item--active');
         }
     }
 }
@@ -245,9 +231,6 @@ function stickNavbar() {
             $('.navigation'),
             'navigation--fixed',
             'navigation--top navigation--bottom');
-        // $('.navigation')
-        //     .removeClass('navigation--top navigation--bottom')
-        //     .addClass('navigation--fixed');
     }
     else {
         if ($(window).scrollTop() <= navbarTopPoint) {
@@ -256,9 +239,6 @@ function stickNavbar() {
                 $('.navigation'),
                 'navigation--top',
                 'navigation--fixed navigation--bottom');
-            // $('.navigation')
-            //     .removeClass('navigation--fixed navigation--bottom')
-            //     .addClass('navigation--top');
         }
         else if ($(window).scrollTop() >= navbarBottomPoint) {
 
@@ -266,9 +246,6 @@ function stickNavbar() {
                 $('.navigation'),
                 'navigation--bottom',
                 'navigation--fixed navigation--top');
-            // $('.navigation')
-            //     .removeClass('navigation--fixed navigation--top')
-            //     .addClass('navigation--bottom');
         }
     }
 }
@@ -291,18 +268,12 @@ function switchColorSchemaBtn() {
             $('.color-schema__panel'),
             'color-schema--color-main',
             'color-schema--color-top-bottom');
-        // $('.color-schema__panel')
-        //     .removeClass('color-schema--color-top-bottom')
-        //     .addClass('color-schema--color-main');
     }
     else {
         addRemoveClass(
             $('.color-schema__panel'),
             'color-schema--color-top-bottom',
             'color-schema--color-main');
-        // $('.color-schema__panel')
-        //     .removeClass('color-schema--color-main')
-        //     .addClass('color-schema--color-top-bottom');
     }
 
     //changing toggle color
@@ -311,18 +282,12 @@ function switchColorSchemaBtn() {
             $('.color-schema__toggle'),
             'color-schema__toggle--color-main',
             'color-schema__toggle--color-top-bottom');
-        // $('.color-schema__toggle')
-        //     .removeClass('color-schema__toggle--color-top-bottom')
-        //     .addClass('color-schema__toggle--color-main');
     }
     else {
         addRemoveClass(
             $('.color-schema__toggle'),
             'color-schema__toggle--color-top-bottom',
             'color-schema__toggle--color-main');
-        // $('.color-schema__toggle')
-        //     .removeClass('color-schema__toggle--color-main')
-        //     .addClass('color-schema__toggle--color-top-bottom');
     }
 
     //changing button color
@@ -331,18 +296,12 @@ function switchColorSchemaBtn() {
             $('.color-schema__btn'),
             'color-schema--color-main',
             'color-schema--color-top-bottom');
-        // $('.color-schema__btn')
-        //     .removeClass('color-schema--color-top-bottom')
-        //     .addClass('color-schema--color-main');
     }
     else {
         addRemoveClass(
             $('.color-schema__btn'),
             'color-schema--color-top-bottom',
             'color-schema--color-main');
-        // $('.color-schema__btn')
-        //     .removeClass('color-schema--color-main')
-        //     .addClass('color-schema--color-top-bottom');
     }
 }
 
@@ -384,7 +343,7 @@ function scrollAnimation() {
 function resizeEvent() {
     $(window).on('resize', function () {
 
-        ititiateInterfaceValues();
+        initiateInterfaceValues();
     });
 }
 
@@ -404,11 +363,9 @@ function colorManagement() {
     $('.color-schema__toggle-input').on('change', function () {
 
         addRemoveClass($('body'), 'color-theme-in-transition', '');
-        // $('body').addClass('color-theme-in-transition');
         $('body').attr('data-theme', $(this).is(':checked') ? "dark" : "light");
         window.setTimeout(function () {
             addRemoveClass($('body'), '', 'color-theme-in-transition')
-            // $('body').removeClass('color-theme-in-transition')
         }, 1000)
     });
 }
@@ -422,7 +379,6 @@ function submitFormHandler() {
 
         var values = {};
         $('#name, #email, #subject, #message-text').each(
-            // $('#contactForm :input, #contactForm textarea').each(
             function (index) {
                 values[this.name] = $(this).val();
                 var input = $(this);
@@ -439,7 +395,7 @@ function submitFormHandler() {
                 'message--shown');
             
             document.getElementById('contactForm').reset();
-            showAlert('success', 'Message sent successfully!');
+            showAlert('success', 'Message has been sent successfully!');
         }
         catch (e) {
             showAlert('error', 'An error occured while message sending: ' + e);
