@@ -45,7 +45,9 @@
 
   &--fixed {
     position: fixed;
-    top: 5rem;
+    top: calc((100vh - #{$navigation-item-height} * 6) / 2);
+    // top: max(calc((100vh - #{$navigation-item-height} * 6) / 2), 5rem);
+    // top: 5rem;
 
     @include respond(_360-580) {
       top: 0;

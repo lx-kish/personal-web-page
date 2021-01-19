@@ -1598,7 +1598,7 @@ body.color-theme-in-transition *:after {
         border-radius: 0; } }
   .navigation--fixed {
     position: fixed;
-    top: 5rem; }
+    top: calc((100vh - 8rem * 6) / 2); }
     @media only screen and (max-width: 36.25em) {
       .navigation--fixed {
         top: 0;

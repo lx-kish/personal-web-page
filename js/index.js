@@ -118,7 +118,8 @@ function initiateInterfaceValues() {
 
     allSectionsOffsetTop = getAllSectionsOffsetTop();
     navbarTopPoint = getElementHeight('.header') - 20; //50;
-    navbarBottomPoint = getElementOffsetTop('.footer') - getElementHeight('.navigation') - 20; //50;
+    navbarBottomPoint = getElementOffsetTop('.footer') - getElementHeight('.navigation') - 100; //50;
+    // navbarBottomPoint = getElementOffsetTop('.footer') - getElementHeight('.navigation') - 20; //50;
 
     scrollSpy();
     stickNavbar();
