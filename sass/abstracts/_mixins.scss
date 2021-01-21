@@ -15,8 +15,23 @@
 
 @mixin animationAppears {
   animation-name: appears;
-  animation-duration: 4.5s;
+  animation-duration: 3s;
+  // animation-duration: 4.5s;
   animation-timing-function: ease-in;
+  backface-visibility: hidden;
+}
+
+/**
+* 2021 0116 New landing screen animations
+*/
+@mixin animationCoding($width, $delay) {
+  width: 0;
+  max-width: #{$width}px;
+  animation-name: codeLines;
+  animation-duration: #{$width / 5 * .04}s;
+  animation-delay: #{$delay}s;
+  animation-timing-function: steps($width / 5, end);
+  animation-fill-mode: forwards;
   backface-visibility: hidden;
 }
 
@@ -60,6 +75,21 @@ OTHERVICE WE SUGGEST IT AS A MOBILE DEVICE WITH TOUCH SCREEN.
     @media only screen and (max-width: 22.5em) {
       @content;
     } //18.75em) { @content };
+  }
+
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  @if $breakpoint == _360-480 {
+    //phone {
+    @media only screen and (max-width: 30em) {
+      @content;
+    }
   }
 
   @if $breakpoint == _360-580 {

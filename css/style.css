@@ -1,3 +1,6 @@
+/**
+* 2021 0116 New landing screen animations
+*/
 /*
 possible $breakpoint arguments:
 -phone-small: 0 - 360px     ==> Phone small ???
@@ -35,6 +38,62 @@ MESSAGE-PLACEHOLDER/LABLE-LIGHT
 MESSAGE-INPUT-DARK
 MESSAGE-PLACEHOLDER/LABEL-DARK
 */
+/**
+* 2021 0116 New landing screen animations
+*/
+@keyframes window-appearance {
+  0% {
+    opacity: 0;
+    transform: rotateY(-15deg) rotateZ(2deg) scale(0.1); }
+  60% {
+    opacity: 0;
+    transform: rotateY(-15deg) rotateZ(2deg) scale(0.1); }
+  100% {
+    opacity: 1;
+    transform: rotateY(-15deg) rotateZ(2deg) scale(1); } }
+
+@keyframes codeLines {
+  from {
+    width: 0; }
+  to {
+    width: 100%; } }
+
+@keyframes cursor {
+  50% {
+    border-color: transparent; } }
+
+@keyframes type {
+  0% {
+    width: 0; }
+  99% {
+    border-right: 2px solid #ffffff; }
+  100% {
+    border-right: none; } }
+
+@keyframes type2 {
+  0% {
+    width: 0; }
+  1% {
+    opacity: 1; }
+  99% {
+    border-right: 2px solid #ffffff; }
+  100% {
+    opacity: 1;
+    border: none; } }
+
+@keyframes type3 {
+  0% {
+    width: 0; }
+  1% {
+    opacity: 1; }
+  99% {
+    border-right: 2px solid #ffffff; }
+  100% {
+    opacity: 1; } }
+
+/**
+* 2021 0116 Previous landing screen animations
+*/
 @keyframes moveInDown {
   0% {
     opacity: 0;
@@ -66,7 +125,63 @@ MESSAGE-PLACEHOLDER/LABEL-DARK
 
 html {
   font-size: 62.5%;
-  -webkit-text-size-adjust: none; }
+  -webkit-text-size-adjust: none;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 75em) {
     html {
       font-size: 56.25%; } }
@@ -302,7 +417,39 @@ body {
   font-weight: 400;
   font-size: 1.6rem;
   line-height: 1.7;
-  color: var(--color-font); }
+  color: var(--color-font);
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 75em) {
     body {
       font-size: 1.8rem;
@@ -326,7 +473,39 @@ body {
 
 .heading-tertiary {
   font-size: 1.6rem;
-  font-weight: 700; }
+  font-weight: 700;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 75em) {
     .heading-tertiary {
       font-size: 1.8rem; } }
@@ -380,7 +559,23 @@ body.color-theme-in-transition *:after {
   backface-visibility: hidden !important; }
 
 .activity {
-  color: var(--color-font); }
+  color: var(--color-font);
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 36.25em) {
     .activity {
       background: var(--color-activity-bg);
@@ -392,7 +587,23 @@ body.color-theme-in-transition *:after {
       border-radius: 0.3rem;
       padding: 2rem; } }
   .activity:not(:last-child) {
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 36.25em) {
       .activity:not(:last-child) {
         margin-bottom: 2rem; } }
@@ -400,7 +611,15 @@ body.color-theme-in-transition *:after {
       .activity:not(:last-child) {
         margin-bottom: 3rem; } }
   .activity__name {
-    text-align: right; }
+    text-align: right;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 55em) {
       .activity__name {
         text-align: initial; } }
@@ -408,7 +627,39 @@ body.color-theme-in-transition *:after {
     font-family: librebaskerville-italic, serif;
     font-size: 1.8rem;
     font-style: italic;
-    text-align: right; }
+    text-align: right;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 55em) {
       .activity__duration {
         text-align: initial; } }
@@ -430,7 +681,23 @@ body.color-theme-in-transition *:after {
       width: 2rem;
       height: 2rem;
       fill: var(--color-primary-dark);
-      vertical-align: middle; }
+      vertical-align: middle;
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
       @media only screen and (max-width: 36.25em) {
         .activity__prop-icon {
           width: 3rem;
@@ -481,7 +748,39 @@ body.color-theme-in-transition *:after {
   -webkit-transition: all 0.2s ease;
   -moz-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;
-  transition: all 0.2s ease; }
+  transition: all 0.2s ease;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 75em) {
     .btn {
       font-size: 1.8rem;
@@ -501,20 +800,44 @@ body.color-theme-in-transition *:after {
       border-radius: 1.5rem; } }
   .btn:hover {
     transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 1.5rem var(--color-shadow-50); }
+    box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (hover: none) {
       .btn:hover {
         transform: none;
         box-shadow: none; } }
     .btn:hover::after {
       transform: scaleX(1.4) scaleY(1.6);
-      opacity: 0; }
+      opacity: 0;
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
       @media only screen and (hover: none) {
         .btn:hover::after {
           transform: none; } }
   .btn:active {
     transform: translateY(-0.1rem);
-    box-shadow: 0 0.5rem 1rem var(--color-shadow-20); }
+    box-shadow: 0 0.5rem 1rem var(--color-shadow-20);
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (hover: none) {
       .btn:active {
         transform: none;
@@ -530,7 +853,39 @@ body.color-theme-in-transition *:after {
     border: 0.2rem solid var(--color-primary-dark);
     background-color: transparent;
     color: var(--color-primary-dark);
-    padding: .7rem 2rem; }
+    padding: .7rem 2rem;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 75em) {
       .btn-form {
         width: 23rem; } }
@@ -542,18 +897,51 @@ body.color-theme-in-transition *:after {
       .btn-form {
         width: 23rem;
         padding: 2rem 4rem; } }
-    @media only screen and (max-width: 75em) {
-      .btn-form:not(:last-child) {
-        margin-right: 6rem; } }
-    @media only screen and (max-width: 55em) {
-      .btn-form:not(:last-child) {
-        margin-right: 6rem; } }
-    @media only screen and (max-width: 36.25em) {
-      .btn-form:not(:last-child) {
-        margin-right: 6rem; } }
-    @media only screen and (max-width: 22.5em) {
-      .btn-form:not(:last-child) {
-        margin-right: 6rem; } }
+    .btn-form:not(:last-child) {
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+      @media only screen and (max-width: 75em) {
+        .btn-form:not(:last-child) {
+          margin-right: 6rem; } }
+      @media only screen and (max-width: 55em) {
+        .btn-form:not(:last-child) {
+          margin-right: 6rem; } }
+      @media only screen and (max-width: 36.25em) {
+        .btn-form:not(:last-child) {
+          margin-right: 6rem; } }
+      @media only screen and (max-width: 22.5em) {
+        .btn-form:not(:last-child) {
+          margin-right: 6rem; } }
 
 .card {
   -moz-perspective: 150rem;
@@ -562,7 +950,23 @@ body.color-theme-in-transition *:after {
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0; }
+  right: 0;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 36.25em) {
     .card {
       max-width: 80rem;
@@ -574,7 +978,23 @@ body.color-theme-in-transition *:after {
   .card__container {
     display: inline-block;
     position: relative;
-    width: 100%; }
+    width: 100%;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 55em) {
       .card__container {
         width: 33.33333333%; } }
@@ -600,23 +1020,80 @@ body.color-theme-in-transition *:after {
     -o-transition: all 0.8s ease;
     transition: all 0.8s ease; }
     .card__side--front {
-      background-color: var(--color-white-light); }
+      background-color: var(--color-white-light);
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
       @media only screen and (max-width: 36.25em) {
         .card__side--front {
           background-color: var(--color-shadow-50); } }
       @media only screen and (max-width: 22.5em) {
         .card__side--front {
           background-color: var(--color-shadow-50); } }
-      @media only screen and (max-width: 55em) {
-        .card__side--front--TW, .card__side--front--EM, .card__side--front--CU {
-          left: 200%; } }
-      @media only screen and (max-width: 36.25em) {
-        .card__side--front--TW, .card__side--front--EM, .card__side--front--CU {
-          left: 0; } }
+      .card__side--front--TW, .card__side--front--EM, .card__side--front--CU {
+        /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+        /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+        @media only screen and (max-width: 55em) {
+          .card__side--front--TW, .card__side--front--EM, .card__side--front--CU {
+            left: 200%; } }
+        @media only screen and (max-width: 36.25em) {
+          .card__side--front--TW, .card__side--front--EM, .card__side--front--CU {
+            left: 0; } }
     .card__side--back {
       transform: rotateY(180deg);
       background-size: cover;
-      background-position: top; }
+      background-position: top;
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
       @media only screen and (max-width: 55em) {
         .card__side--back {
           transform: rotateY(0); } }
@@ -628,49 +1105,130 @@ body.color-theme-in-transition *:after {
         .card__side--back {
           position: initial;
           width: 100%; } }
-      @media only screen and (max-width: 55em) {
-        .card__side--back--PS, .card__side--back--PV, .card__side--back--ACC {
-          left: 100%; } }
-      @media only screen and (max-width: 36.25em) {
-        .card__side--back--PS, .card__side--back--PV, .card__side--back--ACC {
-          left: 0; } }
+      .card__side--back--PS, .card__side--back--PV, .card__side--back--ACC {
+        /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+        /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+        @media only screen and (max-width: 55em) {
+          .card__side--back--PS, .card__side--back--PV, .card__side--back--ACC {
+            left: 100%; } }
+        @media only screen and (max-width: 36.25em) {
+          .card__side--back--PS, .card__side--back--PV, .card__side--back--ACC {
+            left: 0; } }
       .card__side--back--PS {
-        background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70)); }
+        background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70));
+        /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
         @media only screen and (max-width: 36.25em) {
           .card__side--back--PS {
             background-image: none; } }
       .card__side--back--TW {
-        background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70)); }
+        background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70));
+        /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
         @media only screen and (max-width: 36.25em) {
           .card__side--back--TW {
             background-image: none; } }
       .card__side--back--PV {
-        background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70)); }
+        background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70));
+        /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
         @media only screen and (max-width: 36.25em) {
           .card__side--back--PV {
             background-image: none; } }
       .card__side--back--EM {
-        background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70)); }
+        background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70));
+        /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
         @media only screen and (max-width: 36.25em) {
           .card__side--back--EM {
             background-image: none; } }
       .card__side--back--ACC {
-        background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70)); }
+        background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70));
+        /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
         @media only screen and (max-width: 36.25em) {
           .card__side--back--ACC {
             background-image: none; } }
       .card__side--back--CU {
-        background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70)); }
+        background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70));
+        /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
         @media only screen and (max-width: 36.25em) {
           .card__side--back--CU {
             background-image: none; } }
   .card:hover .card__side--front {
-    transform: rotateY(-180deg); }
+    transform: rotateY(-180deg);
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 55em) {
       .card:hover .card__side--front {
         transform: rotateY(0); } }
   .card:hover .card__side--back {
-    transform: rotateY(0); }
+    transform: rotateY(0);
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 55em) {
       .card:hover .card__side--back {
         transform: rotateY(0); } }
@@ -701,21 +1259,54 @@ body.color-theme-in-transition *:after {
     color: var(--color-white);
     text-align: right;
     position: absolute;
-    right: 0; }
+    right: 0;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     .card__heading--PV, .card__heading--CU {
       top: 25%; }
     .card__heading--PS, .card__heading--EM {
       top: 50%; }
     .card__heading--TW, .card__heading--ACC {
       top: 75%; }
-    @media only screen and (max-width: 55em) {
-      .card__heading--TW, .card__heading--EM, .card__heading--CU {
-        text-align: left;
-        left: 0; } }
-    @media only screen and (max-width: 36.25em) {
-      .card__heading--TW, .card__heading--EM, .card__heading--CU {
-        text-align: right;
-        right: 0; } }
+    .card__heading--TW, .card__heading--EM, .card__heading--CU {
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+      @media only screen and (max-width: 55em) {
+        .card__heading--TW, .card__heading--EM, .card__heading--CU {
+          text-align: left;
+          left: 0; } }
+      @media only screen and (max-width: 36.25em) {
+        .card__heading--TW, .card__heading--EM, .card__heading--CU {
+          text-align: right;
+          right: 0; } }
     @media only screen and (max-width: 36.25em) {
       .card__heading {
         transform: rotate(0);
@@ -750,7 +1341,23 @@ body.color-theme-in-transition *:after {
     text-align: justify;
     text-justify: inter-word;
     width: 95%;
-    line-height: 1.3; }
+    line-height: 1.3;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 36.25em) {
       .card__description {
         width: 90%;
@@ -767,24 +1374,78 @@ body.color-theme-in-transition *:after {
         font-weight: 300;
         line-height: 1.5;
         color: var(--color-white); } }
-    @media only screen and (max-width: 36.25em) {
-      .card__description--PS {
-        background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70)); } }
-    @media only screen and (max-width: 36.25em) {
-      .card__description--TW {
-        background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70)); } }
-    @media only screen and (max-width: 36.25em) {
-      .card__description--PV {
-        background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70)); } }
-    @media only screen and (max-width: 36.25em) {
-      .card__description--EM {
-        background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70)); } }
-    @media only screen and (max-width: 36.25em) {
-      .card__description--ACC {
-        background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70)); } }
-    @media only screen and (max-width: 36.25em) {
-      .card__description--CU {
-        background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70)); } }
+    .card__description--PS {
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+      @media only screen and (max-width: 36.25em) {
+        .card__description--PS {
+          background-image: linear-gradient(to right bottom, var(--color-PS-dark-70), var(--color-PS-light-70)); } }
+    .card__description--TW {
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+      @media only screen and (max-width: 36.25em) {
+        .card__description--TW {
+          background-image: linear-gradient(to right bottom, var(--color-TW-dark-70), var(--color-TW-light-70)); } }
+    .card__description--PV {
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+      @media only screen and (max-width: 36.25em) {
+        .card__description--PV {
+          background-image: linear-gradient(to right bottom, var(--color-PV-dark-70), var(--color-PV-light-70)); } }
+    .card__description--EM {
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+      @media only screen and (max-width: 36.25em) {
+        .card__description--EM {
+          background-image: linear-gradient(to right bottom, var(--color-EM-dark-70), var(--color-EM-light-70)); } }
+    .card__description--ACC {
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+      @media only screen and (max-width: 36.25em) {
+        .card__description--ACC {
+          background-image: linear-gradient(to right bottom, var(--color-ACC-dark-70), var(--color-ACC-light-70)); } }
+    .card__description--CU {
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+      @media only screen and (max-width: 36.25em) {
+        .card__description--CU {
+          background-image: linear-gradient(to right bottom, var(--color-CU-dark-70), var(--color-CU-light-70)); } }
 
 .color-schema__panel {
   position: fixed;
@@ -803,7 +1464,39 @@ body.color-theme-in-transition *:after {
   -webkit-transition: all 0.4s ease;
   -moz-transition: all 0.4s ease;
   -o-transition: all 0.4s ease;
-  transition: all 0.4s ease; }
+  transition: all 0.4s ease;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 55em) {
     .color-schema__panel {
       opacity: 1;
@@ -844,32 +1537,82 @@ body.color-theme-in-transition *:after {
     visibility: visible;
     z-index: 10;
     transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 1.5rem var(--color-shadow-50); }
+    box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 55em) {
       .color-schema__panel:hover {
         transform: translateY(0);
         box-shadow: none; } }
-  @media only screen and (max-width: 55em) {
-    .color-schema__panel--hide {
-      transform: translateY(0);
-      box-shadow: none;
-      border-style: none;
-      left: -35rem; } }
-  @media only screen and (max-width: 45em) {
-    .color-schema__panel--hide {
-      left: -35rem; } }
-  @media only screen and (max-width: 36.25em) {
-    .color-schema__panel--hide {
-      left: -35rem; } }
-  @media only screen and (max-width: 22.5em) {
-    .color-schema__panel--hide {
-      left: -45rem; } }
-  @media only screen and (max-width: 55em) {
-    .color-schema__panel--show {
-      transform: translateY(0);
-      box-shadow: none;
-      border-style: none;
-      left: 0; } }
+  .color-schema__panel--hide {
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+    @media only screen and (max-width: 55em) {
+      .color-schema__panel--hide {
+        transform: translateY(0);
+        box-shadow: none;
+        border-style: none;
+        left: -35rem; } }
+    @media only screen and (max-width: 45em) {
+      .color-schema__panel--hide {
+        left: -35rem; } }
+    @media only screen and (max-width: 36.25em) {
+      .color-schema__panel--hide {
+        left: -35rem; } }
+    @media only screen and (max-width: 22.5em) {
+      .color-schema__panel--hide {
+        left: -45rem; } }
+  .color-schema__panel--show {
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+    @media only screen and (max-width: 55em) {
+      .color-schema__panel--show {
+        transform: translateY(0);
+        box-shadow: none;
+        border-style: none;
+        left: 0; } }
 
 .color-schema__form {
   height: 100%;
@@ -882,7 +1625,15 @@ body.color-theme-in-transition *:after {
   flex: 0 0 70%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between; }
+  justify-content: space-between;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 55em) {
     .color-schema__palette {
       flex: 0 0 65%;
@@ -896,7 +1647,39 @@ body.color-theme-in-transition *:after {
 .color-schema__color-component {
   width: 3.2rem;
   height: 3.2rem;
-  border-radius: 0.2rem; }
+  border-radius: 0.2rem;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 55em) {
     .color-schema__color-component {
       width: 4.5rem;
@@ -955,7 +1738,15 @@ body.color-theme-in-transition *:after {
   -o-transition: all 0.2s ease;
   transition: all 0.2s ease;
   animation-name: appears;
-  animation-duration: 5s; }
+  animation-duration: 5s;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 55em) {
     .color-schema__btn {
       position: relative;
@@ -966,14 +1757,30 @@ body.color-theme-in-transition *:after {
       padding: 1rem; } }
   .color-schema__btn:hover {
     transform: translateY(-0.3rem);
-    box-shadow: 0 1rem 1.5rem var(--color-shadow-50); }
+    box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 55em) {
       .color-schema__btn:hover {
         transform: translateY(0);
         box-shadow: none; } }
   .color-schema__btn:active {
     transform: translateY(-0.1rem);
-    box-shadow: 0 0.5rem 1rem var(--color-shadow-20); }
+    box-shadow: 0 0.5rem 1rem var(--color-shadow-20);
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 55em) {
       .color-schema__btn:active {
         transform: translateY(0);
@@ -982,7 +1789,39 @@ body.color-theme-in-transition *:after {
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
-    transition: all 0.4s ease; }
+    transition: all 0.4s ease;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 55em) {
       .color-schema__btn--mobile {
         display: inline-block;
@@ -1013,7 +1852,15 @@ body.color-theme-in-transition *:after {
       visibility: visible;
       z-index: 10;
       transform: translateY(-0.3rem);
-      box-shadow: 0 1rem 1.5rem var(--color-shadow-50); }
+      box-shadow: 0 1rem 1.5rem var(--color-shadow-50);
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
       @media only screen and (max-width: 55em) {
         .color-schema__btn--mobile:hover ~ .color-schema__panel {
           transform: translateY(0);
@@ -1023,7 +1870,15 @@ body.color-theme-in-transition *:after {
 
 .color-schema__icon {
   height: 100%;
-  width: 100%; }
+  width: 100%;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 55em) {
     .color-schema__icon {
       height: 85%;
@@ -1045,12 +1900,52 @@ body.color-theme-in-transition *:after {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer; }
+    cursor: pointer;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 55em) {
       .color-schema__toggle-label {
         padding: 0; } }
   .color-schema__toggle-text {
-    font-size: 1.2rem; }
+    font-size: 1.2rem;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 55em) {
       .color-schema__toggle-text {
         font-size: 1.8rem;
@@ -1078,7 +1973,39 @@ body.color-theme-in-transition *:after {
     -webkit-transition: all 0.4s ease;
     -moz-transition: all 0.4s ease;
     -o-transition: all 0.4s ease;
-    transition: all 0.4s ease; }
+    transition: all 0.4s ease;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 55em) {
       .color-schema__toggle-input {
         width: 5rem;
@@ -1110,7 +2037,39 @@ body.color-theme-in-transition *:after {
       -webkit-transition: all 0.4s ease;
       -moz-transition: all 0.4s ease;
       -o-transition: all 0.4s ease;
-      transition: all 0.4s ease; }
+      transition: all 0.4s ease;
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
       @media only screen and (max-width: 55em) {
         .color-schema__toggle-input::before {
           width: 2.3rem;
@@ -1136,7 +2095,39 @@ body.color-theme-in-transition *:after {
           top: 1.85rem;
           left: 81%; } }
     .color-schema__toggle-input:checked::before {
-      left: 78%; }
+      left: 78%;
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
       @media only screen and (max-width: 55em) {
         .color-schema__toggle-input:checked::before {
           width: 2.4rem;
@@ -1160,27 +2151,67 @@ body.color-theme-in-transition *:after {
     .color-schema__toggle-input:focus {
       outline: none; }
   .color-schema__toggle--color-top-bottom .color-schema__toggle-text {
-    color: var(--color-sign); }
+    color: var(--color-sign);
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 55em) {
       .color-schema__toggle--color-top-bottom .color-schema__toggle-text {
         color: var(--color-primary-dark); } }
   .color-schema__toggle--color-top-bottom .color-schema__toggle-input {
-    border: 0.2rem solid var(--color-sign); }
+    border: 0.2rem solid var(--color-sign);
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 55em) {
       .color-schema__toggle--color-top-bottom .color-schema__toggle-input {
         border: 0.2rem solid var(--color-primary-dark); } }
     .color-schema__toggle--color-top-bottom .color-schema__toggle-input::before {
-      background-color: var(--color-sign); }
+      background-color: var(--color-sign);
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
       @media only screen and (max-width: 55em) {
         .color-schema__toggle--color-top-bottom .color-schema__toggle-input::before {
           background-color: var(--color-primary-dark); } }
     .color-schema__toggle--color-top-bottom .color-schema__toggle-input:checked {
-      background-color: var(--color-sign); }
+      background-color: var(--color-sign);
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
       @media only screen and (max-width: 55em) {
         .color-schema__toggle--color-top-bottom .color-schema__toggle-input:checked {
           background-color: var(--color-primary-dark); } }
     .color-schema__toggle--color-top-bottom .color-schema__toggle-input:checked::before {
-      background-color: var(--color-primary-dark); }
+      background-color: var(--color-primary-dark);
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
       @media only screen and (max-width: 55em) {
         .color-schema__toggle--color-top-bottom .color-schema__toggle-input:checked::before {
           background-color: var(--color-menu-bg); } }
@@ -1193,7 +2224,15 @@ body.color-theme-in-transition *:after {
     .color-schema__toggle--color-main .color-schema__toggle-input:checked {
       background-color: var(--color-primary-dark); }
     .color-schema__toggle--color-main .color-schema__toggle-input:checked::before {
-      background-color: var(--color-bg); }
+      background-color: var(--color-bg);
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
       @media only screen and (max-width: 55em) {
         .color-schema__toggle--color-main .color-schema__toggle-input:checked::before {
           background-color: var(--color-menu-bg); } }
@@ -1204,7 +2243,15 @@ body.color-theme-in-transition *:after {
 
 .color-schema--color-main {
   fill: var(--color-primary-dark);
-  border: 0.2rem solid var(--color-primary-dark); }
+  border: 0.2rem solid var(--color-primary-dark);
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 55em) {
     .color-schema--color-main {
       fill: var(--color-sign);
@@ -1223,7 +2270,15 @@ body.color-theme-in-transition *:after {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
-  transition: all 0.5s ease; }
+  transition: all 0.5s ease;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (hover: none) {
     .message {
       position: initial;
@@ -1247,7 +2302,15 @@ body.color-theme-in-transition *:after {
     overflow-y: auto;
     opacity: 0;
     transform: translate(-50%, -50%) scale(0.5);
-    transition: all 0.4s 0.2s; }
+    transition: all 0.4s 0.2s;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (hover: none) {
       .message__form {
         display: block;
@@ -1267,7 +2330,39 @@ body.color-theme-in-transition *:after {
     text-transform: uppercase;
     font-size: 1.6rem;
     font-weight: 700;
-    color: var(--color-primary-dark); }
+    color: var(--color-primary-dark);
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 75em) {
       .message__header {
         margin-bottom: 3rem;
@@ -1293,14 +2388,30 @@ body.color-theme-in-transition *:after {
     visibility: visible; }
     .message--shown .message__form {
       opacity: 1;
-      transform: translate(-50%, -50%) scale(1); }
+      transform: translate(-50%, -50%) scale(1);
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
       @media only screen and (hover: none) {
         .message--shown .message__form {
           transform: initial;
           overflow-y: initial; } }
   .message:target .message__form {
     opacity: 1;
-    transform: translate(-50%, -50%) scale(1); }
+    transform: translate(-50%, -50%) scale(1);
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (hover: none) {
       .message:target .message__form {
         transform: initial;
@@ -1318,7 +2429,23 @@ body.color-theme-in-transition *:after {
     -webkit-transition: all 0.2s ease;
     -moz-transition: all 0.2s ease;
     -o-transition: all 0.2s ease;
-    transition: all 0.2s ease; }
+    transition: all 0.2s ease;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (hover: none) {
       .message__close {
         display: none; } }
@@ -1328,233 +2455,531 @@ body.color-theme-in-transition *:after {
     .message__close:hover {
       color: var(--color-primary-dark); }
 
-@media only screen and (hover: none) {
-  .form {
-    width: 100%;
-    padding-bottom: 3rem; } }
-
-.form__group--btns {
-  text-align: center;
-  position: relative; }
-
-.form__group--message {
-  height: 15rem;
-  margin-bottom: 2rem; }
-  @media only screen and (max-width: 75em) {
-    .form__group--message {
-      height: 18rem;
-      margin-bottom: 3rem; } }
-  @media only screen and (max-width: 55em) {
-    .form__group--message {
-      height: 23rem;
-      margin-bottom: 3rem; } }
-  @media only screen and (max-width: 36.25em) {
-    .form__group--message {
-      height: 27rem;
-      margin-bottom: 3rem; } }
-  @media only screen and (max-width: 22.5em) {
-    .form__group--message {
-      height: 30rem;
-      margin-bottom: 3rem; } }
-
-.form__field {
-  height: 3.5rem;
-  margin-bottom: 1.5rem; }
-  @media only screen and (max-width: 75em) {
-    .form__field {
-      height: 4rem;
-      margin-bottom: 2rem; } }
-  @media only screen and (max-width: 55em) {
-    .form__field {
-      height: 6.5rem;
-      margin-bottom: 3rem; } }
-  @media only screen and (max-width: 36.25em) {
-    .form__field {
-      height: 8rem;
-      margin-bottom: 3rem; } }
-  @media only screen and (max-width: 22.5em) {
-    .form__field {
-      height: 10rem;
-      margin-bottom: 3rem; } }
-
-.form__input {
-  display: inline-block;
-  height: 3.5rem;
-  width: 100%;
-  font-size: 1.6rem;
-  font-family: inherit;
-  color: inherit;
-  padding: 1.1rem .8rem .2rem;
-  border-radius: 0.5rem;
-  background-color: transparent;
-  border: 0.2rem solid var(--color-primary-dark);
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
-  @media only screen and (max-width: 75em) {
-    .form__input {
-      font-size: 1.8rem;
-      height: 4rem;
-      padding: 1.1rem .8rem .2rem; } }
-  @media only screen and (max-width: 55em) {
-    .form__input {
-      font-size: 2.2rem;
-      height: 6.5rem;
-      padding: 3rem 1rem .5rem; } }
-  @media only screen and (max-width: 36.25em) {
-    .form__input {
-      font-size: 3rem;
-      height: 8rem; } }
-  @media only screen and (max-width: 22.5em) {
-    .form__input {
-      font-size: 4.3rem;
-      height: 10rem; } }
-  .form__input::placeholder {
-    color: transparent; }
-  .form__input--message {
-    resize: none;
+.form {
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+  @media only screen and (hover: none) {
+    .form {
+      width: 100%;
+      padding-bottom: 3rem; } }
+  .form__group--btns {
+    text-align: center;
+    position: relative; }
+  .form__group--message {
     height: 15rem;
-    max-height: 15rem; }
+    margin-bottom: 2rem;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 75em) {
-      .form__input--message {
+      .form__group--message {
         height: 18rem;
-        max-height: 18rem; } }
+        margin-bottom: 3rem; } }
     @media only screen and (max-width: 55em) {
-      .form__input--message {
+      .form__group--message {
         height: 23rem;
-        max-height: 23rem; } }
+        margin-bottom: 3rem; } }
     @media only screen and (max-width: 36.25em) {
-      .form__input--message {
+      .form__group--message {
         height: 27rem;
-        max-height: 27rem; } }
+        margin-bottom: 3rem; } }
     @media only screen and (max-width: 22.5em) {
-      .form__input--message {
+      .form__group--message {
         height: 30rem;
-        max-height: 30rem; } }
-  .form__input:focus {
-    outline: none;
-    box-shadow: 0 1rem 2rem var(--color-shadow-20); }
-    @media only screen and (hover: none) {
-      .form__input:focus {
-        box-shadow: none; } }
-    .form__input:focus:invalid {
-      border: 0.2rem solid var(--color-accent); }
-
-.form__label {
-  display: inline-block;
-  position: relative;
-  height: 3.5rem;
-  font-size: calc(1.6rem * .6);
-  color: var(--color-primary-dark);
-  padding-top: .5rem;
-  padding-left: 1rem;
-  -webkit-transition: all 0.3s ease;
-  -moz-transition: all 0.3s ease;
-  -o-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
-  @media only screen and (max-width: 75em) {
-    .form__label {
-      height: 4rem;
-      font-size: calc(1.8rem * .6);
-      padding-top: .5rem;
-      padding-left: 1rem; } }
-  @media only screen and (max-width: 55em) {
-    .form__label {
-      height: 6.5rem;
-      font-size: calc(2.2rem * .7);
-      padding-top: 1rem;
-      padding-left: 1rem; } }
-  @media only screen and (max-width: 36.25em) {
-    .form__label {
-      height: 8rem;
-      font-size: calc(3rem * .6);
-      padding-top: 1rem;
-      padding-left: 1rem; } }
-  @media only screen and (max-width: 22.5em) {
-    .form__label {
-      height: 10rem;
-      font-size: calc(4.3rem * .5);
-      padding-top: 1rem;
-      padding-left: 1rem; } }
-  .form__label--not-last {
-    top: -4.3rem; }
+        margin-bottom: 3rem; } }
+  .form__field {
+    height: 3.5rem;
+    margin-bottom: 1.5rem;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 75em) {
-      .form__label--not-last {
-        top: -4.7rem; } }
+      .form__field {
+        height: 4rem;
+        margin-bottom: 2rem; } }
     @media only screen and (max-width: 55em) {
-      .form__label--not-last {
-        top: -7rem; } }
+      .form__field {
+        height: 6.5rem;
+        margin-bottom: 3rem; } }
     @media only screen and (max-width: 36.25em) {
-      .form__label--not-last {
-        top: -9rem; } }
+      .form__field {
+        height: 8rem;
+        margin-bottom: 3rem; } }
     @media only screen and (max-width: 22.5em) {
-      .form__label--not-last {
-        top: -11.5rem; } }
-  .form__label--last {
-    top: -16.5rem; }
+      .form__field {
+        height: 10rem;
+        margin-bottom: 3rem; } }
+  .form__input {
+    display: inline-block;
+    height: 3.5rem;
+    width: 100%;
+    font-size: 1.6rem;
+    font-family: inherit;
+    color: inherit;
+    padding: 1.1rem .8rem .2rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    border: 0.2rem solid var(--color-primary-dark);
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 75em) {
-      .form__label--last {
-        top: -19.5rem; } }
+      .form__input {
+        font-size: 1.8rem;
+        height: 4rem;
+        padding: 1.1rem .8rem .2rem; } }
     @media only screen and (max-width: 55em) {
-      .form__label--last {
-        top: -24.5rem; } }
+      .form__input {
+        font-size: 2.2rem;
+        height: 6.5rem;
+        padding: 3rem 1rem .5rem; } }
     @media only screen and (max-width: 36.25em) {
-      .form__label--last {
-        top: -29rem; } }
+      .form__input {
+        font-size: 3rem;
+        height: 8rem; } }
     @media only screen and (max-width: 22.5em) {
-      .form__label--last {
-        top: -33.1rem; } }
-
-.form__input:placeholder-shown + .form__label--not-last {
-  top: -3.7rem;
-  font-size: calc(1.6rem * 1);
-  padding-top: .5rem; }
-  @media only screen and (max-width: 75em) {
-    .form__input:placeholder-shown + .form__label--not-last {
-      top: -4rem;
-      font-size: calc(1.8rem * 1);
-      padding-top: .5rem; } }
-  @media only screen and (max-width: 55em) {
-    .form__input:placeholder-shown + .form__label--not-last {
-      top: -6.5rem;
-      font-size: calc(2.2rem * 1);
-      padding-top: 1.5rem; } }
-  @media only screen and (max-width: 36.25em) {
-    .form__input:placeholder-shown + .form__label--not-last {
-      top: -8rem;
-      font-size: calc(3rem * 1);
-      padding-top: 1.8rem; } }
-  @media only screen and (max-width: 22.5em) {
-    .form__input:placeholder-shown + .form__label--not-last {
-      top: -10rem;
-      font-size: calc(4.3rem * .8);
-      padding-top: 2.5rem; } }
-
-.form__input:placeholder-shown + .form__label--last {
-  top: -17rem;
-  font-size: calc(1.8rem * 1);
-  padding-top: 1.5rem; }
-  @media only screen and (max-width: 75em) {
-    .form__input:placeholder-shown + .form__label--last {
-      top: -20rem;
-      font-size: calc(1.8rem * 1);
-      padding-top: 1.5rem; } }
-  @media only screen and (max-width: 55em) {
-    .form__input:placeholder-shown + .form__label--last {
-      top: -24rem;
-      font-size: calc(2.2rem * 1);
-      padding-top: 1.5rem; } }
-  @media only screen and (max-width: 36.25em) {
-    .form__input:placeholder-shown + .form__label--last {
-      top: -28rem;
-      font-size: calc(3rem * 1);
-      padding-top: 1.8rem; } }
-  @media only screen and (max-width: 22.5em) {
-    .form__input:placeholder-shown + .form__label--last {
-      top: -32rem;
-      font-size: calc(4.3rem * .8);
-      padding-top: 2.5rem; } }
+      .form__input {
+        font-size: 4.3rem;
+        height: 10rem; } }
+    .form__input::placeholder {
+      color: transparent; }
+    .form__input--message {
+      resize: none;
+      height: 15rem;
+      max-height: 15rem;
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+      @media only screen and (max-width: 75em) {
+        .form__input--message {
+          height: 18rem;
+          max-height: 18rem; } }
+      @media only screen and (max-width: 55em) {
+        .form__input--message {
+          height: 23rem;
+          max-height: 23rem; } }
+      @media only screen and (max-width: 36.25em) {
+        .form__input--message {
+          height: 27rem;
+          max-height: 27rem; } }
+      @media only screen and (max-width: 22.5em) {
+        .form__input--message {
+          height: 30rem;
+          max-height: 30rem; } }
+    .form__input:focus {
+      outline: none;
+      box-shadow: 0 1rem 2rem var(--color-shadow-20);
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+      @media only screen and (hover: none) {
+        .form__input:focus {
+          box-shadow: none; } }
+      .form__input:focus:invalid {
+        border: 0.2rem solid var(--color-accent); }
+  .form__label {
+    display: inline-block;
+    position: relative;
+    height: 3.5rem;
+    font-size: calc(1.6rem * .6);
+    color: var(--color-primary-dark);
+    padding-top: .5rem;
+    padding-left: 1rem;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+    @media only screen and (max-width: 75em) {
+      .form__label {
+        height: 4rem;
+        font-size: calc(1.8rem * .6);
+        padding-top: .5rem;
+        padding-left: 1rem; } }
+    @media only screen and (max-width: 55em) {
+      .form__label {
+        height: 6.5rem;
+        font-size: calc(2.2rem * .7);
+        padding-top: 1rem;
+        padding-left: 1rem; } }
+    @media only screen and (max-width: 36.25em) {
+      .form__label {
+        height: 8rem;
+        font-size: calc(3rem * .6);
+        padding-top: 1rem;
+        padding-left: 1rem; } }
+    @media only screen and (max-width: 22.5em) {
+      .form__label {
+        height: 10rem;
+        font-size: calc(4.3rem * .5);
+        padding-top: 1rem;
+        padding-left: 1rem; } }
+    .form__label--not-last {
+      top: -4.3rem;
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+      @media only screen and (max-width: 75em) {
+        .form__label--not-last {
+          top: -4.7rem; } }
+      @media only screen and (max-width: 55em) {
+        .form__label--not-last {
+          top: -7rem; } }
+      @media only screen and (max-width: 36.25em) {
+        .form__label--not-last {
+          top: -9rem; } }
+      @media only screen and (max-width: 22.5em) {
+        .form__label--not-last {
+          top: -11.5rem; } }
+    .form__label--last {
+      top: -16.5rem;
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+      @media only screen and (max-width: 75em) {
+        .form__label--last {
+          top: -19.5rem; } }
+      @media only screen and (max-width: 55em) {
+        .form__label--last {
+          top: -24.5rem; } }
+      @media only screen and (max-width: 36.25em) {
+        .form__label--last {
+          top: -29rem; } }
+      @media only screen and (max-width: 22.5em) {
+        .form__label--last {
+          top: -33.1rem; } }
+  .form__input:placeholder-shown + .form__label--not-last {
+    top: -3.7rem;
+    font-size: calc(1.6rem * 1);
+    padding-top: .5rem;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+    @media only screen and (max-width: 75em) {
+      .form__input:placeholder-shown + .form__label--not-last {
+        top: -4rem;
+        font-size: calc(1.8rem * 1);
+        padding-top: .5rem; } }
+    @media only screen and (max-width: 55em) {
+      .form__input:placeholder-shown + .form__label--not-last {
+        top: -6.5rem;
+        font-size: calc(2.2rem * 1);
+        padding-top: 1.5rem; } }
+    @media only screen and (max-width: 36.25em) {
+      .form__input:placeholder-shown + .form__label--not-last {
+        top: -8rem;
+        font-size: calc(3rem * 1);
+        padding-top: 1.8rem; } }
+    @media only screen and (max-width: 22.5em) {
+      .form__input:placeholder-shown + .form__label--not-last {
+        top: -10rem;
+        font-size: calc(4.3rem * .8);
+        padding-top: 2.5rem; } }
+  .form__input:placeholder-shown + .form__label--last {
+    top: -17rem;
+    font-size: calc(1.8rem * 1);
+    padding-top: 1.5rem;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+    @media only screen and (max-width: 75em) {
+      .form__input:placeholder-shown + .form__label--last {
+        top: -20rem;
+        font-size: calc(1.8rem * 1);
+        padding-top: 1.5rem; } }
+    @media only screen and (max-width: 55em) {
+      .form__input:placeholder-shown + .form__label--last {
+        top: -24rem;
+        font-size: calc(2.2rem * 1);
+        padding-top: 1.5rem; } }
+    @media only screen and (max-width: 36.25em) {
+      .form__input:placeholder-shown + .form__label--last {
+        top: -28rem;
+        font-size: calc(3rem * 1);
+        padding-top: 1.8rem; } }
+    @media only screen and (max-width: 22.5em) {
+      .form__input:placeholder-shown + .form__label--last {
+        top: -32rem;
+        font-size: calc(4.3rem * .8);
+        padding-top: 2.5rem; } }
 
 .navigation {
   position: absolute;
@@ -1566,9 +2991,25 @@ body.color-theme-in-transition *:after {
   -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   animation-name: appears;
-  animation-duration: 4.5s;
+  animation-duration: 3s;
   animation-timing-function: ease-in;
-  backface-visibility: hidden; }
+  backface-visibility: hidden;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 65em) {
     .navigation {
       right: 1.5%;
@@ -1581,7 +3022,15 @@ body.color-theme-in-transition *:after {
       border-radius: 0;
       z-index: 5; } }
   .navigation--top {
-    top: 0; }
+    top: 0;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 36.25em) {
       .navigation--top {
         top: 0;
@@ -1589,7 +3038,15 @@ body.color-theme-in-transition *:after {
         width: 100%;
         border-radius: 0; } }
   .navigation--bottom {
-    bottom: 0rem; }
+    bottom: 0rem;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 36.25em) {
       .navigation--bottom {
         top: 0;
@@ -1598,13 +3055,29 @@ body.color-theme-in-transition *:after {
         border-radius: 0; } }
   .navigation--fixed {
     position: fixed;
-    top: calc((100vh - 8rem * 6) / 2); }
+    top: calc((100vh - 8rem * 6) / 2);
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 36.25em) {
       .navigation--fixed {
         top: 0;
         left: 0; } }
   .navigation__list {
-    list-style: none; }
+    list-style: none;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 36.25em) {
       .navigation__list {
         display: table;
@@ -1613,14 +3086,30 @@ body.color-theme-in-transition *:after {
   .navigation__item {
     height: 8rem;
     background-color: var(--color-menu-bg);
-    color: var(--color-menu-font); }
+    color: var(--color-menu-font);
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 36.25em) {
       .navigation__item {
         display: table-cell; } }
     .navigation__item--active {
       background-color: var(--color-primary-dark); }
     .navigation__item:hover:not(.navigation__item--active) {
-      color: var(--color-primary-dark); }
+      color: var(--color-primary-dark);
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
       @media only screen and (max-width: 36.25em) {
         .navigation__item:hover:not(.navigation__item--active) {
           color: var(--color-sign); } }
@@ -1633,7 +3122,31 @@ body.color-theme-in-transition *:after {
     text-decoration: none;
     font-size: inherit;
     font-weight: 600;
-    color: inherit; }
+    color: inherit;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 75em) {
       .navigation__link {
         font-size: 1.6rem; } }
@@ -1649,7 +3162,23 @@ body.color-theme-in-transition *:after {
   padding: 3rem 6rem 6rem;
   font-family: librebaskerville-italic, serif;
   font-size: 2.5rem;
-  font-style: italic; }
+  font-style: italic;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 36.25em) {
     .section-intro {
       font-size: 3rem; } }
@@ -1658,7 +3187,31 @@ body.color-theme-in-transition *:after {
       font-size: 4rem; } }
 
 .section-title {
-  margin: 5rem 0; }
+  margin: 5rem 0;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 45em) {
     .section-title {
       padding: 0;
@@ -1669,7 +3222,31 @@ body.color-theme-in-transition *:after {
       margin-bottom: 5rem; } }
   .section-title__logo-box {
     display: inline-block;
-    margin-right: 1.5rem; }
+    margin-right: 1.5rem;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 45em) {
       .section-title__logo-box {
         margin-right: 1.5rem; } }
@@ -1685,7 +3262,31 @@ body.color-theme-in-transition *:after {
     vertical-align: -0.7rem;
     stroke: var(--color-primary-dark);
     fill: var(--color-primary-dark);
-    stroke-width: 0.5; }
+    stroke-width: 0.5;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 45em) {
       .section-title__logo {
         height: 7rem;
@@ -1709,7 +3310,31 @@ body.color-theme-in-transition *:after {
     color: transparent;
     font-size: 5.5rem;
     font-weight: 300;
-    letter-spacing: 0.3rem; }
+    letter-spacing: 0.3rem;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 45em) {
       .section-title__text {
         font-size: 6.5rem;
@@ -1731,7 +3356,39 @@ body.color-theme-in-transition *:after {
 
 .tool__name {
   display: inline-block;
-  width: 70%; }
+  width: 70%;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 75em) {
     .tool__name {
       top: 5%;
@@ -1748,7 +3405,15 @@ body.color-theme-in-transition *:after {
       font-size: 4.3rem; } }
 
 .tool__score {
-  float: right; }
+  float: right;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 75em) {
     .tool__score {
       max-width: 35%; } }
@@ -1765,7 +3430,39 @@ body.color-theme-in-transition *:after {
   -webkit-transition: all 0.3s ease;
   -moz-transition: all 0.3s ease;
   -o-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 75em) {
     .tool__icon {
       top: 0.3rem;
@@ -1794,12 +3491,28 @@ body.color-theme-in-transition *:after {
     fill: var(--color-score); }
 
 .tool:hover {
-  background: var(--color-score-hover); }
+  background: var(--color-score-hover);
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (hover: none) {
     .tool:hover {
       background: none; } }
   .tool:hover .tool__icon {
-    margin-left: 1.5px; }
+    margin-left: 1.5px;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (hover: none) {
       .tool:hover .tool__icon {
         margin-left: 0; } }
@@ -1813,7 +3526,23 @@ body.color-theme-in-transition *:after {
     float: left;
     shape-outside: circle(50% at 50% 50%);
     clip-path: circle(50% at 50% 50%);
-    transform: translate(-2rem); }
+    transform: translate(-2rem);
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 36.25em) {
       .about__shape {
         width: 30rem;
@@ -1831,7 +3560,39 @@ body.color-theme-in-transition *:after {
     filter: brightness(90%) sepia(20%); }
   .about__text {
     font-size: 1.6rem;
-    text-align: justify; }
+    text-align: justify;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 75em) {
       .about__text {
         font-size: 1.8rem; } }
@@ -1846,21 +3607,69 @@ body.color-theme-in-transition *:after {
         font-size: 4.3rem; } }
   .about__social-media-box {
     margin-top: calc(6rem / 2);
-    text-align: center; }
+    text-align: center;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 36.25em) {
       .about__social-media-box {
         margin: 5rem 0 3rem; } }
   .about__link:link, .about__link:visited, .about__link:hover, .about__link:active {
     text-decoration: none; }
   .about__link:not(:last-child) {
-    margin-right: 6rem; }
+    margin-right: 6rem;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 36.25em) {
       .about__link:not(:last-child) {
         margin-right: 8rem; } }
   .about__icon {
     height: 3.2rem;
     width: 3.2rem;
-    fill: var(--color-primary-dark); }
+    fill: var(--color-primary-dark);
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 75em) {
       .about__icon {
         height: 3.2rem;
@@ -1886,7 +3695,23 @@ body.color-theme-in-transition *:after {
     padding: 0 2rem 2rem; }
   .contacts__contact-box {
     text-align: center;
-    margin: 2rem auto; }
+    margin: 2rem auto;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 36.25em) {
       .contacts__contact-box {
         margin: 2rem auto; } }
@@ -1904,7 +3729,23 @@ body.color-theme-in-transition *:after {
   .contacts__icon {
     height: 3.2rem;
     width: 3.2rem;
-    vertical-align: middle; }
+    vertical-align: middle;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 36.25em) {
       .contacts__icon {
         height: 6rem;
@@ -1918,7 +3759,23 @@ body.color-theme-in-transition *:after {
     padding-left: 1rem;
     line-height: 100%;
     vertical-align: middle;
-    font-weight: 400; }
+    font-weight: 400;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 36.25em) {
       .contacts__text {
         font-size: 3rem;
@@ -1930,7 +3787,15 @@ body.color-theme-in-transition *:after {
   .contacts__btn-box {
     width: 100%;
     margin: 3rem 0;
-    text-align: center; }
+    text-align: center;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (hover: none) {
       .contacts__btn-box {
         display: none; } }
@@ -1941,7 +3806,23 @@ body.color-theme-in-transition *:after {
   color: var(--color-sign);
   font-size: 1.3rem;
   text-align: center;
-  position: relative; }
+  position: relative;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 36.25em) {
     .footer {
       padding: 5rem 15rem;
@@ -1961,9 +3842,33 @@ body.color-theme-in-transition *:after {
     text-align: center;
     border-radius: 0 0 0.5rem 0.5rem;
     animation-name: appears;
-    animation-duration: 4.5s;
+    animation-duration: 3s;
     animation-timing-function: ease-in;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 65em) {
       .footer__button {
         right: 1.5%;
@@ -1986,7 +3891,39 @@ body.color-theme-in-transition *:after {
     fill: var(--color-sign);
     position: relative;
     top: 50%;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 75em) {
       .footer__icon-up {
         height: 4.5rem;
@@ -2005,7 +3942,15 @@ body.color-theme-in-transition *:after {
         width: 9rem; } }
   .footer__logo-box {
     padding-top: 8rem;
-    padding-bottom: 2rem; }
+    padding-bottom: 2rem;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 22.5em) {
       .footer__logo-box {
         padding-top: 0;
@@ -2015,7 +3960,39 @@ body.color-theme-in-transition *:after {
     width: 6rem;
     stroke: var(--color-sign);
     fill: var(--color-sign);
-    stroke-width: 0.5; }
+    stroke-width: 0.5;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 75em) {
       .footer__logo {
         height: 6.5rem;
@@ -2026,12 +4003,12 @@ body.color-theme-in-transition *:after {
         width: 7rem; } }
     @media only screen and (max-width: 36.25em) {
       .footer__logo {
-        height: 9rem;
-        width: 9rem; } }
+        height: 13rem;
+        width: 13rem; } }
     @media only screen and (max-width: 22.5em) {
       .footer__logo {
-        height: 11rem;
-        width: 11rem; } }
+        height: 13rem;
+        width: 13rem; } }
   .footer__hr {
     box-sizing: content-box;
     height: 0;
@@ -2063,9 +4040,25 @@ body.color-theme-in-transition *:after {
     display: table;
     clear: both; }
   .row [class^="col-"] {
-    float: left; }
+    float: left;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     .row [class^="col-"]:not(:last-child) {
-      margin-right: 6rem; }
+      margin-right: 6rem;
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
       @media only screen and (max-width: 55em) {
         .row [class^="col-"]:not(:last-child) {
           margin-right: 0; } }
@@ -2075,30 +4068,137 @@ body.color-theme-in-transition *:after {
 
 .header {
   height: 100vh;
-  background-image: linear-gradient(to right bottom, var(--color-primary-dark-70), var(--color-primary-light-70)), url(../img/header.jpg);
-  background-size: cover;
-  background-position: top;
-  background-attachment: fixed;
-  color: var(--color-sign);
-  position: relative;
-  background-blend-mode: multiply; }
-  @media (min-resolution: 192dpi) and (min-width: 56.25em), (min-width: 75em) {
-    .header {
-      background-image: linear-gradient(to right bottom, var(--color-primary-dark-70), var(--color-primary-light-70)), url(../img/header-large.jpg); } }
-  @media only screen and (hover: none) {
-    .header {
-      background-attachment: initial; } }
+  /**
+  * 2021 0116 New landing screen animations
+  */ }
   .header__logo-box {
     position: absolute;
-    top: 15%;
-    left: 50%;
+    top: 17vh;
+    left: 22vw;
     transform: translate(-50%, -50%);
+    z-index: 1;
     animation-name: appears;
-    animation-duration: 5.5s; }
+    animation-duration: 8.5s;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+    @media only screen and (min-width: 112.5em) {
+      .header__logo-box {
+        top: 17vh;
+        left: 22vw; } }
+    @media only screen and (max-width: 75em) {
+      .header__logo-box {
+        top: 18vh;
+        left: 17.5vw; } }
+    @media only screen and (max-width: 55em) {
+      .header__logo-box {
+        top: 18vh;
+        left: 13vw; } }
+    @media only screen and (max-width: 45em) {
+      .header__logo-box {
+        top: 13vh;
+        left: 13vw; } }
+    @media only screen and (max-width: 36.25em) {
+      .header__logo-box {
+        top: 12vh;
+        left: 10vw; } }
+    @media only screen and (max-width: 30em) {
+      .header__logo-box {
+        left: 17vw;
+        animation-duration: 4.5s; } }
+    @media only screen and (max-width: 22.5em) {
+      .header__logo-box {
+        top: 13vh;
+        left: 17.5vw; } }
   .header__logo {
     height: 6rem;
     width: 6rem;
-    fill: var(--color-sign); }
+    fill: var(--color-sign);
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 75em) {
       .header__logo {
         height: 6.5rem;
@@ -2109,79 +4209,271 @@ body.color-theme-in-transition *:after {
         width: 7rem; } }
     @media only screen and (max-width: 36.25em) {
       .header__logo {
-        height: 9rem;
-        width: 9rem; } }
+        height: 13rem;
+        width: 13rem; } }
     @media only screen and (max-width: 22.5em) {
       .header__logo {
-        height: 11rem;
-        width: 11rem; } }
-  .header__text-box {
-    position: relative;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    display: inline-block;
-    text-align: center; }
-  .header__main {
-    text-transform: uppercase;
-    font-size: 5rem;
-    font-weight: 400;
-    letter-spacing: 2rem;
-    animation-name: moveInDown;
-    animation-duration: 2s;
-    animation-timing-function: ease-in; }
+        height: 13rem;
+        width: 13rem; } }
+  .header__title {
+    position: absolute;
+    top: 20vh;
+    left: 20vw;
+    font-size: 5.5rem;
+    font-weight: lighter;
+    letter-spacing: -.3rem;
+    z-index: 1;
+    height: 50%;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+    @media only screen and (max-width: 75em) {
+      .header__title {
+        top: 20vh;
+        left: 15vw;
+        font-size: 6rem;
+        letter-spacing: -.3rem; } }
+    @media only screen and (max-width: 55em) {
+      .header__title {
+        top: 20vh;
+        left: 10vw;
+        font-size: 7rem;
+        letter-spacing: -.3rem; } }
     @media only screen and (max-width: 45em) {
-      .header__main {
-        letter-spacing: 1.5rem; } }
+      .header__title {
+        top: 15vh;
+        left: 10vw;
+        font-size: 8rem;
+        letter-spacing: -.3rem; } }
     @media only screen and (max-width: 36.25em) {
-      .header__main {
-        font-size: 7.5rem;
-        letter-spacing: 0.75rem; } }
-    @media only screen and (max-width: 22.5em) {
-      .header__main {
+      .header__title {
+        top: 15vh;
+        left: 5vw;
         font-size: 11rem;
-        letter-spacing: 0.75rem; } }
-  .header__hr {
-    box-sizing: content-box;
-    height: 0;
-    overflow: visible;
-    margin: 0.1rem auto;
-    width: 65.6rem;
-    border: 1px solid var(--color-sign);
-    animation-name: appears;
-    animation-duration: 4s; }
-    @media only screen and (max-width: 45em) {
-      .header__hr {
-        width: 59rem; } }
-    @media only screen and (max-width: 36.25em) {
-      .header__hr {
-        width: 68.5rem;
-        margin: 0 auto 1rem; } }
+        letter-spacing: -.3rem; } }
+    @media only screen and (max-width: 30em) {
+      .header__title {
+        top: 15vh;
+        left: 10vw;
+        font-size: 13rem;
+        letter-spacing: -.3rem; } }
     @media only screen and (max-width: 22.5em) {
-      .header__hr {
-        width: 65rem;
-        margin: 0 auto 2rem; } }
-  .header__sub {
-    text-transform: lowercase;
-    font-size: 2.2rem;
-    font-weight: 300;
-    letter-spacing: 0.97rem;
-    animation-name: appears;
-    animation-duration: 4s; }
-    @media only screen and (max-width: 45em) {
-      .header__sub {
-        letter-spacing: 0.45rem;
-        font-size: 2.8rem; } }
-    @media only screen and (max-width: 36.25em) {
-      .header__sub {
-        letter-spacing: 0.4rem;
-        font-size: 3.5rem; } }
-    @media only screen and (max-width: 22.5em) {
-      .header__sub {
-        letter-spacing: 0.46rem;
-        font-size: 3.3rem; } }
-  .header__last-letter {
-    letter-spacing: 0px; }
+      .header__title {
+        top: 15vh;
+        left: 10vw;
+        font-size: 13rem;
+        letter-spacing: -.3rem; } }
+  .header__text {
+    position: relative;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: 1.3;
+    color: #ffffff;
+    white-space: nowrap;
+    overflow: hidden;
+    cursor: default;
+    border-right: 2px solid #ffffff; }
+    .header__text:nth-child(1) {
+      opacity: 0;
+      width: 100%;
+      animation: type2 0.8s steps(40, end) 3s forwards;
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+      @media only screen and (max-width: 30em) {
+        .header__text:nth-child(1) {
+          animation: type2 0.8s steps(40, end) forwards; } }
+    .header__text:nth-child(2) {
+      top: -20px;
+      opacity: 0;
+      width: 50%;
+      animation: type2 0.4s steps(40, end) 3.8s forwards;
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+      @media only screen and (max-width: 36.25em) {
+        .header__text:nth-child(2) {
+          top: -25px; } }
+      @media only screen and (max-width: 30em) {
+        .header__text:nth-child(2) {
+          animation: type2 0.4s steps(40, end) 0.8s forwards; } }
+    .header__text:nth-child(3) {
+      top: -40px;
+      opacity: 0;
+      width: 45%;
+      animation: type2 0.4s steps(40, end) 4.2s forwards;
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+      @media only screen and (max-width: 36.25em) {
+        .header__text:nth-child(3) {
+          top: -50px; } }
+      @media only screen and (max-width: 30em) {
+        .header__text:nth-child(3) {
+          animation: type2 0.4s steps(40, end) 1.2s forwards; } }
+    .header__text:nth-child(4) {
+      top: -60px;
+      opacity: 0;
+      width: 105%;
+      animation: type2 0.8s steps(40, end) 4.6s forwards;
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+      @media only screen and (max-width: 36.25em) {
+        .header__text:nth-child(4) {
+          top: -75px; } }
+      @media only screen and (max-width: 30em) {
+        .header__text:nth-child(4) {
+          animation: type2 0.8s steps(40, end) 1.6s forwards; } }
+    .header__text:nth-child(5) {
+      top: -80px;
+      opacity: 0;
+      width: 85%;
+      animation: type2 0.7s steps(40, end) 5.4s forwards;
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+      @media only screen and (max-width: 36.25em) {
+        .header__text:nth-child(5) {
+          top: -100px; } }
+      @media only screen and (max-width: 30em) {
+        .header__text:nth-child(5) {
+          animation: type2 0.7s steps(40, end) 2.4s forwards; } }
+    .header__text:nth-child(6) {
+      top: -100px;
+      opacity: 0;
+      width: 88%;
+      animation: type3 0.7s steps(40, end) 6.1s forwards, cursor 0.5s step-end infinite alternate;
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+      /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+      @media only screen and (max-width: 36.25em) {
+        .header__text:nth-child(6) {
+          top: -125px; } }
+      @media only screen and (max-width: 30em) {
+        .header__text:nth-child(6) {
+          animation: type3 0.7s steps(40, end) 3.1s forwards, cursor 0.5s step-end infinite alternate; } }
+  .header__wraper {
+    position: relative;
+    -moz-perspective: 800px;
+    perspective: 800px;
+    background-image: linear-gradient(to right bottom, var(--color-primary-dark), var(--color-primary-light));
+    height: 100vh; }
   .header__button {
     display: inline-block;
     position: absolute;
@@ -2193,9 +4485,33 @@ body.color-theme-in-transition *:after {
     text-align: center;
     border-radius: 0.5rem 0.5rem 0 0;
     animation-name: appears;
-    animation-duration: 4.5s;
+    animation-duration: 3s;
     animation-timing-function: ease-in;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 65em) {
       .header__button {
         right: 1.5%;
@@ -2218,7 +4534,39 @@ body.color-theme-in-transition *:after {
     fill: var(--color-sign);
     position: relative;
     top: 50%;
-    transform: translateY(-50%); }
+    transform: translateY(-50%);
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+    /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
     @media only screen and (max-width: 75em) {
       .header__icon-down {
         height: 4.5rem;
@@ -2236,9 +4584,653 @@ body.color-theme-in-transition *:after {
         height: 9rem;
         width: 9rem; } }
 
+/**
+* 2021 0116 New landing screen animations
+*/
+.window {
+  position: relative;
+  width: 50vw;
+  left: 40vw;
+  top: 10vh;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  background-color: #02203c;
+  outline: 1px solid transparent;
+  border: 2px solid #15314b;
+  box-shadow: 0 0 40px -17.5px rgba(0, 0, 0, 0.4), 46.2px 57.5px 70px -7.5px rgba(0, 0, 0, 0.5);
+  transform: rotateY(-15deg) rotateZ(2deg);
+  transform-origin: center;
+  animation: window-appearance 1s linear normal;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+  @media only screen and (max-width: 75em) {
+    .window {
+      width: 60vw;
+      left: 30vw;
+      top: 15vh; } }
+  @media only screen and (max-width: 55em) {
+    .window {
+      width: 70vw;
+      left: 25vw;
+      top: 15vh; } }
+  @media only screen and (max-width: 36.25em) {
+    .window {
+      width: 80vw;
+      left: 15vw;
+      top: 15vh; } }
+  @media only screen and (max-width: 30em) {
+    .window {
+      display: none; } }
+
+.wraper {
+  position: relative;
+  -moz-perspective: 800px;
+  perspective: 800px;
+  background-image: linear-gradient(to right bottom, var(--color-primary-dark), var(--color-primary-light)); }
+
+.window-header {
+  background-color: #15314b;
+  box-shadow: 0 0 0.5rem 0 rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  font-size: 1.4rem;
+  flex: 0 0 auto;
+  position: relative;
+  z-index: 2;
+  border-bottom: .2rem solid #15314b; }
+
+.window-logo {
+  margin: 0 .5rem;
+  /* margin: 0 5px 0 10px; */
+  background-color: #3b6cc7;
+  /* color: #fff; */
+  display: inline-block;
+  height: 1.3rem;
+  width: 1.3rem;
+  border-radius: .4rem; }
+  .window-logo-box {
+    height: 2rem;
+    white-space: nowrap; }
+
+.window-menu {
+  height: 2rem;
+  white-space: nowrap; }
+
+.window-title {
+  height: 2rem;
+  white-space: nowrap;
+  flex-grow: 1;
+  margin-left: 7vw;
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+  @media only screen and (max-width: 75em) {
+    .window-title {
+      margin-left: 10vw; } }
+
+.window-title-sign {
+  width: 20rem; }
+
+.window-btns {
+  height: 2rem;
+  white-space: nowrap; }
+
+.window-btn {
+  margin-right: 1px;
+  background-color: #c0c0c0;
+  display: inline-block;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 4px; }
+  .window-btn--last {
+    background-color: #99001a;
+    margin-right: 5px; }
+
+.full-screen {
+  flex: 1 1 auto;
+  position: relative;
+  z-index: 1;
+  scrollbar-width: thin;
+  scrollbar-color: #a0a0a0 transparent;
+  display: flex; }
+  .full-screen::-webkit-scrollbar {
+    width: 6px;
+    height: 6px; }
+  .full-screen::-webkit-scrollbar-track {
+    background-color: transparent; }
+  .full-screen::-webkit-scrollbar-thumb {
+    background: #a0a0a0;
+    border-radius: 3px; }
+  .full-screen::-webkit-scrollbar-corner {
+    background-color: transparent; }
+  .full-screen pre {
+    margin: 0;
+    overflow: auto;
+    font-size: 14px; }
+
+.files-screen {
+  flex: 0 1 30%;
+  padding: 10px;
+  border: 2px solid #15314b; }
+  .files-screen__row {
+    height: 2rem;
+    white-space: nowrap;
+    display: flex;
+    width: 100%;
+    overflow: hidden; }
+  .files-screen__row--active {
+    background-color: #3d3d3d; }
+
+.right-side {
+  flex: 1 1 70%;
+  display: flex;
+  flex-direction: column; }
+
+.code-screen {
+  padding: 10px;
+  border: 2px solid #15314b; }
+  .code-screen__row {
+    height: 2rem;
+    white-space: nowrap;
+    display: flex;
+    width: 100%;
+    overflow: hidden; }
+
+.item {
+  display: inline-block;
+  height: 1.3rem;
+  border-radius: 2px;
+  margin: 0 2px 0 0;
+  overflow: hidden;
+  /**
+  * Animation shift
+  * 10 px = .01 sec
+  */ }
+  .item--7 {
+    width: 5px; }
+  .item--icon {
+    width: 13px; }
+  .item--15 {
+    width: 15px; }
+  .item--20 {
+    width: 20px; }
+  .item--25 {
+    width: 25px; }
+  .item--30 {
+    width: 30px; }
+  .item--35 {
+    width: 35px; }
+  .item--40 {
+    width: 40px; }
+  .item--45 {
+    width: 45px; }
+  .item--50 {
+    width: 50px; }
+  .item--55 {
+    width: 55px; }
+  .item--60 {
+    width: 60px; }
+  .item--65 {
+    width: 65px; }
+  .item--70 {
+    width: 70px; }
+  .item--75 {
+    width: 75px; }
+  .item--80 {
+    width: 80px; }
+  .item--90 {
+    width: 90px; }
+  .item--100 {
+    width: 100px; }
+  .item--animated-1 {
+    width: 0;
+    max-width: 30px;
+    animation-name: codeLines;
+    animation-duration: 0.24s;
+    animation-delay: 1s;
+    animation-timing-function: steps(6, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-2 {
+    width: 0;
+    max-width: 35px;
+    animation-name: codeLines;
+    animation-duration: 0.28s;
+    animation-delay: 1.03s;
+    animation-timing-function: steps(7, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-3 {
+    width: 0;
+    max-width: 60px;
+    animation-name: codeLines;
+    animation-duration: 0.48s;
+    animation-delay: 1.065s;
+    animation-timing-function: steps(12, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-4 {
+    width: 0;
+    max-width: 45px;
+    animation-name: codeLines;
+    animation-duration: 0.36s;
+    animation-delay: 1.125s;
+    animation-timing-function: steps(9, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-5 {
+    width: 0;
+    max-width: 30px;
+    animation-name: codeLines;
+    animation-duration: 0.24s;
+    animation-delay: 1.17s;
+    animation-timing-function: steps(6, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-6 {
+    width: 0;
+    max-width: 25px;
+    animation-name: codeLines;
+    animation-duration: 0.2s;
+    animation-delay: 1.2s;
+    animation-timing-function: steps(5, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-7 {
+    width: 0;
+    max-width: 75px;
+    animation-name: codeLines;
+    animation-duration: 0.6s;
+    animation-delay: 1.225s;
+    animation-timing-function: steps(15, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-8 {
+    width: 0;
+    max-width: 35px;
+    animation-name: codeLines;
+    animation-duration: 0.28s;
+    animation-delay: 1.3s;
+    animation-timing-function: steps(7, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-9 {
+    width: 0;
+    max-width: 30px;
+    animation-name: codeLines;
+    animation-duration: 0.24s;
+    animation-delay: 1.335s;
+    animation-timing-function: steps(6, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-10 {
+    width: 0;
+    max-width: 15px;
+    animation-name: codeLines;
+    animation-duration: 0.12s;
+    animation-delay: 1.365s;
+    animation-timing-function: steps(3, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-11 {
+    width: 0;
+    max-width: 65px;
+    animation-name: codeLines;
+    animation-duration: 0.52s;
+    animation-delay: 1.38s;
+    animation-timing-function: steps(13, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-12 {
+    width: 0;
+    max-width: 50px;
+    animation-name: codeLines;
+    animation-duration: 0.4s;
+    animation-delay: 1.445s;
+    animation-timing-function: steps(10, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-13 {
+    width: 0;
+    max-width: 35px;
+    animation-name: codeLines;
+    animation-duration: 0.28s;
+    animation-delay: 1.495s;
+    animation-timing-function: steps(7, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-14 {
+    width: 0;
+    max-width: 45px;
+    animation-name: codeLines;
+    animation-duration: 0.36s;
+    animation-delay: 1.53s;
+    animation-timing-function: steps(9, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-15 {
+    width: 0;
+    max-width: 50px;
+    animation-name: codeLines;
+    animation-duration: 0.4s;
+    animation-delay: 1.575s;
+    animation-timing-function: steps(10, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-16 {
+    width: 0;
+    max-width: 55px;
+    animation-name: codeLines;
+    animation-duration: 0.44s;
+    animation-delay: 1.625s;
+    animation-timing-function: steps(11, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-17 {
+    width: 0;
+    max-width: 25px;
+    animation-name: codeLines;
+    animation-duration: 0.2s;
+    animation-delay: 1.68s;
+    animation-timing-function: steps(5, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-18 {
+    width: 0;
+    max-width: 35px;
+    animation-name: codeLines;
+    animation-duration: 0.28s;
+    animation-delay: 1.705s;
+    animation-timing-function: steps(7, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-19 {
+    width: 0;
+    max-width: 20px;
+    animation-name: codeLines;
+    animation-duration: 0.16s;
+    animation-delay: 1.74s;
+    animation-timing-function: steps(4, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-20 {
+    width: 0;
+    max-width: 65px;
+    animation-name: codeLines;
+    animation-duration: 0.52s;
+    animation-delay: 1.76s;
+    animation-timing-function: steps(13, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-21 {
+    width: 0;
+    max-width: 35px;
+    animation-name: codeLines;
+    animation-duration: 0.28s;
+    animation-delay: 1.825s;
+    animation-timing-function: steps(7, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-22 {
+    width: 0;
+    max-width: 45px;
+    animation-name: codeLines;
+    animation-duration: 0.36s;
+    animation-delay: 1.86s;
+    animation-timing-function: steps(9, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-23 {
+    width: 0;
+    max-width: 35px;
+    animation-name: codeLines;
+    animation-duration: 0.28s;
+    animation-delay: 1.905s;
+    animation-timing-function: steps(7, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-24 {
+    width: 0;
+    max-width: 75px;
+    animation-name: codeLines;
+    animation-duration: 0.6s;
+    animation-delay: 1.94s;
+    animation-timing-function: steps(15, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-25 {
+    width: 0;
+    max-width: 45px;
+    animation-name: codeLines;
+    animation-duration: 0.36s;
+    animation-delay: 2.015s;
+    animation-timing-function: steps(9, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-26 {
+    width: 0;
+    max-width: 45px;
+    animation-name: codeLines;
+    animation-duration: 0.36s;
+    animation-delay: 2.06s;
+    animation-timing-function: steps(9, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-27 {
+    width: 0;
+    max-width: 55px;
+    animation-name: codeLines;
+    animation-duration: 0.44s;
+    animation-delay: 2.105s;
+    animation-timing-function: steps(11, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-28 {
+    width: 0;
+    max-width: 35px;
+    animation-name: codeLines;
+    animation-duration: 0.28s;
+    animation-delay: 2.16s;
+    animation-timing-function: steps(7, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-29 {
+    width: 0;
+    max-width: 60px;
+    animation-name: codeLines;
+    animation-duration: 0.48s;
+    animation-delay: 2.195s;
+    animation-timing-function: steps(12, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-30 {
+    width: 0;
+    max-width: 70px;
+    animation-name: codeLines;
+    animation-duration: 0.56s;
+    animation-delay: 2.255s;
+    animation-timing-function: steps(14, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-31 {
+    width: 0;
+    max-width: 55px;
+    animation-name: codeLines;
+    animation-duration: 0.44s;
+    animation-delay: 2.325s;
+    animation-timing-function: steps(11, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-32 {
+    width: 0;
+    max-width: 45px;
+    animation-name: codeLines;
+    animation-duration: 0.36s;
+    animation-delay: 2.38s;
+    animation-timing-function: steps(9, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-33 {
+    width: 0;
+    max-width: 65px;
+    animation-name: codeLines;
+    animation-duration: 0.52s;
+    animation-delay: 2.425s;
+    animation-timing-function: steps(13, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-34 {
+    width: 0;
+    max-width: 65px;
+    animation-name: codeLines;
+    animation-duration: 0.52s;
+    animation-delay: 2.49s;
+    animation-timing-function: steps(13, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-35 {
+    width: 0;
+    max-width: 75px;
+    animation-name: codeLines;
+    animation-duration: 0.6s;
+    animation-delay: 2.555s;
+    animation-timing-function: steps(15, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-36 {
+    width: 0;
+    max-width: 50px;
+    animation-name: codeLines;
+    animation-duration: 0.4s;
+    animation-delay: 2.63s;
+    animation-timing-function: steps(10, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-37 {
+    width: 0;
+    max-width: 20px;
+    animation-name: codeLines;
+    animation-duration: 0.16s;
+    animation-delay: 2.68s;
+    animation-timing-function: steps(4, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-38 {
+    width: 0;
+    max-width: 65px;
+    animation-name: codeLines;
+    animation-duration: 0.52s;
+    animation-delay: 2.7s;
+    animation-timing-function: steps(13, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--animated-39 {
+    width: 0;
+    max-width: 80px;
+    animation-name: codeLines;
+    animation-duration: 0.64s;
+    animation-delay: 2.765s;
+    animation-timing-function: steps(16, end);
+    animation-fill-mode: forwards;
+    backface-visibility: hidden; }
+  .item--grey {
+    background-color: #909090; }
+  .item--yellow {
+    background-color: #eef13c; }
+  .item--blue {
+    background-color: #1b5ff0; }
+  .item--indigo {
+    background-color: #529ba5; }
+  .item--salad {
+    background-color: #78c078; }
+  .item--violet {
+    background-color: #703770; }
+  .item--brown {
+    background-color: #9e833d;
+    /*#be8a28;*/ }
+  .item--pink {
+    background-color: #b9006c; }
+
+.terminal-screen {
+  flex: 0 1 30%;
+  padding: 10px;
+  border: 2px solid #15314b; }
+  .terminal-screen__row {
+    height: 2rem; }
+
+.window-footer {
+  background-color: #4085a5;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.4);
+  height: 20px;
+  z-index: 2;
+  border-bottom: 2px solid #15314b; }
+
 .section {
   padding: 2rem 20rem;
-  background-color: var(--color-bg); }
+  background-color: var(--color-bg);
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
   @media only screen and (max-width: 45em) {
     .section {
       padding: 2rem 17vw; } }
@@ -2249,10 +5241,26 @@ body.color-theme-in-transition *:after {
     .section {
       padding: 18rem 3.5vw 2rem; } }
 
-@media only screen and (max-width: 36.25em) {
-  .section-profile {
-    padding-top: 15rem; } }
-
-@media only screen and (max-width: 22.5em) {
-  .section-profile {
-    padding-top: 15rem; } }
+.section-profile {
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */
+  /**
+  * 2021 0116 portrait / landscape
+  * This breakpoint is for portrait/landscape modes (to avoid 
+  * orientation:portrait/landscape, as it cause collisions
+  * with the soft keyboards)
+  * For more details see: 
+  * https://stackoverflow.com/questions/8883163/css-media-query-soft-keyboard-breaks-css-orientation-rules-alternative-solut
+  */ }
+  @media only screen and (max-width: 36.25em) {
+    .section-profile {
+      padding-top: 15rem; } }
+  @media only screen and (max-width: 22.5em) {
+    .section-profile {
+      padding-top: 15rem; } }

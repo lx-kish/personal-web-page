@@ -1,3 +1,81 @@
+/**
+* 2021 0116 New landing screen animations
+*/
+@keyframes window-appearance {
+    0% {
+        opacity: 0;
+        transform: rotateY(-15deg) rotateZ(2deg) scale(.1);
+        // transform: rotateY(-15deg) rotateZ(2deg) translateX(100px) scale(.1);
+    }
+    60% {
+        opacity: 0;
+        transform: rotateY(-15deg) rotateZ(2deg) scale(.1);
+        // transform: rotateY(-15deg) rotateZ(2deg) translateX(100px) scale(.1);
+    }
+    100% { 
+        opacity: 1;
+        transform: rotateY(-15deg) rotateZ(2deg) scale(1);
+        // transform: rotateY(-15deg) rotateZ(2deg) translateX(100px) scale(1);
+    }
+}
+
+@keyframes codeLines {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes cursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+@keyframes type {
+    0% {
+      width: 0;
+    }
+    99% {
+      border-right: 2px solid #ffffff;
+    }
+    100% {
+      border-right: none;
+    }
+}
+
+@keyframes type2 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99% {
+      border-right: 2px solid #ffffff;
+    }
+    100% {
+      opacity: 1;
+      border: none;
+    }
+}
+
+@keyframes type3 {
+    0% {
+      width: 0;
+    }
+    1% {
+      opacity: 1;
+    }
+    99% {
+      border-right: 2px solid #ffffff;
+    }
+    100% {
+      opacity: 1;
+    }
+}
+
+/**
+* 2021 0116 Previous landing screen animations
+*/
 @keyframes moveInDown {
     0% {
         opacity: 0;
