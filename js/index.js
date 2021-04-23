@@ -1,8 +1,14 @@
 'use strict';
 
+// import $ from 'jquery';
+// import firebase from 'firebase';
+// var $ = require('jquery');
+// window.$ = require('jquery');
+// console.log($);
+
 var allSectionsOffsetTop;
-var navbarTopPoint;
-var navbarBottomPoint;
+var navbarTopPosition;
+var navbarBottomPosition;
 
 /**
  * Firebase config
@@ -16,16 +22,20 @@ var firebaseConfig = {
     appId: "1:901503787573:web:60236d20b3f8621473877c",
     measurementId: "G-5EW4GQ4PZ2"
 };
+
 /**
  * Firebase initialization
  */
+// var firebase = require('firebase');
+// var app = firebase.initializeApp(firebaseConfig);
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+// firebase.analytics();
 
 /**
 * Initialize page interface, load all variables and events handlers
 */
-$(document).ready(function () {
+$(function () {
+    // $(document).ready(function () {
 
     initiateInterfaceValues();
     scrollEvents();
@@ -42,8 +52,8 @@ $(document).ready(function () {
  * @return void
  */
 function hideAlert() {
-    var el = $('.alert');
-    if (el) el.remove();
+    var e = $('.alert');
+    if (e) e.remove();
 };
 
 /**
@@ -117,9 +127,9 @@ function getAllSectionsOffsetTop() {
 function initiateInterfaceValues() {
 
     allSectionsOffsetTop = getAllSectionsOffsetTop();
-    navbarTopPoint = getElementHeight('.header') - 20; //50;
-    navbarBottomPoint = getElementOffsetTop('.footer') - getElementHeight('.navigation') - 100; //50;
-    // navbarBottomPoint = getElementOffsetTop('.footer') - getElementHeight('.navigation') - 20; //50;
+    navbarTopPosition = getElementHeight('.header') - 20; //50;
+    navbarBottomPosition = getElementOffsetTop('.footer') - getElementHeight('.navigation') - 100; //50;
+    // navbarBottomPosition = getElementOffsetTop('.footer') - getElementHeight('.navigation') - 20; //50;
 
     scrollSpy();
     stickNavbar();
@@ -128,14 +138,25 @@ function initiateInterfaceValues() {
 
 /**
  * Adds and removes class attributes to an html element
- * @param  {Node} e The element which class is adding
+ * @param  {Object} e The jQuery object of the DOM node which class is adding
  * @param  {String} addedClass The class attribute is adding to the element
  * @param  {String} removedClass The class attribute is removing from the element
  * @return void
  */
-function addRemoveClass(el, addedClass, removedClass) {
-    if (addedClass) el.addClass(addedClass);
-    if (removedClass) el.removeClass(removedClass);
+function addRemoveClass(e, addedClass, removedClass) {
+
+    // console.log(
+    // 	'%c element inside addRemoveClass function ===> ',
+    // 	'color: gold; font-weight: bold;',
+    //     e,
+    // 	e.get(0),
+    // 	document.body.contains(e.get(0))
+    // );
+
+    if (!document.body.contains(e.get(0))) return;
+
+    if (addedClass) e.addClass(addedClass);
+    if (removedClass) e.removeClass(removedClass);
 }
 
 /**
@@ -225,52 +246,71 @@ function scrollSpy() {
 */
 function stickNavbar() {
 
-    if ($(window).scrollTop() > navbarTopPoint &&
-        $(window).scrollTop() < navbarBottomPoint) {
+    var aboveNavBarTopPosition = $(window).scrollTop() <= navbarTopPosition;
+    var belowNavBarTopPosition = $(window).scrollTop() > navbarTopPosition;
+    var aboveNavBarBottomPosition = $(window).scrollTop() < navbarBottomPosition;
+    var belowNavBarBottomPosition = $(window).scrollTop() >= navbarBottomPosition;
+
+    if (belowNavBarTopPosition &&
+        aboveNavBarBottomPosition) {
 
         addRemoveClass(
             $('.navigation'),
             'navigation--fixed',
             'navigation--top navigation--bottom');
     }
-    else {
-        if ($(window).scrollTop() <= navbarTopPoint) {
 
-            addRemoveClass(
-                $('.navigation'),
-                'navigation--top',
-                'navigation--fixed navigation--bottom');
-        }
-        else if ($(window).scrollTop() >= navbarBottomPoint) {
+    if (aboveNavBarTopPosition) {
 
-            addRemoveClass(
-                $('.navigation'),
-                'navigation--bottom',
-                'navigation--fixed navigation--top');
-        }
+        addRemoveClass(
+            $('.navigation'),
+            'navigation--top',
+            'navigation--fixed navigation--bottom');
     }
+
+    if (belowNavBarBottomPosition) {
+
+        addRemoveClass(
+            $('.navigation'),
+            'navigation--bottom',
+            'navigation--fixed navigation--top');
+    }
+}
+
+/**
+ * Checkes if fixed element currently lies between end of the header and top of the footer
+ * @param {nodePosition} - current offsetTop of the element
+ * @return {Boolean}
+ */
+function getFixedElementPosition(nodePosition) {
+    return nodePosition > getElementHeight('.header') && nodePosition < getElementOffsetTop('.footer')
 }
 
 /**
 * Switches the color of the <color-schema-button>, <color palete>
 * and <dark-mode toggler> elements at the top and bottom points 
-* of <main> section
+* of <main> section by adding/removing css classes
 */
 function switchColorSchemaBtn() {
 
-    var panelPoint = getElementOffsetTop('.color-schema__panel') + getElementHeight('.color-schema__panel') / 2;
-    var togglePoint = getElementOffsetTop('.color-schema__toggle') + getElementHeight('.color-schema__toggle') / 2;
-    var btnPoint = getElementOffsetTop('.color-schema__btn') + getElementHeight('.color-schema__btn') / 2;
+    var panelPosition = getElementOffsetTop('.color-schema__panel') + getElementHeight('.color-schema__panel') / 2;
+    var togglePosition = getElementOffsetTop('.color-schema__toggle') + getElementHeight('.color-schema__toggle') / 2;
+    var buttonPosition = getElementOffsetTop('.color-schema__btn') + getElementHeight('.color-schema__btn') / 2;
+
+    // conditional variables to define switching colors points
+    var mainPanelColor = getFixedElementPosition(panelPosition);
+    var mainToggleColor = getFixedElementPosition(togglePosition);
+    var mainButtonColor = getFixedElementPosition(buttonPosition);
 
     //changing panel color
-    if (panelPoint > getElementHeight('.header') && panelPoint < getElementOffsetTop('.footer')) {
+    if (mainPanelColor) {
 
         addRemoveClass(
             $('.color-schema__panel'),
             'color-schema--color-main',
             'color-schema--color-top-bottom');
     }
-    else {
+    if (!mainPanelColor) {
         addRemoveClass(
             $('.color-schema__panel'),
             'color-schema--color-top-bottom',
@@ -278,13 +318,13 @@ function switchColorSchemaBtn() {
     }
 
     //changing toggle color
-    if (togglePoint > getElementHeight('.header') && togglePoint < getElementOffsetTop('.footer')) {
+    if (mainToggleColor) {
         addRemoveClass(
             $('.color-schema__toggle'),
             'color-schema__toggle--color-main',
             'color-schema__toggle--color-top-bottom');
     }
-    else {
+    if (!mainToggleColor) {
         addRemoveClass(
             $('.color-schema__toggle'),
             'color-schema__toggle--color-top-bottom',
@@ -292,13 +332,13 @@ function switchColorSchemaBtn() {
     }
 
     //changing button color
-    if (btnPoint > getElementHeight('.header') && btnPoint < getElementOffsetTop('.footer')) {
+    if (mainButtonColor) {
         addRemoveClass(
             $('.color-schema__btn'),
             'color-schema--color-main',
             'color-schema--color-top-bottom');
     }
-    else {
+    if (!mainButtonColor) {
         addRemoveClass(
             $('.color-schema__btn'),
             'color-schema--color-top-bottom',
@@ -394,7 +434,7 @@ function submitFormHandler() {
                 $('#message'),
                 '',
                 'message--shown');
-            
+
             document.getElementById('contactForm').reset();
             showAlert('success', 'Message has been sent successfully!');
         }
